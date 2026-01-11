@@ -1,0 +1,11 @@
+# cat=settings//20; type=string; label=LLL:EXT:rrp_t3toon/Resources/Private/Language/locallang_be.xlf:settings.escape_style;
+escape_style = backslash
+
+# cat=settings//30; type=int+; label=LLL:EXT:rrp_t3toon/Resources/Private/Language/locallang_be.xlf:settings.min_rows_to_tabular;
+min_rows_to_tabular = 2
+
+# cat=settings//40; type=int+; label=LLL:EXT:rrp_t3toon/Resources/Private/Language/locallang_be.xlf:settings.max_preview_items;
+max_preview_items = 200
+
+# cat=settings//50; type=boolean; label=LLL:EXT:rrp_t3toon/Resources/Private/Language/locallang_be.xlf:settings.coerce_scalar_types;
+coerce_scalar_types = 1

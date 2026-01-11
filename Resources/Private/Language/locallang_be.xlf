@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
+    <file source-language="en" datatype="plaintext" original="EXT:rrp_t3toon/Resources/Private/Language/locallang_be.xlf" date="2026-01-11T11:26:11Z" product-name="rrp_t3toon">
+        <header />
+        <body>
+            <trans-unit id="settings.escape_style">
+                <source>Escape Style : Defines how special characters (commas, colons, backslashes, etc.) should be escaped when serializing text values into TOON format.</source>
+            </trans-unit>
+            <trans-unit id="settings.min_rows_to_tabular">
+                <source>Minimum Rows to Tabular : Determines the minimum number of sequential rows required for an array to be rendered as a tabular block in TOON.</source>
+            </trans-unit>
+            <trans-unit id="settings.max_preview_items">
+                <source>Maximum Preview Items : Controls how many items are displayed when rendering long tabular arrays or datasets in TOON format.</source>
+            </trans-unit>
+            <trans-unit id="settings.coerce_scalar_types">
+                <source>Coerce Scalar Types : When decoding TOON back to JSON/PHP arrays, this setting decides whether textual scalars such as "true", "false", "null", or "42" should be converted to their native PHP types (boolean, null, int).</source>
+            </trans-unit>
+        </body>
+    </file>
+</xliff>
