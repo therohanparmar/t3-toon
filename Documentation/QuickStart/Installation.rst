@@ -14,10 +14,6 @@ the extension EXT:rrp_t3toon via composer:
 In TYPO3 installations above version 11.5 the extension will be automatically
 installed. You do not have to activate it manually.
 
-If you are using an older version of TYPO3 or have a legacy installation
-without composer, have a look at the
-:ref:`Extended installation <installation>` chapter.
-
 Requirements
 ------------
 
