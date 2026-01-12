@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<guides xmlns="https://www.phpdoc.org/guides" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="https://www.phpdoc.org/guides ../vendor/phpdocumentor/guides-cli/resources/schema/guides.xsd"
+        links-are-relative="true"
+        default-code-language="php"
+>
+    <extension class="\T3Docs\Typo3DocsTheme\DependencyInjection\Typo3DocsThemeExtension"
+               project-home="https://github.com/therohanparmar/t3-toon"
+               project-contact="https://github.com/therohanparmar/t3-toon/issues"
+               project-repository="https://github.com/therohanparmar/t3-toon"
+               project-issues="https://github.com/therohanparmar/t3-toon/issues"
+               edit-on-github-branch="main"
+               edit-on-github="therohanparmar/t3-toon"
+               typo3-core-preferred="13.4"
+               interlink-shortcode="rrp/t3-toon"
+    />
+    <project title="T3Toon – Token-Efficient Data Format for TYPO3 AI" release="1.0.0" version="1.0.0"
+             copyright="by Rohan R. Parmar"/>
+    <inventory id="t3extbasebook" url="https://docs.typo3.org/m/typo3/book-extbasefluid/13.4/en-us/"/>
+</guides>

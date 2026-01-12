@@ -24,11 +24,18 @@ class ToonHelper
     }
 
     /**
-     * @return array
+     * Retrieves extension configuration settings for rrp_t3toon.
+     *
+     * @return array Extension configuration array
      */
     private static function getExtensionSettings(): array
     {
-        $extensionConfiguration = GeneralUtility::makeInstance(ExtensionConfiguration::class);
-        return $extensionConfiguration->get('wind_patient_registration');
+        try {
+            $extensionConfiguration = GeneralUtility::makeInstance(ExtensionConfiguration::class);
+            return $extensionConfiguration->get('rrp_t3toon') ?: [];
+        } catch (\Exception $e) {
+            // Return empty array if configuration cannot be loaded
+            return [];
+        }
     }
 }
