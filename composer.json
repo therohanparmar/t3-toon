@@ -3,10 +3,15 @@
     "description": "TOON for TYPO3 — a compact, human-readable, and token-efficient data format for AI prompts & LLM contexts. Perfect for ChatGPT, Gemini, Claude, Mistral, and OpenAI integrations (JSON ⇄ TOON).",
     "type": "typo3-cms-extension",
     "license": "MIT",
-        "authors": [
+    "authors": [
         {
             "name": "Rohan Parmar",
             "homepage": "https://github.com/therohanparmar/t3-toon",
+            "role": "Developer"
+        },
+        {
+            "name": "Himanshu Ramavat",
+            "homepage": "https://github.com/himanshuramavat",
             "role": "Developer"
         }
     ],
@@ -72,6 +77,12 @@
         "llm-for-typo3",
         "ai-typo3-package"
     ],
+    "homepage": "https://extensions.typo3.org/extension/rrp_t3toon",
+    "support": {
+        "issues": "https://github.com/therohanparmar/t3-toon/issues",
+        "source": "https://github.com/therohanparmar/t3-toon",
+        "docs": "https://docs.typo3.org/p/rrp/t3-toon/main/en-us/"
+    },
     "require": {
         "php": ">=8",
         "typo3/cms-core": "^12 || ^13"

@@ -30,7 +30,6 @@ T3Toon
 **T3Toon** — also known as **Token-Optimized Object Notation** — is a **TYPO3-native AI data optimization library** that transforms large JSON or PHP arrays into a **compact, readable, and token-efficient format**.
 
 It's crafted for developers working with **ChatGPT, Gemini, Claude, Mistral, or OpenAI APIs**, helping you:
-
 * Save tokens and reduce API costs
 * Simplify complex prompt structures
 * Improve AI response quality and context understanding
