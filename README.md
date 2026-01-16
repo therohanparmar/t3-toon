@@ -1,274 +1,134 @@
 # TOON for TYPO3
 
-### Compact · Token-Efficient · Human-Readable Data Format for AI Prompts & LLM Contexts
+### Token-Optimized Object Notation for AI & LLM Workflows
 
 <p align="center">
-  <img src="https://img.shields.io/badge/Version-1.0.0-blue" alt="Version 1.0.0">
+  <img src="https://img.shields.io/badge/Version-1.1.0-blue" alt="Version 1.1.0">
   <img src="https://img.shields.io/github/license/sbsaga/toon" alt="License">
   <img src="https://img.shields.io/badge/TYPO3-12,13-orange" alt="TYPO3 12,13">
   <img src="https://img.shields.io/badge/PHP-8.0%2B-red" alt="PHP 8.0+">
-  <img src="https://img.shields.io/badge/AI-Ready-success" alt="AI Ready">
 </p>
 
 ---
 
-## 📚 Table of Contents
+## ✨ What is TOON?
 
-1. [Overview](#-overview)
-2. [Key Features](#-key-features)
-3. [Benchmark & Analytics](#-real-world-benchmark)
-4. [Installation](#-installation)
-5. [Configuration](#-configuration)
-6. [Usage](#-usage)
-7. [Quick Benchmark Route](#-quick-benchmark-route)
-8. [Analytics & Visualization](#-analytics--visualization)
-10. [Integration Use Cases](#-integration-use-cases)
-11. [Compatibility](#-compatibility)
-12. [Compression Visualization](#-example-compression-visualization)
-14. [License](#-license)
+**TOON (Token-Optimized Object Notation)** is a **TYPO3-native data format** that transforms large JSON or PHP arrays into a **compact, human-readable, and token-efficient structure**, purpose-built for **AI prompts and LLM contexts**.
 
----
+It helps you:
 
-## ✨ Overview
-
-**TOON for TYPO3** — also known as **Token-Optimized Object Notation** — is a **TYPO3-native AI data optimization library** that transforms large JSON or PHP arrays into a **compact, readable, and token-efficient format**.
-
-It’s crafted for developers working with **ChatGPT, Gemini, Claude, Mistral, or OpenAI APIs**, helping you:
-✅ Save tokens and reduce API costs
-✅ Simplify complex prompt structures
-✅ Improve AI response quality and context understanding
-✅ Maintain human readability and reversibility
+- 🔻 Reduce token usage (up to 60–75%)
+- 💰 Lower AI API costs
+- 🧠 Improve prompt clarity and context understanding
+- 🔁 Convert data seamlessly between **JSON ⇄ TOON**
 
 ---
 
 ## 🚀 Key Features
 
-| Feature                             | Description                                                 |
-| ----------------------------------- | ----------------------------------------------------------- |
-| 🔁 **Bidirectional Conversion**     | Convert JSON ⇄ TOON with ease                               |
-| 🧩 **Readable & Compact**           | YAML-like structure, human-friendly format                  |
-| 💰 **Token-Efficient**              | Save up to 70% tokens on every AI prompt                    |
-| 🔒 **Preserves Key Order**          | Ensures deterministic data output                           |
-| 📊 **Built-in Analytics**           | Measure token, byte, and compression performance            |
-| 🌍 **AI & LLM Ready**               | Optimized for ChatGPT, Gemini, Claude, and Mistral models   |
-| 🆕 **Complex Nested Array Support** | Fully supports deeply nested associative and indexed arrays |
+- 🔁 Bidirectional conversion (JSON ⇄ TOON)
+- 🧩 Compact, YAML-like and human-readable format
+- 💰 Significant token and size reduction
+- 📊 Built-in analytics and token estimation
+- 🧠 Optimized for ChatGPT, Gemini, Claude, and Mistral
+- 🆕 Supports deeply nested and complex data structures
+- 🔒 Preserves key order and data integrity
 
 ---
 
-## Complex & Nested Array Support
+## 📦 Installation
 
-TOON now supports **deeply nested and mixed data structures**, including:
+### ➤ TYPO3 Extension Repository (TER)
 
-- Multi-level associative arrays
-- Indexed collections inside objects
-- Complex real-world structures like users, profiles, orders, metadata, and logs
+Install via the TYPO3 backend or directly from TER:
 
-This enhancement ensures that **no structural information is lost**, while still benefiting from TOON’s compact, token-efficient format.
-
-### Example: Nested Data Conversion
-
-```php
-$data = [
-    'user' => [
-        'id' => 101,
-        'active' => true,
-        'roles' => ['admin', 'editor'],
-        'profile' => [
-            'age' => 32,
-            'location' => [
-                'city' => 'ABC',
-                'country' => 'India',
-            ],
-        ],
-    ],
-    'orders' => [
-        [
-            'order_id' => 'ORD-1001',
-            'amount' => 1998,
-            'status' => 'paid',
-        ],
-    ],
-];
-
-echo \RRP\T3Toon\Service\Toon::convert($data);
-```
-
-This structure remains **human-readable, reversible, and compact**, even with deep nesting.
+🔗 https://extensions.typo3.org/extension/rrp_t3toon
 
 ---
 
-## 🧪 Real-World Benchmark
+### ➤ Composer (Packagist)
 
-| Metric        | JSON  | TOON  | Reduction               |
-| ------------- | ----- | ----- | ----------------------- |
-| Size (bytes)  | 7,718 | 2,538 | **67.12% smaller**      |
-| Tokens (est.) | 1,930 | 640   | **~66.8% fewer tokens** |
-
-### 📈 Visual Comparison
-
-```
-JSON (7.7 KB)
-██████████████████████████████████████████████████████████████████████████
-
-TOON (2.5 KB)
-█████████████████
-```
-
-💡 **TOON** reduces token load by _60–75%_, improving **AI efficiency**, **cost**, and **response quality**.
-
----
-
-## ⚙️ Installation
+Recommended for Composer-based TYPO3 projects: 🔗 https://packagist.org/packages/rrp/t3-toon
 
 ```bash
 composer require rrp/t3-toon
 ```
 
----
+## 🧠 Quick Usage Example
 
-## ⚙️ Configuration
+    use RRP\T3Toon\Service\Toon;
 
+    $data = [
+        'user' => 'ABC',
+        'tasks' => [
+            ['id' => 1, 'done' => false],
+            ['id' => 2, 'done' => true],
+        ],
+    ];
 
----
+    echo Toon::convert($data);
 
-## 🧠 Usage
+**Output (TOON):**
 
-### ➤ Convert JSON → TOON
-
-```php
-$data = [
-    'user' => 'ABC',
-    'message' => 'Hello, how are you?',
-    'tasks' => [
-        ['id' => 1, 'done' => false],
-        ['id' => 2, 'done' => true],
-    ],
-];
-
-$converted = \RRP\T3Toon\Service\Toon::convert($data);
-echo $converted;
-```
-
-**Output:**
-
-```
-user: ABC
-message: Hello\, how are you?
-tasks:
-  items[2]{done,id}:
-    false,1
-    true,2
-```
+    user: ABC
+    tasks:
+      items[2]{id,done}:
+        1,false
+        2,true
 
 ---
 
-### ➤ Convert TOON → JSON
+## 📚 Documentation
 
-```php
-$toon = <<<TOON
-user: ABC
-tasks:
-  items[2]{id,done}:
-    1,false
-    2,true
-TOON;
+Full documentation, configuration, and advanced usage are available here:
 
-$json = \RRP\T3Toon\Service\Toon::decode($toon);
-print_r($json);
-```
+🔗 https://docs.typo3.org/p/rrp/t3-toon/main/en-us/
 
 ---
 
-### ➤ Estimate Tokens
+## 🧩 Use Cases
 
-```php
-$stats = Toon::estimateTokens($converted);
-print_r($stats);
-```
-
-**Output:**
-
-```json
-{
-  "words": 20,
-  "chars": 182,
-  "tokens_estimate": 19
-}
-```
-
----
-
-## 📊 Analytics & Visualization
-
-| Metric              | Description           | Example |
-| ------------------- | --------------------- | ------- |
-| `json_size_bytes`   | Original JSON size    | 7,718   |
-| `toon_size_bytes`   | Optimized TOON size   | 2,538   |
-| `saving_percent`    | Space saved           | 67.12%  |
-| `tokens_estimate`   | Estimated token count | 640     |
-| `compression_ratio` | Ratio (TOON/JSON)     | 0.33    |
-
-🧠 **Visual Graph (Efficiency Comparison)**
-
-```
-| JSON: ██████████████████████████████████████████████████████████ 100%
-| TOON: ████████████ 33%
-```
-
----
-
-## 🧩 Integration Use Cases
-
-| Use Case                             | Benefit                                             |
-| ------------------------------------ | --------------------------------------------------- |
-| 🤖 **AI Prompt Engineering**         | Compress structured data for LLMs                   |
-| 📉 **Token Optimization**            | Reduce token usage and API costs                    |
-| 🧠 **Data Preprocessing**            | Streamline complex structured inputs                |
-| 🧾 **Logging & Debugging**           | Store compact, readable structured logs             |
-| 🗄️ **Database Storage Optimization** | Reduce JSON storage size while preserving structure |
-| 🔍 **Developer Tools**               | Perfect for previews and compact dashboards         |
+- 🤖 AI prompt engineering
+- 📉 Token and cost optimization
+- 🧠 Structured data preprocessing
+- 🧾 Compact logging and debugging
+- 🗄️ Optimized JSON storage
+- 🔍 Developer tooling and previews
 
 ---
 
 ## 🧰 Compatibility
 
-| TYPO3       | PHP | Package Version |
-| ----------- | --- | --------------- |
-| 12.x – 13.x | ≥ 8 | v1.0.0          |
+| TYPO3       | PHP   | Extension Version |
+| ----------- | ----- | ----------------- |
+| 12.x – 13.x | ≥ 8.0 | v1.1.0            |
 
 ---
 
-## 📉 Example Compression Visualization
+## 👨‍💻 Authors
 
-```
-JSON (7.7 KB)
-██████████████████████████████████████████████████████████████████████████
-
-TOON (2.5 KB)
-█████████████████
-```
-
-🧠 **~67% size reduction** while retaining complete data accuracy.
+- **[Rohan Parmar](https://www.linkedin.com/in/rohanrparmar)**
+- **[Himanshu Ramavat](https://www.linkedin.com/in/himanshu-ramavat/)**
 
 ---
 
-## 💡 Contribution
+## 💡 Contributing
 
-Contributions are highly encouraged!
+Contributions are welcome and appreciated ❤️
 
 - Fork the repository
-- Create a new feature branch
-- Commit & push improvements
-- Submit a Pull Request 🎉
+- Create a feature branch
+- Commit your changes
+- Submit a Pull Request
 
 ---
 
 ## 📜 License
 
-Licensed under the **MIT License** — free for both commercial and personal use.
+Licensed under the MIT License — free for personal and commercial use.
 
 ---
 
 <p align="center">
-  <b>Made with 🧡 for TYPO3 community</b>
+  <b>Made with 🧡 for the TYPO3 Developer</b>
 </p>
