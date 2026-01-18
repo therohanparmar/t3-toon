@@ -5,7 +5,7 @@
 <p align="center">
   <img src="https://img.shields.io/badge/Version-1.1.0-blue" alt="Version 1.1.0">
   <img src="https://img.shields.io/github/license/sbsaga/toon" alt="License">
-  <img src="https://img.shields.io/badge/TYPO3-12,13-orange" alt="TYPO3 12,13">
+  <img src="https://img.shields.io/badge/TYPO3-12,13,14-orange" alt="TYPO3 12,13,14">
   <img src="https://img.shields.io/badge/PHP-8.0%2B-red" alt="PHP 8.0+">
 </p>
 
@@ -57,6 +57,7 @@ composer require rrp/t3-toon
 ## 🧠 Quick Usage Example
 
     use RRP\T3Toon\Service\Toon;
+    use TYPO3\CMS\Core\Utility\GeneralUtility;
 
     $data = [
         'user' => 'ABC',
@@ -66,7 +67,7 @@ composer require rrp/t3-toon
         ],
     ];
 
-    echo Toon::convert($data);
+    echo GeneralUtility::makeInstance(Toon::class)->convert($data);
 
 **Output (TOON):**
 
@@ -101,7 +102,7 @@ Full documentation, configuration, and advanced usage are available here:
 
 | TYPO3       | PHP   | Extension Version |
 | ----------- | ----- | ----------------- |
-| 12.x – 13.x | ≥ 8.0 | v1.1.0            |
+| 12.x – 14.x | ≥ 8.0 | v1.1.0            |
 
 ---
 

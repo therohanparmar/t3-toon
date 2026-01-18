@@ -85,16 +85,32 @@
     },
     "require": {
         "php": ">=8",
-        "typo3/cms-core": "^12 || ^13"
+        "typo3/cms-core": "^12 || ^13 || ^14"
+    },
+    "require-dev": {
+        "typo3/testing-framework": "^8.0"
     },
     "autoload": {
         "psr-4": {
             "RRP\\T3Toon\\": "Classes/"
         }
     },
+    "autoload-dev": {
+        "psr-4": {
+            "RRP\\T3Toon\\Tests\\": "Tests/"
+        }
+    },
     "extra": {
         "typo3/cms": {
             "extension-key": "rrp_t3toon"
         }
+    },
+    "scripts": {
+        "test:unit": "../../vendor/bin/phpunit -c phpunit.xml.dist",
+        "doc-watch": "docker run --rm -it --pull always -v $(pwd)/Documentation:/project/Documentation -v $(pwd)/Documentation-GENERATED-temp:/project/Documentation-GENERATED-temp -p 1337:1337 ghcr.io/typo3-documentation/render-guides:latest --config=Documentation --watch"
+    },
+    "scripts-descriptions": {
+        "test:unit": "Run unit tests",
+        "doc-watch": "Render documentation with watcher"
     }
 }

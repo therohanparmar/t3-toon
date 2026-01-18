@@ -16,10 +16,10 @@ class ToonHelper
     public static function getConfig(): array
     {
         return [
-            'escape_style' => (string)(self::getExtensionSettings()['escape_style'] ?? 'backslash'),
-            'min_rows_to_tabular' => (int)(self::getExtensionSettings()['min_rows_to_tabular'] ?? 2),
-            'max_preview_items' => (int)(self::getExtensionSettings()['max_preview_items'] ?? 200),
-            'coerce_scalar_types' => (bool)(self::getExtensionSettings()['coerce_scalar_types'] ?? 1),
+            'escape_style' => (string) (self::getExtensionSettings()['escape_style'] ?? 'backslash'),
+            'min_rows_to_tabular' => (int) (self::getExtensionSettings()['min_rows_to_tabular'] ?? 2),
+            'max_preview_items' => (int) (self::getExtensionSettings()['max_preview_items'] ?? 200),
+            'coerce_scalar_types' => (bool) (self::getExtensionSettings()['coerce_scalar_types'] ?? 1),
         ];
     }
 
@@ -33,7 +33,7 @@ class ToonHelper
         try {
             $extensionConfiguration = GeneralUtility::makeInstance(ExtensionConfiguration::class);
             return $extensionConfiguration->get('rrp_t3toon') ?: [];
-        } catch (\Exception $e) {
+        } catch (\Throwable $e) {
             // Return empty array if configuration cannot be loaded
             return [];
         }

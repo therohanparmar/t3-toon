@@ -12,6 +12,7 @@ Convert PHP arrays or JSON strings to TOON format:
 .. code-block:: php
 
    use RRP\T3Toon\Service\Toon;
+   use TYPO3\CMS\Core\Utility\GeneralUtility;
 
    $data = [
        'user' => 'ABC',
@@ -22,7 +23,7 @@ Convert PHP arrays or JSON strings to TOON format:
        ],
    ];
 
-   $toon = Toon::convert($data);
+   $toon = GeneralUtility::makeInstance(Toon::class)->convert($data);
    echo $toon;
 
 **Output:**
@@ -44,6 +45,7 @@ Convert TOON format back to PHP arrays:
 .. code-block:: php
 
    use RRP\T3Toon\Service\Toon;
+   use TYPO3\CMS\Core\Utility\GeneralUtility;
 
    $toon = <<<TOON
    user: ABC
@@ -53,7 +55,7 @@ Convert TOON format back to PHP arrays:
        2,true
    TOON;
 
-   $data = Toon::decode($toon);
+   $data = GeneralUtility::makeInstance(Toon::class)->decode($toon);
    print_r($data);
 
 **Output:**
@@ -86,9 +88,11 @@ Estimate the number of tokens in a TOON string:
 .. code-block:: php
 
    use RRP\T3Toon\Service\Toon;
+   use TYPO3\CMS\Core\Utility\GeneralUtility;
 
-   $toon = Toon::convert($data);
-   $stats = Toon::estimateTokens($toon);
+   $toonService = GeneralUtility::makeInstance(Toon::class);
+   $toon = $toonService->convert($data);
+   $stats = $toonService->estimateTokens($toon);
    print_r($stats);
 
 **Output:**
@@ -124,9 +128,10 @@ T3Toon automatically detects and handles JSON strings:
 .. code-block:: php
 
    use RRP\T3Toon\Service\Toon;
+   use TYPO3\CMS\Core\Utility\GeneralUtility;
 
    $json = '{"user":"ABC","active":true}';
-   $toon = Toon::convert($json);
+   $toon = GeneralUtility::makeInstance(Toon::class)->convert($json);
    echo $toon;
 
 **Output:**
@@ -144,6 +149,7 @@ T3Toon handles deeply nested structures:
 .. code-block:: php
 
    use RRP\T3Toon\Service\Toon;
+   use TYPO3\CMS\Core\Utility\GeneralUtility;
 
    $data = [
        'user' => [
@@ -167,7 +173,7 @@ T3Toon handles deeply nested structures:
        ],
    ];
 
-   $toon = Toon::convert($data);
+   $toon = GeneralUtility::makeInstance(Toon::class)->convert($data);
    echo $toon;
 
 This structure remains **human-readable, reversible, and compact**, even with deep nesting.

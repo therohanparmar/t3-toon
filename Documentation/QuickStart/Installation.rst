@@ -17,7 +17,7 @@ installed. You do not have to activate it manually.
 Requirements
 ------------
 
-* TYPO3 CMS 12.0.0 - 13.9.99
+* TYPO3 CMS 12.0.0 - 14.9.99
 * PHP 8.0 or higher
 
 Update the database scheme
@@ -44,8 +44,9 @@ the extension manager or by using the service in your code:
 .. code-block:: php
 
    use RRP\T3Toon\Service\Toon;
+   use TYPO3\CMS\Core\Utility\GeneralUtility;
 
    // Test encoding
    $data = ['test' => 'value'];
-   $toon = Toon::convert($data);
+   $toon = GeneralUtility::makeInstance(Toon::class)->convert($data);
    echo $toon; // Should output: test: value

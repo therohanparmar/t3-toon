@@ -38,38 +38,3 @@ Navigate to :guilabel:`Admin Tools > Settings > Extension Configuration` and
 select :guilabel:`T3Toon – Token-Efficient Data Format for TYPO3 AI`.
 
 All configuration options are available through the Extension Manager interface.
-
-Service Configuration
----------------------
-
-The extension uses TYPO3's dependency injection container. Services are configured
-in ``Configuration/Services.yaml``.
-
-Default Service Configuration
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-.. code-block:: yaml
-
-   services:
-     _defaults:
-       autowire: true
-       autoconfigure: true
-       public: false
-
-     RRP\T3Toon\:
-       resource: '../Classes/*'
-       exclude: '../Classes/Domain/Model/*'
-
-Custom Service Configuration
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-You can override service configuration in your site package:
-
-.. code-block:: yaml
-
-   services:
-     RRP\T3Toon\Service\ToonEncoder:
-       arguments:
-         $config:
-           escape_style: 'custom'
-           min_rows_to_tabular: 3
