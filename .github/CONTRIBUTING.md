@@ -13,10 +13,10 @@ email, or any other method with the owners of this repository before making a ch
 ## Making Changes
 
 * Create a topic branch from where you want to base your work.
-  * This is usually the master branch.
+  * This is usually the main branch.
   * Only target release branches if you are certain your fix must be on that
     branch.
-  * To quickly create a topic branch based on master; `git checkout -b
+  * To quickly create a topic branch based on main; `git checkout -b
     fix/main/my_contribution main`. Please avoid working directly on the
     `main` branch.
 * Make commits of logical units.
@@ -88,4 +88,4 @@ This code of conduct applies both within project spaces and in public spaces whe
 Instances of abusive, harassing, or otherwise unacceptable behavior may be reported by opening an issue or contacting one or more of the project maintainers.
 
 This Code of Conduct is adapted from the [Contributor Covenant](http://contributor-covenant.org),
-version 1.2.0, available at [http://contributor-covenant.org/version/1/2/0/](http://contributor-covenant.org/version/1/2/0/)
+version 1.3.0, available at [http://contributor-covenant.org/version/1/2/0/](http://contributor-covenant.org/version/1/2/0/)

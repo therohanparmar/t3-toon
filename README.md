@@ -102,7 +102,7 @@ Full documentation, configuration, and advanced usage are available here:
 
 | TYPO3       | PHP   | Extension Version |
 | ----------- | ----- | ----------------- |
-| 11.x – 14.x | ≥ 7.4 | v1.2.0            |
+| 11.x – 14.x | ≥ 7.4 | v1.3.0            |
 
 ---
 

@@ -14,7 +14,7 @@ A clear and concise description of what you expected to happen.
 
 **Environment**
 - TYPO3 version(s): [e.g. 13.4.1, 12.4.23]
-- t3-toon version: [e.g. 1.2.0]
+- t3-toon version: [e.g. 1.3.0]
 - Is your TYPO3 installation set up with Composer (Composer Mode): [yes, no]
 - OS: [e.g. OSX 10.13.4, Windows 10]
 
