@@ -16,5 +16,5 @@
 .fleet/
 /var/
 /rector.php
-.phpunit.result.cache/
-.phpunit.cache/
+.phpunit.result.cache
+.phpunit.cache

@@ -35,7 +35,7 @@ class Toon
      * @param mixed $input JSON, array, or object
      * @return string TOON representation
      */
-    public function convert(mixed $input): string
+    public function convert($input): string
     {
         return $this->converter->toToon($input);
     }
@@ -48,7 +48,7 @@ class Toon
      * @param mixed $input JSON, array, or object
      * @return string TOON representation
      */
-    public function encode(mixed $input): string
+    public function encode($input): string
     {
         return $this->convert($input);
     }

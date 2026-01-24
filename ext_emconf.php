@@ -10,7 +10,7 @@ $EM_CONF['rrp_t3toon'] = [
     'version' => '1.2.0',
     'constraints' => [
         'depends' => [
-            'typo3' => '12.0.0-14.9.99',
+            'typo3' => '11.0.0-14.9.99',
         ],
         'conflicts' => [],
         'suggests' => [],
