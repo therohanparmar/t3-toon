@@ -34,7 +34,8 @@ class ToonDecoder
 
         // Iterate through each line in the TOON input.
         foreach ($lines as $rawLine) {
-            if ($rawLine === null) continue;
+            if ($rawLine === null)
+                continue;
             $line = rtrim($rawLine, "\r\n");
 
             // Skip blank lines safely.
@@ -56,7 +57,7 @@ class ToonDecoder
             $current = &$stack[count($stack) - 1];
 
             if (preg_match('/^items\[(\d+)\]\{([^\}]*)\}:$/', $content, $m)) {
-                $expectedCount = (int)$m[1];
+                $expectedCount = (int) $m[1];
                 $fieldList = array_map('trim', array_filter(array_map('trim', explode(',', $m[2])), function ($v) {
                     return $v !== '';
                 }));
@@ -186,18 +187,22 @@ class ToonDecoder
      * - "3.14" → float 3.14
      * - "" → null
      */
-    protected function coerceValue(string $s): mixed
+    protected function coerceValue(string $s)
     {
         $s = trim($s);
-        if ($s === '') return null;
+        if ($s === '')
+            return null;
 
         if ($this->config['coerce_scalar_types']) {
             $lower = strtolower($s);
-            if ($lower === 'true') return true;
-            if ($lower === 'false') return false;
-            if ($lower === 'null') return null;
+            if ($lower === 'true')
+                return true;
+            if ($lower === 'false')
+                return false;
+            if ($lower === 'null')
+                return null;
             if (is_numeric($s)) {
-                return str_contains($s, '.') ? (float)$s : (int)$s;
+                return strpos($s, '.') !== false ? (float) $s : (int) $s;
             }
         }
         return $s;

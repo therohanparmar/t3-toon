@@ -17,8 +17,8 @@ installed. You do not have to activate it manually.
 Requirements
 ------------
 
-* TYPO3 CMS 12.0.0 - 14.9.99
-* PHP 8.0 or higher
+* TYPO3 CMS 11.0.0 - 14.9.99
+* PHP 7.4 or higher
 
 Update the database scheme
 ---------------------------

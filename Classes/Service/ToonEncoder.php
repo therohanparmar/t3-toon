@@ -23,7 +23,7 @@ class ToonEncoder
      * @param mixed $input Input data (array, object, JSON string, scalar)
      * @return string TOON-formatted string
      */
-    public function toToon(mixed $input): string
+    public function toToon($input): string
     {
         // ------------------------------------------------------------------
         // Case 1: JSON string — attempt decoding first.
@@ -67,7 +67,7 @@ class ToonEncoder
      * @param int   $depth Current indentation level.
      * @return string Formatted TOON representation.
      */
-    protected function valueToToon(mixed $value, int $depth = 0): string
+    protected function valueToToon($value, int $depth = 0): string
     {
         $indent = str_repeat('  ', $depth);
 
@@ -164,7 +164,7 @@ class ToonEncoder
      * @param mixed $v Scalar value
      * @return string Escaped and formatted representation
      */
-    protected function inlineScalar(mixed $v): string
+    protected function inlineScalar($v): string
     {
         if ($v === null) {
             return '';
@@ -231,7 +231,7 @@ class ToonEncoder
     // ----------------------------------------------------------------------
 
     /** Check if a value is scalar or null. */
-    protected function isScalar(mixed $v): bool
+    protected function isScalar($v): bool
     {
         return is_null($v) || is_scalar($v);
     }
@@ -240,7 +240,7 @@ class ToonEncoder
     protected function looksLikeJson(string $s): bool
     {
         $s = trim($s);
-        return $s !== '' && (str_starts_with($s, '{') || str_starts_with($s, '['));
+        return $s !== '' && ((strpos($s, '{') === 0) || (strpos($s, '[') === 0));
     }
 
     /** Determine if an array is sequential (non-associative). */
