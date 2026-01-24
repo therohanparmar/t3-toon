@@ -22,7 +22,7 @@ jobs:
           tools: composer
 
       - name: Install TYPO3 v11
-        run: compiler require typo3/cms-core:"^11.5" --no-update
+        run: composer require typo3/cms-core:"^11.5" --no-update
 
       - name: Fix PHPUnit Configuration Path
         run: sed -i 's|../../vendor|vendor|g' phpunit.xml.dist
