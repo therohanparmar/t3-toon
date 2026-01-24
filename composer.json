@@ -88,7 +88,7 @@
         "typo3/cms-core": "^11.5 || ^12.4 || ^13.4 || ^14.0"
     },
     "require-dev": {
-        "typo3/testing-framework": "^7.0 || ^8.0"
+        "typo3/testing-framework": "^7 || ^8 || ^9"
     },
     "autoload": {
         "psr-4": {
@@ -103,6 +103,12 @@
     "extra": {
         "typo3/cms": {
             "extension-key": "rrp_t3toon"
+        }
+    },
+    "config": {
+        "allow-plugins": {
+            "typo3/class-alias-loader": true,
+            "typo3/cms-composer-installers": true
         }
     },
     "scripts": {
