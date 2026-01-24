@@ -9,7 +9,7 @@
                project-contact="https://github.com/therohanparmar/t3-toon/issues"
                project-repository="https://github.com/therohanparmar/t3-toon"
                project-issues="https://github.com/therohanparmar/t3-toon/issues"
-               edit-on-github-branch="master"
+               edit-on-github-branch="main"
                edit-on-github="therohanparmar/t3-toon"
                typo3-core-preferred="13.4"
                interlink-shortcode="rrp/t3-toon"
