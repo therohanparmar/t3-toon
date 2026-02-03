@@ -3,7 +3,7 @@
 ### Token-Optimized Object Notation for AI & LLM Workflows
 
 <p align="center">
-  <img src="https://img.shields.io/badge/Version-1.1.0-blue" alt="Version 1.1.0">
+  <img src="https://img.shields.io/badge/Version-1.3.0-blue" alt="Version 1.3.0">
   <img src="https://img.shields.io/github/license/sbsaga/toon" alt="License">
   <img src="https://img.shields.io/badge/TYPO3-11,12,13,14-orange" alt="TYPO3 11-14">
   <img src="https://img.shields.io/badge/PHP-7.4%2B-red" alt="PHP 7.4+">
