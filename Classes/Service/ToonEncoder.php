@@ -4,13 +4,14 @@ declare(strict_types=1);
 
 namespace RRP\T3Toon\Service;
 
+use RRP\T3Toon\Domain\Model\EncodeOptions;
 use RRP\T3Toon\Utility\ToonHelper;
 
 class ToonEncoder
 {
     protected array $config;
 
-    public function __construct(array $config = [])
+    public function __construct()
     {
         $this->config = ToonHelper::getConfig();
     }
@@ -21,41 +22,48 @@ class ToonEncoder
      * Supports arrays, objects, JSON strings, and scalars.
      *
      * @param mixed $input Input data (array, object, JSON string, scalar)
+     * @param EncodeOptions|null $options Optional overrides (indent, delimiter, etc.); null = extension config
      * @return string TOON-formatted string
      */
-    public function toToon($input): string
+    public function toToon($input, ?EncodeOptions $options = null): string
     {
-        // ------------------------------------------------------------------
-        // Case 1: JSON string — attempt decoding first.
-        // ------------------------------------------------------------------
-        // Automatically detects JSON-like strings and converts them into arrays
-        // before proceeding. This allows flexible CLI and API inputs.
-        if (is_string($input) && $this->looksLikeJson($input)) {
-            $decoded = json_decode($input, true);
-            if (json_last_error() === JSON_ERROR_NONE && is_array($decoded)) {
-                return $this->valueToToon($decoded);
+        $previousConfig = $this->config;
+        try {
+            if ($options !== null) {
+                $this->config = ToonHelper::getConfigMerged($options->toConfigOverrides());
             }
-        }
 
-        // ------------------------------------------------------------------
-        // Case 2: Convert objects to associative arrays recursively.
-        // ------------------------------------------------------------------
-        // Ensures that any stdClass or custom DTOs are handled uniformly.
-        if (is_object($input)) {
-            $input = json_decode(json_encode($input), true);
-        }
+            // ------------------------------------------------------------------
+            // Case 1: JSON string — attempt decoding first.
+            // ------------------------------------------------------------------
+            if (is_string($input) && $this->looksLikeJson($input)) {
+                $decoded = json_decode($input, true);
+                if (json_last_error() === JSON_ERROR_NONE && is_array($decoded)) {
+                    return $this->valueToToon($decoded);
+                }
+            }
 
-        // ------------------------------------------------------------------
-        // Case 3: Arrays or iterable structures — recursively convert.
-        // ------------------------------------------------------------------
-        if (is_array($input) || $input instanceof \Traversable) {
-            return $this->valueToToon((array) $input);
-        }
+            // ------------------------------------------------------------------
+            // Case 2: Convert objects to associative arrays recursively.
+            // ------------------------------------------------------------------
+            if (is_object($input)) {
+                $input = json_decode(json_encode($input), true);
+            }
 
-        // ------------------------------------------------------------------
-        // Case 4: Fallback for scalars (numbers, strings, bool, null).
-        // ------------------------------------------------------------------
-        return $this->textToToon((string) $input);
+            // ------------------------------------------------------------------
+            // Case 3: Arrays or iterable structures — recursively convert.
+            // ------------------------------------------------------------------
+            if (is_array($input) || $input instanceof \Traversable) {
+                return $this->valueToToon((array) $input);
+            }
+
+            // ------------------------------------------------------------------
+            // Case 4: Fallback for scalars (numbers, strings, bool, null).
+            // ------------------------------------------------------------------
+            return $this->textToToon((string) $input);
+        } finally {
+            $this->config = $previousConfig;
+        }
     }
 
     /**
@@ -69,7 +77,8 @@ class ToonEncoder
      */
     protected function valueToToon($value, int $depth = 0): string
     {
-        $indent = str_repeat('  ', $depth);
+        $indentSize = (int) ($this->config['indent'] ?? 2);
+        $indent = str_repeat(str_repeat(' ', $indentSize), $depth);
 
         // ------------------------------------------------------------------
         // Handle arrays
@@ -80,6 +89,13 @@ class ToonEncoder
                 // If it’s a list of objects with identical keys, render as a table.
                 if ($this->isArrayOfUniformObjects($value)) {
                     return $this->arrayOfObjectsToToon($value, $depth);
+                }
+
+                // Optional: spec-style single line [N]: v1,v2,v3 for primitive arrays (root or nested)
+                if (!empty($value) && $this->isArrayOfScalars($value) && ($this->config['primitive_array_header'] ?? false)) {
+                    $delimiter = (string) ($this->config['delimiter'] ?? ',');
+                    $parts = array_map(fn($v) => $this->inlineScalar($v), $value);
+                    return $indent . '[' . count($value) . ']: ' . implode($delimiter, $parts);
                 }
 
                 // Otherwise, render line by line (scalar or nested).
@@ -99,15 +115,21 @@ class ToonEncoder
             // ------------------------------------------------------------------
             // Associative arrays (key-value objects)
             // ------------------------------------------------------------------
-            // Preserve key order exactly as given (no sorting).
             $lines = [];
             foreach ($value as $key => $val) {
                 $safeKey = $this->safeKey((string) $key);
 
+                // Optional: key[N]: v1,v2,v3 for primitive lists
+                if (is_array($val) && $this->isSequentialArray($val) && !empty($val) && $this->isArrayOfScalars($val) && ($this->config['primitive_array_header'] ?? false)) {
+                    $delimiter = (string) ($this->config['delimiter'] ?? ',');
+                    $parts = array_map(fn($v) => $this->inlineScalar($v), $val);
+                    $lines[] = $indent . $safeKey . '[' . count($val) . ']: ' . implode($delimiter, $parts);
+                    continue;
+                }
+
                 if ($this->isScalar($val)) {
                     $lines[] = $indent . "{$safeKey}: " . $this->inlineScalar($val);
                 } else {
-                    // Print key followed by nested structure
                     $lines[] = $indent . "{$safeKey}:";
                     $lines[] = $this->valueToToon($val, $depth + 1);
                 }
@@ -130,16 +152,17 @@ class ToonEncoder
      */
     protected function arrayOfObjectsToToon(array $arr, int $depth = 0): string
     {
+        $indentSize = (int) ($this->config['indent'] ?? 2);
+        $delimiter = (string) ($this->config['delimiter'] ?? ',');
+        $indentUnit = str_repeat(' ', $indentSize);
+        $indent = str_repeat($indentUnit, $depth);
+
         if (empty($arr)) {
-            // Edge case: empty list
-            return str_repeat('  ', $depth) . 'items[0]{}:';
+            return $indent . 'items[0]{}:';
         }
 
-        // Preserve the key order from the first row (no sorting)
         $first = (array) $arr[0];
         $fields = array_keys($first);
-        $indent = str_repeat('  ', $depth);
-
         $header = $indent . 'items[' . count($arr) . ']{' . implode(',', $fields) . '}:';
         $rows = [];
         $max = min(count($arr), (int) $this->config['max_preview_items']);
@@ -147,10 +170,9 @@ class ToonEncoder
         for ($i = 0; $i < $max; $i++) {
             $row = [];
             foreach ($fields as $f) {
-                // Safely format each scalar field
                 $row[] = $this->inlineScalar($arr[$i][$f] ?? null);
             }
-            $rows[] = $indent . '  ' . implode(',', $row);
+            $rows[] = $indent . $indentUnit . implode($delimiter, $row);
         }
 
         return $header . "\n" . implode("\n", $rows);
@@ -247,6 +269,17 @@ class ToonEncoder
     protected function isSequentialArray(array $arr): bool
     {
         return array_values($arr) === $arr;
+    }
+
+    /** True if all elements are scalar or null. */
+    protected function isArrayOfScalars(array $arr): bool
+    {
+        foreach ($arr as $item) {
+            if (!($item === null || is_scalar($item))) {
+                return false;
+            }
+        }
+        return true;
     }
 
     /**

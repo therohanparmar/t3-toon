@@ -4,19 +4,18 @@
 Configuration
 ===============
 
-T3Toon can be configured through the TYPO3 Extension Manager or by setting
-extension configuration.
+T3Toon can be configured through the TYPO3 Extension Manager (Install Tool) or by passing per-call options via :ref:`EncodeOptions <options-reference>` and :ref:`DecodeOptions <options-reference>`.
 
-Access Configuration
+Access configuration
 --------------------
 
 Navigate to :guilabel:`Admin Tools > Settings > Extension Configuration` and
 select :guilabel:`T3Toon – Token-Efficient Data Format for TYPO3 AI`.
 
-Configuration Options
-----------------------
+Extension configuration options
+--------------------------------
 
-Escape Style
+Escape style
 ~~~~~~~~~~~~
 
 :Type: string
@@ -24,10 +23,10 @@ Escape Style
 :Description: The style used for escaping special characters in TOON format.
 
 Available options:
-* ``backslash`` - Use backslash escaping (e.g., ``Hello\, world``)
+* ``backslash`` — Use backslash escaping (e.g. ``Hello\, world``)
 
-Minimum Rows for Tabular Format
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Minimum rows for tabular format
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 :Type: integer
 :Default: ``2``
@@ -42,8 +41,8 @@ converted to a more compact tabular format:
      1,false
      2,true
 
-Maximum Preview Items
-~~~~~~~~~~~~~~~~~~~~~
+Maximum preview items
+~~~~~~~~~~~~~~~~~~~~
 
 :Type: integer
 :Default: ``200``
@@ -51,8 +50,8 @@ Maximum Preview Items
 
 This prevents extremely large arrays from generating unreadable output.
 
-Coerce Scalar Types
-~~~~~~~~~~~~~~~~~~~
+Coerce scalar types
+~~~~~~~~~~~~~~~~~~
 
 :Type: boolean
 :Default: ``1`` (enabled)
@@ -65,20 +64,38 @@ When enabled:
 * ``"123"`` → ``123`` (integer)
 * ``"45.67"`` → ``45.67`` (float)
 
-Programmatic Configuration
---------------------------
+Programmatic defaults (code)
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-You can also access configuration programmatically:
+The following options are used by the service with defaults in code when not set in Extension Configuration:
+
+* **indent** (int, default ``2``) — Spaces per indentation level
+* **delimiter** (string, default ``','``) — Field delimiter for tabular rows (comma or tab)
+* **primitive_array_header** (bool, default ``false``) — Emit primitive arrays as ``[N]: v1,v2,v3`` (spec-style)
+
+Per-call options
+----------------
+
+You can override encoding and decoding behavior per call using :ref:`EncodeOptions <options-reference>` and :ref:`DecodeOptions <options-reference>` instead of changing global configuration. See :ref:`Options (EncodeOptions & DecodeOptions) <options-quick>`.
+
+Programmatic access
+-------------------
 
 .. code-block:: php
 
    use RRP\T3Toon\Utility\ToonHelper;
 
    $config = ToonHelper::getConfig();
-   // Returns:
+   // Returns full config including defaults:
    // [
+   //     'indent' => 2,
+   //     'delimiter' => ',',
    //     'escape_style' => 'backslash',
    //     'min_rows_to_tabular' => 2,
    //     'max_preview_items' => 200,
    //     'coerce_scalar_types' => true,
+   //     'primitive_array_header' => false,
    // ]
+
+   $merged = ToonHelper::getConfigMerged(['indent' => 4]);
+   // Merges overrides with extension config (e.g. for one-off encoding).

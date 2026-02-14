@@ -1,3 +1,9 @@
+# cat=settings//10; type=int+; label=LLL:EXT:rrp_t3toon/Resources/Private/Language/locallang_be.xlf:settings.indent;
+indent = 2
+
+# cat=settings//15; type=string; label=LLL:EXT:rrp_t3toon/Resources/Private/Language/locallang_be.xlf:settings.delimiter;
+delimiter = ,
+
 # cat=settings//20; type=string; label=LLL:EXT:rrp_t3toon/Resources/Private/Language/locallang_be.xlf:settings.escape_style;
 escape_style = backslash
 
@@ -9,3 +15,6 @@ max_preview_items = 200
 
 # cat=settings//50; type=boolean; label=LLL:EXT:rrp_t3toon/Resources/Private/Language/locallang_be.xlf:settings.coerce_scalar_types;
 coerce_scalar_types = 1
+
+# cat=settings//55; type=boolean; label=LLL:EXT:rrp_t3toon/Resources/Private/Language/locallang_be.xlf:settings.primitive_array_header;
+primitive_array_header = 0

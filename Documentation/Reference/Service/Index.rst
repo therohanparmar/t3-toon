@@ -3,98 +3,80 @@
 Service API Reference
 =====================
 
-Main Service Class: Toon
-------------------------
-
-The main service class provides static and instance methods for converting between
-PHP arrays/JSON and TOON format.
+Main service class: Toon
+-----------------------
 
 Class: ``RRP\T3Toon\Service\Toon``
 
-Static Methods
-~~~~~~~~~~~~~~
+The main service provides **instance** and **static** methods for converting between PHP arrays/JSON and TOON format, and for token estimation. Pass ``null`` for options to use extension configuration.
 
-convert()
-^^^^^^^^^
+Instance methods (recommended for TYPO3 DI)
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+convert($input, ?EncodeOptions $options = null): string
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 Convert arbitrary input into TOON format.
 
-:Signature: ``static string convert(mixed $input)``
 :Parameters:
-   * ``$input`` (mixed) - JSON string, array, or object
-:Returns: ``string`` - TOON representation
-:Throws: ``RRP\T3Toon\Exception\ToonEncodeException``
+   * ``$input`` (mixed) — JSON string, array, or object
+   * ``$options`` (EncodeOptions|null) — Optional; null = extension config
+:Returns: TOON string
 
-.. code-block:: php
+encode($input, ?EncodeOptions $options = null): string
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-   use RRP\T3Toon\Service\Toon;
+Encode arbitrary input into TOON format (alias for convert).
 
-   $data = ['key' => 'value'];
-   $toon = Toon::convert($data);
-
-encode()
-^^^^^^^^
-
-Encode arbitrary input into TOON format (alias for ``convert()``).
-
-:Signature: ``static string encode(mixed $input)``
-:Parameters:
-   * ``$input`` (mixed) - JSON string, array, or object
-:Returns: ``string`` - TOON representation
-:Throws: ``RRP\T3Toon\Exception\ToonEncodeException``
-
-.. code-block:: php
-
-   use RRP\T3Toon\Service\Toon;
-
-   $toon = Toon::encode($data);
-
-decode()
-^^^^^^^^
+decode(string $toon, ?DecodeOptions $options = null): array
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 Decode a TOON string into an associative PHP array.
 
-:Signature: ``static array decode(string $toon)``
 :Parameters:
-   * ``$toon`` (string) - TOON-formatted string
-:Returns: ``array`` - Decoded PHP array
-:Throws: ``RRP\T3Toon\Exception\ToonDecodeException``
+   * ``$toon`` (string) — TOON-formatted string
+   * ``$options`` (DecodeOptions|null) — Optional; null = extension config
+:Returns: array
+:Throws: ``RRP\T3Toon\Exception\ToonDecodeException`` when input is malformed
+
+estimateTokens(string $toon): array
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+Estimate the number of tokens in a TOON string (words/chars heuristic).
+
+:Parameters: ``$toon`` (string) — TOON string
+:Returns: array with keys ``words`` (int), ``chars`` (int), ``tokens_estimate`` (int)
+
+Static methods (convenience, no DI)
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+convertStatic($input, ?EncodeOptions $options = null): string
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+Static equivalent of convert().
+
+encodeStatic($input, ?EncodeOptions $options = null): string
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+Static equivalent of encode().
+
+decodeStatic(string $toon, ?DecodeOptions $options = null): array
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+Static equivalent of decode(). Throws ``ToonDecodeException`` on malformed input.
+
+estimateTokensStatic(string $toon): array
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+Static equivalent of estimateTokens().
+
+Example
+~~~~~~~
 
 .. code-block:: php
 
    use RRP\T3Toon\Service\Toon;
-
-   $toon = "user: ABC\nactive: true";
-   $data = Toon::decode($toon);
-
-estimateTokens()
-^^^^^^^^^^^^^^^^
-
-Estimate the number of tokens in a TOON string.
-
-:Signature: ``static array estimateTokens(string $toon)``
-:Parameters:
-   * ``$toon`` (string) - TOON-formatted string
-:Returns: ``array`` - Array with keys:
-   * ``words`` (int) - Word count
-   * ``chars`` (int) - Character count
-   * ``tokens_estimate`` (int) - Estimated token count
-
-.. code-block:: php
-
-   use RRP\T3Toon\Service\Toon;
-
-   $stats = Toon::estimateTokens($toon);
-   // Returns: ['words' => 20, 'chars' => 182, 'tokens_estimate' => 19]
-
-Instance Methods
-~~~~~~~~~~~~~~~~
-
-The same methods are available as instance methods for dependency injection:
-
-.. code-block:: php
-
-   use RRP\T3Toon\Service\Toon;
+   use RRP\T3Toon\Domain\Model\EncodeOptions;
    use TYPO3\CMS\Core\Utility\GeneralUtility;
 
    $toon = GeneralUtility::makeInstance(Toon::class);
@@ -102,7 +84,9 @@ The same methods are available as instance methods for dependency injection:
    $decoded = $toon->decode($result);
    $stats = $toon->estimateTokens($result);
 
-Internal Services
+   $compact = Toon::encodeStatic($data, EncodeOptions::compact());
+
+Internal services
 -----------------
 
 ToonEncoder
@@ -112,7 +96,7 @@ Class: ``RRP\T3Toon\Service\ToonEncoder``
 
 Handles conversion from PHP arrays/objects/JSON to TOON format.
 
-:Method: ``toToon(mixed $input): string``
+:Method: ``toToon(mixed $input, ?EncodeOptions $options = null): string``
 
 ToonDecoder
 ~~~~~~~~~~~
@@ -121,10 +105,10 @@ Class: ``RRP\T3Toon\Service\ToonDecoder``
 
 Handles conversion from TOON format to PHP arrays.
 
-:Method: ``fromToon(string $toon): array``
+:Method: ``fromToon(string $toon, ?DecodeOptions $options = null): array``
+:Throws: ``RRP\T3Toon\Exception\ToonDecodeException`` when input is malformed
 
-
-Utility Classes
+Utility classes
 ---------------
 
 ToonHelper
@@ -132,6 +116,26 @@ ToonHelper
 
 Class: ``RRP\T3Toon\Utility\ToonHelper``
 
-Provides configuration access and utility methods.
+:Method: ``static getConfig(): array`` — Get full extension configuration (including code defaults)
+:Method: ``static getConfigMerged(array $overrides): array`` — Merge overrides with extension config
 
-:Method: ``static array getConfig()`` - Get extension configuration
+Domain models (options)
+-----------------------
+
+EncodeOptions
+~~~~~~~~~~~~~
+
+Class: ``RRP\T3Toon\Domain\Model\EncodeOptions``
+
+Constructor: ``(?int $indent = null, ?string $delimiter = null, ?int $maxPreviewItems = null, ?string $escapeStyle = null, ?int $minRowsToTabular = null, ?bool $primitiveArrayHeader = null)``
+
+Presets: ``default()``, ``compact()``, ``readable()``, ``tabular()``. See :ref:`Options (EncodeOptions & DecodeOptions) <options-reference>`.
+
+DecodeOptions
+~~~~~~~~~~~~~
+
+Class: ``RRP\T3Toon\Domain\Model\DecodeOptions``
+
+Constructor: ``(?bool $coerceScalarTypes = null)``
+
+Presets: ``default()``, ``lenient()``. See :ref:`Options (EncodeOptions & DecodeOptions) <options-reference>`.

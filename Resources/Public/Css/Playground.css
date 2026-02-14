@@ -1,0 +1,66 @@
+/**
+ * TOON Playground backend module – minimal styles
+ */
+.toon-playground-container {
+  min-height: calc(100vh - 120px);
+}
+
+.toon-playground-editor {
+  min-height: 450px;
+  resize: vertical;
+}
+
+.toon-playground-editor:focus {
+  background-color: #fff !important;
+  outline: none;
+  border: 1px solid #007bff !important;
+}
+
+.toon-playground-monospace {
+  font-family: 'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, monospace !important;
+  font-size: 0.9rem;
+}
+
+.toon-playground-hr-text {
+  display: flex;
+  align-items: center;
+  text-align: center;
+}
+
+.toon-playground-hr-text::before,
+.toon-playground-hr-text::after {
+  content: '';
+  flex: 1;
+  border-bottom: 1px solid #dee2e6;
+}
+
+.toon-playground-hr-text:not(:empty)::before {
+  margin-right: 0.5em;
+}
+
+.toon-playground-hr-text:not(:empty)::after {
+  margin-left: 0.5em;
+}
+
+.toon-playground-shadow-inner {
+  box-shadow: inset 0 2px 4px 0 rgba(0, 0, 0, 0.06);
+}
+
+.toon-playground-transition {
+  transition: all 0.3s ease;
+}
+
+.toon-playground-badge-soft {
+  background-color: #f8f9fa;
+  border: 1px solid #e9ecef;
+  padding: 2px 8px;
+  border-radius: 4px;
+}
+
+.toon-playground-link:hover {
+  color: #007bff !important;
+}
+
+.toon-playground-controls {
+  max-width: 180px;
+}

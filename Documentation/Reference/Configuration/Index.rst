@@ -3,25 +3,29 @@
 Configuration Reference
 =======================
 
-Extension Configuration
+Extension configuration
 ----------------------
 
-The extension configuration is stored in the TYPO3 Extension Manager and can be
-accessed programmatically via ``ToonHelper::getConfig()``.
+The extension configuration is stored in the TYPO3 Extension Manager (Install Tool) and is read by the service. Additional defaults (indent, delimiter, primitive_array_header) are applied in code when not set. Access the full config programmatically via ``ToonHelper::getConfig()``.
 
-Configuration Array Structure
+Configuration array structure
 -----------------------------
 
 .. code-block:: php
 
    [
-       'escape_style' => 'backslash',        // string
-       'min_rows_to_tabular' => 2,            // int
-       'max_preview_items' => 200,            // int
-       'coerce_scalar_types' => true,         // bool
+       'indent' => 2,                    // int, spaces per level (code default)
+       'delimiter' => ',',               // string, ',' or "\t" (code default)
+       'escape_style' => 'backslash',    // string, from Install Tool
+       'min_rows_to_tabular' => 2,       // int, from Install Tool
+       'max_preview_items' => 200,       // int, from Install Tool
+       'coerce_scalar_types' => true,    // bool, from Install Tool
+       'primitive_array_header' => false, // bool, code default
    ]
 
-Accessing Configuration
+Install Tool (Extension Configuration) provides: ``escape_style``, ``min_rows_to_tabular``, ``max_preview_items``, ``coerce_scalar_types``. The service adds defaults for ``indent``, ``delimiter``, and ``primitive_array_header`` when not present.
+
+Accessing configuration
 -----------------------
 
 .. code-block:: php
@@ -29,12 +33,15 @@ Accessing Configuration
    use RRP\T3Toon\Utility\ToonHelper;
 
    $config = ToonHelper::getConfig();
-   $escapeStyle = $config['escape_style'];
+   $indent = $config['indent'];
+   $merged = ToonHelper::getConfigMerged(['indent' => 4]);
 
 Configuration via Extension Manager
 -----------------------------------
 
-Navigate to :guilabel:`Admin Tools > Settings > Extension Configuration` and
-select :guilabel:`T3Toon – Token-Efficient Data Format for TYPO3 AI`.
+Navigate to :guilabel:`Admin Tools > Settings > Extension Configuration` and select :guilabel:`T3Toon – Token-Efficient Data Format for TYPO3 AI`.
 
-All configuration options are available through the Extension Manager interface.
+EncodeOptions and DecodeOptions (per-call)
+------------------------------------------
+
+See :ref:`Options (EncodeOptions & DecodeOptions) <options-reference>` for overriding encoding/decoding per call instead of changing global configuration.

@@ -11,16 +11,33 @@ class ToonHelper
 {
 
     /**
-     * @return array
+     * Default configuration from extension settings.
+     *
+     * @return array<string, mixed>
      */
     public static function getConfig(): array
     {
+        $settings = self::getExtensionSettings();
         return [
-            'escape_style' => (string) (self::getExtensionSettings()['escape_style'] ?? 'backslash'),
-            'min_rows_to_tabular' => (int) (self::getExtensionSettings()['min_rows_to_tabular'] ?? 2),
-            'max_preview_items' => (int) (self::getExtensionSettings()['max_preview_items'] ?? 200),
-            'coerce_scalar_types' => (bool) (self::getExtensionSettings()['coerce_scalar_types'] ?? 1),
+            'indent' => (int) ($settings['indent'] ?? 2),
+            'delimiter' => (string) ($settings['delimiter'] ?? ','),
+            'escape_style' => (string) ($settings['escape_style'] ?? 'backslash'),
+            'min_rows_to_tabular' => (int) ($settings['min_rows_to_tabular'] ?? 2),
+            'max_preview_items' => (int) ($settings['max_preview_items'] ?? 200),
+            'coerce_scalar_types' => (bool) ($settings['coerce_scalar_types'] ?? true),
+            'primitive_array_header' => (bool) ($settings['primitive_array_header'] ?? false),
         ];
+    }
+
+    /**
+     * Configuration merged with optional overrides (e.g. from EncodeOptions/DecodeOptions).
+     *
+     * @param array<string, mixed> $overrides Keys matching getConfig() override extension config
+     * @return array<string, mixed>
+     */
+    public static function getConfigMerged(array $overrides): array
+    {
+        return array_merge(self::getConfig(), $overrides);
     }
 
     /**

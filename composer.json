@@ -88,6 +88,7 @@
         "typo3/cms-core": "^11.5 || ^12.4 || ^13.4 || ^14.0"
     },
     "require-dev": {
+        "phpstan/phpstan": "^1.10",
         "typo3/testing-framework": "^7 || ^8 || ^9"
     },
     "autoload": {
@@ -116,10 +117,12 @@
     },
     "scripts": {
         "test:unit": "../../vendor/bin/phpunit -c phpunit.xml.dist",
+        "analyse": "phpstan analyse -c phpstan.neon",
         "doc-watch": "docker run --rm -it --pull always -v $(pwd)/Documentation:/project/Documentation -v $(pwd)/Documentation-GENERATED-temp:/project/Documentation-GENERATED-temp -p 1337:1337 ghcr.io/typo3-documentation/render-guides:latest --config=Documentation --watch"
     },
     "scripts-descriptions": {
         "test:unit": "Run unit tests",
+        "analyse": "Run PHPStan static analysis",
         "doc-watch": "Render documentation with watcher"
     }
 }

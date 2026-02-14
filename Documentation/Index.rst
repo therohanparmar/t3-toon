@@ -52,9 +52,9 @@ It's crafted for developers working with **ChatGPT, Gemini, Claude, Mistral, or 
 
         A quick introduction on how to install and use this extension.
 
-    ..  card:: :ref:`Usage <quickStart>`
+    ..  card:: :ref:`Usage <quickUsage>`
 
-        Learn how to use T3Toon for encoding and decoding data, token estimation, and analytics.
+        Encode, decode, options, error handling, global helpers, Fluid ViewHelpers, and the TOON Playground backend module.
 
     ..  card:: :ref:`Reference <reference>`
 

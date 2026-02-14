@@ -4,20 +4,32 @@ declare(strict_types=1);
 
 namespace RRP\T3Toon\Service;
 
+use RRP\T3Toon\Domain\Model\DecodeOptions;
+use RRP\T3Toon\Exception\ToonDecodeException;
 use RRP\T3Toon\Utility\ToonHelper;
 
 class ToonDecoder
 {
     protected array $config;
 
-    public function __construct(array $config = [])
+    public function __construct()
     {
         $this->config = ToonHelper::getConfig();
     }
 
-    public function fromToon(string $toon): array
+    /**
+     * @param DecodeOptions|null $options Optional overrides (e.g. coerceScalarTypes); null = extension config
+     * @throws ToonDecodeException When the TOON input is malformed
+     */
+    public function fromToon(string $toon, ?DecodeOptions $options = null): array
     {
-        // Split TOON into individual lines, handling both \n and \r\n endings.
+        $previousConfig = $this->config;
+        try {
+            if ($options !== null) {
+                $this->config = ToonHelper::getConfigMerged($options->toConfigOverrides());
+            }
+
+            // Split TOON into individual lines, handling both \n and \r\n endings.
         $lines = preg_split("/\r?\n/", $toon);
 
         // Root container that holds the decoded structure.
@@ -33,9 +45,11 @@ class ToonDecoder
         $seenKeysStack = [[]];
 
         // Iterate through each line in the TOON input.
-        foreach ($lines as $rawLine) {
-            if ($rawLine === null)
+        foreach ($lines as $lineIndex => $rawLine) {
+            $lineNumber = $lineIndex + 1;
+            if ($rawLine === null) {
                 continue;
+            }
             $line = rtrim($rawLine, "\r\n");
 
             // Skip blank lines safely.
@@ -55,6 +69,27 @@ class ToonDecoder
             }
 
             $current = &$stack[count($stack) - 1];
+
+            // Primitive array: key[N]: v1,v2,v3 or (at root) [N]: v1,v2,v3
+            if (preg_match('/^([A-Za-z0-9_\-\.]+)\[(\d+)\]:\s*(.*)$/s', $content, $primM)) {
+                $key = strtolower($primM[1]);
+                $count = (int) $primM[2];
+                $rest = trim($primM[3]);
+                $cells = $rest !== '' ? $this->splitCsvEscaped($rest) : [];
+                $values = array_map(fn($c) => $this->coerceValue($c), $cells);
+                $current[$key] = array_slice($values, 0, $count);
+                continue;
+            }
+            if (preg_match('/^\[(\d+)\]:\s*(.*)$/s', $content, $rootPrimM)) {
+                $count = (int) $rootPrimM[1];
+                $rest = trim($rootPrimM[2]);
+                $cells = $rest !== '' ? $this->splitCsvEscaped($rest) : [];
+                $values = array_map(fn($c) => $this->coerceValue($c), array_slice($cells, 0, $count));
+                foreach ($values as $v) {
+                    $current[] = $v;
+                }
+                continue;
+            }
 
             if (preg_match('/^items\[(\d+)\]\{([^\}]*)\}:$/', $content, $m)) {
                 $expectedCount = (int) $m[1];
@@ -93,6 +128,15 @@ class ToonDecoder
                     $current['__table__']['rows'][] = $rowObject;
                     continue;
                 }
+            }
+
+            // Line contains colon but invalid key:value format (e.g. "key : value" or ": value")
+            if (strpos($content, ':') !== false && !preg_match('/^([A-Za-z0-9_\-\.]+):(?:\s*(.*))?$/', $content)) {
+                throw new ToonDecodeException(
+                    'Invalid key:value format (key must be identifier, no space before colon)',
+                    $lineNumber,
+                    $content,
+                );
             }
 
             if (preg_match('/^([A-Za-z0-9_\-\.]+):(?:\s*(.*))?$/', $content, $mm)) {
@@ -135,11 +179,18 @@ class ToonDecoder
                 continue;
             }
 
-            throw new \Exception("Malformed TOON line at indent {$indent}: {$content}");
+            throw new ToonDecodeException(
+                "Malformed TOON line at indent {$indent}",
+                $lineNumber,
+                $content !== '' ? $content : null,
+            );
         }
 
-        // Recursively finalize and normalize any embedded tables.
-        return $this->finalizeTables($root);
+            // Recursively finalize and normalize any embedded tables.
+            return $this->finalizeTables($root);
+        } finally {
+            $this->config = $previousConfig;
+        }
     }
 
     /**
