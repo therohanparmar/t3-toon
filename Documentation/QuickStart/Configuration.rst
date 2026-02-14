@@ -1,13 +1,13 @@
 .. _configuration:
 
 ===============
-Configuration
+Configuration 
 ===============
 
 T3Toon can be configured through the TYPO3 Extension Manager or by setting
-extension configuration.
+extension configuration. 
 
-Access Configuration
+Access Configuration 
 --------------------
 
 Navigate to :guilabel:`Admin Tools > Settings > Extension Configuration` and
