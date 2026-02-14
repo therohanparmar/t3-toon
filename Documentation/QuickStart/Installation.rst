@@ -11,14 +11,13 @@ the extension EXT:rrp_t3toon via composer:
 
    composer require rrp/t3-toon
 
-In TYPO3 installations above version 11.5 the extension will be automatically
-installed. You do not have to activate it manually.
+
 
 Requirements
 ------------
 
-* TYPO3 CMS 11.0.0 – 14.9.99
-* PHP 7.4 or higher
+* TYPO3 CMS 12.4.0 – 14.9.99
+* PHP 8.1 or higher
 
 Update the database scheme
 --------------------------

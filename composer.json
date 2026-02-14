@@ -84,8 +84,8 @@
         "docs": "https://docs.typo3.org/p/rrp/t3-toon/main/en-us/"
     },
     "require": {
-        "php": "^7.4 || ^8.0",
-        "typo3/cms-core": "^11.5 || ^12.4 || ^13.4 || ^14.0"
+        "php": "^8.1",
+        "typo3/cms-core": "^12.4 || ^13.4 || ^14.0"
     },
     "require-dev": {
         "phpstan/phpstan": "^1.10",

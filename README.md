@@ -5,8 +5,8 @@
 <p align="center">
   <img src="https://img.shields.io/badge/Version-1.3.0-blue" alt="Version 1.3.0">
   <img src="https://img.shields.io/github/license/therohanparmar/t3-toon" alt="License">
-  <img src="https://img.shields.io/badge/TYPO3-11,12,13,14-orange" alt="TYPO3 11-14">
-  <img src="https://img.shields.io/badge/PHP-7.4%2B-red" alt="PHP 7.4+">
+  <img src="https://img.shields.io/badge/TYPO3-12,13,14-orange" alt="TYPO3 12-14">
+  <img src="https://img.shields.io/badge/PHP-8.1%2B-red" alt="PHP 8.1+">
 </p>
 
 ---
@@ -194,7 +194,7 @@ Full documentation, configuration, and advanced usage are available here:
 
 | TYPO3       | PHP   | Extension Version |
 | ----------- | ----- | ----------------- |
-| 11.x – 14.x | ≥ 7.4 | v1.3.0            |
+| 12.x – 14.x | ≥ 8.1 | v1.3.0            |
 
 ### Format and spec (future)
 
