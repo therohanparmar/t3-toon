@@ -25,7 +25,7 @@ T3Toon is perfect for:
 * **Data Preprocessing**: Streamline complex structured inputs
 * **Logging & Debugging**: Store compact, readable structured logs
 * **Database Storage**: Reduce JSON storage size while preserving structure
-* **Developer Tools**: Perfect for previews and compact dashboards
+* **Developer Tools**: Perfect for previews and compact dashboards (e.g. TOON Playground backend module)
 
 Why T3Toon?
 -----------
@@ -71,3 +71,10 @@ Example Comparison
        true,2
 
 **Result**: ~67% size reduction and ~66.8% fewer tokens while retaining complete data accuracy.
+
+Format and specification
+-------------------------
+
+This extension uses a **TYPO3-optimized TOON format**: key-value lines, ``items[N]{fields}:`` for tabular arrays, configurable indent and delimiter. It is **inspired by** but not identical to the `TOON Specification <https://github.com/toon-format/spec>`_. For full spec compliance and interoperability with other TOON implementations (e.g. `toon-php <https://github.com/HelgeSverre/toon-php>`_), a future version may add a **spec mode** or an optional bridge. The current format remains stable and suitable for TYPO3 AI integrations.
+
+Optional **primitive array header** (``[N]: v1,v2,v3``) can be enabled via :ref:`EncodeOptions <options-reference>` or extension configuration for spec-style output.

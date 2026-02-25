@@ -4,9 +4,9 @@
 
 <p align="center">
   <img src="https://img.shields.io/badge/Version-1.3.0-blue" alt="Version 1.3.0">
-  <img src="https://img.shields.io/github/license/sbsaga/toon" alt="License">
-  <img src="https://img.shields.io/badge/TYPO3-11,12,13,14-orange" alt="TYPO3 11-14">
-  <img src="https://img.shields.io/badge/PHP-7.4%2B-red" alt="PHP 7.4+">
+  <img src="https://img.shields.io/github/license/therohanparmar/t3-toon" alt="License">
+  <img src="https://img.shields.io/badge/TYPO3-12,13,14-orange" alt="TYPO3 12-14">
+  <img src="https://img.shields.io/badge/PHP-8.1%2B-red" alt="PHP 8.1+">
 </p>
 
 ---
@@ -56,26 +56,118 @@ composer require rrp/t3-toon
 
 ## 🧠 Quick Usage Example
 
-    use RRP\T3Toon\Service\Toon;
-    use TYPO3\CMS\Core\Utility\GeneralUtility;
+**Static API (convenience, no DI):**
 
-    $data = [
-        'user' => 'ABC',
-        'tasks' => [
-            ['id' => 1, 'done' => false],
-            ['id' => 2, 'done' => true],
-        ],
-    ];
+```php
+use RRP\T3Toon\Service\Toon;
 
-    echo GeneralUtility::makeInstance(Toon::class)->convert($data);
+$data = ['user' => 'ABC', 'tasks' => [['id' => 1, 'done' => false], ['id' => 2, 'done' => true]]];
+echo Toon::encodeStatic($data);
+// or: Toon::convertStatic($data);
+
+$decoded = Toon::decodeStatic($toonString);
+$estimate = Toon::estimateTokensStatic($toonString);
+```
+
+**Instance API (recommended in TYPO3 for dependency injection):**
+
+```php
+use RRP\T3Toon\Service\Toon;
+use TYPO3\CMS\Core\Utility\GeneralUtility;
+
+$toon = GeneralUtility::makeInstance(Toon::class);
+echo $toon->convert($data);
+$decoded = $toon->decode($toonString);
+```
 
 **Output (TOON):**
 
-    user: ABC
-    tasks:
-      items[2]{id,done}:
-        1,false
-        2,true
+```
+user: ABC
+tasks:
+  items[2]{id,done}:
+    1,false
+    2,true
+```
+
+### Configuration options
+
+Override encoding/decoding per call with **EncodeOptions** and **DecodeOptions** (null = use extension config from Install Tool):
+
+```php
+use RRP\T3Toon\Domain\Model\EncodeOptions;
+use RRP\T3Toon\Domain\Model\DecodeOptions;
+use RRP\T3Toon\Service\Toon;
+
+// Encoding: indent, delimiter (comma/tab), max_preview_items, etc.
+$compact = Toon::encodeStatic($data, EncodeOptions::compact());   // indent 0
+$readable = Toon::encodeStatic($data, EncodeOptions::readable()); // indent 4
+$tabular = Toon::encodeStatic($data, EncodeOptions::tabular());  // tab delimiter
+
+// Decoding: coerce scalar types (true/false, numbers) or keep as strings
+$data = Toon::decodeStatic($toon);
+$strings = Toon::decodeStatic($toon, DecodeOptions::lenient());   // no coercion
+```
+
+Extension config (Install Tool → Extension Manager → rrp_t3toon) provides defaults: `escape_style`, `min_rows_to_tabular`, `max_preview_items`, `coerce_scalar_types`.
+
+### Global helpers
+
+When the extension is loaded, these global functions are available (no `use` needed):
+
+```php
+toon($value);                    // encode (alias for Toon::encodeStatic)
+toon_decode($toon);              // decode
+toon_compact($value);            // encode with EncodeOptions::compact()
+toon_readable($value);           // encode with EncodeOptions::readable()
+toon_decode_lenient($toon);      // decode without scalar coercion
+toon_estimate_tokens($toon);      // return ['words' => …, 'chars' => …, 'tokens_estimate' => …]
+```
+
+### Fluid ViewHelpers
+
+In Fluid templates, add the namespace and use:
+
+```html
+<html xmlns:toon="http://typo3.org/ns/RRP/T3Toon/ViewHelpers" data-namespace-typo3-fluid="true">
+  <!-- Encode data to TOON -->
+  <toon:encode value="{data}" />
+  <toon:encode value="{data}" options="readable" />
+  <toon:encode value="{data}" options="compact" />
+
+  <!-- Decode TOON and use in loop -->
+  <toon:decode toon="{toonString}" as="decoded">
+    <f:for each="{decoded}" as="item">…</f:for>
+  </toon:decode>
+
+  <!-- Estimate tokens -->
+  <toon:estimateTokens toon="{toonString}" />
+  <toon:estimateTokens toon="{toonString}" as="stats">{stats.tokens_estimate}</toon:estimateTokens>
+</html>
+```
+
+### Backend module (TOON Playground)
+
+In the TYPO3 backend, go to **Tools → TOON Playground** to encode and decode TOON in the browser:
+
+- Paste **JSON** and click **Encode to TOON** or **Encode (compact)** to get TOON output.
+- Paste **TOON** and click **Decode from TOON** to get JSON.
+- The module shows estimated tokens and any error messages.
+
+### Error handling
+
+Decoding malformed TOON throws `RRP\T3Toon\Exception\ToonDecodeException` with line number and snippet:
+
+```php
+use RRP\T3Toon\Exception\ToonDecodeException;
+use RRP\T3Toon\Service\Toon;
+
+try {
+    $data = Toon::decodeStatic($input);
+} catch (ToonDecodeException $e) {
+    // $e->getLineNumber(), $e->getSnippet()
+}
+```
 
 ---
 
@@ -102,7 +194,11 @@ Full documentation, configuration, and advanced usage are available here:
 
 | TYPO3       | PHP   | Extension Version |
 | ----------- | ----- | ----------------- |
-| 11.x – 14.x | ≥ 7.4 | v1.3.0            |
+| 12.x – 14.x | ≥ 8.1 | v1.3.0            |
+
+### Format and spec (future)
+
+This extension uses a **TYPO3-optimized TOON format**: key-value lines, `items[N]{fields}:` for tabular arrays, configurable indent and delimiter. It is **inspired by** but not identical to the [TOON Specification](https://github.com/toon-format/spec). For full spec compliance and interoperability with other TOON implementations (e.g. [toon-php](https://github.com/HelgeSverre/toon-php)), a future version may add a **spec mode** or an optional bridge to `helgesverre/toon`. Current format remains stable and suitable for TYPO3 AI integrations.
 
 ---
 

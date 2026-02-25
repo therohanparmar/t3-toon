@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
+    <file source-language="en" datatype="plaintext" original="EXT:rrp_t3toon/Resources/Private/Language/locallang_mod.xlf" product-name="rrp_t3toon">
+        <header />
+        <body>
+            <trans-unit id="mlang_tabs_tab">
+                <source>TOON Playground</source>
+            </trans-unit>
+            <trans-unit id="playground.title">
+                <source>TOON Playground</source>
+            </trans-unit>
+            <trans-unit id="playground.input_label">
+                <source>Input (JSON for encode, TOON for decode)</source>
+            </trans-unit>
+            <trans-unit id="playground.output_label">
+                <source>Output</source>
+            </trans-unit>
+            <trans-unit id="playground.encode">
+                <source>Encode to TOON</source>
+            </trans-unit>
+            <trans-unit id="playground.decode">
+                <source>Decode from TOON</source>
+            </trans-unit>
+            <trans-unit id="playground.encode_compact">
+                <source>Encode (compact)</source>
+            </trans-unit>
+            <trans-unit id="playground.tokens">
+                <source>Estimated tokens: %d</source>
+            </trans-unit>
+            <trans-unit id="playground.footer_made_with">
+                <source>Made with 🧡 for the TYPO3 Developer by Rohan and Himanshu</source>
+            </trans-unit>
+            <trans-unit id="playground.subtitle">
+                <source>Encode JSON to TOON or decode strings instantly.</source>
+            </trans-unit>
+            <trans-unit id="playground.clear_all">
+                <source>Clear All</source>
+            </trans-unit>
+            <trans-unit id="playground.badge_input">
+                <source>Input</source>
+            </trans-unit>
+            <trans-unit id="playground.or">
+                <source>OR</source>
+            </trans-unit>
+            <trans-unit id="playground.estimated_tokens_label">
+                <source>Estimated tokens</source>
+            </trans-unit>
+            <trans-unit id="playground.copy">
+                <source>Copy</source>
+            </trans-unit>
+            <trans-unit id="playground.copied_to_clipboard">
+                <source>Copied to clipboard!</source>
+            </trans-unit>
+            <trans-unit id="playground.github">
+                <source>GitHub</source>
+            </trans-unit>
+            <trans-unit id="playground.documentation">
+                <source>Documentation</source>
+            </trans-unit>
+            <trans-unit id="playground.clear_confirm">
+                <source>Clear both input and output?</source>
+            </trans-unit>
+            <trans-unit id="playground.clear_confirm_title">
+                <source>Clear All</source>
+            </trans-unit>
+            <trans-unit id="playground.clear_confirm_body">
+                <source>This will clear both the input and output fields. This action cannot be undone.</source>
+            </trans-unit>
+            <trans-unit id="playground.cancel">
+                <source>Cancel</source>
+            </trans-unit>
+            <trans-unit id="playground.confirm_clear">
+                <source>Yes, Clear All</source>
+            </trans-unit>
+            <trans-unit id="playground.placeholder">
+                <source>{"name": "TOON", "items": [1, 2, 3]}</source>
+            </trans-unit>
+            <trans-unit id="playground.error_invalid_json">
+                <source>Invalid JSON input for encode.</source>
+            </trans-unit>
+        </body>
+    </file>
+</xliff>

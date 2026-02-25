@@ -18,9 +18,9 @@ Quick start
 
 #. Start using T3Toon:
 
-   -  Convert JSON to TOON format
+   -  Convert JSON to TOON format (encode/convert)
    -  Decode TOON back to arrays
-   -  Estimate tokens
+   -  Estimate tokens and use per-call options
 
    .. rst-class:: horizbuttons-attention-m
 
@@ -28,12 +28,20 @@ Quick start
 
 #. Configure (optional):
 
-   -  Adjust encoding settings
-   -  Customize compression behavior
+   -  Adjust encoding settings in Extension Configuration
+   -  Override per call with EncodeOptions / DecodeOptions
 
    .. rst-class:: horizbuttons-attention-m
 
    -  :ref:`Configuration <configuration>`
+
+#. Explore more:
+
+   -  :ref:`Options (EncodeOptions & DecodeOptions) <options-quick>`
+   -  :ref:`Error handling <error-handling-quick>`
+   -  :ref:`Global helpers <global-helpers-quick>`
+   -  :ref:`Fluid ViewHelpers <fluid-viewhelpers-quick>`
+   -  :ref:`Backend module (TOON Playground) <backend-module-quick>`
 
 .. toctree::
    :maxdepth: 5
@@ -43,3 +51,8 @@ Quick start
    Installation
    Usage
    Configuration
+   Options
+   ErrorHandling
+   GlobalHelpers
+   FluidViewHelpers
+   BackendModule
