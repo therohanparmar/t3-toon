@@ -60,8 +60,23 @@
             <trans-unit id="playground.clear_confirm">
                 <source>Clear both input and output?</source>
             </trans-unit>
+            <trans-unit id="playground.clear_confirm_title">
+                <source>Clear All</source>
+            </trans-unit>
+            <trans-unit id="playground.clear_confirm_body">
+                <source>This will clear both the input and output fields. This action cannot be undone.</source>
+            </trans-unit>
+            <trans-unit id="playground.cancel">
+                <source>Cancel</source>
+            </trans-unit>
+            <trans-unit id="playground.confirm_clear">
+                <source>Yes, Clear All</source>
+            </trans-unit>
             <trans-unit id="playground.placeholder">
                 <source>{"name": "TOON", "items": [1, 2, 3]}</source>
+            </trans-unit>
+            <trans-unit id="playground.error_invalid_json">
+                <source>Invalid JSON input for encode.</source>
             </trans-unit>
         </body>
     </file>

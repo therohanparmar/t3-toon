@@ -19,6 +19,7 @@ class ToonHelper
     {
         $settings = self::getExtensionSettings();
         return [
+            'enabled' => (bool) ($settings['enabled'] ?? true),
             'indent' => (int) ($settings['indent'] ?? 2),
             'delimiter' => (string) ($settings['delimiter'] ?? ','),
             'escape_style' => (string) ($settings['escape_style'] ?? 'backslash'),
@@ -27,6 +28,14 @@ class ToonHelper
             'coerce_scalar_types' => (bool) ($settings['coerce_scalar_types'] ?? true),
             'primitive_array_header' => (bool) ($settings['primitive_array_header'] ?? false),
         ];
+    }
+
+    /**
+     * Whether TOON encoding is globally enabled.
+     */
+    public static function isEnabled(): bool
+    {
+        return self::getConfig()['enabled'];
     }
 
     /**

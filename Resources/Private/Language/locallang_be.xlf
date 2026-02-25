@@ -3,6 +3,9 @@
     <file source-language="en" datatype="plaintext" original="EXT:rrp_t3toon/Resources/Private/Language/locallang_be.xlf" date="2026-01-11T11:26:11Z" product-name="rrp_t3toon">
         <header />
         <body>
+            <trans-unit id="settings.enabled">
+                <source>Enabled : Global toggle for the TOON converter. When disabled, encoding operations bypass TOON and return standard JSON instead. Decoding of existing TOON data still works normally.</source>
+            </trans-unit>
             <trans-unit id="settings.indent">
                 <source>Indent : Number of spaces per indentation level when encoding TOON (default: 2).</source>
             </trans-unit>

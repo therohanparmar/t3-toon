@@ -5,121 +5,158 @@
 <f:layout name="Module"/>
 
 <f:section name="Content">
-    <div class="container-fluid py-4">
-        <div class="d-flex flex-column toon-playground-container">
+    <div class="toon-playground">
 
-            <div class="mb-4 d-flex justify-content-between align-items-end">
-                <div>
-                    <h1 class="display-6 fw-bold text-primary mb-1">
-                        <f:translate key="LLL:EXT:rrp_t3toon/Resources/Private/Language/locallang_mod.xlf:playground.title"/>
-                    </h1>
-                    <p class="text-muted mb-0">
-                        <f:translate key="LLL:EXT:rrp_t3toon/Resources/Private/Language/locallang_mod.xlf:playground.subtitle"/>
-                    </p>
-                </div>
-                <button type="button" class="btn btn-danger btn-sm" id="toon-clear-btn" data-confirm-message="{f:translate(key:'LLL:EXT:rrp_t3toon/Resources/Private/Language/locallang_mod.xlf:playground.clear_confirm')}">
-                    <core:icon identifier="actions-delete" size="small" />
-                    <f:translate key="LLL:EXT:rrp_t3toon/Resources/Private/Language/locallang_mod.xlf:playground.clear_all"/>
-                </button>
+        <div class="toon-playground__header">
+            <div>
+                <h1 class="toon-playground__title">
+                    <f:translate key="LLL:EXT:rrp_t3toon/Resources/Private/Language/locallang_mod.xlf:playground.title"/>
+                </h1>
+                <p class="toon-playground__subtitle">
+                    <f:translate key="LLL:EXT:rrp_t3toon/Resources/Private/Language/locallang_mod.xlf:playground.subtitle"/>
+                </p>
             </div>
+            <button type="button"
+                    class="btn btn-default btn-sm"
+                    id="toon-clear-btn">
+                <core:icon identifier="actions-delete" size="small"/>
+                <f:translate key="LLL:EXT:rrp_t3toon/Resources/Private/Language/locallang_mod.xlf:playground.clear_all"/>
+            </button>
+        </div>
 
-            <f:if condition="{error}">
-                <div class="alert alert-danger shadow-sm mb-4 border-start border-4 border-danger" role="alert">
-                    <div class="d-flex align-items-center">
-                        <core:icon identifier="actions-exclamation" size="small" />
-                        <div>{error}</div>
+        <f:if condition="{error}">
+            <div class="toon-playground__alert" role="alert">
+                <core:icon identifier="actions-exclamation-triangle" size="small"/>
+                <span>{error}</span>
+            </div>
+        </f:if>
+
+        <form method="post" action="" id="toon-form">
+            <div class="toon-playground__card">
+                <div class="row g-0">
+
+                    <div class="col-12 col-lg-5">
+                        <div class="toon-playground__panel">
+                            <div class="toon-playground__panel-header">
+                                <label for="toon-input" class="toon-playground__label">
+                                    <f:translate key="LLL:EXT:rrp_t3toon/Resources/Private/Language/locallang_mod.xlf:playground.input_label"/>
+                                </label>
+                                <span class="toon-playground__badge">
+                                    <f:translate key="LLL:EXT:rrp_t3toon/Resources/Private/Language/locallang_mod.xlf:playground.badge_input"/>
+                                </span>
+                            </div>
+                            <textarea class="toon-playground__editor"
+                                      id="toon-input"
+                                      name="input"
+                                      placeholder="{f:translate(key:'LLL:EXT:rrp_t3toon/Resources/Private/Language/locallang_mod.xlf:playground.placeholder')}">{input}</textarea>
+                        </div>
                     </div>
-                </div>
-            </f:if>
 
-            <form method="post" action="" id="toon-form" class="flex-grow-1">
-                <div class="card shadow-sm border-0 mb-4 overflow-hidden">
-                    <div class="card-body p-0">
-                        <div class="row g-0">
+                    <div class="col-12 col-lg-2">
+                        <div class="toon-playground__controls">
+                            <button type="submit" name="mode" value="encode"
+                                    class="btn btn-primary btn-sm toon-playground__btn">
+                                <f:translate key="LLL:EXT:rrp_t3toon/Resources/Private/Language/locallang_mod.xlf:playground.encode"/>
+                                <core:icon identifier="actions-arrow-right-alt" size="small"/>
+                            </button>
 
-                            <div class="col-12 col-lg-5 p-4">
-                                <div class="d-flex justify-content-between align-items-center mb-3">
-                                    <label for="toon-input" class="form-label fw-bold text-uppercase small text-muted mb-0">
-                                        <f:translate key="LLL:EXT:rrp_t3toon/Resources/Private/Language/locallang_mod.xlf:playground.input_label"/>
-                                    </label>
-                                    <span class="badge toon-playground-badge-soft text-muted fw-normal">
-                                        <f:translate key="LLL:EXT:rrp_t3toon/Resources/Private/Language/locallang_mod.xlf:playground.badge_input"/>
+                            <button type="submit" name="mode" value="compact"
+                                    class="btn btn-default btn-sm toon-playground__btn">
+                                <f:translate key="LLL:EXT:rrp_t3toon/Resources/Private/Language/locallang_mod.xlf:playground.encode_compact"/>
+                            </button>
+
+                            <div class="toon-playground__divider">
+                                <f:translate key="LLL:EXT:rrp_t3toon/Resources/Private/Language/locallang_mod.xlf:playground.or"/>
+                            </div>
+
+                            <button type="submit" name="mode" value="decode"
+                                    class="btn btn-outline-primary btn-sm toon-playground__btn">
+                                <core:icon identifier="actions-arrow-left-alt" size="small"/>
+                                <f:translate key="LLL:EXT:rrp_t3toon/Resources/Private/Language/locallang_mod.xlf:playground.decode"/>
+                            </button>
+
+                            <f:if condition="{tokenEstimate}">
+                                <div class="toon-playground__tokens">
+                                    <span class="toon-playground__tokens-label">
+                                        <f:translate key="LLL:EXT:rrp_t3toon/Resources/Private/Language/locallang_mod.xlf:playground.estimated_tokens_label"/>
                                     </span>
+                                    <span class="toon-playground__tokens-value">{tokenEstimate}</span>
                                 </div>
-                                <textarea class="form-control toon-playground-monospace border-0 bg-light p-3 toon-playground-editor"
-                                          id="toon-input" name="input"
-                                          placeholder="{f:translate(key:'LLL:EXT:rrp_t3toon/Resources/Private/Language/locallang_mod.xlf:playground.placeholder')}">{input}</textarea>
+                            </f:if>
+                        </div>
+                    </div>
+
+                    <div class="col-12 col-lg-5">
+                        <div class="toon-playground__panel toon-playground__panel--output">
+                            <div class="toon-playground__panel-header">
+                                <label for="toon-output" class="toon-playground__label">
+                                    <f:translate key="LLL:EXT:rrp_t3toon/Resources/Private/Language/locallang_mod.xlf:playground.output_label"/>
+                                </label>
+                                <button type="button" class="btn btn-default btn-sm" id="copy-btn">
+                                    <core:icon identifier="actions-clipboard" size="small"/>
+                                    <f:translate key="LLL:EXT:rrp_t3toon/Resources/Private/Language/locallang_mod.xlf:playground.copy"/>
+                                </button>
                             </div>
-
-                            <div class="col-12 col-lg-2 d-flex flex-column align-items-center justify-content-center bg-white border-start border-end py-5 px-3">
-                                <div class="d-grid gap-3 w-100 toon-playground-controls">
-                                    <button type="submit" name="mode" value="encode" class="btn btn-primary btn-lg shadow-sm py-3">
-                                        <strong><f:translate key="LLL:EXT:rrp_t3toon/Resources/Private/Language/locallang_mod.xlf:playground.encode"/></strong>
-                                        <core:icon identifier="actions-arrow-right-alt" size="small" />
-                                    </button>
-
-                                    <button type="submit" name="mode" value="compact" class="btn btn-secondary btn-sm">
-                                        <f:translate key="LLL:EXT:rrp_t3toon/Resources/Private/Language/locallang_mod.xlf:playground.encode_compact"/>
-                                    </button>
-
-                                    <div class="toon-playground-hr-text text-muted my-3 small text-uppercase fw-bold">
-                                        <f:translate key="LLL:EXT:rrp_t3toon/Resources/Private/Language/locallang_mod.xlf:playground.or"/>
-                                    </div>
-
-                                    <button type="submit" name="mode" value="decode" class="btn btn-dark btn-lg shadow-sm py-3">
-                                        <core:icon identifier="actions-arrow-left-alt" size="small" />
-                                        <strong><f:translate key="LLL:EXT:rrp_t3toon/Resources/Private/Language/locallang_mod.xlf:playground.decode"/></strong>
-                                    </button>
-
-                                    <f:if condition="{tokenEstimate}">
-                                        <div class="mt-4 p-2 bg-info bg-opacity-10 border border-info border-opacity-25 rounded text-center">
-                                            <div class="text-info small fw-bold">
-                                                <f:translate key="LLL:EXT:rrp_t3toon/Resources/Private/Language/locallang_mod.xlf:playground.estimated_tokens_label"/>
-                                            </div>
-                                            <div class="h4 mb-0 text-info">{tokenEstimate}</div>
-                                        </div>
-                                    </f:if>
-                                </div>
-                            </div>
-
-                            <div class="col-12 col-lg-5 p-4 bg-light">
-                                <div class="d-flex justify-content-between align-items-center mb-3">
-                                    <label for="toon-output" class="form-label fw-bold text-uppercase small text-muted mb-0">
-                                        <f:translate key="LLL:EXT:rrp_t3toon/Resources/Private/Language/locallang_mod.xlf:playground.output_label"/>
-                                    </label>
-                                    <button type="button" class="btn btn-sm btn-success px-3" id="copy-btn">
-                                        <core:icon identifier="actions-clipboard" size="small" />
-                                        <f:translate key="LLL:EXT:rrp_t3toon/Resources/Private/Language/locallang_mod.xlf:playground.copy"/>
-                                    </button>
-                                </div>
-                                <textarea class="form-control toon-playground-monospace border-0 p-3 toon-playground-shadow-inner toon-playground-editor"
-                                          id="toon-output" name="output"
-                                          readonly>{output}</textarea>
-                                <div id="copy-status" class="text-success small mt-2 opacity-0 toon-playground-transition">
-                                    <core:icon identifier="actions-check-circle" size="small" />
-                                    <f:translate key="LLL:EXT:rrp_t3toon/Resources/Private/Language/locallang_mod.xlf:playground.copied_to_clipboard"/>
-                                </div>
+                            <textarea class="toon-playground__editor"
+                                      id="toon-output"
+                                      name="output"
+                                      readonly>{output}</textarea>
+                            <div id="copy-status" class="toon-playground__copy-status">
+                                <core:icon identifier="actions-check" size="small"/>
+                                <f:translate key="LLL:EXT:rrp_t3toon/Resources/Private/Language/locallang_mod.xlf:playground.copied_to_clipboard"/>
                             </div>
                         </div>
                     </div>
-                </div>
-            </form>
 
-            <footer class="mt-auto pt-4 pb-3 border-top d-flex justify-content-between align-items-center text-muted small">
-                <div>
-                    <f:translate key="LLL:EXT:rrp_t3toon/Resources/Private/Language/locallang_mod.xlf:playground.footer_made_with"/>
                 </div>
-                <div class="d-flex align-items-center">
-                    <a href="https://github.com/therohanparmar/t3-toon" target="_blank" rel="noopener" class="text-muted text-decoration-none me-3 toon-playground-link">
-                        <core:icon identifier="actions-brand-github" size="small" /> <f:translate key="LLL:EXT:rrp_t3toon/Resources/Private/Language/locallang_mod.xlf:playground.github"/>
-                    </a>
-                    <span class="text-muted me-3">|</span>
-                    <a href="https://docs.typo3.org/p/rrp/t3-toon/main/en-us/" target="_blank" rel="noopener" class="text-muted text-decoration-none toon-playground-link">
-                        <core:icon identifier="actions-notebook-typoscript" size="small" /> <f:translate key="LLL:EXT:rrp_t3toon/Resources/Private/Language/locallang_mod.xlf:playground.documentation"/>
-                    </a>
+            </div>
+        </form>
+
+        <div class="toon-modal" id="toon-clear-modal" aria-hidden="true" role="dialog" aria-labelledby="toon-modal-title">
+            <div class="toon-modal__backdrop" data-toon-modal-close></div>
+            <div class="toon-modal__dialog">
+                <div class="toon-modal__header">
+                    <div class="toon-modal__icon">
+                        <core:icon identifier="actions-delete" size="small"/>
+                    </div>
+                    <h3 class="toon-modal__title" id="toon-modal-title">
+                        <f:translate key="LLL:EXT:rrp_t3toon/Resources/Private/Language/locallang_mod.xlf:playground.clear_confirm_title"/>
+                    </h3>
                 </div>
-            </footer>
+                <div class="toon-modal__body">
+                    <f:translate key="LLL:EXT:rrp_t3toon/Resources/Private/Language/locallang_mod.xlf:playground.clear_confirm_body"/>
+                </div>
+                <div class="toon-modal__footer">
+                    <button type="button" class="btn btn-default btn-sm" data-toon-modal-close>
+                        <f:translate key="LLL:EXT:rrp_t3toon/Resources/Private/Language/locallang_mod.xlf:playground.cancel"/>
+                    </button>
+                    <button type="button" class="btn btn-danger btn-sm" id="toon-clear-confirm-btn">
+                        <core:icon identifier="actions-delete" size="small"/>
+                        <f:translate key="LLL:EXT:rrp_t3toon/Resources/Private/Language/locallang_mod.xlf:playground.confirm_clear"/>
+                    </button>
+                </div>
+            </div>
         </div>
+
+        <footer class="toon-playground__footer">
+            <span>
+                Made with 🧡 for the TYPO3 Developer by
+                <a href="https://www.linkedin.com/in/rohanrparmar" target="_blank" rel="noopener">Rohan</a> and
+                <a href="https://www.linkedin.com/in/himanshu-ramavat/" target="_blank" rel="noopener">Himanshu</a>
+            </span>
+            <div class="toon-playground__footer-links">
+                <a href="https://github.com/therohanparmar/t3-toon" target="_blank" rel="noopener" class="toon-playground__link">
+                    <core:icon identifier="actions-brand-github" size="small"/>
+                    <f:translate key="LLL:EXT:rrp_t3toon/Resources/Private/Language/locallang_mod.xlf:playground.github"/>
+                </a>
+                <span class="toon-playground__footer-sep">|</span>
+                <a href="https://docs.typo3.org/p/rrp/t3-toon/main/en-us/" target="_blank" rel="noopener" class="toon-playground__link">
+                    <core:icon identifier="actions-notebook-typoscript" size="small"/>
+                    <f:translate key="LLL:EXT:rrp_t3toon/Resources/Private/Language/locallang_mod.xlf:playground.documentation"/>
+                </a>
+            </div>
+        </footer>
+
     </div>
 </f:section>
 </html>

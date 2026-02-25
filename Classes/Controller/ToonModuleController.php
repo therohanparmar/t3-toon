@@ -52,7 +52,9 @@ class ToonModuleController
                             $output = $toon->encode($data, $options);
                             $tokenEstimate = $toon->estimateTokens($output);
                         } else {
-                            $error = 'Invalid JSON input for encode.';
+                            $error = $this->getLanguageService()->sL(
+                                'LLL:EXT:rrp_t3toon/Resources/Private/Language/locallang_mod.xlf:playground.error_invalid_json'
+                            );
                         }
                     }
                 } catch (ToonDecodeException $e) {
@@ -76,5 +78,10 @@ class ToonModuleController
         ]);
 
         return $moduleTemplate->renderResponse('ToonModule/Playground');
+    }
+
+    private function getLanguageService(): LanguageService
+    {
+        return $GLOBALS['LANG'];
     }
 }

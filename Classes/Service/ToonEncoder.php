@@ -34,6 +34,23 @@ class ToonEncoder
             }
 
             // ------------------------------------------------------------------
+            // Guard: when TOON is globally disabled, fall back to JSON output.
+            // ------------------------------------------------------------------
+            if (empty($this->config['enabled'])) {
+                $data = $input;
+                if (is_string($data) && $this->looksLikeJson($data)) {
+                    $decoded = json_decode($data, true);
+                    if (json_last_error() === JSON_ERROR_NONE) {
+                        $data = $decoded;
+                    }
+                }
+                if (is_object($data)) {
+                    $data = json_decode(json_encode($data), true);
+                }
+                return json_encode($data, JSON_PRETTY_PRINT | JSON_UNESCAPED_UNICODE);
+            }
+
+            // ------------------------------------------------------------------
             // Case 1: JSON string — attempt decoding first.
             // ------------------------------------------------------------------
             if (is_string($input) && $this->looksLikeJson($input)) {

@@ -1,3 +1,6 @@
+# cat=settings//5; type=boolean; label=LLL:EXT:rrp_t3toon/Resources/Private/Language/locallang_be.xlf:settings.enabled;
+enabled = 1
+
 # cat=settings//10; type=int+; label=LLL:EXT:rrp_t3toon/Resources/Private/Language/locallang_be.xlf:settings.indent;
 indent = 2
 
