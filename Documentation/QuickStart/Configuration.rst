@@ -1,7 +1,7 @@
 .. _configuration:
 
 ===============
-Configuration
+Configuration 
 ===============
 
 T3Toon can be configured through the TYPO3 Extension Manager (Install Tool) or by passing per-call options via :ref:`EncodeOptions <options-reference>` and :ref:`DecodeOptions <options-reference>`.
