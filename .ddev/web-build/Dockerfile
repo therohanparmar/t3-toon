@@ -11,7 +11,7 @@ RUN echo "<li><h2>TYPO3 12.4 LTS</h2><a href="https://v12.${DDEV_SITENAME}.ddev.
 RUN echo "<li><h2>TYPO3 13.4 LTS</h2><a href="https://v13.${DDEV_SITENAME}.ddev.site/">Frontend</a> | <a href="https://v13.${DDEV_SITENAME}.ddev.site/typo3/">Backend</a></li>" >> /var/www/html/index.html
 RUN echo "</ul>" >> /var/www/html/index.html
 RUN echo "<hr>" >> /var/www/html/index.html
-RUN echo "<h3>TYPO3 Backend</h3><ul><li><b>User:</b> <code>admin</code></li><li><b>Password:</b> <code>Password:joh316</code> (also Install Tool)</li></ul>" >> /var/www/html/index.html
+RUN echo "<h3>TYPO3 Backend</h3><ul><li><b>User:</b> <code>admin</code></li><li><b>Password:</b> configured via <code>.ddev/.env</code></li><li>Create it from <code>.ddev/.env.template</code> before running installers</li></ul>" >> /var/www/html/index.html
 RUN echo "<hr>" >> /var/www/html/index.html
 RUN echo "<h3>Documentation</h3><ul><li>First, perform <code>$ ddev docs</code> on CLI</li><li><b>Then visit URL:</b> https://docs.${DDEV_SITENAME}.ddev.site/</li></ul>" >> /var/www/html/index.html
 RUN echo "</body></html>" >> /var/www/html/index.html
