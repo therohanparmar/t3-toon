@@ -96,15 +96,32 @@ TOON;
         ];
         $toon = $this->toon->encode($input);
         $decoded = $this->toon->decode($toon);
-        // Decoder: tasks is array containing one table (array of rows)
+        // Decoder: tasks is decoded directly as rows
         self::assertSame('ABC', $decoded['user']);
         self::assertIsArray($decoded['tasks']);
-        self::assertCount(1, $decoded['tasks']);
-        self::assertCount(2, $decoded['tasks'][0]);
-        self::assertSame(1, $decoded['tasks'][0][0]['id']);
-        self::assertFalse($decoded['tasks'][0][0]['done']);
-        self::assertSame(2, $decoded['tasks'][0][1]['id']);
-        self::assertTrue($decoded['tasks'][0][1]['done']);
+        self::assertCount(2, $decoded['tasks']);
+        self::assertSame(1, $decoded['tasks'][0]['id']);
+        self::assertFalse($decoded['tasks'][0]['done']);
+        self::assertSame(2, $decoded['tasks'][1]['id']);
+        self::assertTrue($decoded['tasks'][1]['done']);
+    }
+
+    public function testRoundTripEncodeDecodeWithTabularDelimiter(): void
+    {
+        $input = [
+            'tasks' => [
+                ['id' => 1, 'done' => false],
+                ['id' => 2, 'done' => true],
+            ],
+        ];
+        $toon = $this->toon->encode($input, EncodeOptions::tabular());
+        self::assertStringContainsString("\t", $toon);
+        $decoded = $this->toon->decode($toon);
+        self::assertCount(2, $decoded['tasks']);
+        self::assertSame(1, $decoded['tasks'][0]['id']);
+        self::assertFalse($decoded['tasks'][0]['done']);
+        self::assertSame(2, $decoded['tasks'][1]['id']);
+        self::assertTrue($decoded['tasks'][1]['done']);
     }
 
     public function testDecodeMalformedThrowsToonDecodeException(): void

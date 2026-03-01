@@ -60,9 +60,21 @@ items[2]{id,name}:
 TOON;
         $decoded = $this->decoder->fromToon($toon);
         self::assertIsArray($decoded);
-        self::assertCount(1, $decoded);
-        self::assertIsArray($decoded[0]);
-        self::assertSame([['id' => 1, 'name' => 'Alice'], ['id' => 2, 'name' => 'Bob']], $decoded[0]);
+        self::assertSame([['id' => 1, 'name' => 'Alice'], ['id' => 2, 'name' => 'Bob']], $decoded);
+    }
+
+    public function testFromToonTabularItemsWithTabDelimiter(): void
+    {
+        $toon = "items[2]{id,name}:\n  1\tAlice\n  2\tBob";
+        $decoded = $this->decoder->fromToon($toon);
+        self::assertSame([['id' => 1, 'name' => 'Alice'], ['id' => 2, 'name' => 'Bob']], $decoded);
+    }
+
+    public function testFromToonPrimitiveArrayHeaderWithTabDelimiter(): void
+    {
+        $toon = "tags[3]: one\ttwo\tthree";
+        $decoded = $this->decoder->fromToon($toon);
+        self::assertSame(['one', 'two', 'three'], $decoded['tags']);
     }
 
     public function testFromToonCoercesTypes(): void
@@ -103,5 +115,12 @@ TOON;
         $decoded = $this->decoder->fromToon($toon);
         self::assertSame(1, $decoded['a']);
         self::assertSame(2, $decoded['b']);
+    }
+
+    public function testFromToonRepeatedScalarKeyBecomesList(): void
+    {
+        $toon = "id: 1\nid: 2\nid: 3";
+        $decoded = $this->decoder->fromToon($toon);
+        self::assertSame([1, 2, 3], $decoded['id']);
     }
 }

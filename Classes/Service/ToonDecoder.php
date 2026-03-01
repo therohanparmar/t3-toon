@@ -30,161 +30,156 @@ class ToonDecoder
             }
 
             // Split TOON into individual lines, handling both \n and \r\n endings.
-        $lines = preg_split("/\r?\n/", $toon);
+            $lines = preg_split("/\r?\n/", $toon);
 
-        // Root container that holds the decoded structure.
-        $root = [];
+            // Root container that holds the decoded structure.
+            $root = [];
 
-        // Stack of container references for nested structures.
-        $stack = [&$root];
+            // Stack of container references for nested structures.
+            $stack = [&$root];
 
-        // Stack that tracks indentation depth to handle nested mappings and arrays.
-        $indentStack = [-1];
+            // Stack that tracks indentation depth to handle nested mappings and arrays.
+            $indentStack = [-1];
 
-        // Track keys at each level to detect when an object should pivot into a list.
-        $seenKeysStack = [[]];
-
-        // Iterate through each line in the TOON input.
-        foreach ($lines as $lineIndex => $rawLine) {
-            $lineNumber = $lineIndex + 1;
-            if ($rawLine === null) {
-                continue;
-            }
-            $line = rtrim($rawLine, "\r\n");
-
-            // Skip blank lines safely.
-            if (trim($line) === '') {
-                continue;
-            }
-
-            // Count indentation (spaces) to determine current nesting level.
-            $indent = strlen($line) - strlen(ltrim($line, ' '));
-            $content = trim($line);
-
-            // Reduce nesting if current indentation is less than the last stored level.
-            while (count($indentStack) > 1 && $indent <= end($indentStack)) {
-                array_pop($indentStack);
-                array_pop($stack);
-                array_pop($seenKeysStack);
-            }
-
-            $current = &$stack[count($stack) - 1];
-
-            // Primitive array: key[N]: v1,v2,v3 or (at root) [N]: v1,v2,v3
-            if (preg_match('/^([A-Za-z0-9_\-\.]+)\[(\d+)\]:\s*(.*)$/s', $content, $primM)) {
-                $key = strtolower($primM[1]);
-                $count = (int) $primM[2];
-                $rest = trim($primM[3]);
-                $cells = $rest !== '' ? $this->splitCsvEscaped($rest) : [];
-                $values = array_map(fn($c) => $this->coerceValue($c), $cells);
-                $current[$key] = array_slice($values, 0, $count);
-                continue;
-            }
-            if (preg_match('/^\[(\d+)\]:\s*(.*)$/s', $content, $rootPrimM)) {
-                $count = (int) $rootPrimM[1];
-                $rest = trim($rootPrimM[2]);
-                $cells = $rest !== '' ? $this->splitCsvEscaped($rest) : [];
-                $values = array_map(fn($c) => $this->coerceValue($c), array_slice($cells, 0, $count));
-                foreach ($values as $v) {
-                    $current[] = $v;
-                }
-                continue;
-            }
-
-            if (preg_match('/^items\[(\d+)\]\{([^\}]*)\}:$/', $content, $m)) {
-                $expectedCount = (int) $m[1];
-                $fieldList = array_map('trim', array_filter(array_map('trim', explode(',', $m[2])), function ($v) {
-                    return $v !== '';
-                }));
-
-                // Prepare a placeholder container for this TOON table block.
-                $tableContainer = ['__table__' => ['count' => $expectedCount, 'fields' => $fieldList, 'rows' => []]];
-
-                // Attach this table to the current structure (root or nested).
-                $current[] = $tableContainer;
-
-                // Push new reference context for the rows block.
-                $stack[] = &$current[count($current) - 1];
-                $indentStack[] = $indent;
-                $seenKeysStack[] = [];
-                continue;
-            }
-
-            // Handle row entries within a TOON table.
-            if (isset($current['__table__'])) {
-                $rowText = trim($content);
-                if ($rowText !== '') {
-                    // Split fields using escaped CSV logic to preserve commas and special chars.
-                    $rowCells = $this->splitCsvEscaped($rowText);
-                    $fields = $current['__table__']['fields'];
-
-                    // Build associative array row: field => value
-                    $rowObject = [];
-                    foreach ($fields as $i => $field) {
-                        $rowObject[$field] = $this->coerceValue($rowCells[$i] ?? '');
-                    }
-
-                    // Add parsed row into table rows.
-                    $current['__table__']['rows'][] = $rowObject;
+            // Iterate through each line in the TOON input.
+            foreach ($lines as $lineIndex => $rawLine) {
+                $lineNumber = $lineIndex + 1;
+                if ($rawLine === null) {
                     continue;
                 }
-            }
+                $line = rtrim($rawLine, "\r\n");
 
-            // Line contains colon but invalid key:value format (e.g. "key : value" or ": value")
-            if (strpos($content, ':') !== false && !preg_match('/^([A-Za-z0-9_\-\.]+):(?:\s*(.*))?$/', $content)) {
+                // Skip blank lines safely.
+                if (trim($line) === '') {
+                    continue;
+                }
+
+                // Count indentation (spaces) to determine current nesting level.
+                $indent = strlen($line) - strlen(ltrim($line, ' '));
+                $content = trim($line);
+
+                // Reduce nesting if current indentation is less than the last stored level.
+                while (count($indentStack) > 1 && $indent <= end($indentStack)) {
+                    array_pop($indentStack);
+                    array_pop($stack);
+                }
+
+                $current = &$stack[count($stack) - 1];
+
+                // Primitive array: key[N]: v1,v2,v3 or (at root) [N]: v1,v2,v3
+                if (preg_match('/^([A-Za-z0-9_\-\.]+)\[(\d+)\]:\s*(.*)$/s', $content, $primM)) {
+                    $key = strtolower($primM[1]);
+                    $count = (int) $primM[2];
+                    $rest = trim($primM[3]);
+                    $cells = $rest !== '' ? $this->splitDelimitedEscaped($rest) : [];
+                    $values = array_map(fn($c) => $this->coerceValue($c), $cells);
+                    $current[$key] = array_slice($values, 0, $count);
+                    continue;
+                }
+                if (preg_match('/^\[(\d+)\]:\s*(.*)$/s', $content, $rootPrimM)) {
+                    $count = (int) $rootPrimM[1];
+                    $rest = trim($rootPrimM[2]);
+                    $cells = $rest !== '' ? $this->splitDelimitedEscaped($rest) : [];
+                    $values = array_map(fn($c) => $this->coerceValue($c), array_slice($cells, 0, $count));
+                    foreach ($values as $v) {
+                        $current[] = $v;
+                    }
+                    continue;
+                }
+
+                if (preg_match('/^items\[(\d+)\]\{([^\}]*)\}:$/', $content, $m)) {
+                    $expectedCount = (int) $m[1];
+                    $fieldList = array_map('trim', array_filter(array_map('trim', explode(',', $m[2])), function ($v) {
+                        return $v !== '';
+                    }));
+
+                    // Prepare a placeholder container for this TOON table block.
+                    $tableContainer = ['__table__' => ['count' => $expectedCount, 'fields' => $fieldList, 'rows' => []]];
+
+                    // If we are inside an explicitly opened empty child container (`key:`),
+                    // store the table directly there to avoid an extra nesting level.
+                    if ($current === [] && array_is_list($current)) {
+                        $current = $tableContainer;
+                        $stack[] = &$current;
+                    } else {
+                        $current[] = $tableContainer;
+                        $stack[] = &$current[count($current) - 1];
+                    }
+                    $indentStack[] = $indent;
+                    continue;
+                }
+
+                // Handle row entries within a TOON table.
+                if (isset($current['__table__'])) {
+                    $rowText = trim($content);
+                    if ($rowText !== '') {
+                        $rowCells = $this->splitDelimitedEscaped($rowText);
+                        $fields = $current['__table__']['fields'];
+
+                        // Build associative array row: field => value
+                        $rowObject = [];
+                        foreach ($fields as $i => $field) {
+                            $rowObject[$field] = $this->coerceValue($rowCells[$i] ?? '');
+                        }
+
+                        // Add parsed row into table rows.
+                        $current['__table__']['rows'][] = $rowObject;
+                        continue;
+                    }
+                }
+
+                // Line contains colon but invalid key:value format (e.g. "key : value" or ": value")
+                if (strpos($content, ':') !== false && !preg_match('/^([A-Za-z0-9_\-\.]+):(?:\s*(.*))?$/', $content)) {
+                    throw new ToonDecodeException(
+                        'Invalid key:value format (key must be identifier, no space before colon)',
+                        $lineNumber,
+                        $content,
+                    );
+                }
+
+                if (preg_match('/^([A-Za-z0-9_\-\.]+):(?:\s*(.*))?$/', $content, $mm)) {
+                    $key = strtolower($mm[1]);
+                    $val = $mm[2] ?? null;
+
+                    // If value is empty, expect a nested block below this line.
+                    if ($val === null || trim($val) === '') {
+                        if (array_key_exists($key, $current)) {
+                            if (!is_array($current[$key]) || !array_is_list($current[$key])) {
+                                $current[$key] = [$current[$key]];
+                            }
+                            $current[$key][] = [];
+                            $stack[] = &$current[$key][count($current[$key]) - 1];
+                        } else {
+                            $current[$key] = [];
+                            $stack[] = &$current[$key];
+                        }
+                        $indentStack[] = $indent;
+                    } else {
+                        $scalar = $this->coerceValue($this->unescape($val));
+                        if (array_key_exists($key, $current)) {
+                            if (!is_array($current[$key]) || !array_is_list($current[$key])) {
+                                $current[$key] = [$current[$key]];
+                            }
+                            $current[$key][] = $scalar;
+                        } else {
+                            $current[$key] = $scalar;
+                        }
+                    }
+                    continue;
+                }
+
+                // If a line does not fit any pattern, handle as sequential item or throw exception.
+                if ($indent > (end($indentStack) ?? -1)) {
+                    $current[] = $this->coerceValue($this->unescape($content));
+                    continue;
+                }
+
                 throw new ToonDecodeException(
-                    'Invalid key:value format (key must be identifier, no space before colon)',
+                    "Malformed TOON line at indent {$indent}",
                     $lineNumber,
-                    $content,
+                    $content !== '' ? $content : null,
                 );
             }
-
-            if (preg_match('/^([A-Za-z0-9_\-\.]+):(?:\s*(.*))?$/', $content, $mm)) {
-                $key = strtolower($mm[1]);
-                $val = $mm[2] ?? null;
-
-                // Pivot Logic: If key repeats at same level (e.g. 'id'), convert parent to list.
-                if (in_array($key, $seenKeysStack[count($seenKeysStack) - 1])) {
-                    array_pop($stack);
-                    $parent = &$stack[count($stack) - 1];
-                    $parentKey = array_key_last($parent);
-                    if (!isset($parent[$parentKey][0])) {
-                        $parent[$parentKey] = [$parent[$parentKey]];
-                    }
-                    $parent[$parentKey][] = [];
-                    $stack[] = &$parent[$parentKey][array_key_last($parent[$parentKey])];
-                    $current = &$stack[count($stack) - 1];
-                    $seenKeysStack[count($seenKeysStack) - 1] = [];
-                }
-
-                $seenKeysStack[count($seenKeysStack) - 1][] = $key;
-
-                // If value is empty, expect a nested block below this line.
-                if ($val === null || trim($val) === '') {
-                    $current[$key] = [];
-                    // Push new reference level to handle indented child elements.
-                    $stack[] = &$current[$key];
-                    $indentStack[] = $indent;
-                    $seenKeysStack[] = [];
-                } else {
-                    // Simple scalar value line, coerce type and assign.
-                    $current[$key] = $this->coerceValue($this->unescape($val));
-                }
-                continue;
-            }
-
-            // If a line does not fit any pattern, handle as sequential item or throw exception.
-            if ($indent > (end($indentStack) ?? -1)) {
-                $current[] = $this->coerceValue($this->unescape($content));
-                continue;
-            }
-
-            throw new ToonDecodeException(
-                "Malformed TOON line at indent {$indent}",
-                $lineNumber,
-                $content !== '' ? $content : null,
-            );
-        }
 
             // Recursively finalize and normalize any embedded tables.
             return $this->finalizeTables($root);
@@ -199,6 +194,9 @@ class ToonDecoder
      */
     protected function finalizeTables(array $node)
     {
+        if (isset($node['__table__']) && is_array($node['__table__'])) {
+            return $node['__table__']['rows'];
+        }
         foreach ($node as $k => $v) {
             if (is_array($v)) {
                 if (isset($v['__table__'])) {
@@ -214,9 +212,14 @@ class ToonDecoder
     /**
      * Splits a CSV line into fields, respecting backslash-escaped commas.
      */
-    protected function splitCsvEscaped(string $s): array
+    protected function splitDelimitedEscaped(string $s): array
     {
-        $result = preg_split('/(?<!\\\\),/', $s);
+        // Auto-detect row delimiter to support both comma- and tab-delimited TOON.
+        if (strpos($s, "\t") !== false) {
+            $result = explode("\t", $s);
+        } else {
+            $result = preg_split('/(?<!\\\\),/', $s);
+        }
         return array_map(fn($p) => $this->unescape(trim($p)), $result);
     }
 
