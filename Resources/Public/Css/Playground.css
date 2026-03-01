@@ -28,7 +28,9 @@
 
 /* ─── Dark Mode ────────────────────────────────────────── */
 [data-color-scheme="dark"] .toon-playground,
-[data-bs-theme="dark"] .toon-playground {
+[data-bs-theme="dark"] .toon-playground,
+[data-theme="dark"] .toon-playground,
+body.theme-dark .toon-playground {
   --toon-surface: #1e1f2e;
   --toon-surface-alt: #262738;
   --toon-surface-code: #222336;
@@ -44,6 +46,26 @@
   --toon-info-soft: rgba(110, 223, 246, 0.08);
   --toon-success: #75b798;
   --toon-shadow-card: 0 2px 12px rgba(0, 0, 0, 0.25);
+}
+
+@media (prefers-color-scheme: dark) {
+  html:not([data-color-scheme="light"]):not([data-bs-theme="light"]):not([data-theme="light"]) .toon-playground {
+    --toon-surface: #1e1f2e;
+    --toon-surface-alt: #262738;
+    --toon-surface-code: #222336;
+    --toon-text: #e1e3ea;
+    --toon-text-muted: #8b8fa6;
+    --toon-border: #353650;
+    --toon-border-subtle: #2d2e44;
+    --toon-accent: #6ea8fe;
+    --toon-accent-soft: rgba(110, 168, 254, 0.1);
+    --toon-danger: #ea868f;
+    --toon-danger-soft: rgba(234, 134, 143, 0.1);
+    --toon-info: #6edff6;
+    --toon-info-soft: rgba(110, 223, 246, 0.08);
+    --toon-success: #75b798;
+    --toon-shadow-card: 0 2px 12px rgba(0, 0, 0, 0.25);
+  }
 }
 
 /* ─── Container ────────────────────────────────────────── */
@@ -341,8 +363,16 @@
 }
 
 [data-color-scheme="dark"] .toon-modal__backdrop,
-[data-bs-theme="dark"] .toon-modal__backdrop {
+[data-bs-theme="dark"] .toon-modal__backdrop,
+[data-theme="dark"] .toon-modal__backdrop,
+body.theme-dark .toon-modal__backdrop {
   background: rgba(0, 0, 0, 0.65);
+}
+
+@media (prefers-color-scheme: dark) {
+  html:not([data-color-scheme="light"]):not([data-bs-theme="light"]):not([data-theme="light"]) .toon-modal__backdrop {
+    background: rgba(0, 0, 0, 0.65);
+  }
 }
 
 .toon-modal__dialog {
@@ -358,8 +388,16 @@
 }
 
 [data-color-scheme="dark"] .toon-modal__dialog,
-[data-bs-theme="dark"] .toon-modal__dialog {
+[data-bs-theme="dark"] .toon-modal__dialog,
+[data-theme="dark"] .toon-modal__dialog,
+body.theme-dark .toon-modal__dialog {
   box-shadow: 0 8px 32px rgba(0, 0, 0, 0.45);
+}
+
+@media (prefers-color-scheme: dark) {
+  html:not([data-color-scheme="light"]):not([data-bs-theme="light"]):not([data-theme="light"]) .toon-modal__dialog {
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.45);
+  }
 }
 
 .toon-modal--open .toon-modal__dialog {
