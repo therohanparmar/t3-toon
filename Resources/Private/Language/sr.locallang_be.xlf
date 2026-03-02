@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xliff xmlns="urn:oasis:names:tc:xliff:document:1.2" version="1.2">
+  <file source-language="en" datatype="plaintext" original="EXT:rrp_t3toon/Resources/Private/Language/locallang_be.xlf" date="2026-01-11T11:26:11Z" product-name="rrp_t3toon" target-language="sr">
+    <header/>
+    <body>
+      <trans-unit id="settings.enabled">
+        <source>Enabled : Global toggle for the TOON converter. When disabled, encoding operations bypass TOON and return standard JSON instead. Decoding of existing TOON data still works normally.</source>
+        <target state="needs-translation">Enabled : Global toggle for the TOON converter. When disabled, encoding operations bypass TOON and return standard JSON instead. Decoding of existing TOON data still works normally.</target>
+      </trans-unit>
+      <trans-unit id="settings.indent">
+        <source>Indent : Number of spaces per indentation level when encoding TOON (default: 2).</source>
+        <target state="needs-translation">Indent : Number of spaces per indentation level when encoding TOON (default: 2).</target>
+      </trans-unit>
+      <trans-unit id="settings.delimiter">
+        <source>Delimiter : Field delimiter for tabular rows when encoding (comma or tab). Use a single comma "," for default.</source>
+        <target state="needs-translation">Delimiter : Field delimiter for tabular rows when encoding (comma or tab). Use a single comma "," for default.</target>
+      </trans-unit>
+      <trans-unit id="settings.escape_style">
+        <source>Escape Style : Defines how special characters (commas, colons, backslashes, etc.) should be escaped when serializing text values into TOON format.</source>
+        <target state="needs-translation">Escape Style : Defines how special characters (commas, colons, backslashes, etc.) should be escaped when serializing text values into TOON format.</target>
+      </trans-unit>
+      <trans-unit id="settings.min_rows_to_tabular">
+        <source>Minimum Rows to Tabular : Determines the minimum number of sequential rows required for an array to be rendered as a tabular block in TOON.</source>
+        <target state="needs-translation">Minimum Rows to Tabular : Determines the minimum number of sequential rows required for an array to be rendered as a tabular block in TOON.</target>
+      </trans-unit>
+      <trans-unit id="settings.max_preview_items">
+        <source>Maximum Preview Items : Controls how many items are displayed when rendering long tabular arrays or datasets in TOON format.</source>
+        <target state="needs-translation">Maximum Preview Items : Controls how many items are displayed when rendering long tabular arrays or datasets in TOON format.</target>
+      </trans-unit>
+      <trans-unit id="settings.coerce_scalar_types">
+        <source>Coerce Scalar Types : When decoding TOON back to JSON/PHP arrays, this setting decides whether textual scalars such as "true", "false", "null", or "42" should be converted to their native PHP types (boolean, null, int).</source>
+        <target state="needs-translation">Coerce Scalar Types : When decoding TOON back to JSON/PHP arrays, this setting decides whether textual scalars such as "true", "false", "null", or "42" should be converted to their native PHP types (boolean, null, int).</target>
+      </trans-unit>
+      <trans-unit id="settings.primitive_array_header">
+        <source>Primitive Array Header : When encoding, emit primitive sequential arrays as a single line [N]: v1,v2,v3 (spec-style). Disabled by default.</source>
+        <target state="needs-translation">Primitive Array Header : When encoding, emit primitive sequential arrays as a single line [N]: v1,v2,v3 (spec-style). Disabled by default.</target>
+      </trans-unit>
+    </body>
+  </file>
+</xliff>
