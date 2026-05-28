@@ -9,4 +9,8 @@ return [
         'provider' => SvgIconProvider::class,
         'source' => 'EXT:rrp_t3toon/Resources/Public/Icons/Extension.svg',
     ],
+    'module-rrp-t3toon-logs' => [
+        'provider' => SvgIconProvider::class,
+        'source' => 'EXT:rrp_t3toon/Resources/Public/Icons/ModuleLogs.svg',
+    ],
 ];

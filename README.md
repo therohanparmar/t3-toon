@@ -3,7 +3,7 @@
 ### Token-Optimized Object Notation for AI & LLM Workflows
 
 <p align="center">
-  <img src="https://img.shields.io/badge/Version-1.3.0-blue" alt="Version 1.3.0">
+  <img src="https://img.shields.io/badge/Version-3.0.0-blue" alt="Version 3.0.0">
   <img src="https://img.shields.io/github/license/therohanparmar/t3-toon" alt="License">
   <img src="https://img.shields.io/badge/TYPO3-12,13,14-orange" alt="TYPO3 12-14">
   <img src="https://img.shields.io/badge/PHP-8.1%2B-red" alt="PHP 8.1+">
@@ -33,6 +33,7 @@ It helps you:
 - 🧠 Optimized for ChatGPT, Gemini, Claude, and Mistral
 - 🆕 Supports deeply nested and complex data structures
 - 🔒 Preserves key order and data integrity
+- 🗂️ Usage logs backend module — every encode/convert call is recorded with input size, output size, and optimization %, filterable and bulk-deletable
 
 ---
 
@@ -109,7 +110,9 @@ $data = Toon::decodeStatic($toon);
 $strings = Toon::decodeStatic($toon, DecodeOptions::lenient());   // no coercion
 ```
 
-Extension config (Install Tool → Extension Manager → rrp_t3toon) provides defaults: `escape_style`, `min_rows_to_tabular`, `max_preview_items`, `coerce_scalar_types`.
+Extension config (Install Tool → Extension Manager → rrp_t3toon) provides defaults: `enabled`, `escape_style`, `min_rows_to_tabular`, `max_preview_items`, `coerce_scalar_types`.
+
+**Note on `enabled`:** when this flag is turned off, `Toon::encode()` and `Toon::convert()` short-circuit and return the input as-is (string verbatim, or `json_encode($input)` for arrays/objects). This lets you toggle optimization globally without code changes. Calls are still logged so you can see in the Logs module which requests ran with optimization on vs off.
 
 ### Global helpers
 
@@ -146,13 +149,37 @@ In Fluid templates, add the namespace and use:
 </html>
 ```
 
-### Backend module (TOON Playground)
+### Backend modules
 
-In the TYPO3 backend, go to **Tools → TOON Playground** to encode and decode TOON in the browser:
+#### Tools → TOON Playground
+
+Encode and decode TOON in the browser:
 
 - Paste **JSON** and click **Encode to TOON** or **Encode (compact)** to get TOON output.
 - Paste **TOON** and click **Decode from TOON** to get JSON.
 - The module shows estimated tokens and any error messages.
+
+#### Tools → TOON Logs
+
+Every successful `encode` / `convert` call (from anywhere — Playground, ViewHelpers, helper functions, programmatic API, scheduler tasks, CLI commands) is recorded in `tx_rrpt3toon_log`. The module lists those rows with:
+
+- Filters: date range, optimization status (enabled/disabled), minimum optimization %, page size.
+- Per-row optimization badge (green when bytes were saved, neutral when passthrough).
+- Per-row delete + bulk delete (checkbox each row + select-all in the header).
+- Sliding-window pagination, newest entries first.
+
+The schema must be migrated once after installation:
+
+```bash
+vendor/bin/typo3 database:updateschema "*.add,*.change"
+```
+
+For development / demos a CLI seed command is available:
+
+```bash
+vendor/bin/typo3 t3toon:seed-logs 500    # insert 500 random rows spread over the last 30 days
+vendor/bin/typo3 t3toon:seed-logs 100 7  # 100 rows over the last 7 days
+```
 
 ### Error handling
 
@@ -194,7 +221,7 @@ Full documentation, configuration, and advanced usage are available here:
 
 | TYPO3       | PHP   | Extension Version |
 | ----------- | ----- | ----------------- |
-| 12.x – 14.x | ≥ 8.1 | v1.3.0            |
+| 12.x – 14.x | ≥ 8.1 | v3.0.0            |
 
 ### Format and spec (future)
 

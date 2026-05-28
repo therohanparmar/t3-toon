@@ -78,6 +78,129 @@
             <trans-unit id="playground.error_invalid_json">
                 <source>Invalid JSON input for encode.</source>
             </trans-unit>
+            <trans-unit id="logs.mlang_tabs_tab">
+                <source>TOON Logs</source>
+            </trans-unit>
+            <trans-unit id="logs.title">
+                <source>TOON Usage Logs</source>
+            </trans-unit>
+            <trans-unit id="logs.subtitle">
+                <source>Every successful encode/convert call recorded with input size, output size, and compression ratio.</source>
+            </trans-unit>
+            <trans-unit id="logs.filter.legend">
+                <source>Filters</source>
+            </trans-unit>
+            <trans-unit id="logs.filter.date_from">
+                <source>From</source>
+            </trans-unit>
+            <trans-unit id="logs.filter.date_to">
+                <source>To</source>
+            </trans-unit>
+            <trans-unit id="logs.filter.enabled">
+                <source>Optimization status</source>
+            </trans-unit>
+            <trans-unit id="logs.filter.enabled.all">
+                <source>All</source>
+            </trans-unit>
+            <trans-unit id="logs.filter.enabled.on">
+                <source>Enabled</source>
+            </trans-unit>
+            <trans-unit id="logs.filter.enabled.off">
+                <source>Disabled</source>
+            </trans-unit>
+            <trans-unit id="logs.filter.min_pct">
+                <source>Min optimization %</source>
+            </trans-unit>
+            <trans-unit id="logs.filter.per_page">
+                <source>Per page</source>
+            </trans-unit>
+            <trans-unit id="logs.filter.apply">
+                <source>Apply</source>
+            </trans-unit>
+            <trans-unit id="logs.filter.reset">
+                <source>Reset</source>
+            </trans-unit>
+            <trans-unit id="logs.column.uid">
+                <source>UID</source>
+            </trans-unit>
+            <trans-unit id="logs.column.date">
+                <source>Date &amp; Time</source>
+            </trans-unit>
+            <trans-unit id="logs.column.input_size">
+                <source>Input size</source>
+            </trans-unit>
+            <trans-unit id="logs.column.output_size">
+                <source>Output size</source>
+            </trans-unit>
+            <trans-unit id="logs.column.optimization">
+                <source>Optimization</source>
+            </trans-unit>
+            <trans-unit id="logs.column.enabled">
+                <source>Enabled</source>
+            </trans-unit>
+            <trans-unit id="logs.column.actions">
+                <source>Actions</source>
+            </trans-unit>
+            <trans-unit id="logs.column.select">
+                <source>Select</source>
+            </trans-unit>
+            <trans-unit id="logs.empty.title">
+                <source>No log entries yet</source>
+            </trans-unit>
+            <trans-unit id="logs.empty.body">
+                <source>Run an encode operation from the TOON Playground to record your first log entry.</source>
+            </trans-unit>
+            <trans-unit id="logs.empty.cta">
+                <source>Open TOON Playground</source>
+            </trans-unit>
+            <trans-unit id="logs.delete.single">
+                <source>Delete</source>
+            </trans-unit>
+            <trans-unit id="logs.delete.bulk">
+                <source>Delete selected (%d)</source>
+            </trans-unit>
+            <trans-unit id="logs.delete.confirm_title">
+                <source>Delete log entries?</source>
+            </trans-unit>
+            <trans-unit id="logs.delete.confirm_body_single">
+                <source>This will permanently remove the selected log entry. This action cannot be undone.</source>
+            </trans-unit>
+            <trans-unit id="logs.delete.confirm_body_bulk">
+                <source>This will permanently remove the selected log entries. This action cannot be undone.</source>
+            </trans-unit>
+            <trans-unit id="logs.delete.confirm_button">
+                <source>Yes, delete</source>
+            </trans-unit>
+            <trans-unit id="logs.delete.cancel">
+                <source>Cancel</source>
+            </trans-unit>
+            <trans-unit id="logs.flash.deleted_title">
+                <source>Log entries deleted</source>
+            </trans-unit>
+            <trans-unit id="logs.flash.deleted_body">
+                <source>%d log entry/entries were removed.</source>
+            </trans-unit>
+            <trans-unit id="logs.flash.nothing_title">
+                <source>Nothing deleted</source>
+            </trans-unit>
+            <trans-unit id="logs.flash.nothing_body">
+                <source>No matching log entries were found.</source>
+            </trans-unit>
+            <trans-unit id="logs.pagination.first">
+                <source>First</source>
+            </trans-unit>
+            <trans-unit id="logs.pagination.previous">
+                <source>Previous</source>
+            </trans-unit>
+            <trans-unit id="logs.pagination.next">
+                <source>Next</source>
+            </trans-unit>
+            <trans-unit id="logs.pagination.last">
+                <source>Last</source>
+            </trans-unit>
+            <trans-unit id="logs.pagination.summary">
+                <source>Page %1$d of %2$d (%3$d total)</source>
+            </trans-unit>
         </body>
     </file>
 </xliff>
