@@ -103,6 +103,170 @@
         <source>Invalid JSON input for encode.</source>
         <target state="needs-translation">Invalid JSON input for encode.</target>
       </trans-unit>
+      <trans-unit id="logs.mlang_tabs_tab">
+        <source>TOON Logs</source>
+        <target state="needs-translation">TOON Logs</target>
+      </trans-unit>
+      <trans-unit id="logs.title">
+        <source>TOON Usage Logs</source>
+        <target state="needs-translation">TOON Usage Logs</target>
+      </trans-unit>
+      <trans-unit id="logs.subtitle">
+        <source>Every successful encode/convert call recorded with input size, output size, and compression ratio.</source>
+        <target state="needs-translation">Every successful encode/convert call recorded with input size, output size, and compression ratio.</target>
+      </trans-unit>
+      <trans-unit id="logs.filter.legend">
+        <source>Filters</source>
+        <target state="needs-translation">Filters</target>
+      </trans-unit>
+      <trans-unit id="logs.filter.date_from">
+        <source>From</source>
+        <target state="needs-translation">From</target>
+      </trans-unit>
+      <trans-unit id="logs.filter.date_to">
+        <source>To</source>
+        <target state="needs-translation">To</target>
+      </trans-unit>
+      <trans-unit id="logs.filter.enabled">
+        <source>Optimization status</source>
+        <target state="needs-translation">Optimization status</target>
+      </trans-unit>
+      <trans-unit id="logs.filter.enabled.all">
+        <source>All</source>
+        <target state="needs-translation">All</target>
+      </trans-unit>
+      <trans-unit id="logs.filter.enabled.on">
+        <source>Enabled</source>
+        <target state="needs-translation">Enabled</target>
+      </trans-unit>
+      <trans-unit id="logs.filter.enabled.off">
+        <source>Disabled</source>
+        <target state="needs-translation">Disabled</target>
+      </trans-unit>
+      <trans-unit id="logs.filter.min_pct">
+        <source>Min optimization %</source>
+        <target state="needs-translation">Min optimization %</target>
+      </trans-unit>
+      <trans-unit id="logs.filter.per_page">
+        <source>Per page</source>
+        <target state="needs-translation">Per page</target>
+      </trans-unit>
+      <trans-unit id="logs.filter.apply">
+        <source>Apply</source>
+        <target state="needs-translation">Apply</target>
+      </trans-unit>
+      <trans-unit id="logs.filter.reset">
+        <source>Reset</source>
+        <target state="needs-translation">Reset</target>
+      </trans-unit>
+      <trans-unit id="logs.column.uid">
+        <source>UID</source>
+        <target state="needs-translation">UID</target>
+      </trans-unit>
+      <trans-unit id="logs.column.date">
+        <source>Date &amp; Time</source>
+        <target state="needs-translation">Date &amp; Time</target>
+      </trans-unit>
+      <trans-unit id="logs.column.input_size">
+        <source>Input size</source>
+        <target state="needs-translation">Input size</target>
+      </trans-unit>
+      <trans-unit id="logs.column.output_size">
+        <source>Output size</source>
+        <target state="needs-translation">Output size</target>
+      </trans-unit>
+      <trans-unit id="logs.column.optimization">
+        <source>Optimization</source>
+        <target state="needs-translation">Optimization</target>
+      </trans-unit>
+      <trans-unit id="logs.column.enabled">
+        <source>Enabled</source>
+        <target state="needs-translation">Enabled</target>
+      </trans-unit>
+      <trans-unit id="logs.column.actions">
+        <source>Actions</source>
+        <target state="needs-translation">Actions</target>
+      </trans-unit>
+      <trans-unit id="logs.column.select">
+        <source>Select</source>
+        <target state="needs-translation">Select</target>
+      </trans-unit>
+      <trans-unit id="logs.empty.title">
+        <source>No log entries yet</source>
+        <target state="needs-translation">No log entries yet</target>
+      </trans-unit>
+      <trans-unit id="logs.empty.body">
+        <source>Run an encode operation from the TOON Playground to record your first log entry.</source>
+        <target state="needs-translation">Run an encode operation from the TOON Playground to record your first log entry.</target>
+      </trans-unit>
+      <trans-unit id="logs.empty.cta">
+        <source>Open TOON Playground</source>
+        <target state="needs-translation">Open TOON Playground</target>
+      </trans-unit>
+      <trans-unit id="logs.delete.single">
+        <source>Delete</source>
+        <target state="needs-translation">Delete</target>
+      </trans-unit>
+      <trans-unit id="logs.delete.bulk">
+        <source>Delete selected (%d)</source>
+        <target state="needs-translation">Delete selected (%d)</target>
+      </trans-unit>
+      <trans-unit id="logs.delete.confirm_title">
+        <source>Delete log entries?</source>
+        <target state="needs-translation">Delete log entries?</target>
+      </trans-unit>
+      <trans-unit id="logs.delete.confirm_body_single">
+        <source>This will permanently remove the selected log entry. This action cannot be undone.</source>
+        <target state="needs-translation">This will permanently remove the selected log entry. This action cannot be undone.</target>
+      </trans-unit>
+      <trans-unit id="logs.delete.confirm_body_bulk">
+        <source>This will permanently remove the selected log entries. This action cannot be undone.</source>
+        <target state="needs-translation">This will permanently remove the selected log entries. This action cannot be undone.</target>
+      </trans-unit>
+      <trans-unit id="logs.delete.confirm_button">
+        <source>Yes, delete</source>
+        <target state="needs-translation">Yes, delete</target>
+      </trans-unit>
+      <trans-unit id="logs.delete.cancel">
+        <source>Cancel</source>
+        <target state="needs-translation">Cancel</target>
+      </trans-unit>
+      <trans-unit id="logs.flash.deleted_title">
+        <source>Log entries deleted</source>
+        <target state="needs-translation">Log entries deleted</target>
+      </trans-unit>
+      <trans-unit id="logs.flash.deleted_body">
+        <source>%d log entry/entries were removed.</source>
+        <target state="needs-translation">%d log entry/entries were removed.</target>
+      </trans-unit>
+      <trans-unit id="logs.flash.nothing_title">
+        <source>Nothing deleted</source>
+        <target state="needs-translation">Nothing deleted</target>
+      </trans-unit>
+      <trans-unit id="logs.flash.nothing_body">
+        <source>No matching log entries were found.</source>
+        <target state="needs-translation">No matching log entries were found.</target>
+      </trans-unit>
+      <trans-unit id="logs.pagination.first">
+        <source>First</source>
+        <target state="needs-translation">First</target>
+      </trans-unit>
+      <trans-unit id="logs.pagination.previous">
+        <source>Previous</source>
+        <target state="needs-translation">Previous</target>
+      </trans-unit>
+      <trans-unit id="logs.pagination.next">
+        <source>Next</source>
+        <target state="needs-translation">Next</target>
+      </trans-unit>
+      <trans-unit id="logs.pagination.last">
+        <source>Last</source>
+        <target state="needs-translation">Last</target>
+      </trans-unit>
+      <trans-unit id="logs.pagination.summary">
+        <source>Page %1$d of %2$d (%3$d total)</source>
+        <target state="needs-translation">Page %1$d of %2$d (%3$d total)</target>
+      </trans-unit>
     </body>
   </file>
 </xliff>
