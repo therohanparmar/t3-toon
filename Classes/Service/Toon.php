@@ -8,6 +8,8 @@ use RRP\T3Toon\Domain\Model\DecodeOptions;
 use RRP\T3Toon\Domain\Model\EncodeOptions;
 use RRP\T3Toon\Exception\ToonDecodeException;
 use RRP\T3Toon\Service\ToonEncoder;
+use TYPO3\CMS\Core\Configuration\ExtensionConfiguration;
+use TYPO3\CMS\Core\Database\ConnectionPool;
 use TYPO3\CMS\Core\Utility\GeneralUtility;
 
 /**
@@ -40,22 +42,46 @@ class Toon
      */
     protected ToonDecoder $decoder;
 
-    public function __construct()
-    {
+    protected UsageLogger $usageLogger;
+
+    protected ExtensionConfiguration $extensionConfiguration;
+
+    public function __construct(
+        ?UsageLogger $usageLogger = null,
+        ?ExtensionConfiguration $extensionConfiguration = null,
+    ) {
         $this->converter = GeneralUtility::makeInstance(ToonEncoder::class);
         $this->decoder = GeneralUtility::makeInstance(ToonDecoder::class);
+        $this->extensionConfiguration = $extensionConfiguration
+            ?? GeneralUtility::makeInstance(ExtensionConfiguration::class);
+        // When DI is in play (autowired from Services.yaml), $usageLogger is injected.
+        // Fallback path for `new Toon()` outside DI: build it explicitly so makeInstance
+        // doesn't try (and fail) to construct UsageLogger from an empty container lookup.
+        $this->usageLogger = $usageLogger ?? GeneralUtility::makeInstance(
+            UsageLogger::class,
+            GeneralUtility::makeInstance(ConnectionPool::class),
+            $this->extensionConfiguration,
+        );
     }
 
     /**
      * Convert arbitrary input into TOON format.
      *
+     * When the "enabled" extension setting is off, returns the input as-is
+     * (string verbatim, or JSON-encoded for arrays/objects) so callers can
+     * disable optimization without code changes.
+     *
      * @param mixed $input JSON, array, or object
      * @param EncodeOptions|null $options Optional encoding options; null = extension config
-     * @return string TOON representation
+     * @return string TOON representation (or pass-through when disabled)
      */
     public function convert($input, ?EncodeOptions $options = null): string
     {
-        return $this->converter->toToon($input, $options);
+        $output = $this->isEnabled()
+            ? $this->converter->toToon($input, $options)
+            : $this->passthrough($input);
+        $this->usageLogger->logEncoded($input, $output);
+        return $output;
     }
 
     /**
@@ -63,11 +89,34 @@ class Toon
      *
      * @param mixed $input JSON, array, or object
      * @param EncodeOptions|null $options Optional encoding options; null = extension config
-     * @return string TOON representation
+     * @return string TOON representation (or pass-through when disabled)
      */
     public function encode($input, ?EncodeOptions $options = null): string
     {
-        return $this->convert($input, $options);
+        // Call the encoder directly (not $this->convert) to keep logging to one row per public call.
+        $output = $this->isEnabled()
+            ? $this->converter->toToon($input, $options)
+            : $this->passthrough($input);
+        $this->usageLogger->logEncoded($input, $output);
+        return $output;
+    }
+
+    private function isEnabled(): bool
+    {
+        try {
+            return (bool) $this->extensionConfiguration->get('rrp_t3toon', 'enabled');
+        } catch (\Throwable) {
+            return true;
+        }
+    }
+
+    private function passthrough(mixed $input): string
+    {
+        if (is_string($input)) {
+            return $input;
+        }
+        $json = json_encode($input, JSON_UNESCAPED_UNICODE | JSON_PARTIAL_OUTPUT_ON_ERROR);
+        return is_string($json) ? $json : '';
     }
 
     /**

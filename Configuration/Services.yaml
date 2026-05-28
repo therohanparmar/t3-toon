@@ -3,3 +3,10 @@ services:
     autowire: true
     autoconfigure: true
     public: false
+
+  RRP\T3Toon\:
+    resource: '../Classes/*'
+
+  RRP\T3Toon\Controller\:
+    resource: '../Classes/Controller/*'
+    public: true

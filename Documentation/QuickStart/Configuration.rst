@@ -15,6 +15,25 @@ select :guilabel:`T3Toon – Token-Efficient Data Format for TYPO3 AI`.
 Extension configuration options
 --------------------------------
 
+Enabled
+~~~~~~~
+
+:Type: boolean
+:Default: ``1`` (enabled)
+:Description: Master switch for TOON optimization.
+
+When this flag is on, ``Toon::encode()`` / ``Toon::convert()`` (and their static aliases
+and global helpers) run the encoder normally.
+
+When it is off, those methods short-circuit and return the input as-is — verbatim for
+strings, ``json_encode($input)`` for arrays/objects. This lets you disable optimization
+globally without code changes (e.g. while debugging an integration). Calls are still
+recorded in the :ref:`TOON Logs module <backend-module-logs>` with ``settings_enabled = 0``
+and ``optimization_pct = 0``, so you can audit which requests ran with optimization on
+vs off.
+
+``decode()`` is not affected by this flag.
+
 Escape style
 ~~~~~~~~~~~~
 
@@ -88,6 +107,7 @@ Programmatic access
    $config = ToonHelper::getConfig();
    // Returns full config including defaults:
    // [
+   //     'enabled' => true,
    //     'indent' => 2,
    //     'delimiter' => ',',
    //     'escape_style' => 'backslash',

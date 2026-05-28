@@ -1,0 +1,268 @@
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers"
+      xmlns:core="http://typo3.org/ns/TYPO3/CMS/Core/ViewHelpers"
+      xmlns:be="http://typo3.org/ns/TYPO3/CMS/Backend/ViewHelpers"
+      data-namespace-typo3-fluid="true">
+
+<f:layout name="Module"/>
+
+<f:section name="Content">
+    <div class="toon-playground toon-logs">
+
+        <div class="toon-playground__header">
+            <div>
+                <h1 class="toon-playground__title">
+                    <f:translate key="LLL:EXT:rrp_t3toon/Resources/Private/Language/locallang_mod.xlf:logs.title"/>
+                </h1>
+                <p class="toon-playground__subtitle">
+                    <f:translate key="LLL:EXT:rrp_t3toon/Resources/Private/Language/locallang_mod.xlf:logs.subtitle"/>
+                </p>
+            </div>
+        </div>
+
+        <form method="get" action="{be:moduleLink(route: 'tools_t3toon_logs')}" class="toon-logs__filters" id="toon-logs-filters">
+            <input type="hidden" name="token" value="{routeToken}"/>
+            <input type="hidden" name="page" value="1"/>
+
+            <div class="toon-logs__filter">
+                <label for="toon-filter-date-from" class="toon-logs__filter-label">
+                    <f:translate key="LLL:EXT:rrp_t3toon/Resources/Private/Language/locallang_mod.xlf:logs.filter.date_from"/>
+                </label>
+                <input type="date" id="toon-filter-date-from" name="dateFrom" value="{filterValues.dateFrom}" class="form-control form-control-sm"/>
+            </div>
+
+            <div class="toon-logs__filter">
+                <label for="toon-filter-date-to" class="toon-logs__filter-label">
+                    <f:translate key="LLL:EXT:rrp_t3toon/Resources/Private/Language/locallang_mod.xlf:logs.filter.date_to"/>
+                </label>
+                <input type="date" id="toon-filter-date-to" name="dateTo" value="{filterValues.dateTo}" class="form-control form-control-sm"/>
+            </div>
+
+            <div class="toon-logs__filter">
+                <label for="toon-filter-enabled" class="toon-logs__filter-label">
+                    <f:translate key="LLL:EXT:rrp_t3toon/Resources/Private/Language/locallang_mod.xlf:logs.filter.enabled"/>
+                </label>
+                <select id="toon-filter-enabled" name="enabled" class="form-select form-select-sm">
+                    <option value=""><f:translate key="LLL:EXT:rrp_t3toon/Resources/Private/Language/locallang_mod.xlf:logs.filter.enabled.all"/></option>
+                    <option value="1" {f:if(condition: '{filterValues.enabled} == \'1\'', then: 'selected="selected"')}><f:translate key="LLL:EXT:rrp_t3toon/Resources/Private/Language/locallang_mod.xlf:logs.filter.enabled.on"/></option>
+                    <option value="0" {f:if(condition: '{filterValues.enabled} == \'0\'', then: 'selected="selected"')}><f:translate key="LLL:EXT:rrp_t3toon/Resources/Private/Language/locallang_mod.xlf:logs.filter.enabled.off"/></option>
+                </select>
+            </div>
+
+            <div class="toon-logs__filter">
+                <label for="toon-filter-min-pct" class="toon-logs__filter-label">
+                    <f:translate key="LLL:EXT:rrp_t3toon/Resources/Private/Language/locallang_mod.xlf:logs.filter.min_pct"/>
+                </label>
+                <input type="number" step="0.1" id="toon-filter-min-pct" name="minPct" value="{filterValues.minPct}" class="form-control form-control-sm"/>
+            </div>
+
+            <div class="toon-logs__filter">
+                <label for="toon-filter-per-page" class="toon-logs__filter-label">
+                    <f:translate key="LLL:EXT:rrp_t3toon/Resources/Private/Language/locallang_mod.xlf:logs.filter.per_page"/>
+                </label>
+                <select id="toon-filter-per-page" name="perPage" class="form-select form-select-sm">
+                    <f:for each="{perPageOptions}" as="option">
+                        <option value="{option}" {f:if(condition: '{option} == {perPage}', then: 'selected="selected"')}>{option}</option>
+                    </f:for>
+                </select>
+            </div>
+
+            <div class="toon-logs__filter toon-logs__filter--actions">
+                <button type="submit" class="btn btn-primary btn-sm">
+                    <core:icon identifier="actions-filter" size="small"/>
+                    <f:translate key="LLL:EXT:rrp_t3toon/Resources/Private/Language/locallang_mod.xlf:logs.filter.apply"/>
+                </button>
+                <a href="{be:moduleLink(route: 'tools_t3toon_logs')}" class="btn btn-default btn-sm">
+                    <core:icon identifier="actions-refresh" size="small"/>
+                    <f:translate key="LLL:EXT:rrp_t3toon/Resources/Private/Language/locallang_mod.xlf:logs.filter.reset"/>
+                </a>
+            </div>
+        </form>
+
+        <f:if condition="{rows}">
+            <f:then>
+                <form method="post" action="{be:moduleLink(route: 'tools_t3toon_logs')}" id="toon-logs-bulk-form">
+                    <input type="hidden" name="returnUrl" value="{returnUrl}"/>
+
+                    <div class="toon-logs__bulkbar" id="toon-logs-bulkbar" hidden>
+                        <span class="toon-logs__bulkbar-count">
+                            <core:icon identifier="actions-check-square" size="small"/>
+                            <span id="toon-logs-selected-count">0</span> selected
+                        </span>
+                        <button type="button" class="btn btn-danger btn-sm" id="toon-logs-bulk-delete">
+                            <core:icon identifier="actions-delete" size="small"/>
+                            <span data-bulk-label="{f:translate(key: 'LLL:EXT:rrp_t3toon/Resources/Private/Language/locallang_mod.xlf:logs.delete.bulk')}">
+                                <f:format.raw>{f:translate(key: 'LLL:EXT:rrp_t3toon/Resources/Private/Language/locallang_mod.xlf:logs.delete.bulk') -> f:format.printf(arguments: '{0: 0}')}</f:format.raw>
+                            </span>
+                        </button>
+                    </div>
+
+                    <div class="table-fit">
+                        <table class="table table-striped table-hover toon-logs__table">
+                            <thead>
+                                <tr>
+                                    <th class="toon-logs__col-select">
+                                        <input type="checkbox" id="toon-logs-select-all" class="toon-logs__checkbox" aria-label="{f:translate(key: 'LLL:EXT:rrp_t3toon/Resources/Private/Language/locallang_mod.xlf:logs.column.select')}"/>
+                                    </th>
+                                    <th><f:translate key="LLL:EXT:rrp_t3toon/Resources/Private/Language/locallang_mod.xlf:logs.column.uid"/></th>
+                                    <th><f:translate key="LLL:EXT:rrp_t3toon/Resources/Private/Language/locallang_mod.xlf:logs.column.date"/></th>
+                                    <th><f:translate key="LLL:EXT:rrp_t3toon/Resources/Private/Language/locallang_mod.xlf:logs.column.input_size"/></th>
+                                    <th><f:translate key="LLL:EXT:rrp_t3toon/Resources/Private/Language/locallang_mod.xlf:logs.column.output_size"/></th>
+                                    <th><f:translate key="LLL:EXT:rrp_t3toon/Resources/Private/Language/locallang_mod.xlf:logs.column.optimization"/></th>
+                                    <th><f:translate key="LLL:EXT:rrp_t3toon/Resources/Private/Language/locallang_mod.xlf:logs.column.enabled"/></th>
+                                    <th class="col-control">
+                                        <span class="visually-hidden"><f:translate key="LLL:EXT:rrp_t3toon/Resources/Private/Language/locallang_mod.xlf:logs.column.actions"/></span>
+                                    </th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <f:for each="{rows}" as="row">
+                                    <tr>
+                                        <td class="toon-logs__col-select">
+                                            <input type="checkbox" name="uids[]" value="{row.uid}" class="toon-logs__checkbox toon-logs__row-select" aria-label="Select log #{row.uid}"/>
+                                        </td>
+                                        <td>{row.uid}</td>
+                                        <td><f:format.date format="Y-m-d H:i:s">@{row.crdate}</f:format.date></td>
+                                        <td>{f:format.bytes(value: row.input_size, decimals: 1)}</td>
+                                        <td>{f:format.bytes(value: row.output_size, decimals: 1)}</td>
+                                        <td>
+                                            <span class="badge {f:if(condition: '{row.optimization_pct} > 0', then: 'badge-success', else: 'badge-secondary')}">
+                                                <f:format.number decimals="2">{row.optimization_pct}</f:format.number>%
+                                            </span>
+                                        </td>
+                                        <td>
+                                            <f:if condition="{row.settings_enabled}">
+                                                <f:then>
+                                                    <core:icon identifier="actions-check" size="small"/>
+                                                </f:then>
+                                                <f:else>
+                                                    <core:icon identifier="actions-close" size="small"/>
+                                                </f:else>
+                                            </f:if>
+                                        </td>
+                                        <td class="col-control">
+                                            <div class="btn-group" role="group">
+                                                <button type="button" class="btn btn-default toon-logs__delete-row" data-uid="{row.uid}" title="{f:translate(key: 'LLL:EXT:rrp_t3toon/Resources/Private/Language/locallang_mod.xlf:logs.delete.single')}">
+                                                    <core:icon identifier="actions-delete" size="small"/>
+                                                </button>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                </f:for>
+                            </tbody>
+                            <tfoot>
+                                <tr>
+                                    <td colspan="8">
+                                        <f:format.printf arguments="{0: paginator.currentPageNumber, 1: pagination.lastPageNumber, 2: totalCount}">
+                                            <f:translate key="LLL:EXT:rrp_t3toon/Resources/Private/Language/locallang_mod.xlf:logs.pagination.summary"/>
+                                        </f:format.printf>
+                                    </td>
+                                </tr>
+                            </tfoot>
+                        </table>
+                    </div>
+
+                    <f:if condition="{pagination.lastPageNumber} > 1">
+                        <nav class="pagination-wrap" aria-label="Pagination">
+                            <ul class="pagination">
+                                <f:if condition="{pagination.previousPageNumber} && {pagination.previousPageNumber} >= 1">
+                                    <f:then>
+                                        <li class="page-item">
+                                            <a href="{be:moduleLink(route: 'tools_t3toon_logs', arguments: '{page: 1, dateFrom: filterValues.dateFrom, dateTo: filterValues.dateTo, enabled: filterValues.enabled, minPct: filterValues.minPct, perPage: perPage}')}" title="{f:translate(key: 'LLL:EXT:rrp_t3toon/Resources/Private/Language/locallang_mod.xlf:logs.pagination.first')}" class="page-link">
+                                                <core:icon identifier="actions-view-paging-first" size="small"/>
+                                            </a>
+                                        </li>
+                                        <li class="page-item">
+                                            <a href="{be:moduleLink(route: 'tools_t3toon_logs', arguments: '{page: pagination.previousPageNumber, dateFrom: filterValues.dateFrom, dateTo: filterValues.dateTo, enabled: filterValues.enabled, minPct: filterValues.minPct, perPage: perPage}')}" title="{f:translate(key: 'LLL:EXT:rrp_t3toon/Resources/Private/Language/locallang_mod.xlf:logs.pagination.previous')}" class="page-link">
+                                                <core:icon identifier="actions-view-paging-previous" size="small"/>
+                                            </a>
+                                        </li>
+                                    </f:then>
+                                    <f:else>
+                                        <li class="page-item disabled">
+                                            <span class="page-link"><core:icon identifier="actions-view-paging-first" size="small"/></span>
+                                        </li>
+                                        <li class="page-item disabled">
+                                            <span class="page-link"><core:icon identifier="actions-view-paging-previous" size="small"/></span>
+                                        </li>
+                                    </f:else>
+                                </f:if>
+                                <li class="page-item">
+                                    <span class="page-link">
+                                        Page {paginator.currentPageNumber} / {pagination.lastPageNumber}
+                                    </span>
+                                </li>
+                                <f:if condition="{pagination.nextPageNumber} && {pagination.nextPageNumber} <= {pagination.lastPageNumber}">
+                                    <f:then>
+                                        <li class="page-item">
+                                            <a href="{be:moduleLink(route: 'tools_t3toon_logs', arguments: '{page: pagination.nextPageNumber, dateFrom: filterValues.dateFrom, dateTo: filterValues.dateTo, enabled: filterValues.enabled, minPct: filterValues.minPct, perPage: perPage}')}" title="{f:translate(key: 'LLL:EXT:rrp_t3toon/Resources/Private/Language/locallang_mod.xlf:logs.pagination.next')}" class="page-link">
+                                                <core:icon identifier="actions-view-paging-next" size="small"/>
+                                            </a>
+                                        </li>
+                                        <li class="page-item">
+                                            <a href="{be:moduleLink(route: 'tools_t3toon_logs', arguments: '{page: pagination.lastPageNumber, dateFrom: filterValues.dateFrom, dateTo: filterValues.dateTo, enabled: filterValues.enabled, minPct: filterValues.minPct, perPage: perPage}')}" title="{f:translate(key: 'LLL:EXT:rrp_t3toon/Resources/Private/Language/locallang_mod.xlf:logs.pagination.last')}" class="page-link">
+                                                <core:icon identifier="actions-view-paging-last" size="small"/>
+                                            </a>
+                                        </li>
+                                    </f:then>
+                                    <f:else>
+                                        <li class="page-item disabled">
+                                            <span class="page-link"><core:icon identifier="actions-view-paging-next" size="small"/></span>
+                                        </li>
+                                        <li class="page-item disabled">
+                                            <span class="page-link"><core:icon identifier="actions-view-paging-last" size="small"/></span>
+                                        </li>
+                                    </f:else>
+                                </f:if>
+                            </ul>
+                        </nav>
+                    </f:if>
+                </form>
+            </f:then>
+            <f:else>
+                <f:be.infobox title="{f:translate(key: 'LLL:EXT:rrp_t3toon/Resources/Private/Language/locallang_mod.xlf:logs.empty.title')}" state="-2">
+                    <p><f:translate key="LLL:EXT:rrp_t3toon/Resources/Private/Language/locallang_mod.xlf:logs.empty.body"/></p>
+                    <a href="{be:moduleLink(route: 'tools_t3toon')}" class="btn btn-primary btn-sm">
+                        <core:icon identifier="actions-arrow-right" size="small"/>
+                        <f:translate key="LLL:EXT:rrp_t3toon/Resources/Private/Language/locallang_mod.xlf:logs.empty.cta"/>
+                    </a>
+                </f:be.infobox>
+            </f:else>
+        </f:if>
+
+        <div class="toon-modal" id="toon-logs-delete-modal" aria-hidden="true" role="dialog" aria-labelledby="toon-logs-modal-title">
+            <div class="toon-modal__backdrop" data-toon-modal-close></div>
+            <div class="toon-modal__dialog">
+                <div class="toon-modal__header">
+                    <div class="toon-modal__icon">
+                        <core:icon identifier="actions-delete" size="small"/>
+                    </div>
+                    <h3 class="toon-modal__title" id="toon-logs-modal-title">
+                        <f:translate key="LLL:EXT:rrp_t3toon/Resources/Private/Language/locallang_mod.xlf:logs.delete.confirm_title"/>
+                    </h3>
+                </div>
+                <div class="toon-modal__body" id="toon-logs-modal-body">
+                    <span data-body-single="{f:translate(key: 'LLL:EXT:rrp_t3toon/Resources/Private/Language/locallang_mod.xlf:logs.delete.confirm_body_single')}"
+                          data-body-bulk="{f:translate(key: 'LLL:EXT:rrp_t3toon/Resources/Private/Language/locallang_mod.xlf:logs.delete.confirm_body_bulk')}">
+                        <f:translate key="LLL:EXT:rrp_t3toon/Resources/Private/Language/locallang_mod.xlf:logs.delete.confirm_body_bulk"/>
+                    </span>
+                </div>
+                <div class="toon-modal__footer">
+                    <button type="button" class="btn btn-default btn-sm" data-toon-modal-close>
+                        <f:translate key="LLL:EXT:rrp_t3toon/Resources/Private/Language/locallang_mod.xlf:logs.delete.cancel"/>
+                    </button>
+                    <button type="button" class="btn btn-danger btn-sm" id="toon-logs-confirm-delete">
+                        <core:icon identifier="actions-delete" size="small"/>
+                        <f:translate key="LLL:EXT:rrp_t3toon/Resources/Private/Language/locallang_mod.xlf:logs.delete.confirm_button"/>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <form method="post" action="{be:moduleLink(route: 'tools_t3toon_logs')}" id="toon-logs-single-form" style="display:none;">
+            <input type="hidden" name="uid" id="toon-logs-single-uid" value=""/>
+            <input type="hidden" name="returnUrl" value="{returnUrl}"/>
+        </form>
+
+    </div>
+</f:section>
+</html>

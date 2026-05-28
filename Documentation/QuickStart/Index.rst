@@ -41,7 +41,7 @@ Quick start
    -  :ref:`Error handling <error-handling-quick>`
    -  :ref:`Global helpers <global-helpers-quick>`
    -  :ref:`Fluid ViewHelpers <fluid-viewhelpers-quick>`
-   -  :ref:`Backend module (TOON Playground) <backend-module-quick>`
+   -  :ref:`Backend modules (Playground & Logs) <backend-module-quick>`
 
 .. toctree::
    :maxdepth: 5

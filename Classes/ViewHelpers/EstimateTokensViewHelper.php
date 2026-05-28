@@ -5,9 +5,7 @@ declare(strict_types=1);
 namespace RRP\T3Toon\ViewHelpers;
 
 use RRP\T3Toon\Service\Toon;
-use TYPO3Fluid\Fluid\Core\Rendering\RenderingContextInterface;
 use TYPO3Fluid\Fluid\Core\ViewHelper\AbstractViewHelper;
-use TYPO3Fluid\Fluid\Core\ViewHelper\Traits\CompileWithRenderStatic;
 
 /**
  * Estimates token count for a TOON string (words/chars heuristic).
@@ -16,8 +14,6 @@ use TYPO3Fluid\Fluid\Core\ViewHelper\Traits\CompileWithRenderStatic;
  */
 final class EstimateTokensViewHelper extends AbstractViewHelper
 {
-    use CompileWithRenderStatic;
-
     protected $escapeOutput = false;
 
     public function initializeArguments(): void
@@ -27,21 +23,15 @@ final class EstimateTokensViewHelper extends AbstractViewHelper
         $this->registerArgument('as', 'string', 'Variable name to assign the result array (words, chars, tokens_estimate)', false, '');
     }
 
-    /**
-     * @param array<string, mixed> $arguments
-     */
-    public static function renderStatic(
-        array $arguments,
-        \Closure $renderChildrenClosure,
-        RenderingContextInterface $renderingContext
-    ): string {
-        $toon = (string) $arguments['toon'];
-        $as = (string) ($arguments['as'] ?? '');
+    public function render(): string
+    {
+        $toon = (string) $this->arguments['toon'];
+        $as = (string) ($this->arguments['as'] ?? '');
         $result = Toon::estimateTokensStatic($toon);
         if ($as !== '') {
-            $variableProvider = $renderingContext->getVariableProvider();
+            $variableProvider = $this->renderingContext->getVariableProvider();
             $variableProvider->add($as, $result);
-            $output = $renderChildrenClosure();
+            $output = $this->renderChildren();
             $variableProvider->remove($as);
             return (string) $output;
         }

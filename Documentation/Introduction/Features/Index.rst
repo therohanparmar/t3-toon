@@ -67,6 +67,21 @@ Backend Module (TOON Playground)
 
 * **Tools → TOON Playground**: Encode JSON to TOON, decode TOON to JSON, encode compact, view token estimate and errors in the browser
 
+Usage Logs Module
+-----------------
+
+* **Tools → TOON Logs**: Every successful ``encode`` / ``convert`` call is recorded in ``tx_rrpt3toon_log`` (input size, output size, optimization %, ``settings_enabled`` snapshot, timestamp)
+* Filters: date range, optimization status (enabled / disabled / all), minimum optimization %, page size
+* Per-row delete and bulk delete with confirmation modal
+* Sliding-window pagination, newest entries first
+* CLI seed command for development: ``vendor/bin/typo3 t3toon:seed-logs <count> [days]``
+
+Global "enabled" Flag
+---------------------
+
+* Extension setting ``enabled`` toggles optimization globally without code changes
+* When off, ``Toon::encode()`` / ``Toon::convert()`` return the input as-is; calls are still logged so you can audit which requests ran with optimization on vs off
+
 Built-in Analytics
 ------------------
 
