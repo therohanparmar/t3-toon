@@ -6,28 +6,34 @@ on:
   pull_request:
     branches: [ main, master ]
 
+permissions:
+  contents: read
+
 jobs:
   test:
     name: TYPO3 ${{ matrix.typo3 }} - PHP ${{ matrix.php }}
     runs-on: ubuntu-latest
+    container:
+      image: himanshuramavat/php-ci:${{ matrix.php }}-v1.1.0
+    defaults:
+      run:
+        shell: bash
     strategy:
       fail-fast: false
       matrix:
         include:
-          # TYPO3 v12
-          - typo3: "^12.4"
-            php: "8.1"
+          # TYPO3 v12 (php-ci provides PHP 8.2–8.4 only)
           - typo3: "^12.4"
             php: "8.2"
           - typo3: "^12.4"
             php: "8.3"
-          
+
           # TYPO3 v13
           - typo3: "^13.4"
             php: "8.2"
           - typo3: "^13.4"
             php: "8.3"
-          
+
           # TYPO3 v14
           - typo3: "^14.0"
             php: "8.2"
@@ -40,13 +46,6 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
 
-      - name: Setup PHP
-        uses: shivammathur/setup-php@v2
-        with:
-          php-version: ${{ matrix.php }}
-          extensions: mbstring, xml, pdo, sqlite3
-          tools: composer
-
       - name: Fix PHPUnit Configuration Path
         # Adjusts the bootstrap path from monorepo style (../../vendor) to standalone package style (vendor)
         run: sed -i 's|../../vendor|vendor|g' phpunit.xml.dist
@@ -55,7 +54,7 @@ jobs:
         run: composer require typo3/cms-core:"${{ matrix.typo3 }}" --no-update
 
       - name: Install Dependencies
-        run: composer update --prefer-dist --no-progress
+        run: composer update --prefer-dist --no-progress --no-interaction
 
       - name: Run Unit Tests
         run: vendor/bin/phpunit -c phpunit.xml.dist
