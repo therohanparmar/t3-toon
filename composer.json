@@ -1,6 +1,6 @@
 {
     "name": "rrp/t3-toon",
-    "description": "TOON for TYPO3 — a compact, human-readable, and token-efficient data format for AI prompts & LLM contexts. Perfect for ChatGPT, Gemini, Claude, Mistral, and OpenAI integrations (JSON ⇄ TOON).",
+    "description": "TOON for TYPO3 — AI-ready data format for LLM prompts, AI agents, ChatGPT, Gemini, Claude, Mistral, OpenAI, and TYPO3 AI integrations. Convert JSON ⇄ TOON for compact, token-efficient AI context exchange.",
     "type": "typo3-cms-extension",
     "license": "MIT",
     "authors": [
