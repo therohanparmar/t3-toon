@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
+  <rect x="14" y="16" width="36" height="6" rx="3" fill="currentColor"/>
+  <rect x="29.5" y="24" width="5" height="9" rx="2" fill="currentColor" opacity="0.9"/>
+  <rect x="29.5" y="35" width="5" height="9" rx="2" fill="currentColor" opacity="0.75"/>
+  <rect x="29.5" y="46" width="5" height="6" rx="2" fill="currentColor" opacity="0.6"/>
+  <path d="M44 10l1.2 3.4L49 15l-3.8 1.6L44 20l-1.2-3.4L39 15l3.8-1.6L44 10z" fill="var(--icon-color-accent, #ff8700)"/>
+</svg>
