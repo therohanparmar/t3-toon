@@ -103,10 +103,17 @@
     },
     "extra": {
         "typo3/cms": {
-            "extension-key": "rrp_t3toon"
+            "cms-package-dir": "{$vendor-dir}/typo3/cms",
+            "extension-key": "rrp_t3toon",
+            "Package": {
+                "providesPackages": []
+            },
+            "version": "3.0.0"
         }
     },
     "config": {
+        "optimize-autoloader": true,
+        "sort-packages": true,
         "allow-plugins": {
             "typo3/class-alias-loader": true,
             "typo3/cms-composer-installers": true
