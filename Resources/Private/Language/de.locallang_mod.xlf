@@ -47,6 +47,10 @@
         <source>Clear All</source>
         <target state="final">Alles löschen</target>
       </trans-unit>
+      <trans-unit id="playground.view_logs">
+        <source>View Logs</source>
+        <target state="needs-translation">View Logs</target>
+      </trans-unit>
       <trans-unit id="playground.badge_input" approved="yes">
         <source>Input</source>
         <target state="final">Eingabe</target>
@@ -103,6 +107,18 @@
         <source>Invalid JSON input for encode.</source>
         <target state="final">Ungültige JSON-Eingabe für die Kodierung.</target>
       </trans-unit>
+      <trans-unit id="optimization_note.title">
+        <source>Why is optimization sometimes negative?</source>
+        <target state="needs-translation">Why is optimization sometimes negative?</target>
+      </trans-unit>
+      <trans-unit id="optimization_note.body">
+        <source>The optimization % compares the TOON output against minified JSON (not the indented text you paste). TOON saves the most on arrays of uniform records, which collapse into a single table header plus one compact line per row — the more rows, the bigger the saving. Deeply nested data with few or no repeating arrays has nothing to tabularize and can come out slightly larger, showing a negative percentage. This is expected, not an error.</source>
+        <target state="needs-translation">The optimization % compares the TOON output against minified JSON (not the indented text you paste). TOON saves the most on arrays of uniform records, which collapse into a single table header plus one compact line per row — the more rows, the bigger the saving. Deeply nested data with few or no repeating arrays has nothing to tabularize and can come out slightly larger, showing a negative percentage. This is expected, not an error.</target>
+      </trans-unit>
+      <trans-unit id="optimization_note.close">
+        <source>Dismiss note</source>
+        <target state="needs-translation">Dismiss note</target>
+      </trans-unit>
       <trans-unit id="logs.mlang_tabs_tab">
         <source>TOON Logs</source>
         <target state="needs-translation">TOON Logs</target>
@@ -114,6 +130,10 @@
       <trans-unit id="logs.subtitle">
         <source>Every successful encode/convert call recorded with input size, output size, and compression ratio.</source>
         <target state="needs-translation">Every successful encode/convert call recorded with input size, output size, and compression ratio.</target>
+      </trans-unit>
+      <trans-unit id="logs.back_to_playground">
+        <source>Back to Playground</source>
+        <target state="needs-translation">Back to Playground</target>
       </trans-unit>
       <trans-unit id="logs.filter.legend">
         <source>Filters</source>
