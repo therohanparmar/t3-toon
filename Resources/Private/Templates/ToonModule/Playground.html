@@ -1,5 +1,6 @@
 <html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers"
       xmlns:core="http://typo3.org/ns/TYPO3/CMS/Core/ViewHelpers"
+      xmlns:be="http://typo3.org/ns/TYPO3/CMS/Backend/ViewHelpers"
       data-namespace-typo3-fluid="true">
 
 <f:layout name="Module"/>
@@ -16,12 +17,18 @@
                     <f:translate key="LLL:EXT:rrp_t3toon/Resources/Private/Language/locallang_mod.xlf:playground.subtitle"/>
                 </p>
             </div>
-            <button type="button"
-                    class="btn btn-default btn-sm"
-                    id="toon-clear-btn">
-                <core:icon identifier="actions-delete" size="small"/>
-                <f:translate key="LLL:EXT:rrp_t3toon/Resources/Private/Language/locallang_mod.xlf:playground.clear_all"/>
-            </button>
+            <div class="toon-playground__header-actions">
+                <a href="{be:moduleLink(route: 'tools_t3toon.logs')}" class="btn btn-default btn-sm">
+                    <core:icon identifier="actions-list-alternative" size="small"/>
+                    <f:translate key="LLL:EXT:rrp_t3toon/Resources/Private/Language/locallang_mod.xlf:playground.view_logs"/>
+                </a>
+                <button type="button"
+                        class="btn btn-default btn-sm"
+                        id="toon-clear-btn">
+                    <core:icon identifier="actions-delete" size="small"/>
+                    <f:translate key="LLL:EXT:rrp_t3toon/Resources/Private/Language/locallang_mod.xlf:playground.clear_all"/>
+                </button>
+            </div>
         </div>
 
         <f:if condition="{error}">
