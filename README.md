@@ -159,9 +159,11 @@ Encode and decode TOON in the browser:
 - Paste **TOON** and click **Decode from TOON** to get JSON.
 - The module shows estimated tokens and any error messages.
 
-#### Tools → TOON Logs
+#### TOON Logs (View Logs button)
 
-Every successful `encode` / `convert` call (from anywhere — Playground, ViewHelpers, helper functions, programmatic API, scheduler tasks, CLI commands) is recorded in `tx_rrpt3toon_log`. The module lists those rows with:
+The Logs screen is part of the same module — open it with the **View Logs** button in the Playground header (and **Back to Playground** to return); there is no separate menu entry.
+
+Every successful `encode` / `convert` call (from anywhere — Playground, ViewHelpers, helper functions, programmatic API, scheduler tasks, CLI commands) is recorded in `tx_rrpt3toon_log`. The screen lists those rows with:
 
 - Filters: date range, optimization status (enabled/disabled), minimum optimization %, page size.
 - Per-row optimization badge (green when bytes were saved, neutral when passthrough).

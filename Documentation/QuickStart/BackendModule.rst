@@ -4,10 +4,14 @@
 Backend modules
 ================
 
-The extension ships with two backend modules under :guilabel:`Tools`:
+The extension ships with a single backend module under :guilabel:`Tools`:
 
 * **TOON Playground** — interactive encode/decode in the browser.
-* **TOON Logs** — list of every recorded ``encode`` / ``convert`` call, with filters and bulk delete.
+
+It has two screens. The **TOON Logs** screen — a list of every recorded
+``encode`` / ``convert`` call, with filters and bulk delete — is reached from a
+:guilabel:`View Logs` button inside the Playground (and a :guilabel:`Back to
+Playground` button returns from it). There is no separate menu entry for the logs.
 
 .. _backend-module-playground:
 
@@ -51,7 +55,8 @@ global helpers, programmatic API, scheduler tasks, CLI commands) is recorded in 
 Access
 ------
 
-In the TYPO3 backend menu, go to **Tools → TOON Logs**.
+From **Tools → TOON Playground**, click the :guilabel:`View Logs` button in the
+header. Use :guilabel:`Back to Playground` to return.
 
 What gets recorded
 ------------------

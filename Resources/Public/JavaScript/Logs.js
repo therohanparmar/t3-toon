@@ -126,6 +126,16 @@
     var confirmBtn = document.getElementById('toon-logs-confirm-delete');
     if (confirmBtn) confirmBtn.addEventListener('click', submitPending);
 
+    // Dismissible optimization note. Hidden only for the current view;
+    // not persisted, so it reappears on reload.
+    var noteCloseBtn = document.getElementById('toon-logs-note-close');
+    if (noteCloseBtn) {
+      noteCloseBtn.addEventListener('click', function () {
+        var note = document.getElementById('toon-logs-note');
+        if (note) note.setAttribute('hidden', '');
+      });
+    }
+
     if (modal) {
       var closers = modal.querySelectorAll('[data-toon-modal-close]');
       for (var k = 0; k < closers.length; k++) {

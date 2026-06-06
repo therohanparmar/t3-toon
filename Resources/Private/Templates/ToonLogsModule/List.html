@@ -17,9 +17,13 @@
                     <f:translate key="LLL:EXT:rrp_t3toon/Resources/Private/Language/locallang_mod.xlf:logs.subtitle"/>
                 </p>
             </div>
+            <a href="{be:moduleLink(route: 'tools_t3toon')}" class="btn btn-default btn-sm">
+                <core:icon identifier="actions-arrow-left-alt" size="small"/>
+                <f:translate key="LLL:EXT:rrp_t3toon/Resources/Private/Language/locallang_mod.xlf:logs.back_to_playground"/>
+            </a>
         </div>
 
-        <form method="get" action="{be:moduleLink(route: 'tools_t3toon_logs')}" class="toon-logs__filters" id="toon-logs-filters">
+        <form method="get" action="{be:moduleLink(route: 'tools_t3toon.logs')}" class="toon-logs__filters" id="toon-logs-filters">
             <input type="hidden" name="token" value="{routeToken}"/>
             <input type="hidden" name="page" value="1"/>
 
@@ -71,16 +75,30 @@
                     <core:icon identifier="actions-filter" size="small"/>
                     <f:translate key="LLL:EXT:rrp_t3toon/Resources/Private/Language/locallang_mod.xlf:logs.filter.apply"/>
                 </button>
-                <a href="{be:moduleLink(route: 'tools_t3toon_logs')}" class="btn btn-default btn-sm">
+                <a href="{be:moduleLink(route: 'tools_t3toon.logs')}" class="btn btn-default btn-sm">
                     <core:icon identifier="actions-refresh" size="small"/>
                     <f:translate key="LLL:EXT:rrp_t3toon/Resources/Private/Language/locallang_mod.xlf:logs.filter.reset"/>
                 </a>
             </div>
         </form>
 
+        <div class="toon-logs__note callout callout-info" id="toon-logs-note" role="note">
+            <div class="toon-logs__note-body">
+                <core:icon identifier="actions-info" size="small"/>
+                <div>
+                    <strong><f:translate key="LLL:EXT:rrp_t3toon/Resources/Private/Language/locallang_mod.xlf:optimization_note.title"/></strong>
+                    <p><f:translate key="LLL:EXT:rrp_t3toon/Resources/Private/Language/locallang_mod.xlf:optimization_note.body"/></p>
+                </div>
+            </div>
+            <button type="button" class="toon-logs__note-close" id="toon-logs-note-close"
+                    aria-label="{f:translate(key: 'LLL:EXT:rrp_t3toon/Resources/Private/Language/locallang_mod.xlf:optimization_note.close')}">
+                <core:icon identifier="actions-close" size="small"/>
+            </button>
+        </div>
+
         <f:if condition="{rows}">
             <f:then>
-                <form method="post" action="{be:moduleLink(route: 'tools_t3toon_logs')}" id="toon-logs-bulk-form">
+                <form method="post" action="{be:moduleLink(route: 'tools_t3toon.logs')}" id="toon-logs-bulk-form">
                     <input type="hidden" name="returnUrl" value="{returnUrl}"/>
 
                     <div class="toon-logs__bulkbar" id="toon-logs-bulkbar" hidden>
@@ -167,12 +185,12 @@
                                 <f:if condition="{pagination.previousPageNumber} && {pagination.previousPageNumber} >= 1">
                                     <f:then>
                                         <li class="page-item">
-                                            <a href="{be:moduleLink(route: 'tools_t3toon_logs', arguments: '{page: 1, dateFrom: filterValues.dateFrom, dateTo: filterValues.dateTo, enabled: filterValues.enabled, minPct: filterValues.minPct, perPage: perPage}')}" title="{f:translate(key: 'LLL:EXT:rrp_t3toon/Resources/Private/Language/locallang_mod.xlf:logs.pagination.first')}" class="page-link">
+                                            <a href="{be:moduleLink(route: 'tools_t3toon.logs', arguments: '{page: 1, dateFrom: filterValues.dateFrom, dateTo: filterValues.dateTo, enabled: filterValues.enabled, minPct: filterValues.minPct, perPage: perPage}')}" title="{f:translate(key: 'LLL:EXT:rrp_t3toon/Resources/Private/Language/locallang_mod.xlf:logs.pagination.first')}" class="page-link">
                                                 <core:icon identifier="actions-view-paging-first" size="small"/>
                                             </a>
                                         </li>
                                         <li class="page-item">
-                                            <a href="{be:moduleLink(route: 'tools_t3toon_logs', arguments: '{page: pagination.previousPageNumber, dateFrom: filterValues.dateFrom, dateTo: filterValues.dateTo, enabled: filterValues.enabled, minPct: filterValues.minPct, perPage: perPage}')}" title="{f:translate(key: 'LLL:EXT:rrp_t3toon/Resources/Private/Language/locallang_mod.xlf:logs.pagination.previous')}" class="page-link">
+                                            <a href="{be:moduleLink(route: 'tools_t3toon.logs', arguments: '{page: pagination.previousPageNumber, dateFrom: filterValues.dateFrom, dateTo: filterValues.dateTo, enabled: filterValues.enabled, minPct: filterValues.minPct, perPage: perPage}')}" title="{f:translate(key: 'LLL:EXT:rrp_t3toon/Resources/Private/Language/locallang_mod.xlf:logs.pagination.previous')}" class="page-link">
                                                 <core:icon identifier="actions-view-paging-previous" size="small"/>
                                             </a>
                                         </li>
@@ -194,12 +212,12 @@
                                 <f:if condition="{pagination.nextPageNumber} && {pagination.nextPageNumber} <= {pagination.lastPageNumber}">
                                     <f:then>
                                         <li class="page-item">
-                                            <a href="{be:moduleLink(route: 'tools_t3toon_logs', arguments: '{page: pagination.nextPageNumber, dateFrom: filterValues.dateFrom, dateTo: filterValues.dateTo, enabled: filterValues.enabled, minPct: filterValues.minPct, perPage: perPage}')}" title="{f:translate(key: 'LLL:EXT:rrp_t3toon/Resources/Private/Language/locallang_mod.xlf:logs.pagination.next')}" class="page-link">
+                                            <a href="{be:moduleLink(route: 'tools_t3toon.logs', arguments: '{page: pagination.nextPageNumber, dateFrom: filterValues.dateFrom, dateTo: filterValues.dateTo, enabled: filterValues.enabled, minPct: filterValues.minPct, perPage: perPage}')}" title="{f:translate(key: 'LLL:EXT:rrp_t3toon/Resources/Private/Language/locallang_mod.xlf:logs.pagination.next')}" class="page-link">
                                                 <core:icon identifier="actions-view-paging-next" size="small"/>
                                             </a>
                                         </li>
                                         <li class="page-item">
-                                            <a href="{be:moduleLink(route: 'tools_t3toon_logs', arguments: '{page: pagination.lastPageNumber, dateFrom: filterValues.dateFrom, dateTo: filterValues.dateTo, enabled: filterValues.enabled, minPct: filterValues.minPct, perPage: perPage}')}" title="{f:translate(key: 'LLL:EXT:rrp_t3toon/Resources/Private/Language/locallang_mod.xlf:logs.pagination.last')}" class="page-link">
+                                            <a href="{be:moduleLink(route: 'tools_t3toon.logs', arguments: '{page: pagination.lastPageNumber, dateFrom: filterValues.dateFrom, dateTo: filterValues.dateTo, enabled: filterValues.enabled, minPct: filterValues.minPct, perPage: perPage}')}" title="{f:translate(key: 'LLL:EXT:rrp_t3toon/Resources/Private/Language/locallang_mod.xlf:logs.pagination.last')}" class="page-link">
                                                 <core:icon identifier="actions-view-paging-last" size="small"/>
                                             </a>
                                         </li>
@@ -258,7 +276,7 @@
             </div>
         </div>
 
-        <form method="post" action="{be:moduleLink(route: 'tools_t3toon_logs')}" id="toon-logs-single-form" style="display:none;">
+        <form method="post" action="{be:moduleLink(route: 'tools_t3toon.logs')}" id="toon-logs-single-form" style="display:none;">
             <input type="hidden" name="uid" id="toon-logs-single-uid" value=""/>
             <input type="hidden" name="returnUrl" value="{returnUrl}"/>
         </form>
