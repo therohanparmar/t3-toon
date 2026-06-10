@@ -49,7 +49,7 @@
       </trans-unit>
       <trans-unit id="playground.view_logs">
         <source>View Logs</source>
-        <target state="needs-translation">View Logs</target>
+        <target state="translated">Protokolle anzeigen</target>
       </trans-unit>
       <trans-unit id="playground.badge_input" approved="yes">
         <source>Input</source>
@@ -109,15 +109,15 @@
       </trans-unit>
       <trans-unit id="optimization_note.title">
         <source>Why is optimization sometimes negative?</source>
-        <target state="needs-translation">Why is optimization sometimes negative?</target>
+        <target state="translated">Warum ist die Optimierung manchmal negativ?</target>
       </trans-unit>
       <trans-unit id="optimization_note.body">
         <source>The optimization % compares the TOON output against minified JSON (not the indented text you paste). TOON saves the most on arrays of uniform records, which collapse into a single table header plus one compact line per row — the more rows, the bigger the saving. Deeply nested data with few or no repeating arrays has nothing to tabularize and can come out slightly larger, showing a negative percentage. This is expected, not an error.</source>
-        <target state="needs-translation">The optimization % compares the TOON output against minified JSON (not the indented text you paste). TOON saves the most on arrays of uniform records, which collapse into a single table header plus one compact line per row — the more rows, the bigger the saving. Deeply nested data with few or no repeating arrays has nothing to tabularize and can come out slightly larger, showing a negative percentage. This is expected, not an error.</target>
+        <target state="translated">The optimization % compares the TOON output against minified JSON (not the indented text you paste). TOON erzielt die größten Einsparungen bei Arrays mit gleichförmigen Datensätzen, da diese zu einer einzigen Tabellenkopfzeile und einer kompakten Zeile pro Datensatz zusammengefasst werden – je mehr Zeilen, desto größer die Einsparung. Tief verschachtelte Daten mit wenigen oder keinen sich wiederholenden Arrays bieten keine Möglichkeit zur Tabellarisierung und können dadurch sogar geringfügig größer ausfallen, was zu einem negativen Prozentsatz führt. Dies ist erwartetes Verhalten und kein Fehler.</target>
       </trans-unit>
       <trans-unit id="optimization_note.close">
         <source>Dismiss note</source>
-        <target state="needs-translation">Dismiss note</target>
+        <target state="translated">Hinweis ausblenden</target>
       </trans-unit>
       <trans-unit id="logs.mlang_tabs_tab">
         <source>TOON Logs</source>
@@ -125,7 +125,7 @@
       </trans-unit>
       <trans-unit id="logs.title">
         <source>TOON Usage Logs</source>
-        <target state="needs-translation">TOON Usage Logs</target>
+        <target state="translated">TOON-Nutzungsprotokolle</target>
       </trans-unit>
       <trans-unit id="logs.subtitle">
         <source>Every successful encode/convert call recorded with input size, output size, and compression ratio.</source>
@@ -137,155 +137,155 @@
       </trans-unit>
       <trans-unit id="logs.filter.legend">
         <source>Filters</source>
-        <target state="needs-translation">Filters</target>
+        <target state="translated">Filter</target>
       </trans-unit>
       <trans-unit id="logs.filter.date_from">
         <source>From</source>
-        <target state="needs-translation">From</target>
+        <target state="translated">Von</target>
       </trans-unit>
       <trans-unit id="logs.filter.date_to">
         <source>To</source>
-        <target state="needs-translation">To</target>
+        <target state="translated">Bis</target>
       </trans-unit>
       <trans-unit id="logs.filter.enabled">
         <source>Optimization status</source>
-        <target state="needs-translation">Optimization status</target>
+        <target state="translated">Optimierungsstatus</target>
       </trans-unit>
       <trans-unit id="logs.filter.enabled.all">
         <source>All</source>
-        <target state="needs-translation">All</target>
+        <target state="translated">Alle</target>
       </trans-unit>
       <trans-unit id="logs.filter.enabled.on">
         <source>Enabled</source>
-        <target state="needs-translation">Enabled</target>
+        <target state="translated">Aktiviert</target>
       </trans-unit>
       <trans-unit id="logs.filter.enabled.off">
         <source>Disabled</source>
-        <target state="needs-translation">Disabled</target>
+        <target state="translated">Deaktiviert</target>
       </trans-unit>
       <trans-unit id="logs.filter.min_pct">
         <source>Min optimization %</source>
-        <target state="needs-translation">Min optimization %</target>
+        <target state="translated">Min. Optimierungs-%</target>
       </trans-unit>
       <trans-unit id="logs.filter.per_page">
         <source>Per page</source>
-        <target state="needs-translation">Per page</target>
+        <target state="translated">Pro Seite</target>
       </trans-unit>
       <trans-unit id="logs.filter.apply">
         <source>Apply</source>
-        <target state="needs-translation">Apply</target>
+        <target state="translated">Anwenden</target>
       </trans-unit>
       <trans-unit id="logs.filter.reset">
         <source>Reset</source>
-        <target state="needs-translation">Reset</target>
+        <target state="translated">Zurücksetzen</target>
       </trans-unit>
       <trans-unit id="logs.column.uid">
         <source>UID</source>
-        <target state="needs-translation">UID</target>
+        <target state="translated">UID</target>
       </trans-unit>
       <trans-unit id="logs.column.date">
         <source>Date &amp; Time</source>
-        <target state="needs-translation">Date &amp; Time</target>
+        <target state="translated">Datum &amp; Uhrzeit</target>
       </trans-unit>
       <trans-unit id="logs.column.input_size">
         <source>Input size</source>
-        <target state="needs-translation">Input size</target>
+        <target state="translated">Eingabegröße</target>
       </trans-unit>
       <trans-unit id="logs.column.output_size">
         <source>Output size</source>
-        <target state="needs-translation">Output size</target>
+        <target state="translated">Ausgabegröße</target>
       </trans-unit>
       <trans-unit id="logs.column.optimization">
         <source>Optimization</source>
-        <target state="needs-translation">Optimization</target>
+        <target state="translated">Optimierung</target>
       </trans-unit>
       <trans-unit id="logs.column.enabled">
         <source>Enabled</source>
-        <target state="needs-translation">Enabled</target>
+        <target state="translated">Aktiviert</target>
       </trans-unit>
       <trans-unit id="logs.column.actions">
         <source>Actions</source>
-        <target state="needs-translation">Actions</target>
+        <target state="translated">Aktionen</target>
       </trans-unit>
       <trans-unit id="logs.column.select">
         <source>Select</source>
-        <target state="needs-translation">Select</target>
+        <target state="translated">Wählen</target>
       </trans-unit>
       <trans-unit id="logs.empty.title">
         <source>No log entries yet</source>
-        <target state="needs-translation">No log entries yet</target>
+        <target state="translated">Noch keine Protokolleinträge</target>
       </trans-unit>
       <trans-unit id="logs.empty.body">
         <source>Run an encode operation from the TOON Playground to record your first log entry.</source>
-        <target state="needs-translation">Run an encode operation from the TOON Playground to record your first log entry.</target>
+        <target state="translated">Führen Sie einen Codierungsvorgang im TOON Playground aus, um Ihren ersten Log-Eintrag aufzuzeichnen.</target>
       </trans-unit>
       <trans-unit id="logs.empty.cta">
         <source>Open TOON Playground</source>
-        <target state="needs-translation">Open TOON Playground</target>
+        <target state="translated">TOON Playground öffnen</target>
       </trans-unit>
       <trans-unit id="logs.delete.single">
         <source>Delete</source>
-        <target state="needs-translation">Delete</target>
+        <target state="translated">Löschen</target>
       </trans-unit>
       <trans-unit id="logs.delete.bulk">
         <source>Delete selected (%d)</source>
-        <target state="needs-translation">Delete selected (%d)</target>
+        <target state="translated">Ausgewählte löschen (%d)</target>
       </trans-unit>
       <trans-unit id="logs.delete.confirm_title">
         <source>Delete log entries?</source>
-        <target state="needs-translation">Delete log entries?</target>
+        <target state="translated">Protokolleinträge löschen?</target>
       </trans-unit>
       <trans-unit id="logs.delete.confirm_body_single">
         <source>This will permanently remove the selected log entry. This action cannot be undone.</source>
-        <target state="needs-translation">This will permanently remove the selected log entry. This action cannot be undone.</target>
+        <target state="translated">Der ausgewählte Protokolleintrag wird dauerhaft gelöscht. Diese Aktion kann nicht rückgängig gemacht werden.</target>
       </trans-unit>
       <trans-unit id="logs.delete.confirm_body_bulk">
         <source>This will permanently remove the selected log entries. This action cannot be undone.</source>
-        <target state="needs-translation">This will permanently remove the selected log entries. This action cannot be undone.</target>
+        <target state="translated">Die ausgewählten Protokolleinträge werden dauerhaft gelöscht. Diese Aktion kann nicht rückgängig gemacht werden.</target>
       </trans-unit>
       <trans-unit id="logs.delete.confirm_button">
         <source>Yes, delete</source>
-        <target state="needs-translation">Yes, delete</target>
+        <target state="translated">Ja, löschen</target>
       </trans-unit>
       <trans-unit id="logs.delete.cancel">
         <source>Cancel</source>
-        <target state="needs-translation">Cancel</target>
+        <target state="translated">Abbrechen</target>
       </trans-unit>
       <trans-unit id="logs.flash.deleted_title">
         <source>Log entries deleted</source>
-        <target state="needs-translation">Log entries deleted</target>
+        <target state="translated">Protokolleinträge gelöscht</target>
       </trans-unit>
       <trans-unit id="logs.flash.deleted_body">
         <source>%d log entry/entries were removed.</source>
-        <target state="needs-translation">%d log entry/entries were removed.</target>
+        <target state="translated">%d Protokolleintrag/Protokolleinträge wurden entfernt.</target>
       </trans-unit>
       <trans-unit id="logs.flash.nothing_title">
         <source>Nothing deleted</source>
-        <target state="needs-translation">Nothing deleted</target>
+        <target state="translated">Nichts gelöscht.</target>
       </trans-unit>
       <trans-unit id="logs.flash.nothing_body">
         <source>No matching log entries were found.</source>
-        <target state="needs-translation">No matching log entries were found.</target>
+        <target state="translated">Keine passenden Protokolleinträge gefunden.</target>
       </trans-unit>
       <trans-unit id="logs.pagination.first">
         <source>First</source>
-        <target state="needs-translation">First</target>
+        <target state="translated">Erste</target>
       </trans-unit>
       <trans-unit id="logs.pagination.previous">
         <source>Previous</source>
-        <target state="needs-translation">Previous</target>
+        <target state="translated">Vorherige</target>
       </trans-unit>
       <trans-unit id="logs.pagination.next">
         <source>Next</source>
-        <target state="needs-translation">Next</target>
+        <target state="translated">Nächste</target>
       </trans-unit>
       <trans-unit id="logs.pagination.last">
         <source>Last</source>
-        <target state="needs-translation">Last</target>
+        <target state="translated">Letzte</target>
       </trans-unit>
       <trans-unit id="logs.pagination.summary">
         <source>Page %1$d of %2$d (%3$d total)</source>
-        <target state="needs-translation">Page %1$d of %2$d (%3$d total)</target>
+        <target state="translated">Seite %1$d von %2$d (%3$d insgesamt)</target>
       </trans-unit>
     </body>
   </file>
