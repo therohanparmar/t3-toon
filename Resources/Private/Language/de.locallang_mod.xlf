@@ -121,7 +121,7 @@
       </trans-unit>
       <trans-unit id="logs.mlang_tabs_tab">
         <source>TOON Logs</source>
-        <target state="needs-translation">TOON Logs</target>
+        <target state="translated">TOON-Protokolle</target>
       </trans-unit>
       <trans-unit id="logs.title">
         <source>TOON Usage Logs</source>
@@ -129,11 +129,11 @@
       </trans-unit>
       <trans-unit id="logs.subtitle">
         <source>Every successful encode/convert call recorded with input size, output size, and compression ratio.</source>
-        <target state="needs-translation">Every successful encode/convert call recorded with input size, output size, and compression ratio.</target>
+        <target state="translated">Jeder erfolgreiche Kodierungs-/Konvertierungsvorgang wird mit Eingabegröße, Ausgabegröße und Komprimierungsrate protokolliert.</target>
       </trans-unit>
       <trans-unit id="logs.back_to_playground">
         <source>Back to Playground</source>
-        <target state="needs-translation">Back to Playground</target>
+        <target state="translated">Zurück zum Playground</target>
       </trans-unit>
       <trans-unit id="logs.filter.legend">
         <source>Filters</source>
