@@ -257,11 +257,11 @@
       </trans-unit>
       <trans-unit id="logs.flash.deleted_body">
         <source>%d log entry/entries were removed.</source>
-        <target state="translated">%d Protokolleintrag/Protokolleinträge wurden entfernt.</target>
+        <target state="translated">%d Protokolleintrag/Protokolleinträge Wurden entfernt.</target>
       </trans-unit>
       <trans-unit id="logs.flash.nothing_title">
         <source>Nothing deleted</source>
-        <target state="translated">Nichts gelöscht.</target>
+        <target state="translated">Nichts gelöscht</target>
       </trans-unit>
       <trans-unit id="logs.flash.nothing_body">
         <source>No matching log entries were found.</source>
