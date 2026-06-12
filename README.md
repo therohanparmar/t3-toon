@@ -7,6 +7,7 @@
   <img src="https://img.shields.io/github/license/therohanparmar/t3-toon" alt="License">
   <img src="https://img.shields.io/badge/TYPO3-12,13,14-orange" alt="TYPO3 12-14">
   <img src="https://img.shields.io/badge/PHP-8.1%2B-red" alt="PHP 8.1+">
+  <a title="Crowdin" target="_blank" href="https://crowdin.com/project/typo3-extension-rrpt3toon"><img src="https://badges.crowdin.net/typo3-extension-rrpt3toon/localized.svg"></a>
 </p>
 
 ---
