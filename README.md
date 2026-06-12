@@ -3,7 +3,7 @@
 ### Token-Optimized Object Notation for AI & LLM Workflows
 
 <p align="center">
-  <img src="https://img.shields.io/badge/Version-3.0.0-blue" alt="Version 3.0.0">
+  <img src="https://img.shields.io/badge/Version-3.1.0-blue" alt="Version 3.1.0">
   <img src="https://img.shields.io/github/license/therohanparmar/t3-toon" alt="License">
   <img src="https://img.shields.io/badge/TYPO3-12,13,14-orange" alt="TYPO3 12-14">
   <img src="https://img.shields.io/badge/PHP-8.1%2B-red" alt="PHP 8.1+">
@@ -223,7 +223,7 @@ Full documentation, configuration, and advanced usage are available here:
 
 | TYPO3       | PHP   | Extension Version |
 | ----------- | ----- | ----------------- |
-| 12.x – 14.x | ≥ 8.1 | v3.0.0            |
+| 12.x – 14.x | ≥ 8.1 | v3.1.0            |
 
 ### Format and spec (future)
 
