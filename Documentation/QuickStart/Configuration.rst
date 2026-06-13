@@ -92,7 +92,7 @@ Show default example
 
 :Type: boolean
 :Default: ``1`` (enabled)
-:Description: When enabled, the :ref:`TOON Playground <backend-module>` pre-fills a
+:Description: When enabled, the :ref:`TOON Playground <backend-module-playground>` pre-fills a
    sample JSON input and its encoded TOON output on first load. Disable to open the
    Playground with empty fields.
 
