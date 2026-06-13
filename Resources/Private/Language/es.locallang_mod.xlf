@@ -5,255 +5,255 @@
     <body>
       <trans-unit id="mlang_tabs_tab">
         <source>TOON Playground</source>
-        <target state="needs-translation">TOON Playground</target>
+        <target state="needs-review-translation" state-qualifier="leveraged-mt">TOON Playground</target>
       </trans-unit>
       <trans-unit id="playground.title">
         <source>TOON Playground</source>
-        <target state="needs-translation">TOON Playground</target>
+        <target state="needs-review-translation" state-qualifier="leveraged-mt">TOON Playground</target>
       </trans-unit>
       <trans-unit id="playground.input_label">
         <source>Input (JSON for encode, TOON for decode)</source>
-        <target state="needs-translation">Input (JSON for encode, TOON for decode)</target>
+        <target state="needs-review-translation" state-qualifier="leveraged-mt">Entrada (JSON para codigo, TOON para decodificación)</target>
       </trans-unit>
       <trans-unit id="playground.output_label">
         <source>Output</source>
-        <target state="needs-translation">Output</target>
+        <target state="needs-review-translation" state-qualifier="leveraged-mt">Salida</target>
       </trans-unit>
       <trans-unit id="playground.encode">
         <source>Encode to TOON</source>
-        <target state="needs-translation">Encode to TOON</target>
+        <target state="needs-review-translation" state-qualifier="leveraged-mt">Codificar a TOON</target>
       </trans-unit>
       <trans-unit id="playground.decode">
         <source>Decode from TOON</source>
-        <target state="needs-translation">Decode from TOON</target>
+        <target state="needs-review-translation" state-qualifier="leveraged-mt">Descodificar de TOON</target>
       </trans-unit>
       <trans-unit id="playground.encode_compact">
         <source>Encode (compact)</source>
-        <target state="needs-translation">Encode (compact)</target>
+        <target state="needs-review-translation" state-qualifier="leveraged-mt">Codificar (compacto)</target>
       </trans-unit>
       <trans-unit id="playground.tokens">
         <source>Estimated tokens: %d</source>
-        <target state="needs-translation">Estimated tokens: %d</target>
+        <target state="needs-review-translation" state-qualifier="leveraged-mt">Tokens estimados: %d</target>
       </trans-unit>
       <trans-unit id="playground.footer_made_with">
         <source>Made with 🧡 for the TYPO3 Developer by Rohan and Himanshu</source>
-        <target state="needs-translation">Made with 🧡 for the TYPO3 Developer by Rohan and Himanshu</target>
+        <target state="needs-review-translation" state-qualifier="leveraged-mt">Hecho con 🧡 para el desarrollador TYPO3 de Rohan y Himanshu</target>
       </trans-unit>
       <trans-unit id="playground.subtitle">
         <source>Encode JSON to TOON or decode strings instantly.</source>
-        <target state="needs-translation">Encode JSON to TOON or decode strings instantly.</target>
+        <target state="needs-review-translation" state-qualifier="leveraged-mt">Codifica JSON a TOON o decodifica cadenas al instante.</target>
       </trans-unit>
       <trans-unit id="playground.clear_all">
         <source>Clear All</source>
-        <target state="needs-translation">Clear All</target>
+        <target state="needs-review-translation" state-qualifier="leveraged-mt">Limpiar todo</target>
       </trans-unit>
       <trans-unit id="playground.view_logs">
         <source>View Logs</source>
-        <target state="needs-translation">View Logs</target>
+        <target state="needs-review-translation" state-qualifier="leveraged-mt">Ver registros</target>
       </trans-unit>
       <trans-unit id="playground.badge_input">
         <source>Input</source>
-        <target state="needs-translation">Input</target>
+        <target state="needs-review-translation" state-qualifier="leveraged-mt">Input</target>
       </trans-unit>
       <trans-unit id="playground.or">
         <source>OR</source>
-        <target state="needs-translation">OR</target>
+        <target state="needs-review-translation" state-qualifier="leveraged-mt">O</target>
       </trans-unit>
       <trans-unit id="playground.estimated_tokens_label">
         <source>Estimated tokens</source>
-        <target state="needs-translation">Estimated tokens</target>
+        <target state="needs-review-translation" state-qualifier="leveraged-mt">Tokens estimados</target>
       </trans-unit>
       <trans-unit id="playground.copy">
         <source>Copy</source>
-        <target state="needs-translation">Copy</target>
+        <target state="needs-review-translation" state-qualifier="leveraged-mt">Copiar</target>
       </trans-unit>
       <trans-unit id="playground.copied_to_clipboard">
         <source>Copied to clipboard!</source>
-        <target state="needs-translation">Copied to clipboard!</target>
+        <target state="needs-review-translation" state-qualifier="leveraged-mt">¡Copiado al portapapeles!</target>
       </trans-unit>
       <trans-unit id="playground.github">
         <source>GitHub</source>
-        <target state="needs-translation">GitHub</target>
+        <target state="needs-review-translation" state-qualifier="leveraged-mt">GitHub</target>
       </trans-unit>
       <trans-unit id="playground.documentation">
         <source>Documentation</source>
-        <target state="needs-translation">Documentation</target>
+        <target state="needs-review-translation" state-qualifier="leveraged-mt">Documentación</target>
       </trans-unit>
       <trans-unit id="playground.clear_confirm">
         <source>Clear both input and output?</source>
-        <target state="needs-translation">Clear both input and output?</target>
+        <target state="needs-review-translation" state-qualifier="leveraged-mt">¿Borrar tanto la entrada como la salida?</target>
       </trans-unit>
       <trans-unit id="playground.clear_confirm_title">
         <source>Clear All</source>
-        <target state="needs-translation">Clear All</target>
+        <target state="needs-review-translation" state-qualifier="leveraged-mt">Limpiar todo</target>
       </trans-unit>
       <trans-unit id="playground.clear_confirm_body">
         <source>This will clear both the input and output fields. This action cannot be undone.</source>
-        <target state="needs-translation">This will clear both the input and output fields. This action cannot be undone.</target>
+        <target state="needs-review-translation" state-qualifier="leveraged-mt">Esto borrará los campos de entrada y salida. Esta acción no se puede deshacer.</target>
       </trans-unit>
       <trans-unit id="playground.cancel">
         <source>Cancel</source>
-        <target state="needs-translation">Cancel</target>
+        <target state="needs-review-translation" state-qualifier="leveraged-mt">Cancelar</target>
       </trans-unit>
       <trans-unit id="playground.confirm_clear">
         <source>Yes, Clear All</source>
-        <target state="needs-translation">Yes, Clear All</target>
+        <target state="needs-review-translation" state-qualifier="leveraged-mt">Sí, limpiar todo</target>
       </trans-unit>
       <trans-unit id="playground.placeholder">
         <source>{"name": "TOON", "items": [1, 2, 3]}</source>
-        <target state="needs-translation">{"name": "TOON", "items": [1, 2, 3]}</target>
+        <target state="needs-review-translation" state-qualifier="leveraged-mt">{"name": "TOON", "items": [1, 2, 3]}</target>
       </trans-unit>
       <trans-unit id="playground.error_invalid_json">
         <source>Invalid JSON input for encode.</source>
-        <target state="needs-translation">Invalid JSON input for encode.</target>
+        <target state="needs-review-translation" state-qualifier="leveraged-mt">Entrada JSON inválida para el código.</target>
       </trans-unit>
       <trans-unit id="optimization_note.title">
         <source>Why is optimization sometimes negative?</source>
-        <target state="needs-translation">Why is optimization sometimes negative?</target>
+        <target state="needs-review-translation" state-qualifier="leveraged-mt">¿Por qué la optimización a veces es negativa?</target>
       </trans-unit>
       <trans-unit id="optimization_note.body">
         <source>The optimization % compares the TOON output against minified JSON (not the indented text you paste). TOON saves the most on arrays of uniform records, which collapse into a single table header plus one compact line per row — the more rows, the bigger the saving. Deeply nested data with few or no repeating arrays has nothing to tabularize and can come out slightly larger, showing a negative percentage. This is expected, not an error.</source>
-        <target state="needs-translation">The optimization % compares the TOON output against minified JSON (not the indented text you paste). TOON saves the most on arrays of uniform records, which collapse into a single table header plus one compact line per row — the more rows, the bigger the saving. Deeply nested data with few or no repeating arrays has nothing to tabularize and can come out slightly larger, showing a negative percentage. This is expected, not an error.</target>
+        <target state="needs-review-translation" state-qualifier="leveraged-mt">El % de optimización compara la salida TOON con el JSON minimizado (no el texto sangrado que pegue). TOON ahorra más en matrices de registros uniformes, que colapsan en una única cabecera de mesa más una línea compacta por fila — cuanto más filas, mayor será el ahorro. Los datos anidados profundamente con pocos o ningún arrays repetitivos no tienen nada que tabular, y pueden salir un poco más grandes, mostrando un porcentaje negativo. Esto se espera, no un error.</target>
       </trans-unit>
       <trans-unit id="optimization_note.close">
         <source>Dismiss note</source>
-        <target state="needs-translation">Dismiss note</target>
+        <target state="needs-review-translation" state-qualifier="leveraged-mt">Descartar nota</target>
       </trans-unit>
       <trans-unit id="logs.mlang_tabs_tab">
         <source>TOON Logs</source>
-        <target state="needs-translation">TOON Logs</target>
+        <target state="needs-review-translation" state-qualifier="leveraged-mt">Registros de TOON</target>
       </trans-unit>
       <trans-unit id="logs.title">
         <source>TOON Usage Logs</source>
-        <target state="needs-translation">TOON Usage Logs</target>
+        <target state="needs-review-translation" state-qualifier="leveraged-mt">Registro de Uso de TOON</target>
       </trans-unit>
       <trans-unit id="logs.subtitle">
         <source>Every successful encode/convert call recorded with input size, output size, and compression ratio.</source>
-        <target state="needs-translation">Every successful encode/convert call recorded with input size, output size, and compression ratio.</target>
+        <target state="needs-review-translation" state-qualifier="leveraged-mt">Cada llamada de codificación/conversión exitosa grabada con tamaño de entrada, tamaño de salida y ratio de compresión.</target>
       </trans-unit>
       <trans-unit id="logs.back_to_playground">
         <source>Back to Playground</source>
-        <target state="needs-translation">Back to Playground</target>
+        <target state="needs-review-translation" state-qualifier="leveraged-mt">Volver a Playground</target>
       </trans-unit>
       <trans-unit id="logs.filter.legend">
         <source>Filters</source>
-        <target state="needs-translation">Filters</target>
+        <target state="needs-review-translation" state-qualifier="leveraged-mt">Filtros</target>
       </trans-unit>
       <trans-unit id="logs.filter.date_from">
         <source>From</source>
-        <target state="needs-translation">From</target>
+        <target state="needs-review-translation" state-qualifier="leveraged-mt">De</target>
       </trans-unit>
       <trans-unit id="logs.filter.date_to">
         <source>To</source>
-        <target state="needs-translation">To</target>
+        <target state="needs-review-translation" state-qualifier="leveraged-mt">A</target>
       </trans-unit>
       <trans-unit id="logs.filter.enabled">
         <source>Optimization status</source>
-        <target state="needs-translation">Optimization status</target>
+        <target state="needs-review-translation" state-qualifier="leveraged-mt">Estado de optimización</target>
       </trans-unit>
       <trans-unit id="logs.filter.enabled.all">
         <source>All</source>
-        <target state="needs-translation">All</target>
+        <target state="needs-review-translation" state-qualifier="leveraged-mt">Todos</target>
       </trans-unit>
       <trans-unit id="logs.filter.enabled.on">
         <source>Enabled</source>
-        <target state="needs-translation">Enabled</target>
+        <target state="needs-review-translation" state-qualifier="leveraged-mt">Activado</target>
       </trans-unit>
       <trans-unit id="logs.filter.enabled.off">
         <source>Disabled</source>
-        <target state="needs-translation">Disabled</target>
+        <target state="needs-review-translation" state-qualifier="leveraged-mt">Deshabilitado</target>
       </trans-unit>
       <trans-unit id="logs.filter.min_pct">
         <source>Min optimization %</source>
-        <target state="needs-translation">Min optimization %</target>
+        <target state="needs-review-translation" state-qualifier="leveraged-mt">% de optimización mínima</target>
       </trans-unit>
       <trans-unit id="logs.filter.per_page">
         <source>Per page</source>
-        <target state="needs-translation">Per page</target>
+        <target state="needs-review-translation" state-qualifier="leveraged-mt">Por página</target>
       </trans-unit>
       <trans-unit id="logs.filter.apply">
         <source>Apply</source>
-        <target state="needs-translation">Apply</target>
+        <target state="needs-review-translation" state-qualifier="leveraged-mt">Aplicar</target>
       </trans-unit>
       <trans-unit id="logs.filter.reset">
         <source>Reset</source>
-        <target state="needs-translation">Reset</target>
+        <target state="needs-review-translation" state-qualifier="leveraged-mt">Reset</target>
       </trans-unit>
       <trans-unit id="logs.column.uid">
         <source>UID</source>
-        <target state="needs-translation">UID</target>
+        <target state="needs-review-translation" state-qualifier="leveraged-mt">UID</target>
       </trans-unit>
       <trans-unit id="logs.column.date">
         <source>Date &amp; Time</source>
-        <target state="needs-translation">Date &amp; Time</target>
+        <target state="needs-review-translation" state-qualifier="leveraged-mt">Fecha &amp; Hora</target>
       </trans-unit>
       <trans-unit id="logs.column.input_size">
         <source>Input size</source>
-        <target state="needs-translation">Input size</target>
+        <target state="needs-review-translation" state-qualifier="leveraged-mt">Input size</target>
       </trans-unit>
       <trans-unit id="logs.column.output_size">
         <source>Output size</source>
-        <target state="needs-translation">Output size</target>
+        <target state="needs-review-translation" state-qualifier="leveraged-mt">Tamaño de salida</target>
       </trans-unit>
       <trans-unit id="logs.column.optimization">
         <source>Optimization</source>
-        <target state="needs-translation">Optimization</target>
+        <target state="needs-review-translation" state-qualifier="leveraged-mt">Optimización</target>
       </trans-unit>
       <trans-unit id="logs.column.enabled">
         <source>Enabled</source>
-        <target state="needs-translation">Enabled</target>
+        <target state="needs-review-translation" state-qualifier="leveraged-mt">Activado</target>
       </trans-unit>
       <trans-unit id="logs.column.actions">
         <source>Actions</source>
-        <target state="needs-translation">Actions</target>
+        <target state="needs-review-translation" state-qualifier="leveraged-mt">Acciones</target>
       </trans-unit>
       <trans-unit id="logs.column.select">
         <source>Select</source>
-        <target state="needs-translation">Select</target>
+        <target state="needs-review-translation" state-qualifier="leveraged-mt">Seleccionar</target>
       </trans-unit>
       <trans-unit id="logs.empty.title">
         <source>No log entries yet</source>
-        <target state="needs-translation">No log entries yet</target>
+        <target state="needs-review-translation" state-qualifier="leveraged-mt">Aún no hay registros</target>
       </trans-unit>
       <trans-unit id="logs.empty.body">
         <source>Run an encode operation from the TOON Playground to record your first log entry.</source>
-        <target state="needs-translation">Run an encode operation from the TOON Playground to record your first log entry.</target>
+        <target state="needs-review-translation" state-qualifier="leveraged-mt">Ejecute una operación de codificación desde el TOON Playground para registrar su primer registro.</target>
       </trans-unit>
       <trans-unit id="logs.empty.cta">
         <source>Open TOON Playground</source>
-        <target state="needs-translation">Open TOON Playground</target>
+        <target state="needs-review-translation" state-qualifier="leveraged-mt">Abrir TOON Playground</target>
       </trans-unit>
       <trans-unit id="logs.delete.single">
         <source>Delete</source>
-        <target state="needs-translation">Delete</target>
+        <target state="needs-review-translation" state-qualifier="leveraged-mt">Eliminar</target>
       </trans-unit>
       <trans-unit id="logs.delete.bulk">
         <source>Delete selected (%d)</source>
-        <target state="needs-translation">Delete selected (%d)</target>
+        <target state="needs-review-translation" state-qualifier="leveraged-mt">Eliminar seleccionado (%d)</target>
       </trans-unit>
       <trans-unit id="logs.delete.confirm_title">
         <source>Delete log entries?</source>
-        <target state="needs-translation">Delete log entries?</target>
+        <target state="needs-review-translation" state-qualifier="leveraged-mt">¿Eliminar entradas de registro?</target>
       </trans-unit>
       <trans-unit id="logs.delete.confirm_body_single">
         <source>This will permanently remove the selected log entry. This action cannot be undone.</source>
-        <target state="needs-translation">This will permanently remove the selected log entry. This action cannot be undone.</target>
+        <target state="needs-review-translation" state-qualifier="leveraged-mt">Esto eliminará permanentemente la entrada de registro seleccionada. Esta acción no se puede deshacer.</target>
       </trans-unit>
       <trans-unit id="logs.delete.confirm_body_bulk">
         <source>This will permanently remove the selected log entries. This action cannot be undone.</source>
-        <target state="needs-translation">This will permanently remove the selected log entries. This action cannot be undone.</target>
+        <target state="needs-review-translation" state-qualifier="leveraged-mt">Esto eliminará permanentemente los registros seleccionados. Esta acción no se puede deshacer.</target>
       </trans-unit>
       <trans-unit id="logs.delete.confirm_button">
         <source>Yes, delete</source>
-        <target state="needs-translation">Yes, delete</target>
+        <target state="needs-review-translation" state-qualifier="leveraged-mt">Sí, eliminar</target>
       </trans-unit>
       <trans-unit id="logs.delete.cancel">
         <source>Cancel</source>
-        <target state="needs-translation">Cancel</target>
+        <target state="needs-review-translation" state-qualifier="leveraged-mt">Cancelar</target>
       </trans-unit>
       <trans-unit id="logs.flash.deleted_title">
         <source>Log entries deleted</source>
-        <target state="needs-translation">Log entries deleted</target>
+        <target state="needs-review-translation" state-qualifier="leveraged-mt">Registro de entradas eliminadas</target>
       </trans-unit>
       <trans-unit id="logs.flash.deleted_body">
         <source>%d log entry/entries were removed.</source>
@@ -261,31 +261,31 @@
       </trans-unit>
       <trans-unit id="logs.flash.nothing_title">
         <source>Nothing deleted</source>
-        <target state="needs-translation">Nothing deleted</target>
+        <target state="needs-review-translation" state-qualifier="leveraged-mt">Nada borrado</target>
       </trans-unit>
       <trans-unit id="logs.flash.nothing_body">
         <source>No matching log entries were found.</source>
-        <target state="needs-translation">No matching log entries were found.</target>
+        <target state="needs-review-translation" state-qualifier="leveraged-mt">No se encontraron registros coincidentes.</target>
       </trans-unit>
       <trans-unit id="logs.pagination.first">
         <source>First</source>
-        <target state="needs-translation">First</target>
+        <target state="needs-review-translation" state-qualifier="leveraged-mt">Primero</target>
       </trans-unit>
       <trans-unit id="logs.pagination.previous">
         <source>Previous</source>
-        <target state="needs-translation">Previous</target>
+        <target state="needs-review-translation" state-qualifier="leveraged-mt">Anterior</target>
       </trans-unit>
       <trans-unit id="logs.pagination.next">
         <source>Next</source>
-        <target state="needs-translation">Next</target>
+        <target state="needs-review-translation" state-qualifier="leveraged-mt">Siguiente</target>
       </trans-unit>
       <trans-unit id="logs.pagination.last">
         <source>Last</source>
-        <target state="needs-translation">Last</target>
+        <target state="needs-review-translation" state-qualifier="leveraged-mt">Última</target>
       </trans-unit>
       <trans-unit id="logs.pagination.summary">
         <source>Page %1$d of %2$d (%3$d total)</source>
-        <target state="needs-translation">Page %1$d of %2$d (%3$d total)</target>
+        <target state="needs-review-translation" state-qualifier="leveraged-mt">Página %1$d de %2$d ( total%3$d)</target>
       </trans-unit>
     </body>
   </file>
