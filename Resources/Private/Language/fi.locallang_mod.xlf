@@ -5,283 +5,283 @@
     <body>
       <trans-unit id="mlang_tabs_tab">
         <source>TOON Playground</source>
-        <target state="needs-translation">TOON Playground</target>
+        <target state="needs-review-translation" state-qualifier="leveraged-mt">TOON Leikkikenttä</target>
       </trans-unit>
       <trans-unit id="playground.title">
         <source>TOON Playground</source>
-        <target state="needs-translation">TOON Playground</target>
+        <target state="needs-review-translation" state-qualifier="leveraged-mt">TOON Leikkikenttä</target>
       </trans-unit>
       <trans-unit id="playground.input_label">
         <source>Input (JSON for encode, TOON for decode)</source>
-        <target state="needs-translation">Input (JSON for encode, TOON for decode)</target>
+        <target state="needs-review-translation" state-qualifier="leveraged-mt">Syöte (JSON koodaukseen, dekoodauksen TOON)</target>
       </trans-unit>
       <trans-unit id="playground.output_label">
         <source>Output</source>
-        <target state="needs-translation">Output</target>
+        <target state="needs-review-translation" state-qualifier="leveraged-mt">Ulostulo</target>
       </trans-unit>
       <trans-unit id="playground.encode">
         <source>Encode to TOON</source>
-        <target state="needs-translation">Encode to TOON</target>
+        <target state="needs-review-translation" state-qualifier="leveraged-mt">Koodaa TOON</target>
       </trans-unit>
       <trans-unit id="playground.decode">
         <source>Decode from TOON</source>
-        <target state="needs-translation">Decode from TOON</target>
+        <target state="needs-review-translation" state-qualifier="leveraged-mt">Decode from TOON</target>
       </trans-unit>
       <trans-unit id="playground.encode_compact">
         <source>Encode (compact)</source>
-        <target state="needs-translation">Encode (compact)</target>
+        <target state="needs-review-translation" state-qualifier="leveraged-mt">Enkoodaus (kompakti)</target>
       </trans-unit>
       <trans-unit id="playground.tokens">
         <source>Estimated tokens: %d</source>
-        <target state="needs-translation">Estimated tokens: %d</target>
+        <target state="needs-review-translation" state-qualifier="leveraged-mt">Arvioidut tunnisteet: %d</target>
       </trans-unit>
       <trans-unit id="playground.footer_made_with">
         <source>Made with 🧡 for the TYPO3 Developer by Rohan and Himanshu</source>
-        <target state="needs-translation">Made with 🧡 for the TYPO3 Developer by Rohan and Himanshu</target>
+        <target state="needs-review-translation" state-qualifier="leveraged-mt">Valmistettu 🧡 varten TYPO3 kehittäjä Rohan ja Himanshu</target>
       </trans-unit>
       <trans-unit id="playground.subtitle">
         <source>Encode JSON to TOON or decode strings instantly.</source>
-        <target state="needs-translation">Encode JSON to TOON or decode strings instantly.</target>
+        <target state="needs-review-translation" state-qualifier="leveraged-mt">Koodaa JSON TOON tai purkaa merkkijonot välittömästi.</target>
       </trans-unit>
       <trans-unit id="playground.clear_all">
         <source>Clear All</source>
-        <target state="needs-translation">Clear All</target>
+        <target state="needs-review-translation" state-qualifier="leveraged-mt">Tyhjennä Kaikki</target>
       </trans-unit>
       <trans-unit id="playground.view_logs">
         <source>View Logs</source>
-        <target state="needs-translation">View Logs</target>
+        <target state="needs-review-translation" state-qualifier="leveraged-mt">Näytä Lokit</target>
       </trans-unit>
       <trans-unit id="playground.badge_input">
         <source>Input</source>
-        <target state="needs-translation">Input</target>
+        <target state="needs-review-translation" state-qualifier="leveraged-mt">Input</target>
       </trans-unit>
       <trans-unit id="playground.or">
         <source>OR</source>
-        <target state="needs-translation">OR</target>
+        <target state="needs-review-translation" state-qualifier="leveraged-mt">TAI</target>
       </trans-unit>
       <trans-unit id="playground.estimated_tokens_label">
         <source>Estimated tokens</source>
-        <target state="needs-translation">Estimated tokens</target>
+        <target state="needs-review-translation" state-qualifier="leveraged-mt">Arvioidut tunnisteet</target>
       </trans-unit>
       <trans-unit id="playground.copy">
         <source>Copy</source>
-        <target state="needs-translation">Copy</target>
+        <target state="needs-review-translation" state-qualifier="leveraged-mt">Kopioi</target>
       </trans-unit>
       <trans-unit id="playground.copied_to_clipboard">
         <source>Copied to clipboard!</source>
-        <target state="needs-translation">Copied to clipboard!</target>
+        <target state="needs-review-translation" state-qualifier="leveraged-mt">Kopioitu leikepöydälle!</target>
       </trans-unit>
       <trans-unit id="playground.github">
         <source>GitHub</source>
-        <target state="needs-translation">GitHub</target>
+        <target state="needs-review-translation" state-qualifier="leveraged-mt">GitHub</target>
       </trans-unit>
       <trans-unit id="playground.documentation">
         <source>Documentation</source>
-        <target state="needs-translation">Documentation</target>
+        <target state="needs-review-translation" state-qualifier="leveraged-mt">Dokumentaatio</target>
       </trans-unit>
       <trans-unit id="playground.clear_confirm">
         <source>Clear both input and output?</source>
-        <target state="needs-translation">Clear both input and output?</target>
+        <target state="needs-review-translation" state-qualifier="leveraged-mt">Tyhjennetäänkö sekä syöte että ulostulo?</target>
       </trans-unit>
       <trans-unit id="playground.clear_confirm_title">
         <source>Clear All</source>
-        <target state="needs-translation">Clear All</target>
+        <target state="needs-review-translation" state-qualifier="leveraged-mt">Tyhjennä Kaikki</target>
       </trans-unit>
       <trans-unit id="playground.clear_confirm_body">
         <source>This will clear both the input and output fields. This action cannot be undone.</source>
-        <target state="needs-translation">This will clear both the input and output fields. This action cannot be undone.</target>
+        <target state="needs-review-translation" state-qualifier="leveraged-mt">Tämä tyhjentää sekä syöttö- että tulostuskentät. Tätä toimintoa ei voi peruuttaa.</target>
       </trans-unit>
       <trans-unit id="playground.cancel">
         <source>Cancel</source>
-        <target state="needs-translation">Cancel</target>
+        <target state="needs-review-translation" state-qualifier="leveraged-mt">Peruuta</target>
       </trans-unit>
       <trans-unit id="playground.confirm_clear">
         <source>Yes, Clear All</source>
-        <target state="needs-translation">Yes, Clear All</target>
+        <target state="needs-review-translation" state-qualifier="leveraged-mt">Kyllä, Tyhjennä Kaikki</target>
       </trans-unit>
       <trans-unit id="playground.placeholder">
         <source>{"name": "TOON", "items": [1, 2, 3]}</source>
-        <target state="needs-translation">{"name": "TOON", "items": [1, 2, 3]}</target>
+        <target state="needs-review-translation" state-qualifier="leveraged-mt">{"name": "TOON", "kohteet": [1, 2, 3]}</target>
       </trans-unit>
       <trans-unit id="playground.error_invalid_json">
         <source>Invalid JSON input for encode.</source>
-        <target state="needs-translation">Invalid JSON input for encode.</target>
+        <target state="needs-review-translation" state-qualifier="leveraged-mt">Virheellinen JSON syöte koodaukseen.</target>
       </trans-unit>
       <trans-unit id="optimization_note.title">
         <source>Why is optimization sometimes negative?</source>
-        <target state="needs-translation">Why is optimization sometimes negative?</target>
+        <target state="needs-review-translation" state-qualifier="leveraged-mt">Miksi optimointi on joskus negatiivista?</target>
       </trans-unit>
       <trans-unit id="optimization_note.body">
         <source>The optimization % compares the TOON output against minified JSON (not the indented text you paste). TOON saves the most on arrays of uniform records, which collapse into a single table header plus one compact line per row — the more rows, the bigger the saving. Deeply nested data with few or no repeating arrays has nothing to tabularize and can come out slightly larger, showing a negative percentage. This is expected, not an error.</source>
-        <target state="needs-translation">The optimization % compares the TOON output against minified JSON (not the indented text you paste). TOON saves the most on arrays of uniform records, which collapse into a single table header plus one compact line per row — the more rows, the bigger the saving. Deeply nested data with few or no repeating arrays has nothing to tabularize and can come out slightly larger, showing a negative percentage. This is expected, not an error.</target>
+        <target state="needs-review-translation" state-qualifier="leveraged-mt">Optimointi % vertaa TOON-ulostuloa pienennettyä JSONia vastaan (ei sisäistä tekstiä jota liität). TOON säästää eniten yhtenäisten tallenteiden taulukoita, joka romahtaa yhteen pöydän otsakkeeseen ja yksi kompakti rivi per rivi — enemmän rivejä, suurempi säästö. Syvästi sisäkkäinen tiedot muutaman tai ei toistuvia taulukoita ei ole mitään tabularize ja voi tulla ulos hieman suurempi, osoittaa negatiivinen prosenttiosuus. Tämän ei odoteta olevan virhe.</target>
       </trans-unit>
       <trans-unit id="optimization_note.close">
         <source>Dismiss note</source>
-        <target state="needs-translation">Dismiss note</target>
+        <target state="needs-review-translation" state-qualifier="leveraged-mt">Hylkää huomautus</target>
       </trans-unit>
       <trans-unit id="logs.mlang_tabs_tab">
         <source>TOON Logs</source>
-        <target state="needs-translation">TOON Logs</target>
+        <target state="needs-review-translation" state-qualifier="leveraged-mt">TOON Lokit</target>
       </trans-unit>
       <trans-unit id="logs.title">
         <source>TOON Usage Logs</source>
-        <target state="needs-translation">TOON Usage Logs</target>
+        <target state="needs-review-translation" state-qualifier="leveraged-mt">TOON Käyttölokit</target>
       </trans-unit>
       <trans-unit id="logs.subtitle">
         <source>Every successful encode/convert call recorded with input size, output size, and compression ratio.</source>
-        <target state="needs-translation">Every successful encode/convert call recorded with input size, output size, and compression ratio.</target>
+        <target state="needs-review-translation" state-qualifier="leveraged-mt">Jokainen onnistunut koodaus / muuntaa puhelun tallennettu tulo koko, tuotos koko, ja pakkaussuhde.</target>
       </trans-unit>
       <trans-unit id="logs.back_to_playground">
         <source>Back to Playground</source>
-        <target state="needs-translation">Back to Playground</target>
+        <target state="needs-review-translation" state-qualifier="leveraged-mt">Takaisin Playground</target>
       </trans-unit>
       <trans-unit id="logs.filter.legend">
         <source>Filters</source>
-        <target state="needs-translation">Filters</target>
+        <target state="needs-review-translation" state-qualifier="leveraged-mt">Suodattimet</target>
       </trans-unit>
       <trans-unit id="logs.filter.date_from">
         <source>From</source>
-        <target state="needs-translation">From</target>
+        <target state="needs-review-translation" state-qualifier="leveraged-mt">Alkaen</target>
       </trans-unit>
       <trans-unit id="logs.filter.date_to">
         <source>To</source>
-        <target state="needs-translation">To</target>
+        <target state="needs-review-translation" state-qualifier="leveraged-mt">Vastaanottaja</target>
       </trans-unit>
       <trans-unit id="logs.filter.enabled">
         <source>Optimization status</source>
-        <target state="needs-translation">Optimization status</target>
+        <target state="needs-review-translation" state-qualifier="leveraged-mt">Optimoinnin tila</target>
       </trans-unit>
       <trans-unit id="logs.filter.enabled.all">
         <source>All</source>
-        <target state="needs-translation">All</target>
+        <target state="needs-review-translation" state-qualifier="leveraged-mt">Kaikki</target>
       </trans-unit>
       <trans-unit id="logs.filter.enabled.on">
         <source>Enabled</source>
-        <target state="needs-translation">Enabled</target>
+        <target state="needs-review-translation" state-qualifier="leveraged-mt">Käytössä</target>
       </trans-unit>
       <trans-unit id="logs.filter.enabled.off">
         <source>Disabled</source>
-        <target state="needs-translation">Disabled</target>
+        <target state="needs-review-translation" state-qualifier="leveraged-mt">Pois Käytöstä</target>
       </trans-unit>
       <trans-unit id="logs.filter.min_pct">
         <source>Min optimization %</source>
-        <target state="needs-translation">Min optimization %</target>
+        <target state="needs-review-translation" state-qualifier="leveraged-mt">Optimointi minimi %</target>
       </trans-unit>
       <trans-unit id="logs.filter.per_page">
         <source>Per page</source>
-        <target state="needs-translation">Per page</target>
+        <target state="needs-review-translation" state-qualifier="leveraged-mt">Per sivu</target>
       </trans-unit>
       <trans-unit id="logs.filter.apply">
         <source>Apply</source>
-        <target state="needs-translation">Apply</target>
+        <target state="needs-review-translation" state-qualifier="leveraged-mt">Käytä</target>
       </trans-unit>
       <trans-unit id="logs.filter.reset">
         <source>Reset</source>
-        <target state="needs-translation">Reset</target>
+        <target state="needs-review-translation" state-qualifier="leveraged-mt">Reset</target>
       </trans-unit>
       <trans-unit id="logs.column.uid">
         <source>UID</source>
-        <target state="needs-translation">UID</target>
+        <target state="needs-review-translation" state-qualifier="leveraged-mt">UID</target>
       </trans-unit>
       <trans-unit id="logs.column.date">
         <source>Date &amp; Time</source>
-        <target state="needs-translation">Date &amp; Time</target>
+        <target state="needs-review-translation" state-qualifier="leveraged-mt">Päivämäärä &amp; Aika</target>
       </trans-unit>
       <trans-unit id="logs.column.input_size">
         <source>Input size</source>
-        <target state="needs-translation">Input size</target>
+        <target state="needs-review-translation" state-qualifier="leveraged-mt">Input size</target>
       </trans-unit>
       <trans-unit id="logs.column.output_size">
         <source>Output size</source>
-        <target state="needs-translation">Output size</target>
+        <target state="needs-review-translation" state-qualifier="leveraged-mt">Ulostulon koko</target>
       </trans-unit>
       <trans-unit id="logs.column.optimization">
         <source>Optimization</source>
-        <target state="needs-translation">Optimization</target>
+        <target state="needs-review-translation" state-qualifier="leveraged-mt">Optimointi</target>
       </trans-unit>
       <trans-unit id="logs.column.enabled">
         <source>Enabled</source>
-        <target state="needs-translation">Enabled</target>
+        <target state="needs-review-translation" state-qualifier="leveraged-mt">Käytössä</target>
       </trans-unit>
       <trans-unit id="logs.column.actions">
         <source>Actions</source>
-        <target state="needs-translation">Actions</target>
+        <target state="needs-review-translation" state-qualifier="leveraged-mt">Toiminnot</target>
       </trans-unit>
       <trans-unit id="logs.column.select">
         <source>Select</source>
-        <target state="needs-translation">Select</target>
+        <target state="needs-review-translation" state-qualifier="leveraged-mt">Valitse</target>
       </trans-unit>
       <trans-unit id="logs.empty.title">
         <source>No log entries yet</source>
-        <target state="needs-translation">No log entries yet</target>
+        <target state="needs-review-translation" state-qualifier="leveraged-mt">Ei vielä lokitietoja</target>
       </trans-unit>
       <trans-unit id="logs.empty.body">
         <source>Run an encode operation from the TOON Playground to record your first log entry.</source>
-        <target state="needs-translation">Run an encode operation from the TOON Playground to record your first log entry.</target>
+        <target state="needs-review-translation" state-qualifier="leveraged-mt">Suorita enkooditoiminto TOON Playground -pelistä, jotta voit tallentaa ensimmäisen kirjautumisesi.</target>
       </trans-unit>
       <trans-unit id="logs.empty.cta">
         <source>Open TOON Playground</source>
-        <target state="needs-translation">Open TOON Playground</target>
+        <target state="needs-review-translation" state-qualifier="leveraged-mt">Avaa TOON Playground</target>
       </trans-unit>
       <trans-unit id="logs.delete.single">
         <source>Delete</source>
-        <target state="needs-translation">Delete</target>
+        <target state="needs-review-translation" state-qualifier="leveraged-mt">Poista</target>
       </trans-unit>
       <trans-unit id="logs.delete.bulk">
         <source>Delete selected (%d)</source>
-        <target state="needs-translation">Delete selected (%d)</target>
+        <target state="needs-review-translation" state-qualifier="leveraged-mt">Poista valittu (%d)</target>
       </trans-unit>
       <trans-unit id="logs.delete.confirm_title">
         <source>Delete log entries?</source>
-        <target state="needs-translation">Delete log entries?</target>
+        <target state="needs-review-translation" state-qualifier="leveraged-mt">Poista lokimerkinnät?</target>
       </trans-unit>
       <trans-unit id="logs.delete.confirm_body_single">
         <source>This will permanently remove the selected log entry. This action cannot be undone.</source>
-        <target state="needs-translation">This will permanently remove the selected log entry. This action cannot be undone.</target>
+        <target state="needs-review-translation" state-qualifier="leveraged-mt">Tämä poistaa pysyvästi valitun lokimerkinnän. Tätä toimintoa ei voi peruuttaa.</target>
       </trans-unit>
       <trans-unit id="logs.delete.confirm_body_bulk">
         <source>This will permanently remove the selected log entries. This action cannot be undone.</source>
-        <target state="needs-translation">This will permanently remove the selected log entries. This action cannot be undone.</target>
+        <target state="needs-review-translation" state-qualifier="leveraged-mt">Tämä poistaa valitut lokitiedot pysyvästi. Tätä toimintoa ei voi peruuttaa.</target>
       </trans-unit>
       <trans-unit id="logs.delete.confirm_button">
         <source>Yes, delete</source>
-        <target state="needs-translation">Yes, delete</target>
+        <target state="needs-review-translation" state-qualifier="leveraged-mt">Kyllä, poista</target>
       </trans-unit>
       <trans-unit id="logs.delete.cancel">
         <source>Cancel</source>
-        <target state="needs-translation">Cancel</target>
+        <target state="needs-review-translation" state-qualifier="leveraged-mt">Peruuta</target>
       </trans-unit>
       <trans-unit id="logs.flash.deleted_title">
         <source>Log entries deleted</source>
-        <target state="needs-translation">Log entries deleted</target>
+        <target state="needs-review-translation" state-qualifier="leveraged-mt">Loki merkinnät poistettu</target>
       </trans-unit>
       <trans-unit id="logs.flash.deleted_body">
         <source>%d log entry/entries were removed.</source>
-        <target state="needs-translation">%d log entry/entries were removed.</target>
+        <target state="needs-review-translation" state-qualifier="leveraged-mt">%d lokin syöttö/merkinnät poistettiin.</target>
       </trans-unit>
       <trans-unit id="logs.flash.nothing_title">
         <source>Nothing deleted</source>
-        <target state="needs-translation">Nothing deleted</target>
+        <target state="needs-review-translation" state-qualifier="leveraged-mt">Mitään ei poistettu</target>
       </trans-unit>
       <trans-unit id="logs.flash.nothing_body">
         <source>No matching log entries were found.</source>
-        <target state="needs-translation">No matching log entries were found.</target>
+        <target state="needs-review-translation" state-qualifier="leveraged-mt">Vastaavia lokitietoja ei löytynyt.</target>
       </trans-unit>
       <trans-unit id="logs.pagination.first">
         <source>First</source>
-        <target state="needs-translation">First</target>
+        <target state="needs-review-translation" state-qualifier="leveraged-mt">Ensimmäinen</target>
       </trans-unit>
       <trans-unit id="logs.pagination.previous">
         <source>Previous</source>
-        <target state="needs-translation">Previous</target>
+        <target state="needs-review-translation" state-qualifier="leveraged-mt">Edellinen</target>
       </trans-unit>
       <trans-unit id="logs.pagination.next">
         <source>Next</source>
-        <target state="needs-translation">Next</target>
+        <target state="needs-review-translation" state-qualifier="leveraged-mt">Seuraava</target>
       </trans-unit>
       <trans-unit id="logs.pagination.last">
         <source>Last</source>
-        <target state="needs-translation">Last</target>
+        <target state="needs-review-translation" state-qualifier="leveraged-mt">Viimeinen</target>
       </trans-unit>
       <trans-unit id="logs.pagination.summary">
         <source>Page %1$d of %2$d (%3$d total)</source>
