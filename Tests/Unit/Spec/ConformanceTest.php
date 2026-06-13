@@ -4,6 +4,7 @@ declare(strict_types=1);
 
 namespace RRP\T3Toon\Tests\Unit\Spec;
 
+use PHPUnit\Framework\Attributes\DataProvider;
 use PHPUnit\Framework\TestCase;
 use RRP\T3Toon\Spec\Decoder;
 use RRP\T3Toon\Spec\Encoder;
@@ -19,9 +20,7 @@ final class ConformanceTest extends TestCase
 {
     private const FIXTURES = __DIR__ . '/../../Fixtures/spec';
 
-    /**
-     * @dataProvider encodeProvider
-     */
+    #[DataProvider('encodeProvider')]
     public function testEncode(string $name, mixed $input, mixed $expected, array $options, bool $shouldError): void
     {
         $encoder = new Encoder(
@@ -45,9 +44,7 @@ final class ConformanceTest extends TestCase
         self::assertSame($expected, $encoder->encode($input), $name);
     }
 
-    /**
-     * @dataProvider decodeProvider
-     */
+    #[DataProvider('decodeProvider')]
     public function testDecode(string $name, mixed $input, mixed $expected, array $options, bool $shouldError): void
     {
         $decoder = new Decoder(

@@ -18,3 +18,5 @@
 /rector.php
 .phpunit.result.cache
 .phpunit.cache
+/vendor/
+/public/

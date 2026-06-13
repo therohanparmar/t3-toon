@@ -21,7 +21,14 @@ final class ToonTest extends UnitTestCase
 
         // Mock ExtensionConfiguration to avoid dependency issues in ToonHelper
         $extensionConfigurationMock = $this->createMock(\TYPO3\CMS\Core\Configuration\ExtensionConfiguration::class);
-        $extensionConfigurationMock->method('get')->willReturn([]);
+        $extensionConfigurationMock->method('get')->willReturnCallback(
+            static fn (string $extensionKey, string $path = ''): mixed => match (true) {
+                $extensionKey !== 'rrp_t3toon' => [],
+                $path === '' => ['enabled' => '1', 'indent' => '2'],
+                $path === 'enabled' => '1',
+                default => [],
+            },
+        );
         GeneralUtility::addInstance(\TYPO3\CMS\Core\Configuration\ExtensionConfiguration::class, $extensionConfigurationMock);
 
         $this->toon = new Toon();
