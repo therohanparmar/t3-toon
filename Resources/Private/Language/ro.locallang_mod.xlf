@@ -3,289 +3,289 @@
   <file source-language="en" datatype="plaintext" original="EXT:rrp_t3toon/Resources/Private/Language/locallang_mod.xlf" product-name="rrp_t3toon" target-language="ro">
     <header/>
     <body>
-      <trans-unit id="mlang_tabs_tab">
+      <trans-unit id="mlang_tabs_tab" approved="yes">
         <source>TOON Playground</source>
-        <target state="needs-review-translation" state-qualifier="leveraged-mt">TOON Playground</target>
+        <target state="final">TOON Playground</target>
       </trans-unit>
-      <trans-unit id="playground.title">
+      <trans-unit id="playground.title" approved="yes">
         <source>TOON Playground</source>
-        <target state="needs-review-translation" state-qualifier="leveraged-mt">TOON Playground</target>
+        <target state="final">TOON Playground</target>
       </trans-unit>
-      <trans-unit id="playground.input_label">
+      <trans-unit id="playground.input_label" approved="yes">
         <source>Input (JSON for encode, TOON for decode)</source>
-        <target state="needs-review-translation" state-qualifier="leveraged-mt">Intrare (JSON pentru cod, TOON pentru decod)</target>
+        <target state="final">Intrare (JSON pentru cod, TOON pentru decod)</target>
       </trans-unit>
-      <trans-unit id="playground.output_label">
+      <trans-unit id="playground.output_label" approved="yes">
         <source>Output</source>
-        <target state="needs-review-translation" state-qualifier="leveraged-mt">Ieșire</target>
+        <target state="final">Ieșire</target>
       </trans-unit>
-      <trans-unit id="playground.encode">
+      <trans-unit id="playground.encode" approved="yes">
         <source>Encode to TOON</source>
-        <target state="needs-review-translation" state-qualifier="leveraged-mt">Codare în TOON</target>
+        <target state="final">Codare în TOON</target>
       </trans-unit>
-      <trans-unit id="playground.decode">
+      <trans-unit id="playground.decode" approved="yes">
         <source>Decode from TOON</source>
-        <target state="needs-review-translation" state-qualifier="leveraged-mt">Decodare de la TOON</target>
+        <target state="final">Decodare de la TOON</target>
       </trans-unit>
-      <trans-unit id="playground.encode_compact">
+      <trans-unit id="playground.encode_compact" approved="yes">
         <source>Encode (compact)</source>
-        <target state="needs-review-translation" state-qualifier="leveraged-mt">Codare (compact)</target>
+        <target state="final">Codare (compact)</target>
       </trans-unit>
-      <trans-unit id="playground.tokens">
+      <trans-unit id="playground.tokens" approved="yes">
         <source>Estimated tokens: %d</source>
-        <target state="needs-review-translation" state-qualifier="leveraged-mt">Tokeni estimați: %d</target>
+        <target state="final">Tokeni estimați: %d</target>
       </trans-unit>
-      <trans-unit id="playground.footer_made_with">
+      <trans-unit id="playground.footer_made_with" approved="yes">
         <source>Made with 🧡 for the TYPO3 Developer by Rohan and Himanshu</source>
-        <target state="needs-review-translation" state-qualifier="leveraged-mt">Făcut cu 🧡 pentru dezvoltatorul TYPO3 de Rohan și Himanshu</target>
+        <target state="final">Făcut cu 🧡 pentru dezvoltatorul TYPO3 de Rohan și Himanshu</target>
       </trans-unit>
-      <trans-unit id="playground.subtitle">
+      <trans-unit id="playground.subtitle" approved="yes">
         <source>Encode JSON to TOON or decode strings instantly.</source>
-        <target state="needs-review-translation" state-qualifier="leveraged-mt">Codificați JSON pe TOON sau decodați șirurile instant.</target>
+        <target state="final">Codificați JSON pe TOON sau decodați șirurile instant.</target>
       </trans-unit>
-      <trans-unit id="playground.clear_all">
+      <trans-unit id="playground.clear_all" approved="yes">
         <source>Clear All</source>
-        <target state="needs-review-translation" state-qualifier="leveraged-mt">Șterge tot</target>
+        <target state="final">Șterge tot</target>
       </trans-unit>
-      <trans-unit id="playground.view_logs">
+      <trans-unit id="playground.view_logs" approved="yes">
         <source>View Logs</source>
-        <target state="needs-review-translation" state-qualifier="leveraged-mt">Vezi jurnalele</target>
+        <target state="final">Vezi jurnalele</target>
       </trans-unit>
-      <trans-unit id="playground.badge_input">
+      <trans-unit id="playground.badge_input" approved="yes">
         <source>Input</source>
-        <target state="needs-review-translation" state-qualifier="leveraged-mt">Input</target>
+        <target state="final">Input</target>
       </trans-unit>
-      <trans-unit id="playground.or">
+      <trans-unit id="playground.or" approved="yes">
         <source>OR</source>
-        <target state="needs-review-translation" state-qualifier="leveraged-mt">SAU</target>
+        <target state="final">SAU</target>
       </trans-unit>
-      <trans-unit id="playground.estimated_tokens_label">
+      <trans-unit id="playground.estimated_tokens_label" approved="yes">
         <source>Estimated tokens</source>
-        <target state="needs-review-translation" state-qualifier="leveraged-mt">Tokeni estimați</target>
+        <target state="final">Tokeni estimați</target>
       </trans-unit>
-      <trans-unit id="playground.copy">
+      <trans-unit id="playground.copy" approved="yes">
         <source>Copy</source>
-        <target state="needs-review-translation" state-qualifier="leveraged-mt">Copiază</target>
+        <target state="final">Copiază</target>
       </trans-unit>
-      <trans-unit id="playground.copied_to_clipboard">
+      <trans-unit id="playground.copied_to_clipboard" approved="yes">
         <source>Copied to clipboard!</source>
-        <target state="needs-review-translation" state-qualifier="leveraged-mt">Copiat în clipboard!</target>
+        <target state="final">Copiat în clipboard!</target>
       </trans-unit>
-      <trans-unit id="playground.github">
+      <trans-unit id="playground.github" approved="yes">
         <source>GitHub</source>
-        <target state="needs-review-translation" state-qualifier="leveraged-mt">GitHub</target>
+        <target state="final">GitHub</target>
       </trans-unit>
-      <trans-unit id="playground.documentation">
+      <trans-unit id="playground.documentation" approved="yes">
         <source>Documentation</source>
-        <target state="needs-review-translation" state-qualifier="leveraged-mt">Documentație</target>
+        <target state="final">Documentație</target>
       </trans-unit>
-      <trans-unit id="playground.clear_confirm">
+      <trans-unit id="playground.clear_confirm" approved="yes">
         <source>Clear both input and output?</source>
-        <target state="needs-review-translation" state-qualifier="leveraged-mt">Ștergeți atât intrarea, cât și ieșirea?</target>
+        <target state="final">Ștergeți atât intrarea, cât și ieșirea?</target>
       </trans-unit>
-      <trans-unit id="playground.clear_confirm_title">
+      <trans-unit id="playground.clear_confirm_title" approved="yes">
         <source>Clear All</source>
-        <target state="needs-review-translation" state-qualifier="leveraged-mt">Șterge tot</target>
+        <target state="final">Șterge tot</target>
       </trans-unit>
-      <trans-unit id="playground.clear_confirm_body">
+      <trans-unit id="playground.clear_confirm_body" approved="yes">
         <source>This will clear both the input and output fields. This action cannot be undone.</source>
-        <target state="needs-review-translation" state-qualifier="leveraged-mt">Acest lucru va şterge atât câmpul de intrare, cât şi cel de ieşire. Această acţiune nu poate fi anulată.</target>
+        <target state="final">Acest lucru va şterge atât câmpul de intrare, cât şi cel de ieşire. Această acţiune nu poate fi anulată.</target>
       </trans-unit>
-      <trans-unit id="playground.cancel">
+      <trans-unit id="playground.cancel" approved="yes">
         <source>Cancel</source>
-        <target state="needs-review-translation" state-qualifier="leveraged-mt">Anulează</target>
+        <target state="final">Anulează</target>
       </trans-unit>
-      <trans-unit id="playground.confirm_clear">
+      <trans-unit id="playground.confirm_clear" approved="yes">
         <source>Yes, Clear All</source>
-        <target state="needs-review-translation" state-qualifier="leveraged-mt">Da, șterge tot</target>
+        <target state="final">Da, șterge tot</target>
       </trans-unit>
-      <trans-unit id="playground.placeholder">
+      <trans-unit id="playground.placeholder" approved="yes">
         <source>{"name": "TOON", "items": [1, 2, 3]}</source>
-        <target state="needs-review-translation" state-qualifier="leveraged-mt">{"nume": "TOON", "articole": [1, 2, 3]}</target>
+        <target state="final">{"nume": "TOON", "articole": [1, 2, 3]}</target>
       </trans-unit>
-      <trans-unit id="playground.error_invalid_json">
+      <trans-unit id="playground.error_invalid_json" approved="yes">
         <source>Invalid JSON input for encode.</source>
-        <target state="needs-review-translation" state-qualifier="leveraged-mt">Introducere JSON nevalidă pentru cod.</target>
+        <target state="final">Introducere JSON nevalidă pentru cod.</target>
       </trans-unit>
-      <trans-unit id="optimization_note.title">
+      <trans-unit id="optimization_note.title" approved="yes">
         <source>Why is optimization sometimes negative?</source>
-        <target state="needs-review-translation" state-qualifier="leveraged-mt">De ce este uneori o optimizare negativă?</target>
+        <target state="final">De ce este uneori o optimizare negativă?</target>
       </trans-unit>
-      <trans-unit id="optimization_note.body">
+      <trans-unit id="optimization_note.body" approved="yes">
         <source>The optimization % compares the TOON output against minified JSON (not the indented text you paste). TOON saves the most on arrays of uniform records, which collapse into a single table header plus one compact line per row — the more rows, the bigger the saving. Deeply nested data with few or no repeating arrays has nothing to tabularize and can come out slightly larger, showing a negative percentage. This is expected, not an error.</source>
-        <target state="needs-review-translation" state-qualifier="leveraged-mt">Optimizarea % compară rezultatul TOON cu JSON minimizat (nu textul indentat pe care îl pastezi). TOON salvează cele mai multe înregistrări uniforme, care se restrânge într-un singur antet de masă plus o linie compactă pe rând - cu cât sunt mai multe rânduri, cu atât este mai mare economia. Include date imbricate cu puţine sau fără reţele repetitive nu are nimic de tabularizat şi poate ieşi puţin mai mari, arătând un procent negativ. Acest lucru se aşteaptă, nu o eroare.</target>
+        <target state="final">Optimizarea % compară rezultatul TOON cu JSON minimizat (nu textul indentat pe care îl pastezi). TOON salvează cele mai multe înregistrări uniforme, care se restrânge într-un singur antet de masă plus o linie compactă pe rând - cu cât sunt mai multe rânduri, cu atât este mai mare economia. Include date imbricate cu puţine sau fără reţele repetitive nu are nimic de tabularizat şi poate ieşi puţin mai mari, arătând un procent negativ. Acest lucru se aşteaptă, nu o eroare.</target>
       </trans-unit>
-      <trans-unit id="optimization_note.close">
+      <trans-unit id="optimization_note.close" approved="yes">
         <source>Dismiss note</source>
-        <target state="needs-review-translation" state-qualifier="leveraged-mt">Renunțați la notă</target>
+        <target state="final">Renunțați la notă</target>
       </trans-unit>
-      <trans-unit id="logs.mlang_tabs_tab">
+      <trans-unit id="logs.mlang_tabs_tab" approved="yes">
         <source>TOON Logs</source>
-        <target state="needs-review-translation" state-qualifier="leveraged-mt">Jurnale TOON</target>
+        <target state="final">Jurnale TOON</target>
       </trans-unit>
-      <trans-unit id="logs.title">
+      <trans-unit id="logs.title" approved="yes">
         <source>TOON Usage Logs</source>
-        <target state="needs-review-translation" state-qualifier="leveraged-mt">Jurnale de utilizare TOON</target>
+        <target state="final">Jurnale de utilizare TOON</target>
       </trans-unit>
-      <trans-unit id="logs.subtitle">
+      <trans-unit id="logs.subtitle" approved="yes">
         <source>Every successful encode/convert call recorded with input size, output size, and compression ratio.</source>
-        <target state="needs-review-translation" state-qualifier="leveraged-mt">Fiecare codare /apel de conversie de succes înregistrat cu dimensiunea de intrare, dimensiunea de ieșire și raportul de comprimare.</target>
+        <target state="final">Fiecare codare /apel de conversie de succes înregistrat cu dimensiunea de intrare, dimensiunea de ieșire și raportul de comprimare.</target>
       </trans-unit>
-      <trans-unit id="logs.back_to_playground">
+      <trans-unit id="logs.back_to_playground" approved="yes">
         <source>Back to Playground</source>
-        <target state="needs-review-translation" state-qualifier="leveraged-mt">Înapoi la locul de joacă</target>
+        <target state="final">Înapoi la locul de joacă</target>
       </trans-unit>
-      <trans-unit id="logs.filter.legend">
+      <trans-unit id="logs.filter.legend" approved="yes">
         <source>Filters</source>
-        <target state="needs-review-translation" state-qualifier="leveraged-mt">Filtre</target>
+        <target state="final">Filtre</target>
       </trans-unit>
-      <trans-unit id="logs.filter.date_from">
+      <trans-unit id="logs.filter.date_from" approved="yes">
         <source>From</source>
-        <target state="needs-review-translation" state-qualifier="leveraged-mt">De la</target>
+        <target state="final">De la</target>
       </trans-unit>
-      <trans-unit id="logs.filter.date_to">
+      <trans-unit id="logs.filter.date_to" approved="yes">
         <source>To</source>
-        <target state="needs-review-translation" state-qualifier="leveraged-mt">La</target>
+        <target state="final">La</target>
       </trans-unit>
-      <trans-unit id="logs.filter.enabled">
+      <trans-unit id="logs.filter.enabled" approved="yes">
         <source>Optimization status</source>
-        <target state="needs-review-translation" state-qualifier="leveraged-mt">Status optimizare</target>
+        <target state="final">Status optimizare</target>
       </trans-unit>
-      <trans-unit id="logs.filter.enabled.all">
+      <trans-unit id="logs.filter.enabled.all" approved="yes">
         <source>All</source>
-        <target state="needs-review-translation" state-qualifier="leveraged-mt">Toate</target>
+        <target state="final">Toate</target>
       </trans-unit>
-      <trans-unit id="logs.filter.enabled.on">
+      <trans-unit id="logs.filter.enabled.on" approved="yes">
         <source>Enabled</source>
-        <target state="needs-review-translation" state-qualifier="leveraged-mt">Activat</target>
+        <target state="final">Activat</target>
       </trans-unit>
-      <trans-unit id="logs.filter.enabled.off">
+      <trans-unit id="logs.filter.enabled.off" approved="yes">
         <source>Disabled</source>
-        <target state="needs-review-translation" state-qualifier="leveraged-mt">Dezactivat</target>
+        <target state="final">Dezactivat</target>
       </trans-unit>
-      <trans-unit id="logs.filter.min_pct">
+      <trans-unit id="logs.filter.min_pct" approved="yes">
         <source>Min optimization %</source>
-        <target state="needs-review-translation" state-qualifier="leveraged-mt">Optimizare minimă %</target>
+        <target state="final">Optimizare minimă %</target>
       </trans-unit>
-      <trans-unit id="logs.filter.per_page">
+      <trans-unit id="logs.filter.per_page" approved="yes">
         <source>Per page</source>
-        <target state="needs-review-translation" state-qualifier="leveraged-mt">Pe pagină</target>
+        <target state="final">Pe pagină</target>
       </trans-unit>
-      <trans-unit id="logs.filter.apply">
+      <trans-unit id="logs.filter.apply" approved="yes">
         <source>Apply</source>
-        <target state="needs-review-translation" state-qualifier="leveraged-mt">Aplică</target>
+        <target state="final">Aplică</target>
       </trans-unit>
-      <trans-unit id="logs.filter.reset">
+      <trans-unit id="logs.filter.reset" approved="yes">
         <source>Reset</source>
-        <target state="needs-review-translation" state-qualifier="leveraged-mt">Reset</target>
+        <target state="final">Reset</target>
       </trans-unit>
-      <trans-unit id="logs.column.uid">
+      <trans-unit id="logs.column.uid" approved="yes">
         <source>UID</source>
-        <target state="needs-review-translation" state-qualifier="leveraged-mt">UID</target>
+        <target state="final">UID</target>
       </trans-unit>
-      <trans-unit id="logs.column.date">
+      <trans-unit id="logs.column.date" approved="yes">
         <source>Date &amp; Time</source>
-        <target state="needs-review-translation" state-qualifier="leveraged-mt">Data &amp; Oră</target>
+        <target state="final">Data &amp; Oră</target>
       </trans-unit>
-      <trans-unit id="logs.column.input_size">
+      <trans-unit id="logs.column.input_size" approved="yes">
         <source>Input size</source>
-        <target state="needs-review-translation" state-qualifier="leveraged-mt">Input size</target>
+        <target state="final">Input size</target>
       </trans-unit>
-      <trans-unit id="logs.column.output_size">
+      <trans-unit id="logs.column.output_size" approved="yes">
         <source>Output size</source>
-        <target state="needs-review-translation" state-qualifier="leveraged-mt">Dimensiunea ieșirii</target>
+        <target state="final">Dimensiunea ieșirii</target>
       </trans-unit>
-      <trans-unit id="logs.column.optimization">
+      <trans-unit id="logs.column.optimization" approved="yes">
         <source>Optimization</source>
-        <target state="needs-review-translation" state-qualifier="leveraged-mt">Optimizare</target>
+        <target state="final">Optimizare</target>
       </trans-unit>
-      <trans-unit id="logs.column.enabled">
+      <trans-unit id="logs.column.enabled" approved="yes">
         <source>Enabled</source>
-        <target state="needs-review-translation" state-qualifier="leveraged-mt">Activat</target>
+        <target state="final">Activat</target>
       </trans-unit>
-      <trans-unit id="logs.column.actions">
+      <trans-unit id="logs.column.actions" approved="yes">
         <source>Actions</source>
-        <target state="needs-review-translation" state-qualifier="leveraged-mt">Acțiuni</target>
+        <target state="final">Acțiuni</target>
       </trans-unit>
-      <trans-unit id="logs.column.select">
+      <trans-unit id="logs.column.select" approved="yes">
         <source>Select</source>
-        <target state="needs-review-translation" state-qualifier="leveraged-mt">Selectare</target>
+        <target state="final">Selectare</target>
       </trans-unit>
-      <trans-unit id="logs.empty.title">
+      <trans-unit id="logs.empty.title" approved="yes">
         <source>No log entries yet</source>
-        <target state="needs-review-translation" state-qualifier="leveraged-mt">Nicio înregistrare în jurnal încă</target>
+        <target state="final">Nicio înregistrare în jurnal încă</target>
       </trans-unit>
-      <trans-unit id="logs.empty.body">
+      <trans-unit id="logs.empty.body" approved="yes">
         <source>Run an encode operation from the TOON Playground to record your first log entry.</source>
-        <target state="needs-review-translation" state-qualifier="leveraged-mt">Execută o operațiune de codare din TOON Playground pentru a înregistra prima dvs. intrare în jurnal.</target>
+        <target state="final">Execută o operațiune de codare din TOON Playground pentru a înregistra prima dvs. intrare în jurnal.</target>
       </trans-unit>
-      <trans-unit id="logs.empty.cta">
+      <trans-unit id="logs.empty.cta" approved="yes">
         <source>Open TOON Playground</source>
-        <target state="needs-review-translation" state-qualifier="leveraged-mt">Deschide TOON Playground</target>
+        <target state="final">Deschide TOON Playground</target>
       </trans-unit>
-      <trans-unit id="logs.delete.single">
+      <trans-unit id="logs.delete.single" approved="yes">
         <source>Delete</source>
-        <target state="needs-review-translation" state-qualifier="leveraged-mt">Ștergere</target>
+        <target state="final">Ștergere</target>
       </trans-unit>
-      <trans-unit id="logs.delete.bulk">
+      <trans-unit id="logs.delete.bulk" approved="yes">
         <source>Delete selected (%d)</source>
-        <target state="needs-review-translation" state-qualifier="leveraged-mt">Șterge selecția (%d)</target>
+        <target state="final">Șterge selecția (%d)</target>
       </trans-unit>
-      <trans-unit id="logs.delete.confirm_title">
+      <trans-unit id="logs.delete.confirm_title" approved="yes">
         <source>Delete log entries?</source>
-        <target state="needs-review-translation" state-qualifier="leveraged-mt">Ștergeți intrările din jurnal?</target>
+        <target state="final">Ștergeți intrările din jurnal?</target>
       </trans-unit>
-      <trans-unit id="logs.delete.confirm_body_single">
+      <trans-unit id="logs.delete.confirm_body_single" approved="yes">
         <source>This will permanently remove the selected log entry. This action cannot be undone.</source>
-        <target state="needs-review-translation" state-qualifier="leveraged-mt">Acest lucru va elimina definitiv intrarea de jurnal selectată. Această acțiune nu poate fi anulată.</target>
+        <target state="final">Acest lucru va elimina definitiv intrarea de jurnal selectată. Această acțiune nu poate fi anulată.</target>
       </trans-unit>
-      <trans-unit id="logs.delete.confirm_body_bulk">
+      <trans-unit id="logs.delete.confirm_body_bulk" approved="yes">
         <source>This will permanently remove the selected log entries. This action cannot be undone.</source>
-        <target state="needs-review-translation" state-qualifier="leveraged-mt">Acest lucru va elimina definitiv intrările din jurnalul selectat. Această acțiune nu poate fi anulată.</target>
+        <target state="final">Acest lucru va elimina definitiv intrările din jurnalul selectat. Această acțiune nu poate fi anulată.</target>
       </trans-unit>
-      <trans-unit id="logs.delete.confirm_button">
+      <trans-unit id="logs.delete.confirm_button" approved="yes">
         <source>Yes, delete</source>
-        <target state="needs-review-translation" state-qualifier="leveraged-mt">Da, șterge</target>
+        <target state="final">Da, șterge</target>
       </trans-unit>
-      <trans-unit id="logs.delete.cancel">
+      <trans-unit id="logs.delete.cancel" approved="yes">
         <source>Cancel</source>
-        <target state="needs-review-translation" state-qualifier="leveraged-mt">Anulează</target>
+        <target state="final">Anulează</target>
       </trans-unit>
-      <trans-unit id="logs.flash.deleted_title">
+      <trans-unit id="logs.flash.deleted_title" approved="yes">
         <source>Log entries deleted</source>
-        <target state="needs-review-translation" state-qualifier="leveraged-mt">Intrări în jurnal șterse</target>
+        <target state="final">Intrări în jurnal șterse</target>
       </trans-unit>
-      <trans-unit id="logs.flash.deleted_body">
+      <trans-unit id="logs.flash.deleted_body" approved="yes">
         <source>%d log entry/entries were removed.</source>
-        <target state="needs-review-translation" state-qualifier="leveraged-mt">%d log/intrări au fost șterse.</target>
+        <target state="final">%d log/intrări au fost șterse.</target>
       </trans-unit>
-      <trans-unit id="logs.flash.nothing_title">
+      <trans-unit id="logs.flash.nothing_title" approved="yes">
         <source>Nothing deleted</source>
-        <target state="needs-review-translation" state-qualifier="leveraged-mt">Nimic șters</target>
+        <target state="final">Nimic șters</target>
       </trans-unit>
-      <trans-unit id="logs.flash.nothing_body">
+      <trans-unit id="logs.flash.nothing_body" approved="yes">
         <source>No matching log entries were found.</source>
-        <target state="needs-review-translation" state-qualifier="leveraged-mt">Nu au fost găsite însemnări corespunzătoare.</target>
+        <target state="final">Nu au fost găsite însemnări corespunzătoare.</target>
       </trans-unit>
-      <trans-unit id="logs.pagination.first">
+      <trans-unit id="logs.pagination.first" approved="yes">
         <source>First</source>
-        <target state="needs-review-translation" state-qualifier="leveraged-mt">Primul</target>
+        <target state="final">Primul</target>
       </trans-unit>
-      <trans-unit id="logs.pagination.previous">
+      <trans-unit id="logs.pagination.previous" approved="yes">
         <source>Previous</source>
-        <target state="needs-review-translation" state-qualifier="leveraged-mt">Anterior</target>
+        <target state="final">Anterior</target>
       </trans-unit>
-      <trans-unit id="logs.pagination.next">
+      <trans-unit id="logs.pagination.next" approved="yes">
         <source>Next</source>
-        <target state="needs-review-translation" state-qualifier="leveraged-mt">Următoarea</target>
+        <target state="final">Următoarea</target>
       </trans-unit>
-      <trans-unit id="logs.pagination.last">
+      <trans-unit id="logs.pagination.last" approved="yes">
         <source>Last</source>
-        <target state="needs-review-translation" state-qualifier="leveraged-mt">Ultimul</target>
+        <target state="final">Ultimul</target>
       </trans-unit>
-      <trans-unit id="logs.pagination.summary">
+      <trans-unit id="logs.pagination.summary" approved="yes">
         <source>Page %1$d of %2$d (%3$d total)</source>
-        <target state="needs-review-translation" state-qualifier="leveraged-mt">Pagina %1$d din %2$d (%3$d total)</target>
+        <target state="final">Pagina %1$d din %2$d (%3$d total)</target>
       </trans-unit>
     </body>
   </file>
