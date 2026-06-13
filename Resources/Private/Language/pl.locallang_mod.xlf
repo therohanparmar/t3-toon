@@ -3,289 +3,289 @@
   <file source-language="en" datatype="plaintext" original="EXT:rrp_t3toon/Resources/Private/Language/locallang_mod.xlf" product-name="rrp_t3toon" target-language="pl">
     <header/>
     <body>
-      <trans-unit id="mlang_tabs_tab">
+      <trans-unit id="mlang_tabs_tab" approved="yes">
         <source>TOON Playground</source>
-        <target state="needs-review-translation" state-qualifier="leveraged-mt">TOON Playground</target>
+        <target state="final">TOON Playground</target>
       </trans-unit>
-      <trans-unit id="playground.title">
+      <trans-unit id="playground.title" approved="yes">
         <source>TOON Playground</source>
-        <target state="needs-review-translation" state-qualifier="leveraged-mt">TOON Playground</target>
+        <target state="final">TOON Playground</target>
       </trans-unit>
-      <trans-unit id="playground.input_label">
+      <trans-unit id="playground.input_label" approved="yes">
         <source>Input (JSON for encode, TOON for decode)</source>
-        <target state="needs-review-translation" state-qualifier="leveraged-mt">Wejście (JSON dla kodowania, TOON dla dekodowania)</target>
+        <target state="final">Wejście (JSON dla kodowania, TOON dla dekodowania)</target>
       </trans-unit>
-      <trans-unit id="playground.output_label">
+      <trans-unit id="playground.output_label" approved="yes">
         <source>Output</source>
-        <target state="needs-review-translation" state-qualifier="leveraged-mt">Wyjście</target>
+        <target state="final">Wyjście</target>
       </trans-unit>
-      <trans-unit id="playground.encode">
+      <trans-unit id="playground.encode" approved="yes">
         <source>Encode to TOON</source>
-        <target state="needs-review-translation" state-qualifier="leveraged-mt">Kodowanie do TOON</target>
+        <target state="final">Kodowanie do TOON</target>
       </trans-unit>
-      <trans-unit id="playground.decode">
+      <trans-unit id="playground.decode" approved="yes">
         <source>Decode from TOON</source>
-        <target state="needs-review-translation" state-qualifier="leveraged-mt">Dekoduj z TOON</target>
+        <target state="final">Dekoduj z TOON</target>
       </trans-unit>
-      <trans-unit id="playground.encode_compact">
+      <trans-unit id="playground.encode_compact" approved="yes">
         <source>Encode (compact)</source>
-        <target state="needs-review-translation" state-qualifier="leveraged-mt">Kodowanie (skrócone)</target>
+        <target state="final">Kodowanie (skrócone)</target>
       </trans-unit>
-      <trans-unit id="playground.tokens">
+      <trans-unit id="playground.tokens" approved="yes">
         <source>Estimated tokens: %d</source>
-        <target state="needs-review-translation" state-qualifier="leveraged-mt">Szacowane tokeny: %d</target>
+        <target state="final">Szacowane tokeny: %d</target>
       </trans-unit>
-      <trans-unit id="playground.footer_made_with">
+      <trans-unit id="playground.footer_made_with" approved="yes">
         <source>Made with 🧡 for the TYPO3 Developer by Rohan and Himanshu</source>
-        <target state="needs-review-translation" state-qualifier="leveraged-mt">Wykonane z 🧡 dla programisty TYPO3 przez Rohan i Himanshu</target>
+        <target state="final">Wykonane z 🧡 dla programisty TYPO3 przez Rohan i Himanshu</target>
       </trans-unit>
-      <trans-unit id="playground.subtitle">
+      <trans-unit id="playground.subtitle" approved="yes">
         <source>Encode JSON to TOON or decode strings instantly.</source>
-        <target state="needs-review-translation" state-qualifier="leveraged-mt">Natychmiast koduj JSON do TOON lub dekoduj ciągi znaków.</target>
+        <target state="final">Natychmiast koduj JSON do TOON lub dekoduj ciągi znaków.</target>
       </trans-unit>
-      <trans-unit id="playground.clear_all">
+      <trans-unit id="playground.clear_all" approved="yes">
         <source>Clear All</source>
-        <target state="needs-review-translation" state-qualifier="leveraged-mt">Wyczyść wszystko</target>
+        <target state="final">Wyczyść wszystko</target>
       </trans-unit>
-      <trans-unit id="playground.view_logs">
+      <trans-unit id="playground.view_logs" approved="yes">
         <source>View Logs</source>
-        <target state="needs-review-translation" state-qualifier="leveraged-mt">Zobacz dzienniki</target>
+        <target state="final">Zobacz dzienniki</target>
       </trans-unit>
-      <trans-unit id="playground.badge_input">
+      <trans-unit id="playground.badge_input" approved="yes">
         <source>Input</source>
-        <target state="needs-review-translation" state-qualifier="leveraged-mt">Input</target>
+        <target state="final">Input</target>
       </trans-unit>
-      <trans-unit id="playground.or">
+      <trans-unit id="playground.or" approved="yes">
         <source>OR</source>
-        <target state="needs-review-translation" state-qualifier="leveraged-mt">LUB</target>
+        <target state="final">LUB</target>
       </trans-unit>
-      <trans-unit id="playground.estimated_tokens_label">
+      <trans-unit id="playground.estimated_tokens_label" approved="yes">
         <source>Estimated tokens</source>
-        <target state="needs-review-translation" state-qualifier="leveraged-mt">Szacowane tokeny</target>
+        <target state="final">Szacowane tokeny</target>
       </trans-unit>
-      <trans-unit id="playground.copy">
+      <trans-unit id="playground.copy" approved="yes">
         <source>Copy</source>
-        <target state="needs-review-translation" state-qualifier="leveraged-mt">Kopiuj</target>
+        <target state="final">Kopiuj</target>
       </trans-unit>
-      <trans-unit id="playground.copied_to_clipboard">
+      <trans-unit id="playground.copied_to_clipboard" approved="yes">
         <source>Copied to clipboard!</source>
-        <target state="needs-review-translation" state-qualifier="leveraged-mt">Skopiowano do schowka!</target>
+        <target state="final">Skopiowano do schowka!</target>
       </trans-unit>
-      <trans-unit id="playground.github">
+      <trans-unit id="playground.github" approved="yes">
         <source>GitHub</source>
-        <target state="needs-review-translation" state-qualifier="leveraged-mt">GitHub</target>
+        <target state="final">GitHub</target>
       </trans-unit>
-      <trans-unit id="playground.documentation">
+      <trans-unit id="playground.documentation" approved="yes">
         <source>Documentation</source>
-        <target state="needs-review-translation" state-qualifier="leveraged-mt">Dokumentacja</target>
+        <target state="final">Dokumentacja</target>
       </trans-unit>
-      <trans-unit id="playground.clear_confirm">
+      <trans-unit id="playground.clear_confirm" approved="yes">
         <source>Clear both input and output?</source>
-        <target state="needs-review-translation" state-qualifier="leveraged-mt">Wyczyścić zarówno wejściowe, jak i wyjściowe?</target>
+        <target state="final">Wyczyścić zarówno wejściowe, jak i wyjściowe?</target>
       </trans-unit>
-      <trans-unit id="playground.clear_confirm_title">
+      <trans-unit id="playground.clear_confirm_title" approved="yes">
         <source>Clear All</source>
-        <target state="needs-review-translation" state-qualifier="leveraged-mt">Wyczyść wszystko</target>
+        <target state="final">Wyczyść wszystko</target>
       </trans-unit>
-      <trans-unit id="playground.clear_confirm_body">
+      <trans-unit id="playground.clear_confirm_body" approved="yes">
         <source>This will clear both the input and output fields. This action cannot be undone.</source>
-        <target state="needs-review-translation" state-qualifier="leveraged-mt">To wyczyści zarówno pola wejściowe, jak i wyjściowe. Tej czynności nie można cofnąć.</target>
+        <target state="final">To wyczyści zarówno pola wejściowe, jak i wyjściowe. Tej czynności nie można cofnąć.</target>
       </trans-unit>
-      <trans-unit id="playground.cancel">
+      <trans-unit id="playground.cancel" approved="yes">
         <source>Cancel</source>
-        <target state="needs-review-translation" state-qualifier="leveraged-mt">Anuluj</target>
+        <target state="final">Anuluj</target>
       </trans-unit>
-      <trans-unit id="playground.confirm_clear">
+      <trans-unit id="playground.confirm_clear" approved="yes">
         <source>Yes, Clear All</source>
-        <target state="needs-review-translation" state-qualifier="leveraged-mt">Tak, Wyczyść Wszystko</target>
+        <target state="final">Tak, Wyczyść Wszystko</target>
       </trans-unit>
-      <trans-unit id="playground.placeholder">
+      <trans-unit id="playground.placeholder" approved="yes">
         <source>{"name": "TOON", "items": [1, 2, 3]}</source>
-        <target state="needs-review-translation" state-qualifier="leveraged-mt">{"name": "TOON", "items": [1, 2, 3]}</target>
+        <target state="final">{"name": "TOON", "items": [1, 2, 3]}</target>
       </trans-unit>
-      <trans-unit id="playground.error_invalid_json">
+      <trans-unit id="playground.error_invalid_json" approved="yes">
         <source>Invalid JSON input for encode.</source>
-        <target state="needs-review-translation" state-qualifier="leveraged-mt">Nieprawidłowe wejście JSON dla enkodu.</target>
+        <target state="final">Nieprawidłowe wejście JSON dla enkodu.</target>
       </trans-unit>
-      <trans-unit id="optimization_note.title">
+      <trans-unit id="optimization_note.title" approved="yes">
         <source>Why is optimization sometimes negative?</source>
-        <target state="needs-review-translation" state-qualifier="leveraged-mt">Dlaczego optymalizacja jest czasami negatywna?</target>
+        <target state="final">Dlaczego optymalizacja jest czasami negatywna?</target>
       </trans-unit>
-      <trans-unit id="optimization_note.body">
+      <trans-unit id="optimization_note.body" approved="yes">
         <source>The optimization % compares the TOON output against minified JSON (not the indented text you paste). TOON saves the most on arrays of uniform records, which collapse into a single table header plus one compact line per row — the more rows, the bigger the saving. Deeply nested data with few or no repeating arrays has nothing to tabularize and can come out slightly larger, showing a negative percentage. This is expected, not an error.</source>
-        <target state="needs-review-translation" state-qualifier="leveraged-mt">Optymalizacja % porównuje wyjście TOON ze zmniejszonym JSON (nie wciśniętym tekstem). TOON zapisuje najwięcej na tablicach jednolitych rekordów, które zwijają się do pojedynczego nagłówka tabeli plus jedna kompaktowa linia na wiersz — im więcej wierszy, tym większe oszczędności. Głęboko zagnieżdżone dane z nielicznymi lub żadnymi powtarzającymi się tablicami nie mają nic do tabelaryzacji i mogą być nieco większe, pokazując ujemny procent. To jest oczekiwane, a nie błąd.</target>
+        <target state="final">Optymalizacja % porównuje wyjście TOON ze zmniejszonym JSON (nie wciśniętym tekstem). TOON zapisuje najwięcej na tablicach jednolitych rekordów, które zwijają się do pojedynczego nagłówka tabeli plus jedna kompaktowa linia na wiersz — im więcej wierszy, tym większe oszczędności. Głęboko zagnieżdżone dane z nielicznymi lub żadnymi powtarzającymi się tablicami nie mają nic do tabelaryzacji i mogą być nieco większe, pokazując ujemny procent. To jest oczekiwane, a nie błąd.</target>
       </trans-unit>
-      <trans-unit id="optimization_note.close">
+      <trans-unit id="optimization_note.close" approved="yes">
         <source>Dismiss note</source>
-        <target state="needs-review-translation" state-qualifier="leveraged-mt">Usuń notatkę</target>
+        <target state="final">Usuń notatkę</target>
       </trans-unit>
-      <trans-unit id="logs.mlang_tabs_tab">
+      <trans-unit id="logs.mlang_tabs_tab" approved="yes">
         <source>TOON Logs</source>
-        <target state="needs-review-translation" state-qualifier="leveraged-mt">Logi TOON</target>
+        <target state="final">Logi TOON</target>
       </trans-unit>
-      <trans-unit id="logs.title">
+      <trans-unit id="logs.title" approved="yes">
         <source>TOON Usage Logs</source>
-        <target state="needs-review-translation" state-qualifier="leveraged-mt">Dzienniki użycia TOON</target>
+        <target state="final">Dzienniki użycia TOON</target>
       </trans-unit>
-      <trans-unit id="logs.subtitle">
+      <trans-unit id="logs.subtitle" approved="yes">
         <source>Every successful encode/convert call recorded with input size, output size, and compression ratio.</source>
-        <target state="needs-review-translation" state-qualifier="leveraged-mt">Każdy udany kodowanie/konwertowanie wywołania nagrywanego z wielkością wejściową, wielkością wyjściową i współczynnikiem kompresji.</target>
+        <target state="final">Każdy udany kodowanie/konwertowanie wywołania nagrywanego z wielkością wejściową, wielkością wyjściową i współczynnikiem kompresji.</target>
       </trans-unit>
-      <trans-unit id="logs.back_to_playground">
+      <trans-unit id="logs.back_to_playground" approved="yes">
         <source>Back to Playground</source>
-        <target state="needs-review-translation" state-qualifier="leveraged-mt">Powrót do Playground</target>
+        <target state="final">Powrót do Playground</target>
       </trans-unit>
-      <trans-unit id="logs.filter.legend">
+      <trans-unit id="logs.filter.legend" approved="yes">
         <source>Filters</source>
-        <target state="needs-review-translation" state-qualifier="leveraged-mt">Filtry</target>
+        <target state="final">Filtry</target>
       </trans-unit>
-      <trans-unit id="logs.filter.date_from">
+      <trans-unit id="logs.filter.date_from" approved="yes">
         <source>From</source>
-        <target state="needs-review-translation" state-qualifier="leveraged-mt">Od</target>
+        <target state="final">Od</target>
       </trans-unit>
-      <trans-unit id="logs.filter.date_to">
+      <trans-unit id="logs.filter.date_to" approved="yes">
         <source>To</source>
-        <target state="needs-review-translation" state-qualifier="leveraged-mt">Do</target>
+        <target state="final">Do</target>
       </trans-unit>
-      <trans-unit id="logs.filter.enabled">
+      <trans-unit id="logs.filter.enabled" approved="yes">
         <source>Optimization status</source>
-        <target state="needs-review-translation" state-qualifier="leveraged-mt">Status optymalizacji</target>
+        <target state="final">Status optymalizacji</target>
       </trans-unit>
-      <trans-unit id="logs.filter.enabled.all">
+      <trans-unit id="logs.filter.enabled.all" approved="yes">
         <source>All</source>
-        <target state="needs-review-translation" state-qualifier="leveraged-mt">Wszystkie</target>
+        <target state="final">Wszystkie</target>
       </trans-unit>
-      <trans-unit id="logs.filter.enabled.on">
+      <trans-unit id="logs.filter.enabled.on" approved="yes">
         <source>Enabled</source>
-        <target state="needs-review-translation" state-qualifier="leveraged-mt">Włączone</target>
+        <target state="final">Włączone</target>
       </trans-unit>
-      <trans-unit id="logs.filter.enabled.off">
+      <trans-unit id="logs.filter.enabled.off" approved="yes">
         <source>Disabled</source>
-        <target state="needs-review-translation" state-qualifier="leveraged-mt">Wyłączone</target>
+        <target state="final">Wyłączone</target>
       </trans-unit>
-      <trans-unit id="logs.filter.min_pct">
+      <trans-unit id="logs.filter.min_pct" approved="yes">
         <source>Min optimization %</source>
-        <target state="needs-review-translation" state-qualifier="leveraged-mt">Min. optymalizacja %</target>
+        <target state="final">Min. optymalizacja %</target>
       </trans-unit>
-      <trans-unit id="logs.filter.per_page">
+      <trans-unit id="logs.filter.per_page" approved="yes">
         <source>Per page</source>
-        <target state="needs-review-translation" state-qualifier="leveraged-mt">Na stronę</target>
+        <target state="final">Na stronę</target>
       </trans-unit>
-      <trans-unit id="logs.filter.apply">
+      <trans-unit id="logs.filter.apply" approved="yes">
         <source>Apply</source>
-        <target state="needs-review-translation" state-qualifier="leveraged-mt">Zastosuj</target>
+        <target state="final">Zastosuj</target>
       </trans-unit>
-      <trans-unit id="logs.filter.reset">
+      <trans-unit id="logs.filter.reset" approved="yes">
         <source>Reset</source>
-        <target state="needs-review-translation" state-qualifier="leveraged-mt">Reset</target>
+        <target state="final">Reset</target>
       </trans-unit>
-      <trans-unit id="logs.column.uid">
+      <trans-unit id="logs.column.uid" approved="yes">
         <source>UID</source>
-        <target state="needs-review-translation" state-qualifier="leveraged-mt">UID</target>
+        <target state="final">UID</target>
       </trans-unit>
-      <trans-unit id="logs.column.date">
+      <trans-unit id="logs.column.date" approved="yes">
         <source>Date &amp; Time</source>
-        <target state="needs-review-translation" state-qualifier="leveraged-mt">Data &amp; Czas</target>
+        <target state="final">Data &amp; Czas</target>
       </trans-unit>
-      <trans-unit id="logs.column.input_size">
+      <trans-unit id="logs.column.input_size" approved="yes">
         <source>Input size</source>
-        <target state="needs-review-translation" state-qualifier="leveraged-mt">Input size</target>
+        <target state="final">Input size</target>
       </trans-unit>
-      <trans-unit id="logs.column.output_size">
+      <trans-unit id="logs.column.output_size" approved="yes">
         <source>Output size</source>
-        <target state="needs-review-translation" state-qualifier="leveraged-mt">Rozmiar wyjściowy</target>
+        <target state="final">Rozmiar wyjściowy</target>
       </trans-unit>
-      <trans-unit id="logs.column.optimization">
+      <trans-unit id="logs.column.optimization" approved="yes">
         <source>Optimization</source>
-        <target state="needs-review-translation" state-qualifier="leveraged-mt">Optymalizacja</target>
+        <target state="final">Optymalizacja</target>
       </trans-unit>
-      <trans-unit id="logs.column.enabled">
+      <trans-unit id="logs.column.enabled" approved="yes">
         <source>Enabled</source>
-        <target state="needs-review-translation" state-qualifier="leveraged-mt">Włączone</target>
+        <target state="final">Włączone</target>
       </trans-unit>
-      <trans-unit id="logs.column.actions">
+      <trans-unit id="logs.column.actions" approved="yes">
         <source>Actions</source>
-        <target state="needs-review-translation" state-qualifier="leveraged-mt">Akcje</target>
+        <target state="final">Akcje</target>
       </trans-unit>
-      <trans-unit id="logs.column.select">
+      <trans-unit id="logs.column.select" approved="yes">
         <source>Select</source>
-        <target state="needs-review-translation" state-qualifier="leveraged-mt">Wybierz</target>
+        <target state="final">Wybierz</target>
       </trans-unit>
-      <trans-unit id="logs.empty.title">
+      <trans-unit id="logs.empty.title" approved="yes">
         <source>No log entries yet</source>
-        <target state="needs-review-translation" state-qualifier="leveraged-mt">Brak wpisów dziennika</target>
+        <target state="final">Brak wpisów dziennika</target>
       </trans-unit>
-      <trans-unit id="logs.empty.body">
+      <trans-unit id="logs.empty.body" approved="yes">
         <source>Run an encode operation from the TOON Playground to record your first log entry.</source>
-        <target state="needs-review-translation" state-qualifier="leveraged-mt">Uruchom operację enkodowania z TOON Playground, aby nagrać swój pierwszy wpis do logu.</target>
+        <target state="final">Uruchom operację enkodowania z TOON Playground, aby nagrać swój pierwszy wpis do logu.</target>
       </trans-unit>
-      <trans-unit id="logs.empty.cta">
+      <trans-unit id="logs.empty.cta" approved="yes">
         <source>Open TOON Playground</source>
-        <target state="needs-review-translation" state-qualifier="leveraged-mt">Otwórz TOON Playground</target>
+        <target state="final">Otwórz TOON Playground</target>
       </trans-unit>
-      <trans-unit id="logs.delete.single">
+      <trans-unit id="logs.delete.single" approved="yes">
         <source>Delete</source>
-        <target state="needs-review-translation" state-qualifier="leveraged-mt">Usuń</target>
+        <target state="final">Usuń</target>
       </trans-unit>
-      <trans-unit id="logs.delete.bulk">
+      <trans-unit id="logs.delete.bulk" approved="yes">
         <source>Delete selected (%d)</source>
-        <target state="needs-review-translation" state-qualifier="leveraged-mt">Usuń zaznaczone (%d)</target>
+        <target state="final">Usuń zaznaczone (%d)</target>
       </trans-unit>
-      <trans-unit id="logs.delete.confirm_title">
+      <trans-unit id="logs.delete.confirm_title" approved="yes">
         <source>Delete log entries?</source>
-        <target state="needs-review-translation" state-qualifier="leveraged-mt">Usunąć wpisy w dzienniku?</target>
+        <target state="final">Usunąć wpisy w dzienniku?</target>
       </trans-unit>
-      <trans-unit id="logs.delete.confirm_body_single">
+      <trans-unit id="logs.delete.confirm_body_single" approved="yes">
         <source>This will permanently remove the selected log entry. This action cannot be undone.</source>
-        <target state="needs-review-translation" state-qualifier="leveraged-mt">To spowoduje trwałe usunięcie zaznaczonego wpisu dziennika. Tej czynności nie można cofnąć.</target>
+        <target state="final">To spowoduje trwałe usunięcie zaznaczonego wpisu dziennika. Tej czynności nie można cofnąć.</target>
       </trans-unit>
-      <trans-unit id="logs.delete.confirm_body_bulk">
+      <trans-unit id="logs.delete.confirm_body_bulk" approved="yes">
         <source>This will permanently remove the selected log entries. This action cannot be undone.</source>
-        <target state="needs-review-translation" state-qualifier="leveraged-mt">To spowoduje trwałe usunięcie zaznaczonych wpisów. Tej akcji nie można cofnąć.</target>
+        <target state="final">To spowoduje trwałe usunięcie zaznaczonych wpisów. Tej akcji nie można cofnąć.</target>
       </trans-unit>
-      <trans-unit id="logs.delete.confirm_button">
+      <trans-unit id="logs.delete.confirm_button" approved="yes">
         <source>Yes, delete</source>
-        <target state="needs-review-translation" state-qualifier="leveraged-mt">Tak, usuń</target>
+        <target state="final">Tak, usuń</target>
       </trans-unit>
-      <trans-unit id="logs.delete.cancel">
+      <trans-unit id="logs.delete.cancel" approved="yes">
         <source>Cancel</source>
-        <target state="needs-review-translation" state-qualifier="leveraged-mt">Anuluj</target>
+        <target state="final">Anuluj</target>
       </trans-unit>
-      <trans-unit id="logs.flash.deleted_title">
+      <trans-unit id="logs.flash.deleted_title" approved="yes">
         <source>Log entries deleted</source>
-        <target state="needs-review-translation" state-qualifier="leveraged-mt">Usunięto wpisy dziennika</target>
+        <target state="final">Usunięto wpisy dziennika</target>
       </trans-unit>
-      <trans-unit id="logs.flash.deleted_body">
+      <trans-unit id="logs.flash.deleted_body" approved="yes">
         <source>%d log entry/entries were removed.</source>
-        <target state="needs-review-translation" state-qualifier="leveraged-mt">%d wpis dziennika zostały usunięte.</target>
+        <target state="final">%d wpis dziennika zostały usunięte.</target>
       </trans-unit>
-      <trans-unit id="logs.flash.nothing_title">
+      <trans-unit id="logs.flash.nothing_title" approved="yes">
         <source>Nothing deleted</source>
-        <target state="needs-review-translation" state-qualifier="leveraged-mt">Nic nie zostało usunięte</target>
+        <target state="final">Nic nie zostało usunięte</target>
       </trans-unit>
-      <trans-unit id="logs.flash.nothing_body">
+      <trans-unit id="logs.flash.nothing_body" approved="yes">
         <source>No matching log entries were found.</source>
-        <target state="needs-review-translation" state-qualifier="leveraged-mt">Nie znaleziono pasujących wpisów dziennika.</target>
+        <target state="final">Nie znaleziono pasujących wpisów dziennika.</target>
       </trans-unit>
-      <trans-unit id="logs.pagination.first">
+      <trans-unit id="logs.pagination.first" approved="yes">
         <source>First</source>
-        <target state="needs-review-translation" state-qualifier="leveraged-mt">Pierwszy</target>
+        <target state="final">Pierwszy</target>
       </trans-unit>
-      <trans-unit id="logs.pagination.previous">
+      <trans-unit id="logs.pagination.previous" approved="yes">
         <source>Previous</source>
-        <target state="needs-review-translation" state-qualifier="leveraged-mt">Poprzedni</target>
+        <target state="final">Poprzedni</target>
       </trans-unit>
-      <trans-unit id="logs.pagination.next">
+      <trans-unit id="logs.pagination.next" approved="yes">
         <source>Next</source>
-        <target state="needs-review-translation" state-qualifier="leveraged-mt">Następny</target>
+        <target state="final">Następny</target>
       </trans-unit>
-      <trans-unit id="logs.pagination.last">
+      <trans-unit id="logs.pagination.last" approved="yes">
         <source>Last</source>
-        <target state="needs-review-translation" state-qualifier="leveraged-mt">Ostatni</target>
+        <target state="final">Ostatni</target>
       </trans-unit>
-      <trans-unit id="logs.pagination.summary">
+      <trans-unit id="logs.pagination.summary" approved="yes">
         <source>Page %1$d of %2$d (%3$d total)</source>
-        <target state="needs-review-translation" state-qualifier="leveraged-mt">Strona %1$d %2$d (%3$d łącznie)</target>
+        <target state="final">Strona %1$d %2$d (%3$d łącznie)</target>
       </trans-unit>
     </body>
   </file>
