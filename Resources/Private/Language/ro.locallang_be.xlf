@@ -3,37 +3,37 @@
   <file source-language="en" datatype="plaintext" original="EXT:rrp_t3toon/Resources/Private/Language/locallang_be.xlf" date="2026-01-11T11:26:11Z" product-name="rrp_t3toon" target-language="ro">
     <header/>
     <body>
-      <trans-unit id="settings.enabled">
+      <trans-unit id="settings.enabled" approved="yes">
         <source>Enabled : Global toggle for the TOON converter. When disabled, encoding operations bypass TOON and return standard JSON instead. Decoding of existing TOON data still works normally.</source>
-        <target state="needs-review-translation" state-qualifier="leveraged-mt">Activat: Comutare globală pentru convertorul TOON. Când este dezactivată, codarea operațiunilor ocolind TOON și returnând JSON standard. Decodarea datelor TOON existente încă funcţionează normal.</target>
+        <target state="final">Activat: Comutare globală pentru convertorul TOON. Când este dezactivată, codarea operațiunilor ocolind TOON și returnând JSON standard. Decodarea datelor TOON existente încă funcţionează normal.</target>
       </trans-unit>
-      <trans-unit id="settings.indent">
+      <trans-unit id="settings.indent" approved="yes">
         <source>Indent : Number of spaces per indentation level when encoding TOON (default: 2).</source>
-        <target state="needs-review-translation" state-qualifier="leveraged-mt">Indent: Numărul de spaţii pe nivel de indentare la codarea TOON (implicit: 2).</target>
+        <target state="final">Indent: Numărul de spaţii pe nivel de indentare la codarea TOON (implicit: 2).</target>
       </trans-unit>
-      <trans-unit id="settings.delimiter">
+      <trans-unit id="settings.delimiter" approved="yes">
         <source>Delimiter : Field delimiter for tabular rows when encoding (comma or tab). Use a single comma "," for default.</source>
-        <target state="needs-review-translation" state-qualifier="leveraged-mt">Delimitator: delimitator de câmp pentru rândurile tabulare atunci când se codifică (virgulă sau tab). Utilizați o singură virgulă"," în mod implicit.</target>
+        <target state="final">Delimitator: delimitator de câmp pentru rândurile tabulare atunci când se codifică (virgulă sau tab). Utilizați o singură virgulă"," în mod implicit.</target>
       </trans-unit>
-      <trans-unit id="settings.escape_style">
+      <trans-unit id="settings.escape_style" approved="yes">
         <source>Escape Style : Defines how special characters (commas, colons, backslashes, etc.) should be escaped when serializing text values into TOON format.</source>
-        <target state="needs-review-translation" state-qualifier="leveraged-mt">Stil Escape : Definește modul în care caracterele speciale (virgule, coloane, backslash-uri etc.) ar trebui evitate atunci când serializezi valorile textului în format TOON.</target>
+        <target state="final">Stil Escape : Definește modul în care caracterele speciale (virgule, coloane, backslash-uri etc.) ar trebui evitate atunci când serializezi valorile textului în format TOON.</target>
       </trans-unit>
-      <trans-unit id="settings.min_rows_to_tabular">
+      <trans-unit id="settings.min_rows_to_tabular" approved="yes">
         <source>Minimum Rows to Tabular : Determines the minimum number of sequential rows required for an array to be rendered as a tabular block in TOON.</source>
-        <target state="needs-review-translation" state-qualifier="leveraged-mt">Rânduri minime la tabul: Determină numărul minim de rânduri secvențiale necesare pentru ca un array să fie randat ca bloc tabular în TOON.</target>
+        <target state="final">Rânduri minime la tabul: Determină numărul minim de rânduri secvențiale necesare pentru ca un array să fie randat ca bloc tabular în TOON.</target>
       </trans-unit>
-      <trans-unit id="settings.max_preview_items">
+      <trans-unit id="settings.max_preview_items" approved="yes">
         <source>Maximum Preview Items : Controls how many items are displayed when rendering long tabular arrays or datasets in TOON format.</source>
-        <target state="needs-review-translation" state-qualifier="leveraged-mt">Maximum Preview Items: Controlează câte elemente sunt afișate când se randează array-uri lungi de tabele sau seturi de date în format TOON.</target>
+        <target state="final">Maximum Preview Items: Controlează câte elemente sunt afișate când se randează array-uri lungi de tabele sau seturi de date în format TOON.</target>
       </trans-unit>
-      <trans-unit id="settings.coerce_scalar_types">
+      <trans-unit id="settings.coerce_scalar_types" approved="yes">
         <source>Coerce Scalar Types : When decoding TOON back to JSON/PHP arrays, this setting decides whether textual scalars such as "true", "false", "null", or "42" should be converted to their native PHP types (boolean, null, int).</source>
-        <target state="needs-review-translation" state-qualifier="leveraged-mt">Tipuri Scalar de constrângere: La decodarea TOON înapoi la array-uri JSON/PHP, această setare decide dacă scalarele textuale cum ar fi "true", "false", "null" sau "42" ar trebui convertite în tipurile lor native de PHP (boolean, null, int).</target>
+        <target state="final">Tipuri Scalar de constrângere: La decodarea TOON înapoi la array-uri JSON/PHP, această setare decide dacă scalarele textuale cum ar fi "true", "false", "null" sau "42" ar trebui convertite în tipurile lor native de PHP (boolean, null, int).</target>
       </trans-unit>
-      <trans-unit id="settings.primitive_array_header">
+      <trans-unit id="settings.primitive_array_header" approved="yes">
         <source>Primitive Array Header : When encoding, emit primitive sequential arrays as a single line [N]: v1,v2,v3 (spec-style). Disabled by default.</source>
-        <target state="needs-review-translation" state-qualifier="leveraged-mt">Antet Array Primitive : Când codifică, emite array-uri secvențiale primitive ca o singură linie [N]: v1,v2,v3 (spec-style). Dezactivat implicit.</target>
+        <target state="final">Antet Array Primitive : Când codifică, emite array-uri secvențiale primitive ca o singură linie [N]: v1,v2,v3 (spec-style). Dezactivat implicit.</target>
       </trans-unit>
     </body>
   </file>
