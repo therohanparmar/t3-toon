@@ -3,37 +3,37 @@
   <file source-language="en" datatype="plaintext" original="EXT:rrp_t3toon/Resources/Private/Language/locallang_be.xlf" date="2026-01-11T11:26:11Z" product-name="rrp_t3toon" target-language="fi">
     <header/>
     <body>
-      <trans-unit id="settings.enabled">
+      <trans-unit id="settings.enabled" approved="yes">
         <source>Enabled : Global toggle for the TOON converter. When disabled, encoding operations bypass TOON and return standard JSON instead. Decoding of existing TOON data still works normally.</source>
-        <target state="needs-review-translation" state-qualifier="leveraged-mt">Käytössä : Global toggle for the TOON converter. When disabled, encoding operations bypass TOON and return standard JSON instead. Olemassa olevan TOON-datan dekoodaus toimii edelleen normaalisti.</target>
+        <target state="final">Käytössä : Global toggle for the TOON converter. When disabled, encoding operations bypass TOON and return standard JSON instead. Olemassa olevan TOON-datan dekoodaus toimii edelleen normaalisti.</target>
       </trans-unit>
-      <trans-unit id="settings.indent">
+      <trans-unit id="settings.indent" approved="yes">
         <source>Indent : Number of spaces per indentation level when encoding TOON (default: 2).</source>
-        <target state="needs-review-translation" state-qualifier="leveraged-mt">Sisennys : välilyöntien määrä sisennyksen tasolla muunnettaessa TOON (oletus: 2).</target>
+        <target state="final">Sisennys : välilyöntien määrä sisennyksen tasolla muunnettaessa TOON (oletus: 2).</target>
       </trans-unit>
-      <trans-unit id="settings.delimiter">
+      <trans-unit id="settings.delimiter" approved="yes">
         <source>Delimiter : Field delimiter for tabular rows when encoding (comma or tab). Use a single comma "," for default.</source>
-        <target state="needs-review-translation" state-qualifier="leveraged-mt">Erotin : Kenttä erottuu taulukkoriville koodauksen yhteydessä (pilkulla tai välilehdellä). Käytä yhtä pilkua "", oletuksena.</target>
+        <target state="final">Erotin : Kenttä erottuu taulukkoriville koodauksen yhteydessä (pilkulla tai välilehdellä). Käytä yhtä pilkua "", oletuksena.</target>
       </trans-unit>
-      <trans-unit id="settings.escape_style">
+      <trans-unit id="settings.escape_style" approved="yes">
         <source>Escape Style : Defines how special characters (commas, colons, backslashes, etc.) should be escaped when serializing text values into TOON format.</source>
-        <target state="needs-review-translation" state-qualifier="leveraged-mt">Pakotyyli : Määrittää, miten erikoismerkit (pilkut, colons, backslashes, jne.) pitäisi karata, kun sarjoitetaan tekstiarvoja TOON-muotoon.</target>
+        <target state="final">Pakotyyli : Määrittää, miten erikoismerkit (pilkut, colons, backslashes, jne.) pitäisi karata, kun sarjoitetaan tekstiarvoja TOON-muotoon.</target>
       </trans-unit>
-      <trans-unit id="settings.min_rows_to_tabular">
+      <trans-unit id="settings.min_rows_to_tabular" approved="yes">
         <source>Minimum Rows to Tabular : Determines the minimum number of sequential rows required for an array to be rendered as a tabular block in TOON.</source>
-        <target state="needs-review-translation" state-qualifier="leveraged-mt">Vähimmäisrivejä taulukkoon : Määritetään vähimmäismäärä peräkkäisiä rivejä, jotka on tehtävä taulukon lohkoksi TOON.</target>
+        <target state="final">Vähimmäisrivejä taulukkoon : Määritetään vähimmäismäärä peräkkäisiä rivejä, jotka on tehtävä taulukon lohkoksi TOON.</target>
       </trans-unit>
-      <trans-unit id="settings.max_preview_items">
+      <trans-unit id="settings.max_preview_items" approved="yes">
         <source>Maximum Preview Items : Controls how many items are displayed when rendering long tabular arrays or datasets in TOON format.</source>
-        <target state="needs-review-translation" state-qualifier="leveraged-mt">Suurin esikatselu Kohteita : Määrittää kuinka monta kohdetta näytetään, kun renderöidään pitkän taulukkomuotoisia taulukoita tai tietokokonaisuuksia.</target>
+        <target state="final">Suurin esikatselu Kohteita : Määrittää kuinka monta kohdetta näytetään, kun renderöidään pitkän taulukkomuotoisia taulukoita tai tietokokonaisuuksia.</target>
       </trans-unit>
-      <trans-unit id="settings.coerce_scalar_types">
+      <trans-unit id="settings.coerce_scalar_types" approved="yes">
         <source>Coerce Scalar Types : When decoding TOON back to JSON/PHP arrays, this setting decides whether textual scalars such as "true", "false", "null", or "42" should be converted to their native PHP types (boolean, null, int).</source>
-        <target state="needs-review-translation" state-qualifier="leveraged-mt">Coerce Scalar tyypit: Kun dekoodaus TOON takaisin JSON/PHP rakenteet, tämä asetus päättää, onko tekstimuotoinen scalars kuten "true", "false", "null" tai "42" on muunnettava niiden alkuperäiseen PHP-tyyppiin (boolean, null, int).</target>
+        <target state="final">Coerce Scalar tyypit: Kun dekoodaus TOON takaisin JSON/PHP rakenteet, tämä asetus päättää, onko tekstimuotoinen scalars kuten "true", "false", "null" tai "42" on muunnettava niiden alkuperäiseen PHP-tyyppiin (boolean, null, int).</target>
       </trans-unit>
-      <trans-unit id="settings.primitive_array_header">
+      <trans-unit id="settings.primitive_array_header" approved="yes">
         <source>Primitive Array Header : When encoding, emit primitive sequential arrays as a single line [N]: v1,v2,v3 (spec-style). Disabled by default.</source>
-        <target state="needs-review-translation" state-qualifier="leveraged-mt">Primitive Array Header : Kun enkoodaus, emit primitiiviset sekventiaaliset matriisit kuin yksi rivi [N]: v1,v2,v3 (spektyyli). Pois käytöstä oletuksena.</target>
+        <target state="final">Primitive Array Header : Kun enkoodaus, emit primitiiviset sekventiaaliset matriisit kuin yksi rivi [N]: v1,v2,v3 (spektyyli). Pois käytöstä oletuksena.</target>
       </trans-unit>
     </body>
   </file>
