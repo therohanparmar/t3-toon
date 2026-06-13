@@ -96,22 +96,19 @@ TOON;
         ];
         $toon = $this->toon->encode($input);
         $decoded = $this->toon->decode($toon);
-        // Decoder: tasks is array containing one table (array of rows)
-        self::assertSame('ABC', $decoded['user']);
-        self::assertIsArray($decoded['tasks']);
-        self::assertCount(1, $decoded['tasks']);
-        self::assertCount(2, $decoded['tasks'][0]);
-        self::assertSame(1, $decoded['tasks'][0][0]['id']);
-        self::assertFalse($decoded['tasks'][0][0]['done']);
-        self::assertSame(2, $decoded['tasks'][0][1]['id']);
-        self::assertTrue($decoded['tasks'][0][1]['done']);
+        // tasks is a uniform array of objects -> tabular -> array of rows.
+        self::assertSame($input, $decoded);
+        self::assertSame(1, $decoded['tasks'][0]['id']);
+        self::assertFalse($decoded['tasks'][0]['done']);
+        self::assertSame(2, $decoded['tasks'][1]['id']);
+        self::assertTrue($decoded['tasks'][1]['done']);
     }
 
     public function testDecodeMalformedThrowsToonDecodeException(): void
     {
         $this->expectException(ToonDecodeException::class);
-        // Line with colon but invalid key:value format
-        Toon::decodeStatic("valid: key\ninvalid : format");
+        // Inline array length mismatch (declared 3, only 1 value).
+        Toon::decodeStatic('tags[3]: a');
     }
 
     public function testEncodeWithEncodeOptionsIndent(): void
@@ -126,13 +123,13 @@ TOON;
 
     public function testDecodeWithDecodeOptionsLenient(): void
     {
-        $toon = "flag: true\ncount: 42";
-        $decodedStrict = $this->toon->decode($toon);
-        $decodedLenient = $this->toon->decode($toon, DecodeOptions::lenient());
-        // Lenient keeps as strings; default coerces
-        self::assertTrue($decodedStrict['flag']);
-        self::assertSame(42, $decodedStrict['count']);
-        self::assertSame('true', $decodedLenient['flag']);
-        self::assertSame('42', $decodedLenient['count']);
+        // Type coercion follows the spec in both modes.
+        $decoded = $this->toon->decode("flag: true\ncount: 42");
+        self::assertTrue($decoded['flag']);
+        self::assertSame(42, $decoded['count']);
+
+        // Lenient = non-strict: tolerates an array length mismatch that strict mode rejects.
+        $lenient = $this->toon->decode('tags[3]: a,b', DecodeOptions::lenient());
+        self::assertSame(['a', 'b'], $lenient['tags']);
     }
 }

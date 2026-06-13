@@ -10,6 +10,7 @@ use RRP\T3Toon\Domain\Model\DecodeOptions;
 use RRP\T3Toon\Domain\Model\EncodeOptions;
 use RRP\T3Toon\Exception\ToonDecodeException;
 use RRP\T3Toon\Service\Toon;
+use RRP\T3Toon\Utility\ToonHelper;
 use TYPO3\CMS\Backend\Template\ModuleTemplateFactory;
 use TYPO3\CMS\Core\Page\PageRenderer;
 use TYPO3\CMS\Core\Utility\GeneralUtility;
@@ -17,6 +18,23 @@ use TYPO3\CMS\Core\Localization\LanguageService;
 
 class ToonModuleController
 {
+    /**
+     * Sample input shown on first load of the Playground (when enabled in extension
+     * configuration). Intentionally different from the toonformat.dev example, using
+     * TYPO3-flavoured data that exercises nesting, a tabular array, and an inline array.
+     */
+    private const DEFAULT_EXAMPLE = <<<JSON
+{
+  "site": "TYPO3 Headless",
+  "languages": ["en", "de", "fr"],
+  "pages": [
+    { "uid": 1, "title": "Home", "hidden": false },
+    { "uid": 2, "title": "Products", "hidden": false },
+    { "uid": 3, "title": "Draft", "hidden": true }
+  ]
+}
+JSON;
+
     public function playgroundAction(ServerRequestInterface $request): ResponseInterface
     {
         $moduleTemplateFactory = GeneralUtility::makeInstance(ModuleTemplateFactory::class);
@@ -46,10 +64,12 @@ class ToonModuleController
                         $output = json_encode($decoded, JSON_PRETTY_PRINT | JSON_UNESCAPED_UNICODE);
                         $tokenEstimate = $toon->estimateTokens($input);
                     } else {
-                        $data = json_decode($input, true);
-                        if (json_last_error() === JSON_ERROR_NONE && is_array($data)) {
+                        json_decode($input);
+                        if (json_last_error() === JSON_ERROR_NONE) {
                             $options = $mode === 'compact' ? EncodeOptions::compact() : null;
-                            $output = $toon->encode($data, $options);
+                            // Pass the JSON string straight through: the encoder re-decodes it
+                            // preserving the object-vs-array distinction (e.g. empty {} vs []).
+                            $output = $toon->encode($input, $options);
                             $tokenEstimate = $toon->estimateTokens($output);
                         } else {
                             $error = $this->getLanguageService()->sL(
@@ -62,6 +82,17 @@ class ToonModuleController
                 } catch (\Throwable $e) {
                     $error = $e->getMessage();
                 }
+            }
+        } elseif (ToonHelper::getConfig()['show_default_example']) {
+            // Initial load (no submission): prefill a sample and its encoded TOON output.
+            $input = self::DEFAULT_EXAMPLE;
+            try {
+                $toon = GeneralUtility::makeInstance(Toon::class);
+                $output = $toon->encode($input);
+                $tokenEstimate = $toon->estimateTokens($output);
+            } catch (\Throwable) {
+                // If anything goes wrong, fall back to an empty Playground silently.
+                $output = '';
             }
         }
 

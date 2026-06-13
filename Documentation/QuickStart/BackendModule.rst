@@ -27,10 +27,11 @@ Features
 * **Input area** — Paste JSON (for encoding) or TOON text (for decoding).
 * **Encode to TOON** — Converts the pasted JSON to TOON format using default encoding options.
 * **Decode from TOON** — Converts the pasted TOON text to JSON (pretty-printed).
-* **Encode (compact)** — Converts the pasted JSON to TOON using compact options (indent 0).
+* **Encode (compact)** — Converts the pasted JSON to TOON using compact options (indent 2, comma).
 * **Output area** — Shows the result (TOON or JSON) after an action.
 * **Estimated tokens** — Displays an approximate token count for the result when available.
 * **Error messages** — If input is invalid (e.g. invalid JSON for encode, malformed TOON for decode), an error message is shown.
+* **Default example** — On first load the module pre-fills a sample JSON input and its encoded TOON output, so you can see the format immediately. This can be turned off via the ``show_default_example`` extension configuration setting (enabled by default); the **Clear all** button also empties both fields.
 
 Workflow
 --------

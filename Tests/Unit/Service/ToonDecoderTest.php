@@ -4,6 +4,7 @@ declare(strict_types=1);
 
 namespace RRP\T3Toon\Tests\Unit\Service;
 
+use RRP\T3Toon\Domain\Model\DecodeOptions;
 use RRP\T3Toon\Exception\ToonDecodeException;
 use RRP\T3Toon\Service\ToonDecoder;
 use TYPO3\CMS\Core\Utility\GeneralUtility;
@@ -28,80 +29,72 @@ final class ToonDecoderTest extends UnitTestCase
         parent::tearDown();
     }
 
-    public function testFromToonSimpleKeyValue(): void
+    public function testSimpleKeyValue(): void
     {
-        $toon = "name: TYPO3\nversion: 13";
-        $decoded = $this->decoder->fromToon($toon);
-        self::assertSame('TYPO3', $decoded['name']);
-        self::assertSame(13, $decoded['version']);
+        $decoded = $this->decoder->fromToon("name: TYPO3\nversion: 13");
+        self::assertSame(['name' => 'TYPO3', 'version' => 13], $decoded);
     }
 
-    public function testFromToonNested(): void
+    public function testNested(): void
     {
-        $toon = <<<TOON
-user: Alice
-meta:
-  active: true
-  score: 9.5
-TOON;
-        $decoded = $this->decoder->fromToon($toon);
-        self::assertSame('Alice', $decoded['user']);
-        self::assertIsArray($decoded['meta']);
-        self::assertTrue($decoded['meta']['active']);
-        self::assertSame(9.5, $decoded['meta']['score']);
+        $decoded = $this->decoder->fromToon("user: Alice\nmeta:\n  active: true\n  score: 9.5");
+        self::assertSame(['user' => 'Alice', 'meta' => ['active' => true, 'score' => 9.5]], $decoded);
     }
 
-    public function testFromToonTabularItems(): void
+    public function testTabularItems(): void
     {
-        $toon = <<<TOON
-items[2]{id,name}:
-  1,Alice
-  2,Bob
-TOON;
-        $decoded = $this->decoder->fromToon($toon);
-        self::assertIsArray($decoded);
-        self::assertCount(1, $decoded);
-        self::assertIsArray($decoded[0]);
-        self::assertSame([['id' => 1, 'name' => 'Alice'], ['id' => 2, 'name' => 'Bob']], $decoded[0]);
+        $decoded = $this->decoder->fromToon("items[2]{id,name}:\n  1,Alice\n  2,Bob");
+        self::assertSame(
+            ['items' => [['id' => 1, 'name' => 'Alice'], ['id' => 2, 'name' => 'Bob']]],
+            $decoded,
+        );
     }
 
-    public function testFromToonCoercesTypes(): void
+    public function testCoercesTypes(): void
     {
-        $toon = "flag: true\ncount: 42\nempty: null";
-        $decoded = $this->decoder->fromToon($toon);
-        self::assertTrue($decoded['flag']);
-        self::assertSame(42, $decoded['count']);
-        self::assertNull($decoded['empty']);
+        $decoded = $this->decoder->fromToon("flag: true\ncount: 42\nempty: null");
+        self::assertSame(['flag' => true, 'count' => 42, 'empty' => null], $decoded);
     }
 
-    public function testFromToonMalformedLineThrowsToonDecodeException(): void
+    public function testRootArrayAndScalar(): void
     {
-        // Line with colon but invalid key:value format (space before colon)
-        $toon = "valid: key\nkey : value";
+        self::assertSame(['x', 'y'], $this->decoder->fromToon('[2]: x,y'));
+        self::assertSame(42, $this->decoder->fromToon('42'));
+        self::assertSame([], $this->decoder->fromToon('[]'));
+    }
+
+    public function testStrictCountMismatchThrows(): void
+    {
         $this->expectException(ToonDecodeException::class);
-        $this->expectExceptionMessage('Line 2');
-        $this->expectExceptionMessage('Invalid key:value format');
-        $this->decoder->fromToon($toon);
+        $this->decoder->fromToon('tags[3]: a,b');
     }
 
-    public function testFromToonDecodeExceptionHasLineNumberAndSnippet(): void
+    public function testDecodeExceptionHasLineNumberAndSnippet(): void
     {
-        // Invalid key:value format triggers exception with line number and snippet
-        $toon = "valid: key\nbad : snippet";
         try {
-            $this->decoder->fromToon($toon);
+            $this->decoder->fromToon("items[2]{id,name}:\n  1,Ada\n  2");
             self::fail('Expected ToonDecodeException');
         } catch (ToonDecodeException $e) {
-            self::assertSame(2, $e->getLineNumber());
-            self::assertSame('bad : snippet', $e->getSnippet());
+            self::assertSame(3, $e->getLineNumber());
+            self::assertSame('2', $e->getSnippet());
         }
     }
 
-    public function testFromToonBlankLinesSkipped(): void
+    public function testLenientAcceptsCountMismatch(): void
     {
-        $toon = "a: 1\n\n\nb: 2";
-        $decoded = $this->decoder->fromToon($toon);
-        self::assertSame(1, $decoded['a']);
-        self::assertSame(2, $decoded['b']);
+        $decoded = $this->decoder->fromToon('tags[3]: a,b', DecodeOptions::lenient());
+        self::assertSame(['tags' => ['a', 'b']], $decoded);
+    }
+
+    public function testPathExpansionOption(): void
+    {
+        $decoded = $this->decoder->fromToon('a.b.c: 1', DecodeOptions::expanded());
+        self::assertSame(['a' => ['b' => ['c' => 1]]], $decoded);
+    }
+
+    public function testBlankLinesBetweenFieldsSkipped(): void
+    {
+        $decoded = $this->decoder->fromToon("a: 1\n\n\nb: 2");
+        self::assertSame(['a' => 1, 'b' => 2], $decoded);
     }
 }

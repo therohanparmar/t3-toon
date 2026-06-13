@@ -15,8 +15,8 @@ Readable & Compact
 ------------------
 
 * YAML-like structure that's human-friendly
-* Configurable indent and delimiter (comma or tab)
-* Presets: compact (indent 0), readable (indent 4), tabular (tab delimiter)
+* Configurable indent and delimiter (comma, tab, or pipe)
+* Presets: compact (indent 2), readable (indent 4), tabular (tab delimiter), folded (key folding)
 
 Token-Efficient
 ---------------
@@ -36,9 +36,9 @@ Preserves Key Order
 Per-Call Options (EncodeOptions / DecodeOptions)
 ------------------------------------------------
 
-* **EncodeOptions**: Override indent, delimiter, maxPreviewItems, escapeStyle, minRowsToTabular, primitiveArrayHeader per call
-* **DecodeOptions**: Control scalar type coercion (default vs lenient)
-* Presets: ``EncodeOptions::compact()``, ``EncodeOptions::readable()``, ``EncodeOptions::tabular()``; ``DecodeOptions::lenient()``
+* **EncodeOptions**: Override indent, delimiter (comma/tab/pipe), key folding, and flatten depth per call
+* **DecodeOptions**: Toggle strict-mode validation and dotted-key path expansion
+* Presets: ``EncodeOptions::compact()``, ``::readable()``, ``::tabular()``, ``::folded()``; ``DecodeOptions::lenient()``, ``::expanded()``
 
 Static and Instance API
 ------------------------

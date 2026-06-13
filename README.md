@@ -3,7 +3,7 @@
 ### Token-Optimized Object Notation for AI & LLM Workflows
 
 <p align="center">
-  <img src="https://img.shields.io/badge/Version-3.0.0-blue" alt="Version 3.0.0">
+  <img src="https://img.shields.io/badge/Version-4.0.0-blue" alt="Version 4.0.0">
   <img src="https://img.shields.io/github/license/therohanparmar/t3-toon" alt="License">
   <img src="https://img.shields.io/badge/TYPO3-12,13,14-orange" alt="TYPO3 12-14">
   <img src="https://img.shields.io/badge/PHP-8.1%2B-red" alt="PHP 8.1+">
@@ -11,9 +11,11 @@
 
 ---
 
+> **v4.0 — now fully spec-compliant.** This release implements the official [TOON Specification v3.3](https://github.com/toon-format/spec) and passes the complete language-agnostic conformance suite (389/389 encode + decode fixtures). See [Specification compliance](#-specification-compliance) below. v4.0 is a breaking change from the 3.x custom format — review the migration notes before upgrading.
+
 ## ✨ What is TOON?
 
-**TOON (Token-Optimized Object Notation)** is a **TYPO3-native data format** that transforms large JSON or PHP arrays into a **compact, human-readable, and token-efficient structure**, purpose-built for **AI prompts and LLM contexts**.
+**TOON (Token-Oriented Object Notation)** is a **compact, human-readable, token-efficient** text format for the JSON data model, purpose-built for **AI prompts and LLM contexts**. This extension is a spec-compliant TOON encoder/decoder for TYPO3.
 
 It helps you:
 
@@ -100,17 +102,31 @@ use RRP\T3Toon\Domain\Model\EncodeOptions;
 use RRP\T3Toon\Domain\Model\DecodeOptions;
 use RRP\T3Toon\Service\Toon;
 
-// Encoding: indent, delimiter (comma/tab), max_preview_items, etc.
-$compact = Toon::encodeStatic($data, EncodeOptions::compact());   // indent 0
+// Encoding: indent, delimiter (comma/tab/pipe), key folding
+$compact = Toon::encodeStatic($data, EncodeOptions::compact());   // indent 2, comma
 $readable = Toon::encodeStatic($data, EncodeOptions::readable()); // indent 4
-$tabular = Toon::encodeStatic($data, EncodeOptions::tabular());  // tab delimiter
+$tabular = Toon::encodeStatic($data, EncodeOptions::tabular());   // tab delimiter
+$folded = Toon::encodeStatic($data, EncodeOptions::folded());     // safe key folding
+$custom = Toon::encodeStatic($data, new EncodeOptions(indent: 2, delimiter: "|", keyFolding: "safe"));
 
-// Decoding: coerce scalar types (true/false, numbers) or keep as strings
+// Decoding: strict (default) vs lenient; optional dotted-key path expansion
 $data = Toon::decodeStatic($toon);
-$strings = Toon::decodeStatic($toon, DecodeOptions::lenient());   // no coercion
+$lenient = Toon::decodeStatic($toon, DecodeOptions::lenient());   // relax strict-mode checks
+$expanded = Toon::decodeStatic($toon, DecodeOptions::expanded()); // expand a.b.c into nested objects
 ```
 
-Extension config (Install Tool → Extension Manager → rrp_t3toon) provides defaults: `enabled`, `escape_style`, `min_rows_to_tabular`, `max_preview_items`, `coerce_scalar_types`.
+Extension config (Install Tool → Settings → Extension Configuration → rrp_t3toon) provides defaults:
+
+| Key | Values | Default | Applies to |
+| --- | --- | --- | --- |
+| `enabled` | bool | `1` | encode (passthrough when off) |
+| `indent` | int ≥ 1 | `2` | encode |
+| `delimiter` | comma / tab / pipe | `comma` | encode |
+| `key_folding` | off / safe | `off` | encode (§13.4) |
+| `flatten_depth` | int (`-1` = unbounded) | `-1` | encode (key folding) |
+| `strict` | bool | `1` | decode (§14) |
+| `expand_paths` | off / safe | `off` | decode (§13.4) |
+| `show_default_example` | bool | `1` | Playground (prefill sample on first load) |
 
 **Note on `enabled`:** when this flag is turned off, `Toon::encode()` and `Toon::convert()` short-circuit and return the input as-is (string verbatim, or `json_encode($input)` for arrays/objects). This lets you toggle optimization globally without code changes. Calls are still logged so you can see in the Logs module which requests ran with optimization on vs off.
 
@@ -158,6 +174,7 @@ Encode and decode TOON in the browser:
 - Paste **JSON** and click **Encode to TOON** or **Encode (compact)** to get TOON output.
 - Paste **TOON** and click **Decode from TOON** to get JSON.
 - The module shows estimated tokens and any error messages.
+- On first load it pre-fills a sample JSON input and its encoded TOON output so you can see the format immediately. Turn this off with the `show_default_example` extension setting (on by default); **Clear all** empties both fields.
 
 #### Tools → TOON Logs
 
@@ -219,13 +236,33 @@ Full documentation, configuration, and advanced usage are available here:
 
 ## 🧰 Compatibility
 
-| TYPO3       | PHP   | Extension Version |
-| ----------- | ----- | ----------------- |
-| 12.x – 14.x | ≥ 8.1 | v3.0.0            |
+| TYPO3       | PHP   | Extension Version | TOON Spec |
+| ----------- | ----- | ----------------- | --------- |
+| 12.x – 14.x | ≥ 8.1 | v4.0.0            | v3.3      |
 
-### Format and spec (future)
+## ✅ Specification compliance
 
-This extension uses a **TYPO3-optimized TOON format**: key-value lines, `items[N]{fields}:` for tabular arrays, configurable indent and delimiter. It is **inspired by** but not identical to the [TOON Specification](https://github.com/toon-format/spec). For full spec compliance and interoperability with other TOON implementations (e.g. [toon-php](https://github.com/HelgeSverre/toon-php)), a future version may add a **spec mode** or an optional bridge to `helgesverre/toon`. Current format remains stable and suitable for TYPO3 AI integrations.
+As of **v4.0.0**, this extension implements the official **[TOON Specification v3.3](https://github.com/toon-format/spec)** and passes the complete language-agnostic conformance suite — **389/389 fixtures** (153 encode + 236 decode), covering primitives, objects, primitive/tabular/nested/mixed arrays, all three delimiters (comma, tab, pipe), quoting and escaping rules, canonical number formatting, root-form detection, strict-mode validation errors, blank-line and indentation rules, key folding, and path expansion.
+
+The vendored fixtures live in `Tests/Fixtures/spec/` (see `PROVENANCE.txt` for the pinned spec commit). Run them with:
+
+```bash
+php Tests/run-conformance.php          # standalone runner, no dependencies
+# or, with the dev dependencies installed:
+composer test:unit                     # includes the PHPUnit ConformanceTest
+```
+
+The spec engine lives in `Classes/Spec/` (`Encoder`, `Decoder`) and is dependency-free; the TYPO3 service layer (`Toon`, `ToonEncoder`, `ToonDecoder`) is a thin adapter over it.
+
+### Upgrading from 3.x (breaking changes)
+
+v3.x emitted a TYPO3-specific “TOON-inspired” format. v4.0 emits **standards-compliant TOON**, so output bytes differ. Notable changes:
+
+- Tabular arrays use the real key (`users[2]{id,name}:`) instead of a hardcoded `items[…]` wrapper.
+- Object keys are preserved verbatim (no lowercasing/stripping); strings are quoted/escaped per spec instead of being trimmed.
+- Primitive arrays are inline by default (`tags[3]: a,b,c`); `null` encodes as `null`.
+- Removed config keys: `escape_style`, `min_rows_to_tabular`, `max_preview_items`, `coerce_scalar_types`, `primitive_array_header`. New keys: `key_folding`, `flatten_depth`, `strict`, `expand_paths`.
+- `DecodeOptions::lenient()` / the `lenient` ViewHelper argument now mean **non-strict decoding** (not “skip type coercion”). `Toon::decode()` now returns `mixed` (root scalars/arrays are supported), with objects still decoded to associative arrays.
 
 ---
 

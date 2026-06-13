@@ -1,23 +1,23 @@
-# cat=settings//5; type=boolean; label=LLL:EXT:rrp_t3toon/Resources/Private/Language/locallang_be.xlf:settings.enabled;
+# cat=encoding//10; type=boolean; label=LLL:EXT:rrp_t3toon/Resources/Private/Language/locallang_be.xlf:settings.enabled;
 enabled = 1
 
-# cat=settings//10; type=int+; label=LLL:EXT:rrp_t3toon/Resources/Private/Language/locallang_be.xlf:settings.indent;
+# cat=encoding//20; type=int+; label=LLL:EXT:rrp_t3toon/Resources/Private/Language/locallang_be.xlf:settings.indent;
 indent = 2
 
-# cat=settings//15; type=string; label=LLL:EXT:rrp_t3toon/Resources/Private/Language/locallang_be.xlf:settings.delimiter;
-delimiter = ,
+# cat=encoding//30; type=options[Comma=comma,Tab=tab,Pipe=pipe]; label=LLL:EXT:rrp_t3toon/Resources/Private/Language/locallang_be.xlf:settings.delimiter;
+delimiter = comma
 
-# cat=settings//20; type=string; label=LLL:EXT:rrp_t3toon/Resources/Private/Language/locallang_be.xlf:settings.escape_style;
-escape_style = backslash
+# cat=encoding//40; type=options[Off=off,Safe=safe]; label=LLL:EXT:rrp_t3toon/Resources/Private/Language/locallang_be.xlf:settings.key_folding;
+key_folding = off
 
-# cat=settings//30; type=int+; label=LLL:EXT:rrp_t3toon/Resources/Private/Language/locallang_be.xlf:settings.min_rows_to_tabular;
-min_rows_to_tabular = 2
+# cat=encoding//50; type=int; label=LLL:EXT:rrp_t3toon/Resources/Private/Language/locallang_be.xlf:settings.flatten_depth;
+flatten_depth = -1
 
-# cat=settings//40; type=int+; label=LLL:EXT:rrp_t3toon/Resources/Private/Language/locallang_be.xlf:settings.max_preview_items;
-max_preview_items = 200
+# cat=decoding//60; type=boolean; label=LLL:EXT:rrp_t3toon/Resources/Private/Language/locallang_be.xlf:settings.strict;
+strict = 1
 
-# cat=settings//50; type=boolean; label=LLL:EXT:rrp_t3toon/Resources/Private/Language/locallang_be.xlf:settings.coerce_scalar_types;
-coerce_scalar_types = 1
+# cat=decoding//70; type=options[Off=off,Safe=safe]; label=LLL:EXT:rrp_t3toon/Resources/Private/Language/locallang_be.xlf:settings.expand_paths;
+expand_paths = off
 
-# cat=settings//55; type=boolean; label=LLL:EXT:rrp_t3toon/Resources/Private/Language/locallang_be.xlf:settings.primitive_array_header;
-primitive_array_header = 0
+# cat=playground//80; type=boolean; label=LLL:EXT:rrp_t3toon/Resources/Private/Language/locallang_be.xlf:settings.show_default_example;
+show_default_example = 1

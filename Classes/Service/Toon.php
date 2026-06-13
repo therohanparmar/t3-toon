@@ -120,14 +120,17 @@ class Toon
     }
 
     /**
-     * Decode a TOON string into an associative PHP array.
+     * Decode a TOON string into native PHP values.
+     *
+     * Objects decode to associative arrays, arrays to lists, and a bare scalar
+     * or array at the document root is returned as-is.
      *
      * @param string $toon TOON-formatted string
      * @param DecodeOptions|null $options Optional decoding options; null = extension config
-     * @return array Decoded associative array
+     * @return mixed Decoded value (associative array, list, scalar, or null)
      * @throws ToonDecodeException When the TOON input is malformed
      */
-    public function decode(string $toon, ?DecodeOptions $options = null): array
+    public function decode(string $toon, ?DecodeOptions $options = null): mixed
     {
         return $this->decoder->fromToon($toon, $options);
     }
@@ -149,10 +152,10 @@ class Toon
      *
      * @param string $toon TOON-formatted string
      * @param DecodeOptions|null $options Optional decoding options; null = extension config
-     * @return array Decoded associative array
+     * @return mixed Decoded value (associative array, list, scalar, or null)
      * @throws ToonDecodeException When the TOON input is malformed
      */
-    public static function decodeStatic(string $toon, ?DecodeOptions $options = null): array
+    public static function decodeStatic(string $toon, ?DecodeOptions $options = null): mixed
     {
         return GeneralUtility::makeInstance(self::class)->decode($toon, $options);
     }

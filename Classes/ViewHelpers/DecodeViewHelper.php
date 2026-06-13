@@ -22,7 +22,7 @@ final class DecodeViewHelper extends AbstractViewHelper
         parent::initializeArguments();
         $this->registerArgument('toon', 'string', 'TOON-formatted string to decode', true);
         $this->registerArgument('as', 'string', 'Variable name to assign the decoded array to', false, '');
-        $this->registerArgument('lenient', 'bool', 'If true, do not coerce scalar types', false, false);
+        $this->registerArgument('lenient', 'bool', 'If true, decode in lenient (non-strict) mode', false, false);
     }
 
     public function render(): string
