@@ -5,35 +5,35 @@
     <body>
       <trans-unit id="settings.enabled">
         <source>Enabled : Global toggle for the TOON converter. When disabled, encoding operations bypass TOON and return standard JSON instead. Decoding of existing TOON data still works normally.</source>
-        <target state="needs-translation">Enabled : Global toggle for the TOON converter. When disabled, encoding operations bypass TOON and return standard JSON instead. Decoding of existing TOON data still works normally.</target>
+        <target state="needs-review-translation" state-qualifier="leveraged-mt">Włączone : Globalne przełączenie dla konwertera TOON. Gdy wyłączone, operacje kodowania pomija TOON i zamiast tego zwróć standardowy JSON. Dekodowanie istniejących danych TOON nadal działa normalnie.</target>
       </trans-unit>
       <trans-unit id="settings.indent">
         <source>Indent : Number of spaces per indentation level when encoding TOON (default: 2).</source>
-        <target state="needs-translation">Indent : Number of spaces per indentation level when encoding TOON (default: 2).</target>
+        <target state="needs-review-translation" state-qualifier="leveraged-mt">Wcięcie : Liczba spacji na poziom wcięcia podczas kodowania TOON (domyślnie: 2).</target>
       </trans-unit>
       <trans-unit id="settings.delimiter">
         <source>Delimiter : Field delimiter for tabular rows when encoding (comma or tab). Use a single comma "," for default.</source>
-        <target state="needs-translation">Delimiter : Field delimiter for tabular rows when encoding (comma or tab). Use a single comma "," for default.</target>
+        <target state="needs-review-translation" state-qualifier="leveraged-mt">Ogranicznik: Ogranicznik pola dla wierszy tabularnych podczas kodowania (przecinek lub karta). Użyj pojedynczego przecinka "," dla wartości domyślnej.</target>
       </trans-unit>
       <trans-unit id="settings.escape_style">
         <source>Escape Style : Defines how special characters (commas, colons, backslashes, etc.) should be escaped when serializing text values into TOON format.</source>
-        <target state="needs-translation">Escape Style : Defines how special characters (commas, colons, backslashes, etc.) should be escaped when serializing text values into TOON format.</target>
+        <target state="needs-review-translation" state-qualifier="leveraged-mt">Styl ucieczki: Określa jak znaki specjalne (przecinki, kolory, ukośniki, itp.) powinny zostać pominięte podczas serializacji wartości tekstu w formacie TOON.</target>
       </trans-unit>
       <trans-unit id="settings.min_rows_to_tabular">
         <source>Minimum Rows to Tabular : Determines the minimum number of sequential rows required for an array to be rendered as a tabular block in TOON.</source>
-        <target state="needs-translation">Minimum Rows to Tabular : Determines the minimum number of sequential rows required for an array to be rendered as a tabular block in TOON.</target>
+        <target state="needs-review-translation" state-qualifier="leveraged-mt">Minimalne wiersze tabeli : Określa minimalną liczbę kolejnych wierszy wymaganą dla tablicy do renderowania jako blok tabulacyjny w TOON.</target>
       </trans-unit>
       <trans-unit id="settings.max_preview_items">
         <source>Maximum Preview Items : Controls how many items are displayed when rendering long tabular arrays or datasets in TOON format.</source>
-        <target state="needs-translation">Maximum Preview Items : Controls how many items are displayed when rendering long tabular arrays or datasets in TOON format.</target>
+        <target state="needs-review-translation" state-qualifier="leveraged-mt">Maksymalna liczba elementów podglądu: Kontroluje liczbę elementów wyświetlanych podczas renderowania długich tabel lub zbiorów danych w formacie TOON.</target>
       </trans-unit>
       <trans-unit id="settings.coerce_scalar_types">
         <source>Coerce Scalar Types : When decoding TOON back to JSON/PHP arrays, this setting decides whether textual scalars such as "true", "false", "null", or "42" should be converted to their native PHP types (boolean, null, int).</source>
-        <target state="needs-translation">Coerce Scalar Types : When decoding TOON back to JSON/PHP arrays, this setting decides whether textual scalars such as "true", "false", "null", or "42" should be converted to their native PHP types (boolean, null, int).</target>
+        <target state="needs-review-translation" state-qualifier="leveraged-mt">Coerce Scalar Typy : podczas dekodowania TOON z powrotem do tablic JSON/PHP to ustawienie decyduje, czy skalary tekstowe takie jak "true", "false", "null" lub "42" powinny zostać przekonwertowane na ich natywne typy PHP (logiczne, null, int).</target>
       </trans-unit>
       <trans-unit id="settings.primitive_array_header">
         <source>Primitive Array Header : When encoding, emit primitive sequential arrays as a single line [N]: v1,v2,v3 (spec-style). Disabled by default.</source>
-        <target state="needs-translation">Primitive Array Header : When encoding, emit primitive sequential arrays as a single line [N]: v1,v2,v3 (spec-style). Disabled by default.</target>
+        <target state="needs-review-translation" state-qualifier="leveraged-mt">Prymitywny nagłówek tablicy: podczas kodowania emituj prymitywne tablice sekwencyjne jako pojedynczy wiersz [N]: v1,v2,v3 (styl spec). Domyślnie wyłączone.</target>
       </trans-unit>
     </body>
   </file>
