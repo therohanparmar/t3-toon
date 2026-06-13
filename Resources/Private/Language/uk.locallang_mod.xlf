@@ -3,289 +3,289 @@
   <file source-language="en" datatype="plaintext" original="EXT:rrp_t3toon/Resources/Private/Language/locallang_mod.xlf" product-name="rrp_t3toon" target-language="uk">
     <header/>
     <body>
-      <trans-unit id="mlang_tabs_tab">
+      <trans-unit id="mlang_tabs_tab" approved="yes">
         <source>TOON Playground</source>
-        <target state="needs-review-translation" state-qualifier="leveraged-mt">TOON Playground</target>
+        <target state="final">TOON Playground</target>
       </trans-unit>
-      <trans-unit id="playground.title">
+      <trans-unit id="playground.title" approved="yes">
         <source>TOON Playground</source>
-        <target state="needs-review-translation" state-qualifier="leveraged-mt">TOON Playground</target>
+        <target state="final">TOON Playground</target>
       </trans-unit>
-      <trans-unit id="playground.input_label">
+      <trans-unit id="playground.input_label" approved="yes">
         <source>Input (JSON for encode, TOON for decode)</source>
-        <target state="needs-review-translation" state-qualifier="leveraged-mt">Введення (JSON для коду, ТЕМА для декоду)</target>
+        <target state="final">Введення (JSON для коду, ТЕМА для декоду)</target>
       </trans-unit>
-      <trans-unit id="playground.output_label">
+      <trans-unit id="playground.output_label" approved="yes">
         <source>Output</source>
-        <target state="needs-review-translation" state-qualifier="leveraged-mt">Вихід</target>
+        <target state="final">Вихід</target>
       </trans-unit>
-      <trans-unit id="playground.encode">
+      <trans-unit id="playground.encode" approved="yes">
         <source>Encode to TOON</source>
-        <target state="needs-review-translation" state-qualifier="leveraged-mt">Кодувати у TOON</target>
+        <target state="final">Кодувати у TOON</target>
       </trans-unit>
-      <trans-unit id="playground.decode">
+      <trans-unit id="playground.decode" approved="yes">
         <source>Decode from TOON</source>
-        <target state="needs-review-translation" state-qualifier="leveraged-mt">Розпаковувати з TOON</target>
+        <target state="final">Розпаковувати з TOON</target>
       </trans-unit>
-      <trans-unit id="playground.encode_compact">
+      <trans-unit id="playground.encode_compact" approved="yes">
         <source>Encode (compact)</source>
-        <target state="needs-review-translation" state-qualifier="leveraged-mt">Кодування (компактний)</target>
+        <target state="final">Кодування (компактний)</target>
       </trans-unit>
-      <trans-unit id="playground.tokens">
+      <trans-unit id="playground.tokens" approved="yes">
         <source>Estimated tokens: %d</source>
-        <target state="needs-review-translation" state-qualifier="leveraged-mt">Приблизні токени: %d</target>
+        <target state="final">Приблизні токени: %d</target>
       </trans-unit>
-      <trans-unit id="playground.footer_made_with">
+      <trans-unit id="playground.footer_made_with" approved="yes">
         <source>Made with 🧡 for the TYPO3 Developer by Rohan and Himanshu</source>
-        <target state="needs-review-translation" state-qualifier="leveraged-mt">Зроблено з 🧡 для розробників TYPO3 Rohan і Himanshu</target>
+        <target state="final">Зроблено з 🧡 для розробників TYPO3 Rohan і Himanshu</target>
       </trans-unit>
-      <trans-unit id="playground.subtitle">
+      <trans-unit id="playground.subtitle" approved="yes">
         <source>Encode JSON to TOON or decode strings instantly.</source>
-        <target state="needs-review-translation" state-qualifier="leveraged-mt">Кодувати JSON в TOON або миттєво розшифрувати рядки.</target>
+        <target state="final">Кодувати JSON в TOON або миттєво розшифрувати рядки.</target>
       </trans-unit>
-      <trans-unit id="playground.clear_all">
+      <trans-unit id="playground.clear_all" approved="yes">
         <source>Clear All</source>
-        <target state="needs-review-translation" state-qualifier="leveraged-mt">Очистити все</target>
+        <target state="final">Очистити все</target>
       </trans-unit>
-      <trans-unit id="playground.view_logs">
+      <trans-unit id="playground.view_logs" approved="yes">
         <source>View Logs</source>
-        <target state="needs-review-translation" state-qualifier="leveraged-mt">Перегляд логів</target>
+        <target state="final">Перегляд логів</target>
       </trans-unit>
-      <trans-unit id="playground.badge_input">
+      <trans-unit id="playground.badge_input" approved="yes">
         <source>Input</source>
-        <target state="needs-review-translation" state-qualifier="leveraged-mt">Input</target>
+        <target state="final">Input</target>
       </trans-unit>
-      <trans-unit id="playground.or">
+      <trans-unit id="playground.or" approved="yes">
         <source>OR</source>
-        <target state="needs-review-translation" state-qualifier="leveraged-mt">АБО</target>
+        <target state="final">АБО</target>
       </trans-unit>
-      <trans-unit id="playground.estimated_tokens_label">
+      <trans-unit id="playground.estimated_tokens_label" approved="yes">
         <source>Estimated tokens</source>
-        <target state="needs-review-translation" state-qualifier="leveraged-mt">Оцінки токенів</target>
+        <target state="final">Оцінки токенів</target>
       </trans-unit>
-      <trans-unit id="playground.copy">
+      <trans-unit id="playground.copy" approved="yes">
         <source>Copy</source>
-        <target state="needs-review-translation" state-qualifier="leveraged-mt">Копія</target>
+        <target state="final">Копія</target>
       </trans-unit>
-      <trans-unit id="playground.copied_to_clipboard">
+      <trans-unit id="playground.copied_to_clipboard" approved="yes">
         <source>Copied to clipboard!</source>
-        <target state="needs-review-translation" state-qualifier="leveraged-mt">Скопійовано в буфер обміну!</target>
+        <target state="final">Скопійовано в буфер обміну!</target>
       </trans-unit>
-      <trans-unit id="playground.github">
+      <trans-unit id="playground.github" approved="yes">
         <source>GitHub</source>
-        <target state="needs-review-translation" state-qualifier="leveraged-mt">GitHub</target>
+        <target state="final">GitHub</target>
       </trans-unit>
-      <trans-unit id="playground.documentation">
+      <trans-unit id="playground.documentation" approved="yes">
         <source>Documentation</source>
-        <target state="needs-review-translation" state-qualifier="leveraged-mt">Документація</target>
+        <target state="final">Документація</target>
       </trans-unit>
-      <trans-unit id="playground.clear_confirm">
+      <trans-unit id="playground.clear_confirm" approved="yes">
         <source>Clear both input and output?</source>
-        <target state="needs-review-translation" state-qualifier="leveraged-mt">Очистити поле вводу і виводу?</target>
+        <target state="final">Очистити поле вводу і виводу?</target>
       </trans-unit>
-      <trans-unit id="playground.clear_confirm_title">
+      <trans-unit id="playground.clear_confirm_title" approved="yes">
         <source>Clear All</source>
-        <target state="needs-review-translation" state-qualifier="leveraged-mt">Очистити все</target>
+        <target state="final">Очистити все</target>
       </trans-unit>
-      <trans-unit id="playground.clear_confirm_body">
+      <trans-unit id="playground.clear_confirm_body" approved="yes">
         <source>This will clear both the input and output fields. This action cannot be undone.</source>
-        <target state="needs-review-translation" state-qualifier="leveraged-mt">Це очистить поля вводу і вихідних. Цю дію не можна скасувати.</target>
+        <target state="final">Це очистить поля вводу і вихідних. Цю дію не можна скасувати.</target>
       </trans-unit>
-      <trans-unit id="playground.cancel">
+      <trans-unit id="playground.cancel" approved="yes">
         <source>Cancel</source>
-        <target state="needs-review-translation" state-qualifier="leveraged-mt">Скасувати</target>
+        <target state="final">Скасувати</target>
       </trans-unit>
-      <trans-unit id="playground.confirm_clear">
+      <trans-unit id="playground.confirm_clear" approved="yes">
         <source>Yes, Clear All</source>
-        <target state="needs-review-translation" state-qualifier="leveraged-mt">Так, очистити все</target>
+        <target state="final">Так, очистити все</target>
       </trans-unit>
-      <trans-unit id="playground.placeholder">
+      <trans-unit id="playground.placeholder" approved="yes">
         <source>{"name": "TOON", "items": [1, 2, 3]}</source>
-        <target state="needs-review-translation" state-qualifier="leveraged-mt">{"name": "TOON", "items": [1, 2, 3]}</target>
+        <target state="final">{"name": "TOON", "items": [1, 2, 3]}</target>
       </trans-unit>
-      <trans-unit id="playground.error_invalid_json">
+      <trans-unit id="playground.error_invalid_json" approved="yes">
         <source>Invalid JSON input for encode.</source>
-        <target state="needs-review-translation" state-qualifier="leveraged-mt">Недійсне введення JSON для кодування.</target>
+        <target state="final">Недійсне введення JSON для кодування.</target>
       </trans-unit>
-      <trans-unit id="optimization_note.title">
+      <trans-unit id="optimization_note.title" approved="yes">
         <source>Why is optimization sometimes negative?</source>
-        <target state="needs-review-translation" state-qualifier="leveraged-mt">Чому оптимізація іноді негативна?</target>
+        <target state="final">Чому оптимізація іноді негативна?</target>
       </trans-unit>
-      <trans-unit id="optimization_note.body">
+      <trans-unit id="optimization_note.body" approved="yes">
         <source>The optimization % compares the TOON output against minified JSON (not the indented text you paste). TOON saves the most on arrays of uniform records, which collapse into a single table header plus one compact line per row — the more rows, the bigger the saving. Deeply nested data with few or no repeating arrays has nothing to tabularize and can come out slightly larger, showing a negative percentage. This is expected, not an error.</source>
-        <target state="needs-review-translation" state-qualifier="leveraged-mt">Оптимізація % порівнює вихід TOON проти мінімумованого JSON (не обвинувачений текст, який ви вставили). TOON зберігає більшу частину в масивах однорідних записів, який розпадається в заголовок таблиці плюс один компактний рядок - чим більше рядів, тим більше збережень. Глибоко вкладені дані з декількома або без повторних масивів не мають нічого для табуляризації і можуть вийти трохи більше, показуючи негативний відсоток. Це очікується, а не помилка.</target>
+        <target state="final">Оптимізація % порівнює вихід TOON проти мінімумованого JSON (не обвинувачений текст, який ви вставили). TOON зберігає більшу частину в масивах однорідних записів, який розпадається в заголовок таблиці плюс один компактний рядок - чим більше рядів, тим більше збережень. Глибоко вкладені дані з декількома або без повторних масивів не мають нічого для табуляризації і можуть вийти трохи більше, показуючи негативний відсоток. Це очікується, а не помилка.</target>
       </trans-unit>
-      <trans-unit id="optimization_note.close">
+      <trans-unit id="optimization_note.close" approved="yes">
         <source>Dismiss note</source>
-        <target state="needs-review-translation" state-qualifier="leveraged-mt">Відхилити нотатку</target>
+        <target state="final">Відхилити нотатку</target>
       </trans-unit>
-      <trans-unit id="logs.mlang_tabs_tab">
+      <trans-unit id="logs.mlang_tabs_tab" approved="yes">
         <source>TOON Logs</source>
-        <target state="needs-review-translation" state-qualifier="leveraged-mt">ЗАВЕРШЕННЯ</target>
+        <target state="final">ЗАВЕРШЕННЯ</target>
       </trans-unit>
-      <trans-unit id="logs.title">
+      <trans-unit id="logs.title" approved="yes">
         <source>TOON Usage Logs</source>
-        <target state="needs-review-translation" state-qualifier="leveraged-mt">Журнал використання TOON</target>
+        <target state="final">Журнал використання TOON</target>
       </trans-unit>
-      <trans-unit id="logs.subtitle">
+      <trans-unit id="logs.subtitle" approved="yes">
         <source>Every successful encode/convert call recorded with input size, output size, and compression ratio.</source>
-        <target state="needs-review-translation" state-qualifier="leveraged-mt">Кожен успішний енкод/конвертувати виклик з розміром вхідних даних, обсягу виводу і стиснення.</target>
+        <target state="final">Кожен успішний енкод/конвертувати виклик з розміром вхідних даних, обсягу виводу і стиснення.</target>
       </trans-unit>
-      <trans-unit id="logs.back_to_playground">
+      <trans-unit id="logs.back_to_playground" approved="yes">
         <source>Back to Playground</source>
-        <target state="needs-review-translation" state-qualifier="leveraged-mt">Назад до Playground</target>
+        <target state="final">Назад до Playground</target>
       </trans-unit>
-      <trans-unit id="logs.filter.legend">
+      <trans-unit id="logs.filter.legend" approved="yes">
         <source>Filters</source>
-        <target state="needs-review-translation" state-qualifier="leveraged-mt">Фільтри</target>
+        <target state="final">Фільтри</target>
       </trans-unit>
-      <trans-unit id="logs.filter.date_from">
+      <trans-unit id="logs.filter.date_from" approved="yes">
         <source>From</source>
-        <target state="needs-review-translation" state-qualifier="leveraged-mt">Від</target>
+        <target state="final">Від</target>
       </trans-unit>
-      <trans-unit id="logs.filter.date_to">
+      <trans-unit id="logs.filter.date_to" approved="yes">
         <source>To</source>
-        <target state="needs-review-translation" state-qualifier="leveraged-mt">На</target>
+        <target state="final">На</target>
       </trans-unit>
-      <trans-unit id="logs.filter.enabled">
+      <trans-unit id="logs.filter.enabled" approved="yes">
         <source>Optimization status</source>
-        <target state="needs-review-translation" state-qualifier="leveraged-mt">Оптимізація статусу</target>
+        <target state="final">Оптимізація статусу</target>
       </trans-unit>
-      <trans-unit id="logs.filter.enabled.all">
+      <trans-unit id="logs.filter.enabled.all" approved="yes">
         <source>All</source>
-        <target state="needs-review-translation" state-qualifier="leveraged-mt">Всі</target>
+        <target state="final">Всі</target>
       </trans-unit>
-      <trans-unit id="logs.filter.enabled.on">
+      <trans-unit id="logs.filter.enabled.on" approved="yes">
         <source>Enabled</source>
-        <target state="needs-review-translation" state-qualifier="leveraged-mt">Увімкнено</target>
+        <target state="final">Увімкнено</target>
       </trans-unit>
-      <trans-unit id="logs.filter.enabled.off">
+      <trans-unit id="logs.filter.enabled.off" approved="yes">
         <source>Disabled</source>
-        <target state="needs-review-translation" state-qualifier="leveraged-mt">Вимкнено</target>
+        <target state="final">Вимкнено</target>
       </trans-unit>
-      <trans-unit id="logs.filter.min_pct">
+      <trans-unit id="logs.filter.min_pct" approved="yes">
         <source>Min optimization %</source>
-        <target state="needs-review-translation" state-qualifier="leveraged-mt">Мінімальна оптимізація %</target>
+        <target state="final">Мінімальна оптимізація %</target>
       </trans-unit>
-      <trans-unit id="logs.filter.per_page">
+      <trans-unit id="logs.filter.per_page" approved="yes">
         <source>Per page</source>
-        <target state="needs-review-translation" state-qualifier="leveraged-mt">На сторінці</target>
+        <target state="final">На сторінці</target>
       </trans-unit>
-      <trans-unit id="logs.filter.apply">
+      <trans-unit id="logs.filter.apply" approved="yes">
         <source>Apply</source>
-        <target state="needs-review-translation" state-qualifier="leveraged-mt">Прийняти</target>
+        <target state="final">Прийняти</target>
       </trans-unit>
-      <trans-unit id="logs.filter.reset">
+      <trans-unit id="logs.filter.reset" approved="yes">
         <source>Reset</source>
-        <target state="needs-review-translation" state-qualifier="leveraged-mt">Reset</target>
+        <target state="final">Reset</target>
       </trans-unit>
-      <trans-unit id="logs.column.uid">
+      <trans-unit id="logs.column.uid" approved="yes">
         <source>UID</source>
-        <target state="needs-review-translation" state-qualifier="leveraged-mt">ІД UID</target>
+        <target state="final">ІД UID</target>
       </trans-unit>
-      <trans-unit id="logs.column.date">
+      <trans-unit id="logs.column.date" approved="yes">
         <source>Date &amp; Time</source>
-        <target state="needs-translation">Date &amp; Time</target>
+        <target state="final">Дата &amp; та час</target>
       </trans-unit>
-      <trans-unit id="logs.column.input_size">
+      <trans-unit id="logs.column.input_size" approved="yes">
         <source>Input size</source>
-        <target state="needs-review-translation" state-qualifier="leveraged-mt">Input size</target>
+        <target state="final">Input size</target>
       </trans-unit>
-      <trans-unit id="logs.column.output_size">
+      <trans-unit id="logs.column.output_size" approved="yes">
         <source>Output size</source>
-        <target state="needs-review-translation" state-qualifier="leveraged-mt">Розмір виводу</target>
+        <target state="final">Розмір виводу</target>
       </trans-unit>
-      <trans-unit id="logs.column.optimization">
+      <trans-unit id="logs.column.optimization" approved="yes">
         <source>Optimization</source>
-        <target state="needs-review-translation" state-qualifier="leveraged-mt">Оптимізація</target>
+        <target state="final">Оптимізація</target>
       </trans-unit>
-      <trans-unit id="logs.column.enabled">
+      <trans-unit id="logs.column.enabled" approved="yes">
         <source>Enabled</source>
-        <target state="needs-review-translation" state-qualifier="leveraged-mt">Увімкнено</target>
+        <target state="final">Увімкнено</target>
       </trans-unit>
-      <trans-unit id="logs.column.actions">
+      <trans-unit id="logs.column.actions" approved="yes">
         <source>Actions</source>
-        <target state="needs-review-translation" state-qualifier="leveraged-mt">Дії</target>
+        <target state="final">Дії</target>
       </trans-unit>
-      <trans-unit id="logs.column.select">
+      <trans-unit id="logs.column.select" approved="yes">
         <source>Select</source>
-        <target state="needs-review-translation" state-qualifier="leveraged-mt">Вибрати</target>
+        <target state="final">Вибрати</target>
       </trans-unit>
-      <trans-unit id="logs.empty.title">
+      <trans-unit id="logs.empty.title" approved="yes">
         <source>No log entries yet</source>
-        <target state="needs-review-translation" state-qualifier="leveraged-mt">Немає записів в журналі</target>
+        <target state="final">Немає записів в журналі</target>
       </trans-unit>
-      <trans-unit id="logs.empty.body">
+      <trans-unit id="logs.empty.body" approved="yes">
         <source>Run an encode operation from the TOON Playground to record your first log entry.</source>
-        <target state="needs-review-translation" state-qualifier="leveraged-mt">Запустіть операцію введеного коду з TOON Playground щоб записати ваш перший запис журналу.</target>
+        <target state="final">Запустіть операцію введеного коду з TOON Playground щоб записати ваш перший запис журналу.</target>
       </trans-unit>
-      <trans-unit id="logs.empty.cta">
+      <trans-unit id="logs.empty.cta" approved="yes">
         <source>Open TOON Playground</source>
-        <target state="needs-review-translation" state-qualifier="leveraged-mt">Відкрити TOON Playground</target>
+        <target state="final">Відкрити TOON Playground</target>
       </trans-unit>
-      <trans-unit id="logs.delete.single">
+      <trans-unit id="logs.delete.single" approved="yes">
         <source>Delete</source>
-        <target state="needs-review-translation" state-qualifier="leveraged-mt">Видалити</target>
+        <target state="final">Видалити</target>
       </trans-unit>
-      <trans-unit id="logs.delete.bulk">
+      <trans-unit id="logs.delete.bulk" approved="yes">
         <source>Delete selected (%d)</source>
-        <target state="needs-translation">Delete selected (%d)</target>
+        <target state="final">Видалити вибране (%d)</target>
       </trans-unit>
-      <trans-unit id="logs.delete.confirm_title">
+      <trans-unit id="logs.delete.confirm_title" approved="yes">
         <source>Delete log entries?</source>
-        <target state="needs-review-translation" state-qualifier="leveraged-mt">Видалити записи журналу?</target>
+        <target state="final">Видалити записи журналу?</target>
       </trans-unit>
-      <trans-unit id="logs.delete.confirm_body_single">
+      <trans-unit id="logs.delete.confirm_body_single" approved="yes">
         <source>This will permanently remove the selected log entry. This action cannot be undone.</source>
-        <target state="needs-review-translation" state-qualifier="leveraged-mt">Це остаточно видалить вибраний запис журналу. Цю дію неможливо скасувати.</target>
+        <target state="final">Це остаточно видалить вибраний запис журналу. Цю дію неможливо скасувати.</target>
       </trans-unit>
-      <trans-unit id="logs.delete.confirm_body_bulk">
+      <trans-unit id="logs.delete.confirm_body_bulk" approved="yes">
         <source>This will permanently remove the selected log entries. This action cannot be undone.</source>
-        <target state="needs-review-translation" state-qualifier="leveraged-mt">Ця дія остаточно видалить обрані записи журналу. Цю дію не можна скасувати.</target>
+        <target state="final">Ця дія остаточно видалить обрані записи журналу. Цю дію не можна скасувати.</target>
       </trans-unit>
-      <trans-unit id="logs.delete.confirm_button">
+      <trans-unit id="logs.delete.confirm_button" approved="yes">
         <source>Yes, delete</source>
-        <target state="needs-review-translation" state-qualifier="leveraged-mt">Так, видалити</target>
+        <target state="final">Так, видалити</target>
       </trans-unit>
-      <trans-unit id="logs.delete.cancel">
+      <trans-unit id="logs.delete.cancel" approved="yes">
         <source>Cancel</source>
-        <target state="needs-review-translation" state-qualifier="leveraged-mt">Скасувати</target>
+        <target state="final">Скасувати</target>
       </trans-unit>
-      <trans-unit id="logs.flash.deleted_title">
+      <trans-unit id="logs.flash.deleted_title" approved="yes">
         <source>Log entries deleted</source>
-        <target state="needs-review-translation" state-qualifier="leveraged-mt">Записи в журналі видалено</target>
+        <target state="final">Записи в журналі видалено</target>
       </trans-unit>
-      <trans-unit id="logs.flash.deleted_body">
+      <trans-unit id="logs.flash.deleted_body" approved="yes">
         <source>%d log entry/entries were removed.</source>
-        <target state="needs-review-translation" state-qualifier="leveraged-mt">%d запис журналу/елементи було видалено.</target>
+        <target state="final">%d запис журналу/елементи було видалено.</target>
       </trans-unit>
-      <trans-unit id="logs.flash.nothing_title">
+      <trans-unit id="logs.flash.nothing_title" approved="yes">
         <source>Nothing deleted</source>
-        <target state="needs-review-translation" state-qualifier="leveraged-mt">Нічого не видалено</target>
+        <target state="final">Нічого не видалено</target>
       </trans-unit>
-      <trans-unit id="logs.flash.nothing_body">
+      <trans-unit id="logs.flash.nothing_body" approved="yes">
         <source>No matching log entries were found.</source>
-        <target state="needs-review-translation" state-qualifier="leveraged-mt">Не знайдено відповідних записів журналу.</target>
+        <target state="final">Не знайдено відповідних записів журналу.</target>
       </trans-unit>
-      <trans-unit id="logs.pagination.first">
+      <trans-unit id="logs.pagination.first" approved="yes">
         <source>First</source>
-        <target state="needs-review-translation" state-qualifier="leveraged-mt">Перший</target>
+        <target state="final">Перший</target>
       </trans-unit>
-      <trans-unit id="logs.pagination.previous">
+      <trans-unit id="logs.pagination.previous" approved="yes">
         <source>Previous</source>
-        <target state="needs-review-translation" state-qualifier="leveraged-mt">Попереднє</target>
+        <target state="final">Попереднє</target>
       </trans-unit>
-      <trans-unit id="logs.pagination.next">
+      <trans-unit id="logs.pagination.next" approved="yes">
         <source>Next</source>
-        <target state="needs-review-translation" state-qualifier="leveraged-mt">Уперед</target>
+        <target state="final">Уперед</target>
       </trans-unit>
-      <trans-unit id="logs.pagination.last">
+      <trans-unit id="logs.pagination.last" approved="yes">
         <source>Last</source>
-        <target state="needs-review-translation" state-qualifier="leveraged-mt">Останнє</target>
+        <target state="final">Останнє</target>
       </trans-unit>
-      <trans-unit id="logs.pagination.summary">
+      <trans-unit id="logs.pagination.summary" approved="yes">
         <source>Page %1$d of %2$d (%3$d total)</source>
-        <target state="needs-review-translation" state-qualifier="leveraged-mt">Сторінка %1$d %2$d (%3$d усього)</target>
+        <target state="final">Сторінка %1$d %2$d (%3$d усього)</target>
       </trans-unit>
     </body>
   </file>
