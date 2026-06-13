@@ -3,37 +3,37 @@
   <file source-language="en" datatype="plaintext" original="EXT:rrp_t3toon/Resources/Private/Language/locallang_be.xlf" date="2026-01-11T11:26:11Z" product-name="rrp_t3toon" target-language="no">
     <header/>
     <body>
-      <trans-unit id="settings.enabled">
+      <trans-unit id="settings.enabled" approved="yes">
         <source>Enabled : Global toggle for the TOON converter. When disabled, encoding operations bypass TOON and return standard JSON instead. Decoding of existing TOON data still works normally.</source>
-        <target state="needs-review-translation" state-qualifier="leveraged-mt">Aktivert: Global av/på TOON-konverterer. Når deaktivert, bypass TOON og returner standard JSON i stedet. Dekoding av eksisterende TOON-data fungerer fortsatt normalt.</target>
+        <target state="final">Aktivert: Global av/på TOON-konverterer. Når deaktivert, bypass TOON og returner standard JSON i stedet. Dekoding av eksisterende TOON-data fungerer fortsatt normalt.</target>
       </trans-unit>
-      <trans-unit id="settings.indent">
+      <trans-unit id="settings.indent" approved="yes">
         <source>Indent : Number of spaces per indentation level when encoding TOON (default: 2).</source>
-        <target state="needs-review-translation" state-qualifier="leveraged-mt">Innrykk: Antall mellomrom per innrykkelsesnivå ved koding TOON (standard: 2).</target>
+        <target state="final">Innrykk: Antall mellomrom per innrykkelsesnivå ved koding TOON (standard: 2).</target>
       </trans-unit>
-      <trans-unit id="settings.delimiter">
+      <trans-unit id="settings.delimiter" approved="yes">
         <source>Delimiter : Field delimiter for tabular rows when encoding (comma or tab). Use a single comma "," for default.</source>
-        <target state="needs-review-translation" state-qualifier="leveraged-mt">Skilletegn : Feltskilletegn for tabellrader ved koding (komma eller fan). Bruk ett enkelt komma "," for standard.</target>
+        <target state="final">Skilletegn : Feltskilletegn for tabellrader ved koding (komma eller fan). Bruk ett enkelt komma "," for standard.</target>
       </trans-unit>
-      <trans-unit id="settings.escape_style">
+      <trans-unit id="settings.escape_style" approved="yes">
         <source>Escape Style : Defines how special characters (commas, colons, backslashes, etc.) should be escaped when serializing text values into TOON format.</source>
-        <target state="needs-review-translation" state-qualifier="leveraged-mt">Verkningsstil : Definerer hvordan spesialtegn (komma, koloner, bakskråstreker osv.) skal unnslippes når tekstverdiene serialiseres i TOON-format.</target>
+        <target state="final">Verkningsstil : Definerer hvordan spesialtegn (komma, koloner, bakskråstreker osv.) skal unnslippes når tekstverdiene serialiseres i TOON-format.</target>
       </trans-unit>
-      <trans-unit id="settings.min_rows_to_tabular">
+      <trans-unit id="settings.min_rows_to_tabular" approved="yes">
         <source>Minimum Rows to Tabular : Determines the minimum number of sequential rows required for an array to be rendered as a tabular block in TOON.</source>
-        <target state="needs-review-translation" state-qualifier="leveraged-mt">Minimumsrader for Tabell: Bestemmer minimum antall sekvensielle rader som kreves for at en liste skal gjengis som en tabellblokk i TOON.</target>
+        <target state="final">Minimumsrader for Tabell: Bestemmer minimum antall sekvensielle rader som kreves for at en liste skal gjengis som en tabellblokk i TOON.</target>
       </trans-unit>
-      <trans-unit id="settings.max_preview_items">
+      <trans-unit id="settings.max_preview_items" approved="yes">
         <source>Maximum Preview Items : Controls how many items are displayed when rendering long tabular arrays or datasets in TOON format.</source>
-        <target state="needs-review-translation" state-qualifier="leveraged-mt">Maks antall forhåndsvisningselementer: Kontrollerer hvor mange elementer vises når du gjengir lange tabellarmaturer eller datasett i TOON-format.</target>
+        <target state="final">Maks antall forhåndsvisningselementer: Kontrollerer hvor mange elementer vises når du gjengir lange tabellarmaturer eller datasett i TOON-format.</target>
       </trans-unit>
-      <trans-unit id="settings.coerce_scalar_types">
+      <trans-unit id="settings.coerce_scalar_types" approved="yes">
         <source>Coerce Scalar Types : When decoding TOON back to JSON/PHP arrays, this setting decides whether textual scalars such as "true", "false", "null", or "42" should be converted to their native PHP types (boolean, null, int).</source>
-        <target state="needs-review-translation" state-qualifier="leveraged-mt">Coerce Scalar Type: Når dekoding TOON tilbake til JSON/PHP arrays, bestemmer denne innstillingen om tekstuelle skalaer som "true", "false", "null" eller "42" bør konverteres til de opprinnelige PHP-typene (boolean, null, int).</target>
+        <target state="final">Coerce Scalar Type: Når dekoding TOON tilbake til JSON/PHP arrays, bestemmer denne innstillingen om tekstuelle skalaer som "true", "false", "null" eller "42" bør konverteres til de opprinnelige PHP-typene (boolean, null, int).</target>
       </trans-unit>
-      <trans-unit id="settings.primitive_array_header">
+      <trans-unit id="settings.primitive_array_header" approved="yes">
         <source>Primitive Array Header : When encoding, emit primitive sequential arrays as a single line [N]: v1,v2,v3 (spec-style). Disabled by default.</source>
-        <target state="needs-review-translation" state-qualifier="leveraged-mt">Primitiv Array Header : Ved koding avgir primitive sekvensielle plys som en enkelt linje [N]: v1,v2,v3 (spekterstil). Deaktivert som standard.</target>
+        <target state="final">Primitiv Array Header : Ved koding avgir primitive sekvensielle plys som en enkelt linje [N]: v1,v2,v3 (spekterstil). Deaktivert som standard.</target>
       </trans-unit>
     </body>
   </file>
