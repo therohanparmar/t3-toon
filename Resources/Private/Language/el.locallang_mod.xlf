@@ -3,289 +3,289 @@
   <file source-language="en" datatype="plaintext" original="EXT:rrp_t3toon/Resources/Private/Language/locallang_mod.xlf" product-name="rrp_t3toon" target-language="el">
     <header/>
     <body>
-      <trans-unit id="mlang_tabs_tab">
+      <trans-unit id="mlang_tabs_tab" approved="yes">
         <source>TOON Playground</source>
-        <target state="needs-review-translation" state-qualifier="leveraged-mt">TOON Παιδική Χαρά</target>
+        <target state="final">TOON Παιδική Χαρά</target>
       </trans-unit>
-      <trans-unit id="playground.title">
+      <trans-unit id="playground.title" approved="yes">
         <source>TOON Playground</source>
-        <target state="needs-review-translation" state-qualifier="leveraged-mt">TOON Παιδική Χαρά</target>
+        <target state="final">TOON Παιδική Χαρά</target>
       </trans-unit>
-      <trans-unit id="playground.input_label">
+      <trans-unit id="playground.input_label" approved="yes">
         <source>Input (JSON for encode, TOON for decode)</source>
-        <target state="needs-review-translation" state-qualifier="leveraged-mt">Είσοδος (JSON για κωδικό, TOON για αποκωδικοποίηση)</target>
+        <target state="final">Είσοδος (JSON για κωδικό, TOON για αποκωδικοποίηση)</target>
       </trans-unit>
-      <trans-unit id="playground.output_label">
+      <trans-unit id="playground.output_label" approved="yes">
         <source>Output</source>
-        <target state="needs-review-translation" state-qualifier="leveraged-mt">Έξοδος</target>
+        <target state="final">Έξοδος</target>
       </trans-unit>
-      <trans-unit id="playground.encode">
+      <trans-unit id="playground.encode" approved="yes">
         <source>Encode to TOON</source>
-        <target state="needs-review-translation" state-qualifier="leveraged-mt">Κωδικοποίηση στο TOON</target>
+        <target state="final">Κωδικοποίηση στο TOON</target>
       </trans-unit>
-      <trans-unit id="playground.decode">
+      <trans-unit id="playground.decode" approved="yes">
         <source>Decode from TOON</source>
-        <target state="needs-review-translation" state-qualifier="leveraged-mt">Αποκωδικοποίηση από TOON</target>
+        <target state="final">Αποκωδικοποίηση από TOON</target>
       </trans-unit>
-      <trans-unit id="playground.encode_compact">
+      <trans-unit id="playground.encode_compact" approved="yes">
         <source>Encode (compact)</source>
-        <target state="needs-review-translation" state-qualifier="leveraged-mt">Κωδικοποίηση (συμπαγές)</target>
+        <target state="final">Κωδικοποίηση (συμπαγές)</target>
       </trans-unit>
-      <trans-unit id="playground.tokens">
+      <trans-unit id="playground.tokens" approved="yes">
         <source>Estimated tokens: %d</source>
-        <target state="needs-review-translation" state-qualifier="leveraged-mt">Εκτιμώμενα νομίσματα: %d</target>
+        <target state="final">Εκτιμώμενα νομίσματα: %d</target>
       </trans-unit>
-      <trans-unit id="playground.footer_made_with">
+      <trans-unit id="playground.footer_made_with" approved="yes">
         <source>Made with 🧡 for the TYPO3 Developer by Rohan and Himanshu</source>
-        <target state="needs-review-translation" state-qualifier="leveraged-mt">Φτιαγμένο με 🧡 για τον προγραμματιστή TYPO3 του Rohan και Himanshu</target>
+        <target state="final">Φτιαγμένο με 🧡 για τον προγραμματιστή TYPO3 του Rohan και Himanshu</target>
       </trans-unit>
-      <trans-unit id="playground.subtitle">
+      <trans-unit id="playground.subtitle" approved="yes">
         <source>Encode JSON to TOON or decode strings instantly.</source>
-        <target state="needs-review-translation" state-qualifier="leveraged-mt">Κωδικοποίηση JSON σε TOON ή αποκωδικοποίηση συμβολοσειρών αμέσως.</target>
+        <target state="final">Κωδικοποίηση JSON σε TOON ή αποκωδικοποίηση συμβολοσειρών αμέσως.</target>
       </trans-unit>
-      <trans-unit id="playground.clear_all">
+      <trans-unit id="playground.clear_all" approved="yes">
         <source>Clear All</source>
-        <target state="needs-review-translation" state-qualifier="leveraged-mt">Εκκαθάριση Όλων</target>
+        <target state="final">Εκκαθάριση Όλων</target>
       </trans-unit>
-      <trans-unit id="playground.view_logs">
+      <trans-unit id="playground.view_logs" approved="yes">
         <source>View Logs</source>
-        <target state="needs-review-translation" state-qualifier="leveraged-mt">Προβολή Αρχείων Καταγραφής</target>
+        <target state="final">Προβολή Αρχείων Καταγραφής</target>
       </trans-unit>
-      <trans-unit id="playground.badge_input">
+      <trans-unit id="playground.badge_input" approved="yes">
         <source>Input</source>
-        <target state="needs-review-translation" state-qualifier="leveraged-mt">Input</target>
+        <target state="final">Input</target>
       </trans-unit>
-      <trans-unit id="playground.or">
+      <trans-unit id="playground.or" approved="yes">
         <source>OR</source>
-        <target state="needs-review-translation" state-qualifier="leveraged-mt">Ή</target>
+        <target state="final">Ή</target>
       </trans-unit>
-      <trans-unit id="playground.estimated_tokens_label">
+      <trans-unit id="playground.estimated_tokens_label" approved="yes">
         <source>Estimated tokens</source>
-        <target state="needs-review-translation" state-qualifier="leveraged-mt">Εκτιμώμενα νομίσματα</target>
+        <target state="final">Εκτιμώμενα νομίσματα</target>
       </trans-unit>
-      <trans-unit id="playground.copy">
+      <trans-unit id="playground.copy" approved="yes">
         <source>Copy</source>
-        <target state="needs-review-translation" state-qualifier="leveraged-mt">Αντιγραφή</target>
+        <target state="final">Αντιγραφή</target>
       </trans-unit>
-      <trans-unit id="playground.copied_to_clipboard">
+      <trans-unit id="playground.copied_to_clipboard" approved="yes">
         <source>Copied to clipboard!</source>
-        <target state="needs-review-translation" state-qualifier="leveraged-mt">Αντιγράφηκε στο πρόχειρο!</target>
+        <target state="final">Αντιγράφηκε στο πρόχειρο!</target>
       </trans-unit>
-      <trans-unit id="playground.github">
+      <trans-unit id="playground.github" approved="yes">
         <source>GitHub</source>
-        <target state="needs-review-translation" state-qualifier="leveraged-mt">GitHub</target>
+        <target state="final">GitHub</target>
       </trans-unit>
-      <trans-unit id="playground.documentation">
+      <trans-unit id="playground.documentation" approved="yes">
         <source>Documentation</source>
-        <target state="needs-review-translation" state-qualifier="leveraged-mt">Τεκμηρίωση</target>
+        <target state="final">Τεκμηρίωση</target>
       </trans-unit>
-      <trans-unit id="playground.clear_confirm">
+      <trans-unit id="playground.clear_confirm" approved="yes">
         <source>Clear both input and output?</source>
-        <target state="needs-review-translation" state-qualifier="leveraged-mt">Καθαρισμός εισόδου και εξόδου?</target>
+        <target state="final">Καθαρισμός εισόδου και εξόδου?</target>
       </trans-unit>
-      <trans-unit id="playground.clear_confirm_title">
+      <trans-unit id="playground.clear_confirm_title" approved="yes">
         <source>Clear All</source>
-        <target state="needs-review-translation" state-qualifier="leveraged-mt">Εκκαθάριση Όλων</target>
+        <target state="final">Εκκαθάριση Όλων</target>
       </trans-unit>
-      <trans-unit id="playground.clear_confirm_body">
+      <trans-unit id="playground.clear_confirm_body" approved="yes">
         <source>This will clear both the input and output fields. This action cannot be undone.</source>
-        <target state="needs-review-translation" state-qualifier="leveraged-mt">Αυτό θα καθαρίσει τόσο τα πεδία εισόδου όσο και εξόδου. Αυτή η ενέργεια δεν μπορεί να αναιρεθεί.</target>
+        <target state="final">Αυτό θα καθαρίσει τόσο τα πεδία εισόδου όσο και εξόδου. Αυτή η ενέργεια δεν μπορεί να αναιρεθεί.</target>
       </trans-unit>
-      <trans-unit id="playground.cancel">
+      <trans-unit id="playground.cancel" approved="yes">
         <source>Cancel</source>
-        <target state="needs-review-translation" state-qualifier="leveraged-mt">Ακύρωση</target>
+        <target state="final">Ακύρωση</target>
       </trans-unit>
-      <trans-unit id="playground.confirm_clear">
+      <trans-unit id="playground.confirm_clear" approved="yes">
         <source>Yes, Clear All</source>
-        <target state="needs-review-translation" state-qualifier="leveraged-mt">Ναι, Εκκαθάριση Όλων</target>
+        <target state="final">Ναι, Εκκαθάριση Όλων</target>
       </trans-unit>
-      <trans-unit id="playground.placeholder">
+      <trans-unit id="playground.placeholder" approved="yes">
         <source>{"name": "TOON", "items": [1, 2, 3]}</source>
-        <target state="needs-review-translation" state-qualifier="leveraged-mt">{"name": "TOON", "items": [1, 2, 3]}</target>
+        <target state="final">{"name": "TOON", "items": [1, 2, 3]}</target>
       </trans-unit>
-      <trans-unit id="playground.error_invalid_json">
+      <trans-unit id="playground.error_invalid_json" approved="yes">
         <source>Invalid JSON input for encode.</source>
-        <target state="needs-review-translation" state-qualifier="leveraged-mt">Μη έγκυρη εισαγωγή JSON για κωδικό.</target>
+        <target state="final">Μη έγκυρη εισαγωγή JSON για κωδικό.</target>
       </trans-unit>
-      <trans-unit id="optimization_note.title">
+      <trans-unit id="optimization_note.title" approved="yes">
         <source>Why is optimization sometimes negative?</source>
-        <target state="needs-review-translation" state-qualifier="leveraged-mt">Γιατί η βελτιστοποίηση μερικές φορές αρνητική?</target>
+        <target state="final">Γιατί η βελτιστοποίηση μερικές φορές αρνητική?</target>
       </trans-unit>
-      <trans-unit id="optimization_note.body">
+      <trans-unit id="optimization_note.body" approved="yes">
         <source>The optimization % compares the TOON output against minified JSON (not the indented text you paste). TOON saves the most on arrays of uniform records, which collapse into a single table header plus one compact line per row — the more rows, the bigger the saving. Deeply nested data with few or no repeating arrays has nothing to tabularize and can come out slightly larger, showing a negative percentage. This is expected, not an error.</source>
-        <target state="needs-review-translation" state-qualifier="leveraged-mt">Η βελτιστοποίηση % συγκρίνει την έξοδο TOON με την κομμένη JSON (όχι το τρισδιάστατο κείμενο που επικολλείτε). TOON αποθηκεύει τα περισσότερα σε συστοιχίες ομοιόμορφων εγγραφών, που καταρρέουν σε μια ενιαία κεφαλίδα πίνακα συν μια συμπαγή γραμμή ανά σειρά - οι περισσότερες σειρές, τόσο μεγαλύτερη είναι η εξοικονόμηση. Βαθιά ένθετα δεδομένα με λίγες ή καθόλου επαναλαμβανόμενες συστοιχίες δεν έχει τίποτα να tabularize και μπορεί να βγει ελαφρώς μεγαλύτερο, δείχνοντας αρνητικό ποσοστό. Αυτό είναι αναμενόμενο, όχι σφάλμα.</target>
+        <target state="final">Η βελτιστοποίηση % συγκρίνει την έξοδο TOON με την κομμένη JSON (όχι το τρισδιάστατο κείμενο που επικολλείτε). TOON αποθηκεύει τα περισσότερα σε συστοιχίες ομοιόμορφων εγγραφών, που καταρρέουν σε μια ενιαία κεφαλίδα πίνακα συν μια συμπαγή γραμμή ανά σειρά - οι περισσότερες σειρές, τόσο μεγαλύτερη είναι η εξοικονόμηση. Βαθιά ένθετα δεδομένα με λίγες ή καθόλου επαναλαμβανόμενες συστοιχίες δεν έχει τίποτα να tabularize και μπορεί να βγει ελαφρώς μεγαλύτερο, δείχνοντας αρνητικό ποσοστό. Αυτό είναι αναμενόμενο, όχι σφάλμα.</target>
       </trans-unit>
-      <trans-unit id="optimization_note.close">
+      <trans-unit id="optimization_note.close" approved="yes">
         <source>Dismiss note</source>
-        <target state="needs-review-translation" state-qualifier="leveraged-mt">Παράβλεψη σημείωσης</target>
+        <target state="final">Παράβλεψη σημείωσης</target>
       </trans-unit>
-      <trans-unit id="logs.mlang_tabs_tab">
+      <trans-unit id="logs.mlang_tabs_tab" approved="yes">
         <source>TOON Logs</source>
-        <target state="needs-review-translation" state-qualifier="leveraged-mt">Αρχεία Καταγραφής TOON</target>
+        <target state="final">Αρχεία Καταγραφής TOON</target>
       </trans-unit>
-      <trans-unit id="logs.title">
+      <trans-unit id="logs.title" approved="yes">
         <source>TOON Usage Logs</source>
-        <target state="needs-review-translation" state-qualifier="leveraged-mt">Αρχεία Καταγραφής Χρήσης TOON</target>
+        <target state="final">Αρχεία Καταγραφής Χρήσης TOON</target>
       </trans-unit>
-      <trans-unit id="logs.subtitle">
+      <trans-unit id="logs.subtitle" approved="yes">
         <source>Every successful encode/convert call recorded with input size, output size, and compression ratio.</source>
-        <target state="needs-review-translation" state-qualifier="leveraged-mt">Κάθε επιτυχής κωδικοποίηση/μετατροπή κλήσης που καταγράφεται με το μέγεθος εισόδου, το μέγεθος εξόδου, και την αναλογία συμπίεσης.</target>
+        <target state="final">Κάθε επιτυχής κωδικοποίηση/μετατροπή κλήσης που καταγράφεται με το μέγεθος εισόδου, το μέγεθος εξόδου, και την αναλογία συμπίεσης.</target>
       </trans-unit>
-      <trans-unit id="logs.back_to_playground">
+      <trans-unit id="logs.back_to_playground" approved="yes">
         <source>Back to Playground</source>
-        <target state="needs-review-translation" state-qualifier="leveraged-mt">Επιστροφή στην Παιδική Χαρά</target>
+        <target state="final">Επιστροφή στην Παιδική Χαρά</target>
       </trans-unit>
-      <trans-unit id="logs.filter.legend">
+      <trans-unit id="logs.filter.legend" approved="yes">
         <source>Filters</source>
-        <target state="needs-review-translation" state-qualifier="leveraged-mt">Φίλτρα</target>
+        <target state="final">Φίλτρα</target>
       </trans-unit>
-      <trans-unit id="logs.filter.date_from">
+      <trans-unit id="logs.filter.date_from" approved="yes">
         <source>From</source>
-        <target state="needs-review-translation" state-qualifier="leveraged-mt">Από</target>
+        <target state="final">Από</target>
       </trans-unit>
-      <trans-unit id="logs.filter.date_to">
+      <trans-unit id="logs.filter.date_to" approved="yes">
         <source>To</source>
-        <target state="needs-review-translation" state-qualifier="leveraged-mt">Προς</target>
+        <target state="final">Προς</target>
       </trans-unit>
-      <trans-unit id="logs.filter.enabled">
+      <trans-unit id="logs.filter.enabled" approved="yes">
         <source>Optimization status</source>
-        <target state="needs-review-translation" state-qualifier="leveraged-mt">Κατάσταση βελτιστοποίησης</target>
+        <target state="final">Κατάσταση βελτιστοποίησης</target>
       </trans-unit>
-      <trans-unit id="logs.filter.enabled.all">
+      <trans-unit id="logs.filter.enabled.all" approved="yes">
         <source>All</source>
-        <target state="needs-review-translation" state-qualifier="leveraged-mt">Όλα</target>
+        <target state="final">Όλα</target>
       </trans-unit>
-      <trans-unit id="logs.filter.enabled.on">
+      <trans-unit id="logs.filter.enabled.on" approved="yes">
         <source>Enabled</source>
-        <target state="needs-review-translation" state-qualifier="leveraged-mt">Ενεργοποιημένο</target>
+        <target state="final">Ενεργοποιημένο</target>
       </trans-unit>
-      <trans-unit id="logs.filter.enabled.off">
+      <trans-unit id="logs.filter.enabled.off" approved="yes">
         <source>Disabled</source>
-        <target state="needs-review-translation" state-qualifier="leveraged-mt">Απενεργοποιημένο</target>
+        <target state="final">Απενεργοποιημένο</target>
       </trans-unit>
-      <trans-unit id="logs.filter.min_pct">
+      <trans-unit id="logs.filter.min_pct" approved="yes">
         <source>Min optimization %</source>
-        <target state="needs-review-translation" state-qualifier="leveraged-mt">Ελάχιστη βελτιστοποίηση %</target>
+        <target state="final">Ελάχιστη βελτιστοποίηση %</target>
       </trans-unit>
-      <trans-unit id="logs.filter.per_page">
+      <trans-unit id="logs.filter.per_page" approved="yes">
         <source>Per page</source>
-        <target state="needs-review-translation" state-qualifier="leveraged-mt">Ανά σελίδα</target>
+        <target state="final">Ανά σελίδα</target>
       </trans-unit>
-      <trans-unit id="logs.filter.apply">
+      <trans-unit id="logs.filter.apply" approved="yes">
         <source>Apply</source>
-        <target state="needs-review-translation" state-qualifier="leveraged-mt">Εφαρμογή</target>
+        <target state="final">Εφαρμογή</target>
       </trans-unit>
-      <trans-unit id="logs.filter.reset">
+      <trans-unit id="logs.filter.reset" approved="yes">
         <source>Reset</source>
-        <target state="needs-review-translation" state-qualifier="leveraged-mt">Reset</target>
+        <target state="final">Reset</target>
       </trans-unit>
-      <trans-unit id="logs.column.uid">
+      <trans-unit id="logs.column.uid" approved="yes">
         <source>UID</source>
-        <target state="needs-review-translation" state-qualifier="leveraged-mt">UID</target>
+        <target state="final">UID</target>
       </trans-unit>
-      <trans-unit id="logs.column.date">
+      <trans-unit id="logs.column.date" approved="yes">
         <source>Date &amp; Time</source>
-        <target state="needs-translation">Date &amp; Time</target>
+        <target state="final">Ημερομηνία &amp; Ώρα</target>
       </trans-unit>
-      <trans-unit id="logs.column.input_size">
+      <trans-unit id="logs.column.input_size" approved="yes">
         <source>Input size</source>
-        <target state="needs-review-translation" state-qualifier="leveraged-mt">Input size</target>
+        <target state="final">Input size</target>
       </trans-unit>
-      <trans-unit id="logs.column.output_size">
+      <trans-unit id="logs.column.output_size" approved="yes">
         <source>Output size</source>
-        <target state="needs-review-translation" state-qualifier="leveraged-mt">Μέγεθος εξόδου</target>
+        <target state="final">Μέγεθος εξόδου</target>
       </trans-unit>
-      <trans-unit id="logs.column.optimization">
+      <trans-unit id="logs.column.optimization" approved="yes">
         <source>Optimization</source>
-        <target state="needs-review-translation" state-qualifier="leveraged-mt">Βελτιστοποίηση</target>
+        <target state="final">Βελτιστοποίηση</target>
       </trans-unit>
-      <trans-unit id="logs.column.enabled">
+      <trans-unit id="logs.column.enabled" approved="yes">
         <source>Enabled</source>
-        <target state="needs-review-translation" state-qualifier="leveraged-mt">Ενεργοποιημένο</target>
+        <target state="final">Ενεργοποιημένο</target>
       </trans-unit>
-      <trans-unit id="logs.column.actions">
+      <trans-unit id="logs.column.actions" approved="yes">
         <source>Actions</source>
-        <target state="needs-review-translation" state-qualifier="leveraged-mt">Ενέργειες</target>
+        <target state="final">Ενέργειες</target>
       </trans-unit>
-      <trans-unit id="logs.column.select">
+      <trans-unit id="logs.column.select" approved="yes">
         <source>Select</source>
-        <target state="needs-review-translation" state-qualifier="leveraged-mt">Επιλογή</target>
+        <target state="final">Επιλογή</target>
       </trans-unit>
-      <trans-unit id="logs.empty.title">
+      <trans-unit id="logs.empty.title" approved="yes">
         <source>No log entries yet</source>
-        <target state="needs-review-translation" state-qualifier="leveraged-mt">Δεν υπάρχουν καταχωρήσεις καταγραφής ακόμα</target>
+        <target state="final">Δεν υπάρχουν καταχωρήσεις καταγραφής ακόμα</target>
       </trans-unit>
-      <trans-unit id="logs.empty.body">
+      <trans-unit id="logs.empty.body" approved="yes">
         <source>Run an encode operation from the TOON Playground to record your first log entry.</source>
-        <target state="needs-review-translation" state-qualifier="leveraged-mt">Εκτελέστε μια λειτουργία κωδικοποίησης από το TOON Playground για να καταγράψετε την πρώτη σας εγγραφή καταγραφής.</target>
+        <target state="final">Εκτελέστε μια λειτουργία κωδικοποίησης από το TOON Playground για να καταγράψετε την πρώτη σας εγγραφή καταγραφής.</target>
       </trans-unit>
-      <trans-unit id="logs.empty.cta">
+      <trans-unit id="logs.empty.cta" approved="yes">
         <source>Open TOON Playground</source>
-        <target state="needs-review-translation" state-qualifier="leveraged-mt">Ανοίξτε Την Παιδική Χαρά</target>
+        <target state="final">Ανοίξτε Την Παιδική Χαρά</target>
       </trans-unit>
-      <trans-unit id="logs.delete.single">
+      <trans-unit id="logs.delete.single" approved="yes">
         <source>Delete</source>
-        <target state="needs-review-translation" state-qualifier="leveraged-mt">Διαγραφή</target>
+        <target state="final">Διαγραφή</target>
       </trans-unit>
-      <trans-unit id="logs.delete.bulk">
+      <trans-unit id="logs.delete.bulk" approved="yes">
         <source>Delete selected (%d)</source>
-        <target state="needs-review-translation" state-qualifier="leveraged-mt">Διαγραφή επιλεγμένων (%d)</target>
+        <target state="final">Διαγραφή επιλεγμένων (%d)</target>
       </trans-unit>
-      <trans-unit id="logs.delete.confirm_title">
+      <trans-unit id="logs.delete.confirm_title" approved="yes">
         <source>Delete log entries?</source>
-        <target state="needs-review-translation" state-qualifier="leveraged-mt">Διαγραφή καταχωρήσεων καταγραφής?</target>
+        <target state="final">Διαγραφή καταχωρήσεων καταγραφής?</target>
       </trans-unit>
-      <trans-unit id="logs.delete.confirm_body_single">
+      <trans-unit id="logs.delete.confirm_body_single" approved="yes">
         <source>This will permanently remove the selected log entry. This action cannot be undone.</source>
-        <target state="needs-review-translation" state-qualifier="leveraged-mt">Αυτό θα αφαιρέσει μόνιμα την επιλεγμένη καταχώρηση καταγραφής. Αυτή η ενέργεια δεν μπορεί να αναιρεθεί.</target>
+        <target state="final">Αυτό θα αφαιρέσει μόνιμα την επιλεγμένη καταχώρηση καταγραφής. Αυτή η ενέργεια δεν μπορεί να αναιρεθεί.</target>
       </trans-unit>
-      <trans-unit id="logs.delete.confirm_body_bulk">
+      <trans-unit id="logs.delete.confirm_body_bulk" approved="yes">
         <source>This will permanently remove the selected log entries. This action cannot be undone.</source>
-        <target state="needs-review-translation" state-qualifier="leveraged-mt">Αυτό θα αφαιρέσει μόνιμα τις επιλεγμένες καταχωρήσεις καταγραφής. Αυτή η ενέργεια δεν μπορεί να αναιρεθεί.</target>
+        <target state="final">Αυτό θα αφαιρέσει μόνιμα τις επιλεγμένες καταχωρήσεις καταγραφής. Αυτή η ενέργεια δεν μπορεί να αναιρεθεί.</target>
       </trans-unit>
-      <trans-unit id="logs.delete.confirm_button">
+      <trans-unit id="logs.delete.confirm_button" approved="yes">
         <source>Yes, delete</source>
-        <target state="needs-review-translation" state-qualifier="leveraged-mt">Ναι, διαγραφή</target>
+        <target state="final">Ναι, διαγραφή</target>
       </trans-unit>
-      <trans-unit id="logs.delete.cancel">
+      <trans-unit id="logs.delete.cancel" approved="yes">
         <source>Cancel</source>
-        <target state="needs-review-translation" state-qualifier="leveraged-mt">Ακύρωση</target>
+        <target state="final">Ακύρωση</target>
       </trans-unit>
-      <trans-unit id="logs.flash.deleted_title">
+      <trans-unit id="logs.flash.deleted_title" approved="yes">
         <source>Log entries deleted</source>
-        <target state="needs-review-translation" state-qualifier="leveraged-mt">Η καταγραφή καταχωρήσεων διαγράφηκε</target>
+        <target state="final">Η καταγραφή καταχωρήσεων διαγράφηκε</target>
       </trans-unit>
-      <trans-unit id="logs.flash.deleted_body">
+      <trans-unit id="logs.flash.deleted_body" approved="yes">
         <source>%d log entry/entries were removed.</source>
-        <target state="needs-translation">%d log entry/entries were removed.</target>
+        <target state="final">%d καταχώρηση/καταχωρίσεις καταγράφηκαν.</target>
       </trans-unit>
-      <trans-unit id="logs.flash.nothing_title">
+      <trans-unit id="logs.flash.nothing_title" approved="yes">
         <source>Nothing deleted</source>
-        <target state="needs-review-translation" state-qualifier="leveraged-mt">Τίποτα διαγράφηκε</target>
+        <target state="final">Τίποτα διαγράφηκε</target>
       </trans-unit>
-      <trans-unit id="logs.flash.nothing_body">
+      <trans-unit id="logs.flash.nothing_body" approved="yes">
         <source>No matching log entries were found.</source>
-        <target state="needs-review-translation" state-qualifier="leveraged-mt">Δεν βρέθηκαν καταχωρήσεις καταγραφής που ταιριάζουν.</target>
+        <target state="final">Δεν βρέθηκαν καταχωρήσεις καταγραφής που ταιριάζουν.</target>
       </trans-unit>
-      <trans-unit id="logs.pagination.first">
+      <trans-unit id="logs.pagination.first" approved="yes">
         <source>First</source>
-        <target state="needs-review-translation" state-qualifier="leveraged-mt">Πρώτη</target>
+        <target state="final">Πρώτη</target>
       </trans-unit>
-      <trans-unit id="logs.pagination.previous">
+      <trans-unit id="logs.pagination.previous" approved="yes">
         <source>Previous</source>
-        <target state="needs-review-translation" state-qualifier="leveraged-mt">Προηγούμενο</target>
+        <target state="final">Προηγούμενο</target>
       </trans-unit>
-      <trans-unit id="logs.pagination.next">
+      <trans-unit id="logs.pagination.next" approved="yes">
         <source>Next</source>
-        <target state="needs-review-translation" state-qualifier="leveraged-mt">Επόμενο</target>
+        <target state="final">Επόμενο</target>
       </trans-unit>
-      <trans-unit id="logs.pagination.last">
+      <trans-unit id="logs.pagination.last" approved="yes">
         <source>Last</source>
-        <target state="needs-review-translation" state-qualifier="leveraged-mt">Τελευταία</target>
+        <target state="final">Τελευταία</target>
       </trans-unit>
-      <trans-unit id="logs.pagination.summary">
+      <trans-unit id="logs.pagination.summary" approved="yes">
         <source>Page %1$d of %2$d (%3$d total)</source>
-        <target state="needs-review-translation" state-qualifier="leveraged-mt">Σελίδα %1$d %2$d (%3$d total)</target>
+        <target state="final">Σελίδα %1$d %2$d (%3$d total)</target>
       </trans-unit>
     </body>
   </file>
