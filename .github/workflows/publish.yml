@@ -41,6 +41,7 @@ jobs:
           fi
           {
             echo 'terReleaseNotes<<EOF'
+            echo "Release notes and changelog:"
             echo "https://github.com/${{ github.repository }}/releases/tag/${{ env.version }}"
             echo EOF
           } >> "$GITHUB_ENV"
