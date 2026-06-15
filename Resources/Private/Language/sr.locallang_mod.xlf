@@ -3,289 +3,345 @@
   <file source-language="en" datatype="plaintext" original="EXT:rrp_t3toon/Resources/Private/Language/locallang_mod.xlf" product-name="rrp_t3toon" target-language="sr">
     <header/>
     <body>
-      <trans-unit id="mlang_tabs_tab">
+      <trans-unit id="mlang_tabs_tab" approved="yes">
         <source>TOON Playground</source>
-        <target state="needs-translation">TOON Playground</target>
+        <target state="final">TOON Playground</target>
       </trans-unit>
-      <trans-unit id="playground.title">
+      <trans-unit id="playground.title" approved="yes">
         <source>TOON Playground</source>
-        <target state="needs-translation">TOON Playground</target>
+        <target state="final">TOON Igralište</target>
       </trans-unit>
-      <trans-unit id="playground.input_label">
+      <trans-unit id="playground.input_label" approved="yes">
         <source>Input (JSON for encode, TOON for decode)</source>
-        <target state="needs-translation">Input (JSON for encode, TOON for decode)</target>
+        <target state="final">Улаз (JSON за кодирање, TOON за декодирање)</target>
       </trans-unit>
-      <trans-unit id="playground.output_label">
+      <trans-unit id="playground.output_label" approved="yes">
         <source>Output</source>
-        <target state="needs-translation">Output</target>
+        <target state="final">Излаз</target>
       </trans-unit>
-      <trans-unit id="playground.encode">
+      <trans-unit id="playground.encode" approved="yes">
         <source>Encode to TOON</source>
-        <target state="needs-translation">Encode to TOON</target>
+        <target state="final">Кодирај у TOON</target>
       </trans-unit>
-      <trans-unit id="playground.decode">
+      <trans-unit id="playground.decode" approved="yes">
         <source>Decode from TOON</source>
-        <target state="needs-translation">Decode from TOON</target>
+        <target state="final">Декодирај из TOON</target>
       </trans-unit>
-      <trans-unit id="playground.encode_compact">
+      <trans-unit id="playground.encode_compact" approved="yes">
         <source>Encode (compact)</source>
-        <target state="needs-translation">Encode (compact)</target>
+        <target state="final">Enkoduj (kompaktno)</target>
       </trans-unit>
-      <trans-unit id="playground.tokens">
+      <trans-unit id="playground.tokens" approved="yes">
         <source>Estimated tokens: %d</source>
-        <target state="needs-translation">Estimated tokens: %d</target>
+        <target state="final">Procenjeni tokeni: %d</target>
       </trans-unit>
-      <trans-unit id="playground.footer_made_with">
+      <trans-unit id="playground.footer_made_with" approved="yes">
         <source>Made with 🧡 for the TYPO3 Developer by Rohan and Himanshu</source>
-        <target state="needs-translation">Made with 🧡 for the TYPO3 Developer by Rohan and Himanshu</target>
+        <target state="final">Направљено са 🧡 за TYPO3 програмере од стране Рохана и Химаншуа</target>
       </trans-unit>
-      <trans-unit id="playground.subtitle">
+      <trans-unit id="playground.subtitle" approved="yes">
         <source>Encode JSON to TOON or decode strings instantly.</source>
-        <target state="needs-translation">Encode JSON to TOON or decode strings instantly.</target>
+        <target state="final">Кодирајте JSON у TOON или декодирајте стрингове тренутно.</target>
       </trans-unit>
-      <trans-unit id="playground.clear_all">
+      <trans-unit id="playground.clear_all" approved="yes">
         <source>Clear All</source>
-        <target state="needs-translation">Clear All</target>
+        <target state="final">Обриши све</target>
       </trans-unit>
-      <trans-unit id="playground.view_logs">
+      <trans-unit id="playground.view_logs" approved="yes">
         <source>View Logs</source>
-        <target state="needs-translation">View Logs</target>
+        <target state="final">Погледај логове</target>
       </trans-unit>
-      <trans-unit id="playground.badge_input">
+      <trans-unit id="playground.badge_input" approved="yes">
         <source>Input</source>
-        <target state="needs-translation">Input</target>
+        <target state="final">Унос</target>
       </trans-unit>
-      <trans-unit id="playground.or">
+      <trans-unit id="playground.or" approved="yes">
         <source>OR</source>
-        <target state="needs-translation">OR</target>
+        <target state="final">ILI</target>
       </trans-unit>
-      <trans-unit id="playground.estimated_tokens_label">
+      <trans-unit id="playground.estimated_tokens_label" approved="yes">
         <source>Estimated tokens</source>
-        <target state="needs-translation">Estimated tokens</target>
+        <target state="final">Процењени токени</target>
       </trans-unit>
-      <trans-unit id="playground.copy">
+      <trans-unit id="playground.copy" approved="yes">
         <source>Copy</source>
-        <target state="needs-translation">Copy</target>
+        <target state="final">Копирај</target>
       </trans-unit>
-      <trans-unit id="playground.copied_to_clipboard">
+      <trans-unit id="playground.copied_to_clipboard" approved="yes">
         <source>Copied to clipboard!</source>
-        <target state="needs-translation">Copied to clipboard!</target>
+        <target state="final">Копирано у међуспремник!</target>
       </trans-unit>
-      <trans-unit id="playground.github">
+      <trans-unit id="playground.github" approved="yes">
         <source>GitHub</source>
-        <target state="needs-translation">GitHub</target>
+        <target state="final">GitHub</target>
       </trans-unit>
-      <trans-unit id="playground.documentation">
+      <trans-unit id="playground.documentation" approved="yes">
         <source>Documentation</source>
-        <target state="needs-translation">Documentation</target>
+        <target state="final">Документација</target>
       </trans-unit>
-      <trans-unit id="playground.clear_confirm">
+      <trans-unit id="playground.clear_confirm" approved="yes">
         <source>Clear both input and output?</source>
-        <target state="needs-translation">Clear both input and output?</target>
+        <target state="final">Obrisati i unos i izlaz?</target>
       </trans-unit>
-      <trans-unit id="playground.clear_confirm_title">
+      <trans-unit id="playground.clear_confirm_title" approved="yes">
         <source>Clear All</source>
-        <target state="needs-translation">Clear All</target>
+        <target state="final">Обриши све</target>
       </trans-unit>
-      <trans-unit id="playground.clear_confirm_body">
+      <trans-unit id="playground.clear_confirm_body" approved="yes">
         <source>This will clear both the input and output fields. This action cannot be undone.</source>
-        <target state="needs-translation">This will clear both the input and output fields. This action cannot be undone.</target>
+        <target state="final">Ово ће обрисати и поља за унос и поља за излаз. Ова радња се не може поништити.</target>
       </trans-unit>
-      <trans-unit id="playground.cancel">
+      <trans-unit id="playground.cancel" approved="yes">
         <source>Cancel</source>
-        <target state="needs-translation">Cancel</target>
+        <target state="final">Откажи</target>
       </trans-unit>
-      <trans-unit id="playground.confirm_clear">
+      <trans-unit id="playground.confirm_clear" approved="yes">
         <source>Yes, Clear All</source>
-        <target state="needs-translation">Yes, Clear All</target>
+        <target state="final">Да, обриши све</target>
       </trans-unit>
-      <trans-unit id="playground.placeholder">
+      <trans-unit id="playground.placeholder" approved="yes">
         <source>{"name": "TOON", "items": [1, 2, 3]}</source>
-        <target state="needs-translation">{"name": "TOON", "items": [1, 2, 3]}</target>
+        <target state="final">{"name": "TOON", "items": [1, 2, 3]}</target>
       </trans-unit>
-      <trans-unit id="playground.error_invalid_json">
+      <trans-unit id="playground.error_invalid_json" approved="yes">
         <source>Invalid JSON input for encode.</source>
-        <target state="needs-translation">Invalid JSON input for encode.</target>
+        <target state="final">Неважећи JSON унос за кодирање.</target>
       </trans-unit>
-      <trans-unit id="optimization_note.title">
+      <trans-unit id="playground.option_delimiter">
+        <source>Delimiter</source>
+        <target state="needs-translation">Delimiter</target>
+      </trans-unit>
+      <trans-unit id="playground.option_indent">
+        <source>Indent</source>
+        <target state="needs-translation">Indent</target>
+      </trans-unit>
+      <trans-unit id="playground.option_key_folding">
+        <source>Key folding</source>
+        <target state="needs-translation">Key folding</target>
+      </trans-unit>
+      <trans-unit id="playground.key_folding_off">
+        <source>Off</source>
+        <target state="needs-translation">Off</target>
+      </trans-unit>
+      <trans-unit id="playground.key_folding_safe">
+        <source>Safe</source>
+        <target state="needs-translation">Safe</target>
+      </trans-unit>
+      <trans-unit id="playground.option_flatten_depth">
+        <source>Flatten depth</source>
+        <target state="needs-translation">Flatten depth</target>
+      </trans-unit>
+      <trans-unit id="playground.flatten_unlimited">
+        <source>Unlimited</source>
+        <target state="needs-translation">Unlimited</target>
+      </trans-unit>
+      <trans-unit id="playground.presets">
+        <source>Load example</source>
+        <target state="needs-translation">Load example</target>
+      </trans-unit>
+      <trans-unit id="playground.preset_hikes">
+        <source>Hikes</source>
+        <target state="needs-translation">Hikes</target>
+      </trans-unit>
+      <trans-unit id="playground.preset_typo3">
+        <source>TYPO3</source>
+        <target state="needs-translation">TYPO3</target>
+      </trans-unit>
+      <trans-unit id="playground.chars">
+        <source>chars</source>
+        <target state="needs-translation">chars</target>
+      </trans-unit>
+      <trans-unit id="playground.size_reduction">
+        <source>%s%% size reduction vs pretty JSON</source>
+        <target state="needs-translation">%s%% size reduction vs pretty JSON</target>
+      </trans-unit>
+      <trans-unit id="playground.lenient_decode">
+        <source>Lenient decode</source>
+        <target state="needs-translation">Lenient decode</target>
+      </trans-unit>
+      <trans-unit id="playground.official_playground">
+        <source>Official playground</source>
+        <target state="needs-translation">Official playground</target>
+      </trans-unit>
+      <trans-unit id="optimization_note.title" approved="yes">
         <source>Why is optimization sometimes negative?</source>
-        <target state="needs-translation">Why is optimization sometimes negative?</target>
+        <target state="final">Зашто је оптимизација понекад негативна?</target>
       </trans-unit>
-      <trans-unit id="optimization_note.body">
+      <trans-unit id="optimization_note.body" approved="yes">
         <source>The optimization % compares the TOON output against minified JSON (not the indented text you paste). TOON saves the most on arrays of uniform records, which collapse into a single table header plus one compact line per row — the more rows, the bigger the saving. Deeply nested data with few or no repeating arrays has nothing to tabularize and can come out slightly larger, showing a negative percentage. This is expected, not an error.</source>
-        <target state="needs-translation">The optimization % compares the TOON output against minified JSON (not the indented text you paste). TOON saves the most on arrays of uniform records, which collapse into a single table header plus one compact line per row — the more rows, the bigger the saving. Deeply nested data with few or no repeating arrays has nothing to tabularize and can come out slightly larger, showing a negative percentage. This is expected, not an error.</target>
+        <target state="final">Проценат оптимизације % пореди TOON излаз са минификованим JSON-ом (не са увученим текстом који налепите). TOON највише уштеди на низовима уједначених записа, који се сажимају у јединствено заглавље табеле и по један компактан ред по реду — што је више редова, то је уштедевина већа. Дубоко угнежђени подаци са мало или нимало понављајућих низова немају шта да се претвори у табелу и могу испасти незнатно већи, показујући негативни проценат. То је очекивано, а не грешка.</target>
       </trans-unit>
-      <trans-unit id="optimization_note.close">
+      <trans-unit id="optimization_note.close" approved="yes">
         <source>Dismiss note</source>
-        <target state="needs-translation">Dismiss note</target>
+        <target state="final">Одбаци напомену</target>
       </trans-unit>
-      <trans-unit id="logs.mlang_tabs_tab">
+      <trans-unit id="logs.mlang_tabs_tab" approved="yes">
         <source>TOON Logs</source>
-        <target state="needs-translation">TOON Logs</target>
+        <target state="final">TOON Логови</target>
       </trans-unit>
-      <trans-unit id="logs.title">
+      <trans-unit id="logs.title" approved="yes">
         <source>TOON Usage Logs</source>
-        <target state="needs-translation">TOON Usage Logs</target>
+        <target state="final">TOON Логови Коришћења</target>
       </trans-unit>
-      <trans-unit id="logs.subtitle">
+      <trans-unit id="logs.subtitle" approved="yes">
         <source>Every successful encode/convert call recorded with input size, output size, and compression ratio.</source>
-        <target state="needs-translation">Every successful encode/convert call recorded with input size, output size, and compression ratio.</target>
+        <target state="final">Svaki uspešan poziv kodiranja/konverzije zabeležen sa veličinom ulaza, veličinom izlaza i stepenom kompresije.</target>
       </trans-unit>
-      <trans-unit id="logs.back_to_playground">
+      <trans-unit id="logs.back_to_playground" approved="yes">
         <source>Back to Playground</source>
-        <target state="needs-translation">Back to Playground</target>
+        <target state="final">Назад на Playground</target>
       </trans-unit>
-      <trans-unit id="logs.filter.legend">
+      <trans-unit id="logs.filter.legend" approved="yes">
         <source>Filters</source>
-        <target state="needs-translation">Filters</target>
+        <target state="final">Филтери</target>
       </trans-unit>
-      <trans-unit id="logs.filter.date_from">
+      <trans-unit id="logs.filter.date_from" approved="yes">
         <source>From</source>
-        <target state="needs-translation">From</target>
+        <target state="final">Од</target>
       </trans-unit>
-      <trans-unit id="logs.filter.date_to">
+      <trans-unit id="logs.filter.date_to" approved="yes">
         <source>To</source>
-        <target state="needs-translation">To</target>
+        <target state="final">До</target>
       </trans-unit>
-      <trans-unit id="logs.filter.enabled">
+      <trans-unit id="logs.filter.enabled" approved="yes">
         <source>Optimization status</source>
-        <target state="needs-translation">Optimization status</target>
+        <target state="final">Статус оптимизације</target>
       </trans-unit>
-      <trans-unit id="logs.filter.enabled.all">
+      <trans-unit id="logs.filter.enabled.all" approved="yes">
         <source>All</source>
-        <target state="needs-translation">All</target>
+        <target state="final">Све</target>
       </trans-unit>
-      <trans-unit id="logs.filter.enabled.on">
+      <trans-unit id="logs.filter.enabled.on" approved="yes">
         <source>Enabled</source>
-        <target state="needs-translation">Enabled</target>
+        <target state="final">Омогућено</target>
       </trans-unit>
-      <trans-unit id="logs.filter.enabled.off">
+      <trans-unit id="logs.filter.enabled.off" approved="yes">
         <source>Disabled</source>
-        <target state="needs-translation">Disabled</target>
+        <target state="final">Onemogućeno</target>
       </trans-unit>
-      <trans-unit id="logs.filter.min_pct">
+      <trans-unit id="logs.filter.min_pct" approved="yes">
         <source>Min optimization %</source>
-        <target state="needs-translation">Min optimization %</target>
+        <target state="final">Минимална оптимизација %</target>
       </trans-unit>
-      <trans-unit id="logs.filter.per_page">
+      <trans-unit id="logs.filter.per_page" approved="yes">
         <source>Per page</source>
-        <target state="needs-translation">Per page</target>
+        <target state="final">По страни</target>
       </trans-unit>
-      <trans-unit id="logs.filter.apply">
+      <trans-unit id="logs.filter.apply" approved="yes">
         <source>Apply</source>
-        <target state="needs-translation">Apply</target>
+        <target state="final">Примени</target>
       </trans-unit>
-      <trans-unit id="logs.filter.reset">
+      <trans-unit id="logs.filter.reset" approved="yes">
         <source>Reset</source>
-        <target state="needs-translation">Reset</target>
+        <target state="final">Ресетовати</target>
       </trans-unit>
-      <trans-unit id="logs.column.uid">
+      <trans-unit id="logs.column.uid" approved="yes">
         <source>UID</source>
-        <target state="needs-translation">UID</target>
+        <target state="final">УИД</target>
       </trans-unit>
-      <trans-unit id="logs.column.date">
+      <trans-unit id="logs.column.date" approved="yes">
         <source>Date &amp; Time</source>
-        <target state="needs-translation">Date &amp; Time</target>
+        <target state="final">Датум и време</target>
       </trans-unit>
-      <trans-unit id="logs.column.input_size">
+      <trans-unit id="logs.column.input_size" approved="yes">
         <source>Input size</source>
-        <target state="needs-translation">Input size</target>
+        <target state="final">Величина улаза</target>
       </trans-unit>
-      <trans-unit id="logs.column.output_size">
+      <trans-unit id="logs.column.output_size" approved="yes">
         <source>Output size</source>
-        <target state="needs-translation">Output size</target>
+        <target state="final">Величина излаза</target>
       </trans-unit>
-      <trans-unit id="logs.column.optimization">
+      <trans-unit id="logs.column.optimization" approved="yes">
         <source>Optimization</source>
-        <target state="needs-translation">Optimization</target>
+        <target state="final">Оптимизација</target>
       </trans-unit>
-      <trans-unit id="logs.column.enabled">
+      <trans-unit id="logs.column.enabled" approved="yes">
         <source>Enabled</source>
-        <target state="needs-translation">Enabled</target>
+        <target state="final">Омогућено</target>
       </trans-unit>
-      <trans-unit id="logs.column.actions">
+      <trans-unit id="logs.column.actions" approved="yes">
         <source>Actions</source>
-        <target state="needs-translation">Actions</target>
+        <target state="final">Радње</target>
       </trans-unit>
-      <trans-unit id="logs.column.select">
+      <trans-unit id="logs.column.select" approved="yes">
         <source>Select</source>
-        <target state="needs-translation">Select</target>
+        <target state="final">Изаберите</target>
       </trans-unit>
-      <trans-unit id="logs.empty.title">
+      <trans-unit id="logs.empty.title" approved="yes">
         <source>No log entries yet</source>
-        <target state="needs-translation">No log entries yet</target>
+        <target state="final">Još uvek nema unosa u evidenciji</target>
       </trans-unit>
-      <trans-unit id="logs.empty.body">
+      <trans-unit id="logs.empty.body" approved="yes">
         <source>Run an encode operation from the TOON Playground to record your first log entry.</source>
-        <target state="needs-translation">Run an encode operation from the TOON Playground to record your first log entry.</target>
+        <target state="final">Покрените операцију кодирања из TOON Playground-а да бисте забележили свој први унос у дневник.</target>
       </trans-unit>
-      <trans-unit id="logs.empty.cta">
+      <trans-unit id="logs.empty.cta" approved="yes">
         <source>Open TOON Playground</source>
-        <target state="needs-translation">Open TOON Playground</target>
+        <target state="final">Отворите TOON игралиште</target>
       </trans-unit>
-      <trans-unit id="logs.delete.single">
+      <trans-unit id="logs.delete.single" approved="yes">
         <source>Delete</source>
-        <target state="needs-translation">Delete</target>
+        <target state="final">Избриши</target>
       </trans-unit>
-      <trans-unit id="logs.delete.bulk">
+      <trans-unit id="logs.delete.bulk" approved="yes">
         <source>Delete selected (%d)</source>
-        <target state="needs-translation">Delete selected (%d)</target>
+        <target state="final">Избриши изабране (%d)</target>
       </trans-unit>
-      <trans-unit id="logs.delete.confirm_title">
+      <trans-unit id="logs.delete.confirm_title" approved="yes">
         <source>Delete log entries?</source>
-        <target state="needs-translation">Delete log entries?</target>
+        <target state="final">Obrisati stavke dnevnika?</target>
       </trans-unit>
-      <trans-unit id="logs.delete.confirm_body_single">
+      <trans-unit id="logs.delete.confirm_body_single" approved="yes">
         <source>This will permanently remove the selected log entry. This action cannot be undone.</source>
-        <target state="needs-translation">This will permanently remove the selected log entry. This action cannot be undone.</target>
+        <target state="final">Ово ће трајно уклонити изабрани унос у дневнику. Ова радња се не може опозвати.</target>
       </trans-unit>
-      <trans-unit id="logs.delete.confirm_body_bulk">
+      <trans-unit id="logs.delete.confirm_body_bulk" approved="yes">
         <source>This will permanently remove the selected log entries. This action cannot be undone.</source>
-        <target state="needs-translation">This will permanently remove the selected log entries. This action cannot be undone.</target>
+        <target state="final">Ово ће трајно уклонити изабране уносе у дневнику. Ова радња се не може опозвати.</target>
       </trans-unit>
-      <trans-unit id="logs.delete.confirm_button">
+      <trans-unit id="logs.delete.confirm_button" approved="yes">
         <source>Yes, delete</source>
-        <target state="needs-translation">Yes, delete</target>
+        <target state="final">Да, обриши</target>
       </trans-unit>
-      <trans-unit id="logs.delete.cancel">
+      <trans-unit id="logs.delete.cancel" approved="yes">
         <source>Cancel</source>
-        <target state="needs-translation">Cancel</target>
+        <target state="final">Откажи</target>
       </trans-unit>
-      <trans-unit id="logs.flash.deleted_title">
+      <trans-unit id="logs.flash.deleted_title" approved="yes">
         <source>Log entries deleted</source>
-        <target state="needs-translation">Log entries deleted</target>
+        <target state="final">Ставке дневника су обрисане</target>
       </trans-unit>
-      <trans-unit id="logs.flash.deleted_body">
+      <trans-unit id="logs.flash.deleted_body" approved="yes">
         <source>%d log entry/entries were removed.</source>
-        <target state="needs-translation">%d log entry/entries were removed.</target>
+        <target state="final">%d stavki evidencije je uklonjena/o.</target>
       </trans-unit>
-      <trans-unit id="logs.flash.nothing_title">
+      <trans-unit id="logs.flash.nothing_title" approved="yes">
         <source>Nothing deleted</source>
-        <target state="needs-translation">Nothing deleted</target>
+        <target state="final">Ништа није обрисано</target>
       </trans-unit>
-      <trans-unit id="logs.flash.nothing_body">
+      <trans-unit id="logs.flash.nothing_body" approved="yes">
         <source>No matching log entries were found.</source>
-        <target state="needs-translation">No matching log entries were found.</target>
+        <target state="final">Nisu pronađeni odgovarajući unosi u evidenciji.</target>
       </trans-unit>
-      <trans-unit id="logs.pagination.first">
+      <trans-unit id="logs.pagination.first" approved="yes">
         <source>First</source>
-        <target state="needs-translation">First</target>
+        <target state="final">Прва</target>
       </trans-unit>
-      <trans-unit id="logs.pagination.previous">
+      <trans-unit id="logs.pagination.previous" approved="yes">
         <source>Previous</source>
-        <target state="needs-translation">Previous</target>
+        <target state="final">Претходна</target>
       </trans-unit>
-      <trans-unit id="logs.pagination.next">
+      <trans-unit id="logs.pagination.next" approved="yes">
         <source>Next</source>
-        <target state="needs-translation">Next</target>
+        <target state="final">Следећа</target>
       </trans-unit>
-      <trans-unit id="logs.pagination.last">
+      <trans-unit id="logs.pagination.last" approved="yes">
         <source>Last</source>
-        <target state="needs-translation">Last</target>
+        <target state="final">Последња</target>
       </trans-unit>
-      <trans-unit id="logs.pagination.summary">
+      <trans-unit id="logs.pagination.summary" approved="yes">
         <source>Page %1$d of %2$d (%3$d total)</source>
-        <target state="needs-translation">Page %1$d of %2$d (%3$d total)</target>
+        <target state="final">Страница %1$d од %2$d (укупно %3$d)</target>
       </trans-unit>
     </body>
   </file>
