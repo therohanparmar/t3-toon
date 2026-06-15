@@ -3,289 +3,345 @@
   <file source-language="en" datatype="plaintext" original="EXT:rrp_t3toon/Resources/Private/Language/locallang_mod.xlf" product-name="rrp_t3toon" target-language="af">
     <header/>
     <body>
-      <trans-unit id="mlang_tabs_tab">
+      <trans-unit id="mlang_tabs_tab" approved="yes">
         <source>TOON Playground</source>
-        <target state="needs-translation">TOON Playground</target>
+        <target state="final">TOON Speelplek</target>
       </trans-unit>
-      <trans-unit id="playground.title">
+      <trans-unit id="playground.title" approved="yes">
         <source>TOON Playground</source>
-        <target state="needs-translation">TOON Playground</target>
+        <target state="final">TOON Speelgrond</target>
       </trans-unit>
-      <trans-unit id="playground.input_label">
+      <trans-unit id="playground.input_label" approved="yes">
         <source>Input (JSON for encode, TOON for decode)</source>
-        <target state="needs-translation">Input (JSON for encode, TOON for decode)</target>
+        <target state="final">Invoer (JSON vir enkodeer, TOON vir dekodeer)</target>
       </trans-unit>
-      <trans-unit id="playground.output_label">
+      <trans-unit id="playground.output_label" approved="yes">
         <source>Output</source>
-        <target state="needs-translation">Output</target>
+        <target state="final">Uitvoer</target>
       </trans-unit>
-      <trans-unit id="playground.encode">
+      <trans-unit id="playground.encode" approved="yes">
         <source>Encode to TOON</source>
-        <target state="needs-translation">Encode to TOON</target>
+        <target state="final">Enkodeer na TOON</target>
       </trans-unit>
-      <trans-unit id="playground.decode">
+      <trans-unit id="playground.decode" approved="yes">
         <source>Decode from TOON</source>
-        <target state="needs-translation">Decode from TOON</target>
+        <target state="final">Dekodeer van TOON</target>
       </trans-unit>
-      <trans-unit id="playground.encode_compact">
+      <trans-unit id="playground.encode_compact" approved="yes">
         <source>Encode (compact)</source>
-        <target state="needs-translation">Encode (compact)</target>
+        <target state="final">Enkodeer (kompak)</target>
       </trans-unit>
-      <trans-unit id="playground.tokens">
+      <trans-unit id="playground.tokens" approved="yes">
         <source>Estimated tokens: %d</source>
-        <target state="needs-translation">Estimated tokens: %d</target>
+        <target state="final">Geskatte tokens: %d</target>
       </trans-unit>
-      <trans-unit id="playground.footer_made_with">
+      <trans-unit id="playground.footer_made_with" approved="yes">
         <source>Made with 🧡 for the TYPO3 Developer by Rohan and Himanshu</source>
-        <target state="needs-translation">Made with 🧡 for the TYPO3 Developer by Rohan and Himanshu</target>
+        <target state="final">Gemaak met 🧡 vir die TYPO3-ontwikkelaar deur Rohan en Himanshu</target>
       </trans-unit>
-      <trans-unit id="playground.subtitle">
+      <trans-unit id="playground.subtitle" approved="yes">
         <source>Encode JSON to TOON or decode strings instantly.</source>
-        <target state="needs-translation">Encode JSON to TOON or decode strings instantly.</target>
+        <target state="final">Kodeer JSON na TOON of dekodeer stringe onmiddellik.</target>
       </trans-unit>
-      <trans-unit id="playground.clear_all">
+      <trans-unit id="playground.clear_all" approved="yes">
         <source>Clear All</source>
-        <target state="needs-translation">Clear All</target>
+        <target state="final">Verwyder Alles</target>
       </trans-unit>
-      <trans-unit id="playground.view_logs">
+      <trans-unit id="playground.view_logs" approved="yes">
         <source>View Logs</source>
-        <target state="needs-translation">View Logs</target>
+        <target state="final">Bekyk Logboeke</target>
       </trans-unit>
-      <trans-unit id="playground.badge_input">
+      <trans-unit id="playground.badge_input" approved="yes">
         <source>Input</source>
-        <target state="needs-translation">Input</target>
+        <target state="final">Invoer</target>
       </trans-unit>
-      <trans-unit id="playground.or">
+      <trans-unit id="playground.or" approved="yes">
         <source>OR</source>
-        <target state="needs-translation">OR</target>
+        <target state="final">OF</target>
       </trans-unit>
-      <trans-unit id="playground.estimated_tokens_label">
+      <trans-unit id="playground.estimated_tokens_label" approved="yes">
         <source>Estimated tokens</source>
-        <target state="needs-translation">Estimated tokens</target>
+        <target state="final">Geskatte tokens</target>
       </trans-unit>
-      <trans-unit id="playground.copy">
+      <trans-unit id="playground.copy" approved="yes">
         <source>Copy</source>
-        <target state="needs-translation">Copy</target>
+        <target state="final">Kopieer</target>
       </trans-unit>
-      <trans-unit id="playground.copied_to_clipboard">
+      <trans-unit id="playground.copied_to_clipboard" approved="yes">
         <source>Copied to clipboard!</source>
-        <target state="needs-translation">Copied to clipboard!</target>
+        <target state="final">Gekopieer na knipbord!</target>
       </trans-unit>
-      <trans-unit id="playground.github">
+      <trans-unit id="playground.github" approved="yes">
         <source>GitHub</source>
-        <target state="needs-translation">GitHub</target>
+        <target state="final">GitHub</target>
       </trans-unit>
-      <trans-unit id="playground.documentation">
+      <trans-unit id="playground.documentation" approved="yes">
         <source>Documentation</source>
-        <target state="needs-translation">Documentation</target>
+        <target state="final">Dokumentasie</target>
       </trans-unit>
-      <trans-unit id="playground.clear_confirm">
+      <trans-unit id="playground.clear_confirm" approved="yes">
         <source>Clear both input and output?</source>
-        <target state="needs-translation">Clear both input and output?</target>
+        <target state="final">Maak beide invoer en uitvoer skoon?</target>
       </trans-unit>
-      <trans-unit id="playground.clear_confirm_title">
+      <trans-unit id="playground.clear_confirm_title" approved="yes">
         <source>Clear All</source>
-        <target state="needs-translation">Clear All</target>
+        <target state="final">Maak Alles Skoon</target>
       </trans-unit>
-      <trans-unit id="playground.clear_confirm_body">
+      <trans-unit id="playground.clear_confirm_body" approved="yes">
         <source>This will clear both the input and output fields. This action cannot be undone.</source>
-        <target state="needs-translation">This will clear both the input and output fields. This action cannot be undone.</target>
+        <target state="final">Dit sal beide die invoer- en uitvoervelde uitvee. Hierdie aksie kan nie ongedaan gemaak word nie.</target>
       </trans-unit>
-      <trans-unit id="playground.cancel">
+      <trans-unit id="playground.cancel" approved="yes">
         <source>Cancel</source>
-        <target state="needs-translation">Cancel</target>
+        <target state="final">Kanselleer</target>
       </trans-unit>
-      <trans-unit id="playground.confirm_clear">
+      <trans-unit id="playground.confirm_clear" approved="yes">
         <source>Yes, Clear All</source>
-        <target state="needs-translation">Yes, Clear All</target>
+        <target state="final">Ja, Verwyder Alles</target>
       </trans-unit>
-      <trans-unit id="playground.placeholder">
+      <trans-unit id="playground.placeholder" approved="yes">
         <source>{"name": "TOON", "items": [1, 2, 3]}</source>
-        <target state="needs-translation">{"name": "TOON", "items": [1, 2, 3]}</target>
+        <target state="final">{"name": "TOON", "items": [1, 2, 3]}</target>
       </trans-unit>
-      <trans-unit id="playground.error_invalid_json">
+      <trans-unit id="playground.error_invalid_json" approved="yes">
         <source>Invalid JSON input for encode.</source>
-        <target state="needs-translation">Invalid JSON input for encode.</target>
+        <target state="final">Ongeldige JSON-invoer vir kodering.</target>
       </trans-unit>
-      <trans-unit id="optimization_note.title">
+      <trans-unit id="playground.option_delimiter">
+        <source>Delimiter</source>
+        <target state="needs-translation">Delimiter</target>
+      </trans-unit>
+      <trans-unit id="playground.option_indent">
+        <source>Indent</source>
+        <target state="needs-translation">Indent</target>
+      </trans-unit>
+      <trans-unit id="playground.option_key_folding">
+        <source>Key folding</source>
+        <target state="needs-translation">Key folding</target>
+      </trans-unit>
+      <trans-unit id="playground.key_folding_off">
+        <source>Off</source>
+        <target state="needs-translation">Off</target>
+      </trans-unit>
+      <trans-unit id="playground.key_folding_safe">
+        <source>Safe</source>
+        <target state="needs-translation">Safe</target>
+      </trans-unit>
+      <trans-unit id="playground.option_flatten_depth">
+        <source>Flatten depth</source>
+        <target state="needs-translation">Flatten depth</target>
+      </trans-unit>
+      <trans-unit id="playground.flatten_unlimited">
+        <source>Unlimited</source>
+        <target state="needs-translation">Unlimited</target>
+      </trans-unit>
+      <trans-unit id="playground.presets">
+        <source>Load example</source>
+        <target state="needs-translation">Load example</target>
+      </trans-unit>
+      <trans-unit id="playground.preset_hikes">
+        <source>Hikes</source>
+        <target state="needs-translation">Hikes</target>
+      </trans-unit>
+      <trans-unit id="playground.preset_typo3">
+        <source>TYPO3</source>
+        <target state="needs-translation">TYPO3</target>
+      </trans-unit>
+      <trans-unit id="playground.chars">
+        <source>chars</source>
+        <target state="needs-translation">chars</target>
+      </trans-unit>
+      <trans-unit id="playground.size_reduction">
+        <source>%s%% size reduction vs pretty JSON</source>
+        <target state="needs-translation">%s%% size reduction vs pretty JSON</target>
+      </trans-unit>
+      <trans-unit id="playground.lenient_decode">
+        <source>Lenient decode</source>
+        <target state="needs-translation">Lenient decode</target>
+      </trans-unit>
+      <trans-unit id="playground.official_playground">
+        <source>Official playground</source>
+        <target state="needs-translation">Official playground</target>
+      </trans-unit>
+      <trans-unit id="optimization_note.title" approved="yes">
         <source>Why is optimization sometimes negative?</source>
-        <target state="needs-translation">Why is optimization sometimes negative?</target>
+        <target state="final">Hoekom is optimering soms negatief?</target>
       </trans-unit>
-      <trans-unit id="optimization_note.body">
+      <trans-unit id="optimization_note.body" approved="yes">
         <source>The optimization % compares the TOON output against minified JSON (not the indented text you paste). TOON saves the most on arrays of uniform records, which collapse into a single table header plus one compact line per row — the more rows, the bigger the saving. Deeply nested data with few or no repeating arrays has nothing to tabularize and can come out slightly larger, showing a negative percentage. This is expected, not an error.</source>
-        <target state="needs-translation">The optimization % compares the TOON output against minified JSON (not the indented text you paste). TOON saves the most on arrays of uniform records, which collapse into a single table header plus one compact line per row — the more rows, the bigger the saving. Deeply nested data with few or no repeating arrays has nothing to tabularize and can come out slightly larger, showing a negative percentage. This is expected, not an error.</target>
+        <target state="final">Die optimaliserings % vergelyk die TOON-uitvoer met geminifiseerde JSON (nie die ingespasde teks wat u plak nie). TOON bespaar die meeste op skikkings van eenvormige rekords, wat saamvou in 'n enkele tabelopskrif plus een kompakte reël per ry — hoe meer rye, hoe groter die besparing. Diep geneste data met min of geen herhalende skikkings het niks om te tabellariseer nie en kan effens groter uitkom, wat 'n negatiewe persentasie toon. Dit is verwagte gedrag, nie 'n fout nie.</target>
       </trans-unit>
-      <trans-unit id="optimization_note.close">
+      <trans-unit id="optimization_note.close" approved="yes">
         <source>Dismiss note</source>
-        <target state="needs-translation">Dismiss note</target>
+        <target state="final">Sluit nota</target>
       </trans-unit>
-      <trans-unit id="logs.mlang_tabs_tab">
+      <trans-unit id="logs.mlang_tabs_tab" approved="yes">
         <source>TOON Logs</source>
-        <target state="needs-translation">TOON Logs</target>
+        <target state="final">TOON Logs</target>
       </trans-unit>
-      <trans-unit id="logs.title">
+      <trans-unit id="logs.title" approved="yes">
         <source>TOON Usage Logs</source>
-        <target state="needs-translation">TOON Usage Logs</target>
+        <target state="final">TOON Gebruikslogboeke</target>
       </trans-unit>
-      <trans-unit id="logs.subtitle">
+      <trans-unit id="logs.subtitle" approved="yes">
         <source>Every successful encode/convert call recorded with input size, output size, and compression ratio.</source>
-        <target state="needs-translation">Every successful encode/convert call recorded with input size, output size, and compression ratio.</target>
+        <target state="final">Elke suksesvolle enkodeer-/omskepoproep aangeteken met invoergrootte, uitvoergrootte en kompressieverhouding.</target>
       </trans-unit>
-      <trans-unit id="logs.back_to_playground">
+      <trans-unit id="logs.back_to_playground" approved="yes">
         <source>Back to Playground</source>
-        <target state="needs-translation">Back to Playground</target>
+        <target state="final">Terug na Speelgrond</target>
       </trans-unit>
-      <trans-unit id="logs.filter.legend">
+      <trans-unit id="logs.filter.legend" approved="yes">
         <source>Filters</source>
-        <target state="needs-translation">Filters</target>
+        <target state="final">Filters</target>
       </trans-unit>
-      <trans-unit id="logs.filter.date_from">
+      <trans-unit id="logs.filter.date_from" approved="yes">
         <source>From</source>
-        <target state="needs-translation">From</target>
+        <target state="final">Van</target>
       </trans-unit>
-      <trans-unit id="logs.filter.date_to">
+      <trans-unit id="logs.filter.date_to" approved="yes">
         <source>To</source>
-        <target state="needs-translation">To</target>
+        <target state="final">Tot</target>
       </trans-unit>
-      <trans-unit id="logs.filter.enabled">
+      <trans-unit id="logs.filter.enabled" approved="yes">
         <source>Optimization status</source>
-        <target state="needs-translation">Optimization status</target>
+        <target state="final">Optimaliseringstatus</target>
       </trans-unit>
-      <trans-unit id="logs.filter.enabled.all">
+      <trans-unit id="logs.filter.enabled.all" approved="yes">
         <source>All</source>
-        <target state="needs-translation">All</target>
+        <target state="final">Almal</target>
       </trans-unit>
-      <trans-unit id="logs.filter.enabled.on">
+      <trans-unit id="logs.filter.enabled.on" approved="yes">
         <source>Enabled</source>
-        <target state="needs-translation">Enabled</target>
+        <target state="final">Geaktiveer</target>
       </trans-unit>
-      <trans-unit id="logs.filter.enabled.off">
+      <trans-unit id="logs.filter.enabled.off" approved="yes">
         <source>Disabled</source>
-        <target state="needs-translation">Disabled</target>
+        <target state="final">Gedeaktiveer</target>
       </trans-unit>
-      <trans-unit id="logs.filter.min_pct">
+      <trans-unit id="logs.filter.min_pct" approved="yes">
         <source>Min optimization %</source>
-        <target state="needs-translation">Min optimization %</target>
+        <target state="final">Min optimalisering %</target>
       </trans-unit>
-      <trans-unit id="logs.filter.per_page">
+      <trans-unit id="logs.filter.per_page" approved="yes">
         <source>Per page</source>
-        <target state="needs-translation">Per page</target>
+        <target state="final">Per bladsy</target>
       </trans-unit>
-      <trans-unit id="logs.filter.apply">
+      <trans-unit id="logs.filter.apply" approved="yes">
         <source>Apply</source>
-        <target state="needs-translation">Apply</target>
+        <target state="final">Toepas</target>
       </trans-unit>
-      <trans-unit id="logs.filter.reset">
+      <trans-unit id="logs.filter.reset" approved="yes">
         <source>Reset</source>
-        <target state="needs-translation">Reset</target>
+        <target state="final">Stel terug</target>
       </trans-unit>
-      <trans-unit id="logs.column.uid">
+      <trans-unit id="logs.column.uid" approved="yes">
         <source>UID</source>
-        <target state="needs-translation">UID</target>
+        <target state="final">UID</target>
       </trans-unit>
-      <trans-unit id="logs.column.date">
+      <trans-unit id="logs.column.date" approved="yes">
         <source>Date &amp; Time</source>
-        <target state="needs-translation">Date &amp; Time</target>
+        <target state="final">Datum &amp; Tyd</target>
       </trans-unit>
-      <trans-unit id="logs.column.input_size">
+      <trans-unit id="logs.column.input_size" approved="yes">
         <source>Input size</source>
-        <target state="needs-translation">Input size</target>
+        <target state="final">Invoergrootte</target>
       </trans-unit>
-      <trans-unit id="logs.column.output_size">
+      <trans-unit id="logs.column.output_size" approved="yes">
         <source>Output size</source>
-        <target state="needs-translation">Output size</target>
+        <target state="final">Uitvoergrootte</target>
       </trans-unit>
-      <trans-unit id="logs.column.optimization">
+      <trans-unit id="logs.column.optimization" approved="yes">
         <source>Optimization</source>
-        <target state="needs-translation">Optimization</target>
+        <target state="final">Optimalisering</target>
       </trans-unit>
-      <trans-unit id="logs.column.enabled">
+      <trans-unit id="logs.column.enabled" approved="yes">
         <source>Enabled</source>
-        <target state="needs-translation">Enabled</target>
+        <target state="final">Geaktiveer</target>
       </trans-unit>
-      <trans-unit id="logs.column.actions">
+      <trans-unit id="logs.column.actions" approved="yes">
         <source>Actions</source>
-        <target state="needs-translation">Actions</target>
+        <target state="final">Aksies</target>
       </trans-unit>
-      <trans-unit id="logs.column.select">
+      <trans-unit id="logs.column.select" approved="yes">
         <source>Select</source>
-        <target state="needs-translation">Select</target>
+        <target state="final">Kies</target>
       </trans-unit>
-      <trans-unit id="logs.empty.title">
+      <trans-unit id="logs.empty.title" approved="yes">
         <source>No log entries yet</source>
-        <target state="needs-translation">No log entries yet</target>
+        <target state="final">Nog geen loglêers nie</target>
       </trans-unit>
-      <trans-unit id="logs.empty.body">
+      <trans-unit id="logs.empty.body" approved="yes">
         <source>Run an encode operation from the TOON Playground to record your first log entry.</source>
-        <target state="needs-translation">Run an encode operation from the TOON Playground to record your first log entry.</target>
+        <target state="final">Voer 'n enkodeerbewerking uit vanaf die TOON-speelgrond om jou eerste logi-inskrywing te rekordeer.</target>
       </trans-unit>
-      <trans-unit id="logs.empty.cta">
+      <trans-unit id="logs.empty.cta" approved="yes">
         <source>Open TOON Playground</source>
-        <target state="needs-translation">Open TOON Playground</target>
+        <target state="final">Maak TOON Speelgrond oop</target>
       </trans-unit>
-      <trans-unit id="logs.delete.single">
+      <trans-unit id="logs.delete.single" approved="yes">
         <source>Delete</source>
-        <target state="needs-translation">Delete</target>
+        <target state="final">Uitvee</target>
       </trans-unit>
-      <trans-unit id="logs.delete.bulk">
+      <trans-unit id="logs.delete.bulk" approved="yes">
         <source>Delete selected (%d)</source>
-        <target state="needs-translation">Delete selected (%d)</target>
+        <target state="final">Vee geselekteerde uit (%d)</target>
       </trans-unit>
-      <trans-unit id="logs.delete.confirm_title">
+      <trans-unit id="logs.delete.confirm_title" approved="yes">
         <source>Delete log entries?</source>
-        <target state="needs-translation">Delete log entries?</target>
+        <target state="final">Verwyder loglêer inskrywings?</target>
       </trans-unit>
-      <trans-unit id="logs.delete.confirm_body_single">
+      <trans-unit id="logs.delete.confirm_body_single" approved="yes">
         <source>This will permanently remove the selected log entry. This action cannot be undone.</source>
-        <target state="needs-translation">This will permanently remove the selected log entry. This action cannot be undone.</target>
+        <target state="final">Dit sal die geselekteerde logboinskrywing permanent verwyder. Hierdie aksie kan nie ongedaan gemaak word nie.</target>
       </trans-unit>
-      <trans-unit id="logs.delete.confirm_body_bulk">
+      <trans-unit id="logs.delete.confirm_body_bulk" approved="yes">
         <source>This will permanently remove the selected log entries. This action cannot be undone.</source>
-        <target state="needs-translation">This will permanently remove the selected log entries. This action cannot be undone.</target>
+        <target state="final">Dit sal die geselekteerde logentrys permanent verwyder. Hierdie aksie kan nie ongedaan gemaak word nie.</target>
       </trans-unit>
-      <trans-unit id="logs.delete.confirm_button">
+      <trans-unit id="logs.delete.confirm_button" approved="yes">
         <source>Yes, delete</source>
-        <target state="needs-translation">Yes, delete</target>
+        <target state="final">Ja, verwyder</target>
       </trans-unit>
-      <trans-unit id="logs.delete.cancel">
+      <trans-unit id="logs.delete.cancel" approved="yes">
         <source>Cancel</source>
-        <target state="needs-translation">Cancel</target>
+        <target state="final">Kanselleer</target>
       </trans-unit>
-      <trans-unit id="logs.flash.deleted_title">
+      <trans-unit id="logs.flash.deleted_title" approved="yes">
         <source>Log entries deleted</source>
-        <target state="needs-translation">Log entries deleted</target>
+        <target state="final">Loglêers uitgevee</target>
       </trans-unit>
-      <trans-unit id="logs.flash.deleted_body">
+      <trans-unit id="logs.flash.deleted_body" approved="yes">
         <source>%d log entry/entries were removed.</source>
-        <target state="needs-translation">%d log entry/entries were removed.</target>
+        <target state="final">%d loginskrywing(s) is verwyder.</target>
       </trans-unit>
-      <trans-unit id="logs.flash.nothing_title">
+      <trans-unit id="logs.flash.nothing_title" approved="yes">
         <source>Nothing deleted</source>
-        <target state="needs-translation">Nothing deleted</target>
+        <target state="final">Niks uitgevee</target>
       </trans-unit>
-      <trans-unit id="logs.flash.nothing_body">
+      <trans-unit id="logs.flash.nothing_body" approved="yes">
         <source>No matching log entries were found.</source>
-        <target state="needs-translation">No matching log entries were found.</target>
+        <target state="final">Geen ooreenstemmende logboekinskrywings is gevind.</target>
       </trans-unit>
-      <trans-unit id="logs.pagination.first">
+      <trans-unit id="logs.pagination.first" approved="yes">
         <source>First</source>
-        <target state="needs-translation">First</target>
+        <target state="final">Eerste</target>
       </trans-unit>
-      <trans-unit id="logs.pagination.previous">
+      <trans-unit id="logs.pagination.previous" approved="yes">
         <source>Previous</source>
-        <target state="needs-translation">Previous</target>
+        <target state="final">Vorige</target>
       </trans-unit>
-      <trans-unit id="logs.pagination.next">
+      <trans-unit id="logs.pagination.next" approved="yes">
         <source>Next</source>
-        <target state="needs-translation">Next</target>
+        <target state="final">Volgende</target>
       </trans-unit>
-      <trans-unit id="logs.pagination.last">
+      <trans-unit id="logs.pagination.last" approved="yes">
         <source>Last</source>
-        <target state="needs-translation">Last</target>
+        <target state="final">Laaste</target>
       </trans-unit>
-      <trans-unit id="logs.pagination.summary">
+      <trans-unit id="logs.pagination.summary" approved="yes">
         <source>Page %1$d of %2$d (%3$d total)</source>
-        <target state="needs-translation">Page %1$d of %2$d (%3$d total)</target>
+        <target state="final">Bladsy %1$d van %2$d (%3$d totaal)</target>
       </trans-unit>
     </body>
   </file>
