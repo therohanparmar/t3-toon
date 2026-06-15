@@ -4,58 +4,74 @@ declare(strict_types=1);
 
 namespace RRP\T3Toon\Tests\Unit\Domain\Model;
 
-use RRP\T3Toon\Domain\Model\EncodeOptions;
 use PHPUnit\Framework\TestCase;
+use RRP\T3Toon\Domain\Model\EncodeOptions;
 
 final class EncodeOptionsTest extends TestCase
 {
     public function testDefaultReturnsEmptyOverrides(): void
     {
-        $options = EncodeOptions::default();
-        self::assertSame([], $options->toConfigOverrides());
+        self::assertSame([], EncodeOptions::default()->toConfigOverrides());
     }
 
     public function testCompact(): void
     {
         $options = EncodeOptions::compact();
-        self::assertSame(0, $options->indent);
+        self::assertSame(2, $options->indent);
         self::assertSame(',', $options->delimiter);
         $overrides = $options->toConfigOverrides();
-        self::assertSame(0, $overrides['indent']);
+        self::assertSame(2, $overrides['indent']);
         self::assertSame(',', $overrides['delimiter']);
     }
 
     public function testReadable(): void
     {
-        $options = EncodeOptions::readable();
-        self::assertSame(4, $options->indent);
+        self::assertSame(4, EncodeOptions::readable()->indent);
     }
 
     public function testTabular(): void
     {
-        $options = EncodeOptions::tabular();
-        self::assertSame("\t", $options->delimiter);
+        self::assertSame("\t", EncodeOptions::tabular()->delimiter);
     }
 
-    public function testConstructorWithIndentAndMaxPreviewItems(): void
+    public function testFolded(): void
     {
-        $options = new EncodeOptions(indent: 4, maxPreviewItems: 10);
-        $overrides = $options->toConfigOverrides();
-        self::assertSame(4, $overrides['indent']);
-        self::assertSame(10, $overrides['max_preview_items']);
+        $options = EncodeOptions::folded();
+        self::assertSame('safe', $options->keyFolding);
+        self::assertSame(['key_folding' => 'safe'], $options->toConfigOverrides());
     }
 
-    public function testNegativeIndentThrows(): void
+    public function testConstructorOverrides(): void
+    {
+        $options = new EncodeOptions(indent: 4, delimiter: '|', keyFolding: 'safe', flattenDepth: 2);
+        self::assertSame(
+            ['indent' => 4, 'delimiter' => '|', 'key_folding' => 'safe', 'flatten_depth' => 2],
+            $options->toConfigOverrides(),
+        );
+    }
+
+    public function testPipeDelimiterIsValid(): void
+    {
+        self::assertSame('|', (new EncodeOptions(delimiter: '|'))->delimiter);
+    }
+
+    public function testIndentBelowOneThrows(): void
     {
         $this->expectException(\InvalidArgumentException::class);
-        $this->expectExceptionMessage('non-negative');
-        new EncodeOptions(indent: -1);
+        $this->expectExceptionMessage('indent must be >= 1');
+        new EncodeOptions(indent: 0);
     }
 
     public function testInvalidDelimiterThrows(): void
     {
         $this->expectException(\InvalidArgumentException::class);
         $this->expectExceptionMessage('delimiter');
-        new EncodeOptions(delimiter: '|');
+        new EncodeOptions(delimiter: ';');
+    }
+
+    public function testInvalidKeyFoldingThrows(): void
+    {
+        $this->expectException(\InvalidArgumentException::class);
+        new EncodeOptions(keyFolding: 'always');
     }
 }

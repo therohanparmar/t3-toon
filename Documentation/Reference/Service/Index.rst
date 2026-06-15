@@ -28,7 +28,7 @@ encode($input, ?EncodeOptions $options = null): string
 
 Encode arbitrary input into TOON format (alias for convert).
 
-decode(string $toon, ?DecodeOptions $options = null): array
+decode(string $toon, ?DecodeOptions $options = null): mixed
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 Decode a TOON string into an associative PHP array.
@@ -60,7 +60,7 @@ encodeStatic($input, ?EncodeOptions $options = null): string
 
 Static equivalent of encode().
 
-decodeStatic(string $toon, ?DecodeOptions $options = null): array
+decodeStatic(string $toon, ?DecodeOptions $options = null): mixed
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 Static equivalent of decode(). Throws ``ToonDecodeException`` on malformed input.
@@ -105,7 +105,7 @@ Class: ``RRP\T3Toon\Service\ToonDecoder``
 
 Handles conversion from TOON format to PHP arrays.
 
-:Method: ``fromToon(string $toon, ?DecodeOptions $options = null): array``
+:Method: ``fromToon(string $toon, ?DecodeOptions $options = null): mixed``
 :Throws: ``RRP\T3Toon\Exception\ToonDecodeException`` when input is malformed
 
 Utility classes
@@ -127,15 +127,15 @@ EncodeOptions
 
 Class: ``RRP\T3Toon\Domain\Model\EncodeOptions``
 
-Constructor: ``(?int $indent = null, ?string $delimiter = null, ?int $maxPreviewItems = null, ?string $escapeStyle = null, ?int $minRowsToTabular = null, ?bool $primitiveArrayHeader = null)``
+Constructor: ``(?int $indent = null, ?string $delimiter = null, ?string $keyFolding = null, ?int $flattenDepth = null)``
 
-Presets: ``default()``, ``compact()``, ``readable()``, ``tabular()``. See :ref:`Options (EncodeOptions & DecodeOptions) <options-reference>`.
+Presets: ``default()``, ``compact()``, ``readable()``, ``tabular()``, ``folded()``. See :ref:`Options (EncodeOptions & DecodeOptions) <options-reference>`.
 
 DecodeOptions
 ~~~~~~~~~~~~~
 
 Class: ``RRP\T3Toon\Domain\Model\DecodeOptions``
 
-Constructor: ``(?bool $coerceScalarTypes = null)``
+Constructor: ``(?bool $strict = null, ?string $expandPaths = null)``
 
-Presets: ``default()``, ``lenient()``. See :ref:`Options (EncodeOptions & DecodeOptions) <options-reference>`.
+Presets: ``default()``, ``lenient()``, ``expanded()``. See :ref:`Options (EncodeOptions & DecodeOptions) <options-reference>`.

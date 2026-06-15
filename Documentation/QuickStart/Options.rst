@@ -5,7 +5,10 @@
 Options (EncodeOptions & DecodeOptions)
 ===========================================
 
-You can override encoding and decoding behavior **per call** without changing extension configuration. Pass ``EncodeOptions`` to ``encode()`` / ``convert()`` / ``encodeStatic()`` / ``convertStatic()`` and ``DecodeOptions`` to ``decode()`` / ``decodeStatic()``. Use ``null`` to fall back to extension config.
+You can override encoding and decoding behavior **per call** without changing
+extension configuration. Pass ``EncodeOptions`` to ``encode()`` / ``convert()`` /
+``encodeStatic()`` / ``convertStatic()`` and ``DecodeOptions`` to ``decode()`` /
+``decodeStatic()``. Use ``null`` to fall back to extension config.
 
 EncodeOptions
 -------------
@@ -14,12 +17,10 @@ Class: ``RRP\T3Toon\Domain\Model\EncodeOptions``
 
 Constructor parameters (all optional; ``null`` = use extension config):
 
-* **indent** (int|null) — Spaces per indentation level (default from config: 2)
-* **delimiter** (string|null) — Field delimiter for tabular rows: ``EncodeOptions::DELIMITER_COMMA`` (``','``) or ``EncodeOptions::DELIMITER_TAB`` (``"\t"``)
-* **maxPreviewItems** (int|null) — Maximum rows to emit in tabular blocks
-* **escapeStyle** (string|null) — Escape style (e.g. ``'backslash'``)
-* **minRowsToTabular** (int|null) — Minimum rows before using tabular format
-* **primitiveArrayHeader** (bool|null) — If true, emit primitive sequential arrays as single line ``[N]: v1,v2,v3`` (spec-style)
+* **indent** (int|null) — Spaces per indentation level (spec default 2; must be >= 1)
+* **delimiter** (string|null) — Document delimiter: ``EncodeOptions::DELIMITER_COMMA`` (``','``), ``EncodeOptions::DELIMITER_TAB`` (``"\t"``), or ``EncodeOptions::DELIMITER_PIPE`` (``'|'``)
+* **keyFolding** (string|null) — ``'off'`` (default) or ``'safe'`` (collapse single-key object chains into dotted paths, spec §13.4)
+* **flattenDepth** (int|null) — Max segments to fold when ``keyFolding`` is ``'safe'``; ``null`` = unbounded
 
 Presets
 ~~~~~~~
@@ -31,10 +32,8 @@ Presets
 
    // Default: use extension config
    $toon = Toon::encodeStatic($data, EncodeOptions::default());
-   // or pass null
-   $toon = Toon::encodeStatic($data, null);
 
-   // Compact: indent 0, comma delimiter
+   // Compact: indent 2, comma delimiter (canonical)
    $toon = Toon::encodeStatic($data, EncodeOptions::compact());
 
    // Readable: indent 4
@@ -43,8 +42,11 @@ Presets
    // Tabular: tab delimiter (spreadsheet-friendly)
    $toon = Toon::encodeStatic($data, EncodeOptions::tabular());
 
-   // Custom: e.g. primitive array header
-   $options = new EncodeOptions(primitiveArrayHeader: true);
+   // Folded: safe key folding (a.b.c: 1)
+   $toon = Toon::encodeStatic($data, EncodeOptions::folded());
+
+   // Custom: pipe delimiter + safe folding to depth 2
+   $options = new EncodeOptions(delimiter: '|', keyFolding: 'safe', flattenDepth: 2);
    $toon = Toon::encodeStatic($data, $options);
 
 DecodeOptions
@@ -52,9 +54,16 @@ DecodeOptions
 
 Class: ``RRP\T3Toon\Domain\Model\DecodeOptions``
 
-Constructor parameters:
+Constructor parameters (all optional; ``null`` = use extension config):
 
-* **coerceScalarTypes** (bool|null) — If true, convert ``"true"``/``"false"``/``"123"`` to PHP types; if false, keep as strings (default from config: true)
+* **strict** (bool|null) — Enforce strict-mode validation (array length and row-width counts, indentation multiples, escape and delimiter consistency, blank lines inside arrays). Default ``true`` (spec §14). Set ``false`` for lenient parsing.
+* **expandPaths** (string|null) — ``'off'`` (default) keeps dotted keys literal; ``'safe'`` expands unquoted dotted keys into nested objects (spec §13.4)
+
+.. note::
+
+   Type coercion of unquoted tokens (``true``/``false``/``null``/numbers) always
+   follows the specification in both strict and lenient modes. "Lenient" relaxes
+   structural validation only; it does **not** disable type coercion.
 
 Presets
 ~~~~~~~
@@ -64,13 +73,18 @@ Presets
    use RRP\T3Toon\Domain\Model\DecodeOptions;
    use RRP\T3Toon\Service\Toon;
 
-   // Default: use extension config (coerce scalar types)
+   // Default: strict decoding
    $data = Toon::decodeStatic($toon, DecodeOptions::default());
 
-   // Lenient: do not coerce; keep "true", "42" as strings
+   // Lenient: relax strict-mode validation
    $data = Toon::decodeStatic($toon, DecodeOptions::lenient());
+
+   // Expanded: split dotted keys into nested objects
+   $data = Toon::decodeStatic($toon, DecodeOptions::expanded());
 
 Merging with extension config
 -----------------------------
 
-Internally, non-null option properties are merged with extension configuration for that single call. Use ``ToonHelper::getConfigMerged()`` if you need the merged config array (e.g. for custom logic).
+Internally, non-null option properties are merged with extension configuration
+for that single call. Use ``ToonHelper::getConfigMerged()`` if you need the
+merged config array (e.g. for custom logic).

@@ -99,19 +99,21 @@ Override encoding or decoding behavior for a single call without changing extens
    use RRP\T3Toon\Domain\Model\EncodeOptions;
    use RRP\T3Toon\Service\Toon;
 
-   $compact = Toon::encodeStatic($data, EncodeOptions::compact());   // indent 0
+   $compact = Toon::encodeStatic($data, EncodeOptions::compact());   // indent 2
    $readable = Toon::encodeStatic($data, EncodeOptions::readable()); // indent 4
    $tabular = Toon::encodeStatic($data, EncodeOptions::tabular());    // tab delimiter
+   $folded = Toon::encodeStatic($data, EncodeOptions::folded());      // safe key folding
 
-**Decoding (lenient = no scalar coercion):**
+**Decoding (lenient = relaxed strict-mode validation):**
 
 .. code-block:: php
 
    use RRP\T3Toon\Domain\Model\DecodeOptions;
    use RRP\T3Toon\Service\Toon;
 
-   $data = Toon::decodeStatic($toon);                              // use extension config
-   $strings = Toon::decodeStatic($toon, DecodeOptions::lenient());  // keep "true", "42" as strings
+   $data = Toon::decodeStatic($toon);                               // use extension config (strict)
+   $lenient = Toon::decodeStatic($toon, DecodeOptions::lenient());  // relax strict-mode validation
+   $expanded = Toon::decodeStatic($toon, DecodeOptions::expanded()); // expand dotted keys into objects
 
 See :ref:`Options (EncodeOptions & DecodeOptions) <options-quick>` for full details.
 

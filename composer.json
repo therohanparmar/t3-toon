@@ -1,8 +1,10 @@
 {
+    "$schema": "https://getcomposer.org/schema.json",
     "name": "rrp/t3-toon",
-    "description": "TOON for TYPO3 — AI-ready data format for LLM prompts, AI agents, ChatGPT, Gemini, Claude, Mistral, OpenAI, and TYPO3 AI integrations. Convert JSON ⇄ TOON for compact, token-efficient AI context exchange.",
+    "description": "TOON for TYPO3 - AI-ready data format for LLM prompts, AI agents, ChatGPT, Gemini, Claude, Mistral, OpenAI, and TYPO3 AI integrations. Convert JSON ⇄ TOON for compact, token-efficient AI context exchange.",
     "type": "typo3-cms-extension",
     "license": "MIT",
+    "readme": "README.md",
     "authors": [
         {
             "name": "Rohan Parmar",
@@ -16,75 +18,29 @@
         }
     ],
     "keywords": [
-        "typo3",
-        "typo3-package",
-        "typo3-ai",
-        "typo3-chatgpt",
-        "typo3-gemini",
-        "typo3-openai",
-        "typo3-anthropic",
-        "typo3-mistral",
-        "ai",
-        "ai-integration",
-        "ai-tools",
-        "ai-prompt",
-        "prompt",
-        "prompt-engineering",
-        "prompt-optimization",
-        "prompt-compression",
-        "context-optimizer",
-        "context-compression",
-        "token",
-        "token-efficient",
-        "token-optimizer",
-        "token-saver",
-        "llm",
-        "llm-tools",
-        "openai",
-        "chatgpt",
-        "claude",
-        "anthropic",
-        "gemini",
-        "mistral",
-        "gpt",
-        "gpt4",
-        "gpt3",
-        "ai-developer-tools",
-        "json",
-        "data",
-        "data-formatter",
-        "data-compression",
-        "data-transformer",
-        "compact-json",
-        "converter",
-        "formatter",
-        "parser",
-        "serialization",
-        "serialization-format",
-        "yaml-alternative",
-        "object-notation",
-        "human-readable-format",
-        "php",
-        "php8",
         "toon",
-        "toon-typo3",
-        "typo3-toon",
-        "ai-for-typo3",
-        "chatgpt-for-typo3",
-        "gemini-for-typo3",
-        "openai-for-typo3",
-        "claude-for-typo3",
-        "llm-for-typo3",
-        "ai-typo3-package"
+        "toon-format",
+        "token-oriented-object-notation",
+        "json",
+        "serialization",
+        "llm",
+        "token-efficient",
+        "php",
+        "typo3",
+        "typo3-cms-extension",
+        "encoder",
+        "decoder"
     ],
-    "homepage": "https://extensions.typo3.org/extension/rrp_t3toon",
+    "homepage": "https://github.com/therohanparmar/t3-toon",
     "support": {
         "issues": "https://github.com/therohanparmar/t3-toon/issues",
         "source": "https://github.com/therohanparmar/t3-toon",
-        "docs": "https://docs.typo3.org/p/rrp/t3-toon/3.1/en-us/"
+        "docs": "https://docs.typo3.org/p/rrp/t3-toon/4.0/en-us/"
     },
     "require": {
         "php": "^8.1",
+        "ext-json": "*",
+        "ext-mbstring": "*",
         "typo3/cms-core": "^12.4 || ^13.4 || ^14"
     },
     "require-dev": {
@@ -108,7 +64,7 @@
             "Package": {
                 "providesPackages": []
             },
-            "version": "3.1.0"
+            "version": "4.0.0"
         }
     },
     "config": {
@@ -124,11 +80,13 @@
     },
     "scripts": {
         "test:unit": "../../vendor/bin/phpunit -c phpunit.xml.dist",
+        "test:conformance": "php Tests/run-conformance.php",
         "analyse": "phpstan analyse -c phpstan.neon",
         "doc-watch": "docker run --rm -it --pull always -v $(pwd)/Documentation:/project/Documentation -v $(pwd)/Documentation-GENERATED-temp:/project/Documentation-GENERATED-temp -p 1337:1337 ghcr.io/typo3-documentation/render-guides:latest --config=Documentation --watch"
     },
     "scripts-descriptions": {
         "test:unit": "Run unit tests",
+        "test:conformance": "Run TOON spec v3.3 conformance fixtures (389 encode + decode)",
         "analyse": "Run PHPStan static analysis",
         "doc-watch": "Render documentation with watcher"
     }

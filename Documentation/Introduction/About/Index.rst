@@ -75,6 +75,6 @@ Example Comparison
 Format and specification
 -------------------------
 
-This extension uses a **TYPO3-optimized TOON format**: key-value lines, ``items[N]{fields}:`` for tabular arrays, configurable indent and delimiter. It is **inspired by** but not identical to the `TOON Specification <https://github.com/toon-format/spec>`_. For full spec compliance and interoperability with other TOON implementations (e.g. `toon-php <https://github.com/HelgeSverre/toon-php>`_), a future version may add a **spec mode** or an optional bridge. The current format remains stable and suitable for TYPO3 AI integrations.
+As of **v4.0.0**, this extension implements the official `TOON Specification v3.3 <https://github.com/toon-format/spec>`_ and passes the complete language-agnostic conformance suite (389/389 encode + decode fixtures). Output is interoperable with other spec-compliant TOON implementations. The spec engine (``RRP\T3Toon\Spec\Encoder`` / ``Decoder``) is dependency-free; the TYPO3 service layer is a thin adapter over it.
 
-Optional **primitive array header** (``[N]: v1,v2,v3``) can be enabled via :ref:`EncodeOptions <options-reference>` or extension configuration for spec-style output.
+Tabular arrays use the real key (``users[2]{id,name}:``), primitive arrays are inline (``tags[3]: a,b,c``), and the encoder supports comma/tab/pipe delimiters and optional key folding.

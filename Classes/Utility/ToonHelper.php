@@ -18,15 +18,19 @@ class ToonHelper
     public static function getConfig(): array
     {
         $settings = self::getExtensionSettings();
+        // flatten_depth: -1 (or empty) means "unbounded" -> null for the Spec encoder.
+        $flatten = $settings['flatten_depth'] ?? '';
+        $flattenDepth = ($flatten === '' || (int) $flatten < 0) ? null : (int) $flatten;
+
         return [
             'enabled' => (bool) ($settings['enabled'] ?? true),
-            'indent' => (int) ($settings['indent'] ?? 2),
-            'delimiter' => (string) ($settings['delimiter'] ?? ','),
-            'escape_style' => (string) ($settings['escape_style'] ?? 'backslash'),
-            'min_rows_to_tabular' => (int) ($settings['min_rows_to_tabular'] ?? 2),
-            'max_preview_items' => (int) ($settings['max_preview_items'] ?? 200),
-            'coerce_scalar_types' => (bool) ($settings['coerce_scalar_types'] ?? true),
-            'primitive_array_header' => (bool) ($settings['primitive_array_header'] ?? false),
+            'indent' => max(1, (int) ($settings['indent'] ?? 2)),
+            'delimiter' => self::normalizeDelimiter((string) ($settings['delimiter'] ?? ',')),
+            'key_folding' => ($settings['key_folding'] ?? 'off') === 'safe' ? 'safe' : 'off',
+            'flatten_depth' => $flattenDepth,
+            'strict' => (bool) ($settings['strict'] ?? true),
+            'expand_paths' => ($settings['expand_paths'] ?? 'off') === 'safe' ? 'safe' : 'off',
+            'show_default_example' => (bool) ($settings['show_default_example'] ?? true),
         ];
     }
 
@@ -36,6 +40,19 @@ class ToonHelper
     public static function isEnabled(): bool
     {
         return self::getConfig()['enabled'];
+    }
+
+    /**
+     * Map a configured delimiter token to the literal character used by the Spec engine.
+     * Accepts the named tokens "comma"/"tab"/"pipe" as well as the literal characters.
+     */
+    private static function normalizeDelimiter(string $value): string
+    {
+        return match ($value) {
+            'tab', "\t", '\t' => "\t",
+            'pipe', '|' => '|',
+            default => ',',
+        };
     }
 
     /**

@@ -4,28 +4,39 @@ declare(strict_types=1);
 
 namespace RRP\T3Toon\Tests\Unit\Domain\Model;
 
-use RRP\T3Toon\Domain\Model\DecodeOptions;
 use PHPUnit\Framework\TestCase;
+use RRP\T3Toon\Domain\Model\DecodeOptions;
 
 final class DecodeOptionsTest extends TestCase
 {
     public function testDefaultReturnsEmptyOverrides(): void
     {
-        $options = DecodeOptions::default();
-        self::assertSame([], $options->toConfigOverrides());
+        self::assertSame([], DecodeOptions::default()->toConfigOverrides());
     }
 
     public function testLenient(): void
     {
         $options = DecodeOptions::lenient();
-        self::assertFalse($options->coerceScalarTypes);
-        $overrides = $options->toConfigOverrides();
-        self::assertFalse($overrides['coerce_scalar_types']);
+        self::assertFalse($options->strict);
+        self::assertSame(['strict' => false], $options->toConfigOverrides());
     }
 
-    public function testConstructorWithCoerceScalarTypes(): void
+    public function testExpanded(): void
     {
-        $options = new DecodeOptions(coerceScalarTypes: false);
-        self::assertSame(['coerce_scalar_types' => false], $options->toConfigOverrides());
+        $options = DecodeOptions::expanded();
+        self::assertSame('safe', $options->expandPaths);
+        self::assertSame(['expand_paths' => 'safe'], $options->toConfigOverrides());
+    }
+
+    public function testConstructorOverrides(): void
+    {
+        $options = new DecodeOptions(strict: false, expandPaths: 'safe');
+        self::assertSame(['strict' => false, 'expand_paths' => 'safe'], $options->toConfigOverrides());
+    }
+
+    public function testInvalidExpandPathsThrows(): void
+    {
+        $this->expectException(\InvalidArgumentException::class);
+        new DecodeOptions(expandPaths: 'deep');
     }
 }

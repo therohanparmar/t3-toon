@@ -29,6 +29,21 @@
     }
   }
 
+  function loadPreset(scriptId) {
+    var scriptEl = document.getElementById(scriptId);
+    var inputEl = document.getElementById('toon-input');
+    var outputEl = document.getElementById('toon-output');
+    if (!scriptEl || !inputEl) return;
+
+    try {
+      var data = JSON.parse(scriptEl.textContent || '');
+      inputEl.value = JSON.stringify(data, null, 2);
+      if (outputEl) outputEl.value = '';
+    } catch (e) {
+      // ignore invalid preset JSON
+    }
+  }
+
   function openModal() {
     if (!modal) return;
     modal.classList.add('toon-modal--open');
@@ -57,20 +72,30 @@
     var copyBtn = document.getElementById('copy-btn');
     var clearBtn = document.getElementById('toon-clear-btn');
     var confirmBtn = document.getElementById('toon-clear-confirm-btn');
+    var presetHikes = document.getElementById('preset-hikes');
+    var presetTypo3 = document.getElementById('preset-typo3');
     modal = document.getElementById('toon-clear-modal');
 
     if (copyBtn) copyBtn.addEventListener('click', copyOutput);
     if (clearBtn) clearBtn.addEventListener('click', openModal);
     if (confirmBtn) confirmBtn.addEventListener('click', confirmClear);
+    if (presetHikes) {
+      presetHikes.addEventListener('click', function () {
+        loadPreset('toon-preset-hikes');
+      });
+    }
+    if (presetTypo3) {
+      presetTypo3.addEventListener('click', function () {
+        loadPreset('toon-preset-typo3');
+      });
+    }
 
-    // Close modal via [data-toon-modal-close] elements
     if (modal) {
       var closers = modal.querySelectorAll('[data-toon-modal-close]');
       for (var i = 0; i < closers.length; i++) {
         closers[i].addEventListener('click', closeModal);
       }
 
-      // Close on Escape key
       document.addEventListener('keydown', function (e) {
         if (e.key === 'Escape' && modal.classList.contains('toon-modal--open')) {
           closeModal();

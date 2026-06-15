@@ -29,12 +29,17 @@ Features
 --------
 
 * **Input area** — Paste JSON (for encoding) or TOON text (for decoding).
-* **Encode to TOON** — Converts the pasted JSON to TOON format using default encoding options.
-* **Decode from TOON** — Converts the pasted TOON text to JSON (pretty-printed).
-* **Encode (compact)** — Converts the pasted JSON to TOON using compact options (indent 0).
-* **Output area** — Shows the result (TOON or JSON) after an action.
-* **Estimated tokens** — Displays an approximate token count for the result when available.
-* **Error messages** — If input is invalid (e.g. invalid JSON for encode, malformed TOON for decode), an error message is shown.
+* **Encode options** — Delimiter (comma / tab / pipe), indent, key folding, and flatten depth (aligned with the `official TOON playground <https://toonformat.dev/playground.html>`_).
+* **Load example** — **Hikes** (official mixed-structure demo) or **TYPO3** (headless site sample).
+* **Encode to TOON** — Converts pasted JSON using the selected encode options.
+* **Decode from TOON** — Converts pasted TOON to pretty-printed JSON (strict by default).
+* **Lenient decode** — Optional checkbox to relax strict-mode validation (counts, indentation, blank lines).
+* **Encode (compact)** — Same as encode with compact preset (indent 2, comma).
+* **Output area** — Result plus character counts; after encode, size reduction vs pretty JSON is shown when applicable.
+* **Estimated tokens** — Approximate token count for the result when available.
+* **Error messages** — Invalid JSON or malformed TOON surfaces a clear error.
+* **Default example** — On first load the **Hikes** sample and its TOON output are pre-filled. Disable via ``show_default_example``; **Clear all** empties both fields.
+* **Official playground** — Footer link to `toonformat.dev <https://toonformat.dev/playground.html>`_.
 
 Workflow
 --------
