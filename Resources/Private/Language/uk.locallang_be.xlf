@@ -1,39 +1,39 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <xliff xmlns="urn:oasis:names:tc:xliff:document:1.2" version="1.2">
-  <file source-language="en" datatype="plaintext" original="EXT:rrp_t3toon/Resources/Private/Language/locallang_be.xlf" date="2026-01-11T11:26:11Z" product-name="rrp_t3toon" target-language="uk">
+  <file source-language="en" datatype="plaintext" original="EXT:rrp_t3toon/Resources/Private/Language/locallang_be.xlf" date="2026-06-13T00:00:00Z" product-name="rrp_t3toon" target-language="uk">
     <header/>
     <body>
       <trans-unit id="settings.enabled" approved="yes">
         <source>Enabled : Global toggle for the TOON converter. When disabled, encoding operations bypass TOON and return standard JSON instead. Decoding of existing TOON data still works normally.</source>
         <target state="final">Увімкнено: Глобальні перемикачі для перетворювача TOON. Коли вимкнено, операції з кодування обходять TOON і замість цього повертають стандартний JSON. Декодування існуючих даних TOON все ще працює нормально.</target>
       </trans-unit>
-      <trans-unit id="settings.indent" approved="yes">
-        <source>Indent : Number of spaces per indentation level when encoding TOON (default: 2).</source>
-        <target state="final">Відступ: Кількість прогалин на рівень відступу при кодуванні (за замовчуванням: 2).</target>
+      <trans-unit id="settings.indent">
+        <source>Indent : Number of spaces per indentation level when encoding TOON (spec default: 2; must be at least 1).</source>
+        <target state="needs-translation">Indent : Number of spaces per indentation level when encoding TOON (spec default: 2; must be at least 1).</target>
       </trans-unit>
-      <trans-unit id="settings.delimiter" approved="yes">
-        <source>Delimiter : Field delimiter for tabular rows when encoding (comma or tab). Use a single comma "," for default.</source>
-        <target state="final">Роздільник : Роздільник полів для табуляційних рядків в кодуванні (кома або вкладка). Для типового використовуйте одну кому "".</target>
+      <trans-unit id="settings.delimiter">
+        <source>Delimiter : Document delimiter for inline arrays and tabular rows when encoding: Comma (default), Tab, or Pipe.</source>
+        <target state="needs-translation">Delimiter : Document delimiter for inline arrays and tabular rows when encoding: Comma (default), Tab, or Pipe.</target>
       </trans-unit>
-      <trans-unit id="settings.escape_style" approved="yes">
-        <source>Escape Style : Defines how special characters (commas, colons, backslashes, etc.) should be escaped when serializing text values into TOON format.</source>
-        <target state="final">Стиль втеки: Визначає, як спеціальні символи (коми, кольори, зворотні слеші і т. д.) повинні бути екрановані при серіалізації значень тексту в форматі TOON .</target>
+      <trans-unit id="settings.key_folding">
+        <source>Key Folding : When set to "Safe", chains of single-key objects are collapsed into dotted paths (e.g. a.b.c: 1) to reduce verbosity. "Off" keeps standard nesting (spec §13.4).</source>
+        <target state="needs-translation">Key Folding : When set to "Safe", chains of single-key objects are collapsed into dotted paths (e.g. a.b.c: 1) to reduce verbosity. "Off" keeps standard nesting (spec §13.4).</target>
       </trans-unit>
-      <trans-unit id="settings.min_rows_to_tabular" approved="yes">
-        <source>Minimum Rows to Tabular : Determines the minimum number of sequential rows required for an array to be rendered as a tabular block in TOON.</source>
-        <target state="final">Мінімальна кількість рядків для табуляції: визначає мінімальну кількість послідовних рядків, необхідних для відображення масиву як табуляційний блок в TOON.</target>
+      <trans-unit id="settings.flatten_depth">
+        <source>Flatten Depth : Maximum number of segments to fold when Key Folding is "Safe". Use -1 for unbounded; values below 2 have no practical folding effect.</source>
+        <target state="needs-translation">Flatten Depth : Maximum number of segments to fold when Key Folding is "Safe". Use -1 for unbounded; values below 2 have no practical folding effect.</target>
       </trans-unit>
-      <trans-unit id="settings.max_preview_items" approved="yes">
-        <source>Maximum Preview Items : Controls how many items are displayed when rendering long tabular arrays or datasets in TOON format.</source>
-        <target state="final">Максимальна кількість елементів попереднього перегляду: визначається, скільки елементів відображатиметься під час рендерингу довгих табуляцій або наборів даних у TOON форматі.</target>
+      <trans-unit id="settings.strict">
+        <source>Strict Decoding : Enforce strict-mode validation when decoding (array length and row-width counts, indentation multiples, escape and delimiter consistency). Disable for lenient parsing (spec §14).</source>
+        <target state="needs-translation">Strict Decoding : Enforce strict-mode validation when decoding (array length and row-width counts, indentation multiples, escape and delimiter consistency). Disable for lenient parsing (spec §14).</target>
       </trans-unit>
-      <trans-unit id="settings.coerce_scalar_types" approved="yes">
-        <source>Coerce Scalar Types : When decoding TOON back to JSON/PHP arrays, this setting decides whether textual scalars such as "true", "false", "null", or "42" should be converted to their native PHP types (boolean, null, int).</source>
-        <target state="final">Види коефір масштабування: декодування TOON в масиви JSON/PHP, цей параметр вирішує, чи текстові скаляри, такі як "true", "false", "null", або "42" слід перетворити на локальні PHP типи (логічно, int).</target>
+      <trans-unit id="settings.expand_paths">
+        <source>Expand Paths : When set to "Safe", unquoted dotted keys are expanded into nested objects on decode (e.g. a.b.c -&gt; {a:{b:{c:...}}}). "Off" keeps dotted keys literal (spec §13.4).</source>
+        <target state="needs-translation">Expand Paths : When set to "Safe", unquoted dotted keys are expanded into nested objects on decode (e.g. a.b.c -&gt; {a:{b:{c:...}}}). "Off" keeps dotted keys literal (spec §13.4).</target>
       </trans-unit>
-      <trans-unit id="settings.primitive_array_header" approved="yes">
-        <source>Primitive Array Header : When encoding, emit primitive sequential arrays as a single line [N]: v1,v2,v3 (spec-style). Disabled by default.</source>
-        <target state="final">Заголовок примітивного масиву: Під час кодування виводити примітивні послідовні масиви в один рядок [N]: v1,v2,v3 (у стилі специфікації). За замовчуванням вимкнено.</target>
+      <trans-unit id="settings.show_default_example">
+        <source>Show Default Example : When enabled, the TOON Playground backend module pre-fills a sample JSON input and its encoded TOON output on first load. Disable to open the Playground with empty fields.</source>
+        <target state="needs-translation">Show Default Example : When enabled, the TOON Playground backend module pre-fills a sample JSON input and its encoded TOON output on first load. Disable to open the Playground with empty fields.</target>
       </trans-unit>
     </body>
   </file>
