@@ -5,19 +5,19 @@
     <body>
       <trans-unit id="settings.enabled">
         <source>Enabled : Global toggle for the TOON converter. When disabled, encoding operations bypass TOON and return standard JSON instead. Decoding of existing TOON data still works normally.</source>
-        <target state="needs-translation">Enabled : Global toggle for the TOON converter. When disabled, encoding operations bypass TOON and return standard JSON instead. Decoding of existing TOON data still works normally.</target>
+        <target state="translated">Geaktiveer: Globale omskepper vir die TOON-konverter. Wanneer gedeaktiveer, omseil koderingbewerkings TOON en gee standaard JSON terug. Dekodering van bestaande TOON-data werk steeds normaal.</target>
       </trans-unit>
       <trans-unit id="settings.indent">
         <source>Indent : Number of spaces per indentation level when encoding TOON (default: 2).</source>
-        <target state="needs-translation">Indent : Number of spaces per indentation level when encoding TOON (default: 2).</target>
+        <target state="translated">Indent: Aantal spasies per inspringvlak tydens die kodering van TOON (standaard: 2).</target>
       </trans-unit>
       <trans-unit id="settings.delimiter">
         <source>Delimiter : Field delimiter for tabular rows when encoding (comma or tab). Use a single comma "," for default.</source>
-        <target state="needs-translation">Delimiter : Field delimiter for tabular rows when encoding (comma or tab). Use a single comma "," for default.</target>
+        <target state="translated">Scheidingsteken : Veld-skeidingsteken vir tabelrye tydens kodering (komma of tab). Gebruik 'n enkele komma "," as verstekwaarde.</target>
       </trans-unit>
       <trans-unit id="settings.escape_style">
         <source>Escape Style : Defines how special characters (commas, colons, backslashes, etc.) should be escaped when serializing text values into TOON format.</source>
-        <target state="needs-translation">Escape Style : Defines how special characters (commas, colons, backslashes, etc.) should be escaped when serializing text values into TOON format.</target>
+        <target state="translated">Escape-styl: Definieer hoe spesiale karakters (kommas, kolonne, agterste skuinsstrepe, ens.) ontsnap moet word wanneer tekswaardes in TOON-formaat geserialiseer word.</target>
       </trans-unit>
       <trans-unit id="settings.min_rows_to_tabular">
         <source>Minimum Rows to Tabular : Determines the minimum number of sequential rows required for an array to be rendered as a tabular block in TOON.</source>
