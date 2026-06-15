@@ -107,6 +107,62 @@
         <source>Invalid JSON input for encode.</source>
         <target state="final">Nieprawidłowe wejście JSON dla enkodu.</target>
       </trans-unit>
+      <trans-unit id="playground.option_delimiter">
+        <source>Delimiter</source>
+        <target state="needs-translation">Delimiter</target>
+      </trans-unit>
+      <trans-unit id="playground.option_indent">
+        <source>Indent</source>
+        <target state="needs-translation">Indent</target>
+      </trans-unit>
+      <trans-unit id="playground.option_key_folding">
+        <source>Key folding</source>
+        <target state="needs-translation">Key folding</target>
+      </trans-unit>
+      <trans-unit id="playground.key_folding_off">
+        <source>Off</source>
+        <target state="needs-translation">Off</target>
+      </trans-unit>
+      <trans-unit id="playground.key_folding_safe">
+        <source>Safe</source>
+        <target state="needs-translation">Safe</target>
+      </trans-unit>
+      <trans-unit id="playground.option_flatten_depth">
+        <source>Flatten depth</source>
+        <target state="needs-translation">Flatten depth</target>
+      </trans-unit>
+      <trans-unit id="playground.flatten_unlimited">
+        <source>Unlimited</source>
+        <target state="needs-translation">Unlimited</target>
+      </trans-unit>
+      <trans-unit id="playground.presets">
+        <source>Load example</source>
+        <target state="needs-translation">Load example</target>
+      </trans-unit>
+      <trans-unit id="playground.preset_hikes">
+        <source>Hikes</source>
+        <target state="needs-translation">Hikes</target>
+      </trans-unit>
+      <trans-unit id="playground.preset_typo3">
+        <source>TYPO3</source>
+        <target state="needs-translation">TYPO3</target>
+      </trans-unit>
+      <trans-unit id="playground.chars">
+        <source>chars</source>
+        <target state="needs-translation">chars</target>
+      </trans-unit>
+      <trans-unit id="playground.size_reduction">
+        <source>%s%% size reduction vs pretty JSON</source>
+        <target state="needs-translation">%s%% size reduction vs pretty JSON</target>
+      </trans-unit>
+      <trans-unit id="playground.lenient_decode">
+        <source>Lenient decode</source>
+        <target state="needs-translation">Lenient decode</target>
+      </trans-unit>
+      <trans-unit id="playground.official_playground">
+        <source>Official playground</source>
+        <target state="needs-translation">Official playground</target>
+      </trans-unit>
       <trans-unit id="optimization_note.title" approved="yes">
         <source>Why is optimization sometimes negative?</source>
         <target state="final">Dlaczego optymalizacja jest czasami negatywna?</target>
