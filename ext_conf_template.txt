@@ -8,10 +8,10 @@ indent = 2
 delimiter = comma
 
 # cat=encoding//40; type=options[Off=off,Safe=safe]; label=LLL:EXT:rrp_t3toon/Resources/Private/Language/locallang_be.xlf:settings.key_folding;
-key_folding = off
+key_folding = safe
 
 # cat=encoding//50; type=int; label=LLL:EXT:rrp_t3toon/Resources/Private/Language/locallang_be.xlf:settings.flatten_depth;
-flatten_depth = -1
+flatten_depth = 2
 
 # cat=decoding//60; type=boolean; label=LLL:EXT:rrp_t3toon/Resources/Private/Language/locallang_be.xlf:settings.strict;
 strict = 1

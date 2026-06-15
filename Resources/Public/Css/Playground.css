@@ -1,49 +1,103 @@
 /**
  * TOON Playground – TYPO3 Backend Module Styles
- * Supports light and dark mode via TYPO3 theme system
+ * Supports light and dark mode via TYPO3 color-scheme + design tokens
  */
 
-/* ─── Theme Variables (Light Mode) ─────────────────────── */
+/* ─── Theme tokens (light-dark + TYPO3 fallbacks) ───────── */
 .toon-playground {
-  --toon-surface: #ffffff;
-  --toon-surface-alt: #f8f9fa;
-  --toon-surface-code: #f8f9fa;
-  --toon-text: #212529;
-  --toon-text-muted: #6c757d;
-  --toon-border: #dee2e6;
-  --toon-border-subtle: #e9ecef;
-  --toon-accent: #0078e7;
-  --toon-accent-soft: rgba(0, 120, 231, 0.08);
-  --toon-danger: #c83c3c;
-  --toon-danger-soft: #fbeaea;
-  --toon-info: #6daae0;
-  --toon-info-soft: #e8f1fa;
-  --toon-success: #79a548;
-  --toon-shadow-card: 0 1px 2px rgba(0, 0, 0, 0.05);
-  --toon-font-mono: 'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, monospace;
-  --toon-radius: 4px;
-  --toon-radius-sm: 4px;
+  color-scheme: light dark;
+
+  --toon-surface: var(--typo3-surface-container-lowest, light-dark(#ffffff, #1e1e1e));
+  --toon-surface-alt: var(--typo3-surface-container-low, light-dark(#f5f5f5, #292929));
+  --toon-surface-code: var(--typo3-input-bg, light-dark(#f8f9fa, #2b2b2b));
+  --toon-text: var(--typo3-text-color-base, light-dark(#212529, #e9ecef));
+  --toon-text-muted: var(--typo3-text-color-variant, light-dark(#6c757d, #adb5bd));
+  --toon-border: var(--typo3-input-border-color, light-dark(#dee2e6, #3a3a3a));
+  --toon-border-subtle: light-dark(#e9ecef, #333333);
+  --toon-accent: var(--typo3-state-primary-color, light-dark(#0078e7, #56a8ff));
+  --toon-accent-soft: var(--typo3-state-primary-bg, light-dark(rgba(0, 120, 231, 0.08), rgba(86, 168, 255, 0.14)));
+  --toon-danger: var(--typo3-state-danger-color, light-dark(#c83c3c, #e87f7f));
+  --toon-danger-soft: var(--typo3-state-danger-bg, light-dark(#fbeaea, rgba(232, 127, 127, 0.14)));
+  --toon-info: var(--typo3-state-info-color, light-dark(#6daae0, #79b5ea));
+  --toon-info-soft: var(--typo3-surface-container-info, light-dark(#e8f1fa, rgba(42, 168, 156, 0.18)));
+  --toon-success: var(--typo3-state-success-color, light-dark(#79a548, #94c46a));
+  --toon-shadow-card: light-dark(0 1px 2px rgba(0, 0, 0, 0.05), 0 1px 3px rgba(0, 0, 0, 0.45));
+  --toon-font-mono: var(--typo3-font-family-code, 'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, monospace);
+  --toon-radius: var(--typo3-component-border-radius, 4px);
+  --toon-radius-sm: var(--typo3-component-border-radius, 4px);
   --toon-transition: 0.15s ease-in-out;
 }
 
-/* ─── Dark Mode ────────────────────────────────────────── */
+/* Explicit TYPO3 / Bootstrap dark theme (when light-dark() alone is not enough) */
 [data-color-scheme="dark"] .toon-playground,
-[data-bs-theme="dark"] .toon-playground {
-  --toon-surface: #1c1c1c;
-  --toon-surface-alt: #252525;
-  --toon-surface-code: #2b2b2b;
-  --toon-text: #e9ecef;
-  --toon-text-muted: #adb5bd;
-  --toon-border: #3a3a3a;
-  --toon-border-subtle: #2f2f2f;
-  --toon-accent: #56a8ff;
-  --toon-accent-soft: rgba(86, 168, 255, 0.12);
-  --toon-danger: #e87f7f;
-  --toon-danger-soft: rgba(232, 127, 127, 0.12);
-  --toon-info: #79b5ea;
-  --toon-info-soft: rgba(121, 181, 234, 0.12);
-  --toon-success: #94c46a;
-  --toon-shadow-card: 0 1px 2px rgba(0, 0, 0, 0.3);
+[data-bs-theme="dark"] .toon-playground,
+html[data-color-scheme="dark"] .toon-playground,
+html[data-bs-theme="dark"] .toon-playground {
+  --toon-surface: var(--typo3-surface-container-lowest, #1e1e1e);
+  --toon-surface-alt: var(--typo3-surface-container-low, #292929);
+  --toon-surface-code: var(--typo3-input-bg, #2b2b2b);
+  --toon-text: var(--typo3-text-color-base, #e9ecef);
+  --toon-text-muted: var(--typo3-text-color-variant, #adb5bd);
+  --toon-border: var(--typo3-input-border-color, #3a3a3a);
+  --toon-border-subtle: #333333;
+  --toon-accent: var(--typo3-state-primary-color, #56a8ff);
+  --toon-accent-soft: var(--typo3-state-primary-bg, rgba(86, 168, 255, 0.14));
+  --toon-danger-soft: var(--typo3-state-danger-bg, rgba(232, 127, 127, 0.14));
+  --toon-info-soft: var(--typo3-surface-container-info, rgba(42, 168, 156, 0.18));
+  --toon-shadow-card: 0 1px 3px rgba(0, 0, 0, 0.45);
+}
+
+/* Bootstrap form controls inside the playground */
+.toon-playground .form-select,
+.toon-playground .form-control {
+  background-color: var(--toon-surface-code);
+  color: var(--toon-text);
+  border-color: var(--toon-border);
+}
+
+.toon-playground .form-select:focus,
+.toon-playground .form-control:focus {
+  background-color: var(--toon-surface);
+  color: var(--toon-text);
+  border-color: var(--toon-accent);
+  box-shadow: 0 0 0 0.2rem var(--toon-accent-soft);
+}
+
+[data-color-scheme="dark"] .toon-playground .form-select,
+[data-bs-theme="dark"] .toon-playground .form-select,
+[data-color-scheme="dark"] .toon-playground .form-control,
+[data-bs-theme="dark"] .toon-playground .form-control {
+  background-color: var(--toon-surface-code);
+  color: var(--toon-text);
+  border-color: var(--toon-border);
+}
+
+/* Secondary buttons: softer in dark mode */
+[data-color-scheme="dark"] .toon-playground .btn-default,
+[data-bs-theme="dark"] .toon-playground .btn-default {
+  background-color: var(--toon-surface-alt);
+  border-color: var(--toon-border);
+  color: var(--toon-text);
+}
+
+[data-color-scheme="dark"] .toon-playground .btn-default:hover,
+[data-bs-theme="dark"] .toon-playground .btn-default:hover {
+  background-color: color-mix(in srgb, var(--toon-surface-alt), var(--toon-text) 8%);
+  border-color: var(--toon-border);
+  color: var(--toon-text);
+}
+
+[data-color-scheme="dark"] .toon-playground .btn-outline-primary,
+[data-bs-theme="dark"] .toon-playground .btn-outline-primary {
+  color: var(--toon-accent);
+  border-color: color-mix(in srgb, var(--toon-accent), transparent 50%);
+}
+
+[data-color-scheme="dark"] .toon-playground .btn-outline-primary:hover,
+[data-bs-theme="dark"] .toon-playground .btn-outline-primary:hover {
+  background-color: var(--toon-accent-soft);
+  color: var(--toon-accent);
+  border-color: var(--toon-accent);
 }
 
 /* ─── Container ────────────────────────────────────────── */
@@ -68,6 +122,73 @@
   display: flex;
   gap: 0.5rem;
   flex-shrink: 0;
+}
+
+/* ─── Encode options (parity with toonformat.dev) ───────── */
+.toon-playground__options {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem 1.25rem;
+  align-items: flex-end;
+  margin-bottom: 1rem;
+  padding: 0.875rem 1rem;
+  background: var(--toon-surface-alt);
+  border: 1px solid var(--toon-border-subtle);
+  border-radius: var(--toon-radius);
+}
+
+.toon-playground__options-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+  min-width: 7rem;
+}
+
+.toon-playground__options-group--presets {
+  min-width: auto;
+  flex: 1 1 auto;
+}
+
+.toon-playground__options-label {
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.02em;
+  color: var(--toon-text-muted);
+}
+
+.toon-playground__preset-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.toon-playground__meta {
+  font-size: 0.75rem;
+  color: var(--toon-text-muted);
+  font-weight: 400;
+  margin-left: 0.5rem;
+}
+
+.toon-playground__lenient {
+  display: flex;
+  align-items: center;
+  gap: 0.35rem;
+  font-size: 0.75rem;
+  color: var(--toon-text-muted);
+  margin-top: 0.5rem;
+  cursor: pointer;
+}
+
+.toon-playground__lenient input {
+  margin: 0;
+  accent-color: var(--toon-accent);
+}
+
+/* Checkbox label readability in dark mode */
+[data-color-scheme="dark"] .toon-playground__lenient,
+[data-bs-theme="dark"] .toon-playground__lenient {
+  color: var(--toon-text-muted);
 }
 
 .toon-playground__title {
@@ -148,7 +269,7 @@
   padding: 0.25em 0.6em;
   border-radius: var(--toon-radius-sm);
   background: var(--toon-accent);
-  color: #fff;
+  color: light-dark(#ffffff, #1e1e1e);
   line-height: 1;
 }
 
@@ -244,17 +365,23 @@
   margin-left: 0.5em;
 }
 
-/* ─── Token Estimate (TYPO3 callout-info) ──────────────── */
+/* ─── Token Estimate ───────────────────────────────────── */
 .toon-playground__tokens {
   margin-top: 1rem;
   padding: 0.5rem 0.75rem;
   text-align: center;
   background: var(--toon-info-soft);
-  border: 1px solid transparent;
+  border: 1px solid color-mix(in srgb, var(--toon-info), transparent 70%);
   border-left: 4px solid var(--toon-info);
   border-radius: var(--toon-radius-sm);
   max-width: 180px;
   width: 100%;
+}
+
+[data-color-scheme="dark"] .toon-playground__tokens,
+[data-bs-theme="dark"] .toon-playground__tokens {
+  background: color-mix(in srgb, var(--toon-info), transparent 88%);
+  border-color: color-mix(in srgb, var(--toon-info), transparent 55%);
 }
 
 .toon-playground__tokens-label {
@@ -291,7 +418,10 @@
 }
 
 /* ─── Footer (TYPO3 backend theme) ─────────────────────── */
-.toon-playground__footer {
+.toon-playground .toon-playground__footer {
+  --toon-footer-link: light-dark(#5a5a5a, #c8c8c8);
+  --toon-footer-link-hover: light-dark(#1a6ec5, #a8d4ff);
+
   position: fixed;
   bottom: 0;
   left: 0;
@@ -300,11 +430,37 @@
   padding: 0.6rem 1.5rem;
   border-top: 1px solid var(--toon-border);
   background: var(--toon-surface);
+  backdrop-filter: blur(8px);
   display: flex;
   justify-content: space-between;
   align-items: center;
   font-size: 0.8rem;
   color: var(--toon-text-muted);
+}
+
+[data-color-scheme="dark"] .toon-playground .toon-playground__footer,
+[data-bs-theme="dark"] .toon-playground .toon-playground__footer {
+  --toon-footer-link: #c8c8c8;
+  --toon-footer-link-hover: #a8d4ff;
+}
+
+.toon-playground .toon-playground__footer a,
+.toon-playground .toon-playground__footer a.toon-playground__link {
+  color: var(--toon-footer-link);
+  background-color: transparent;
+  text-decoration: none;
+  transition: color var(--toon-transition);
+}
+
+.toon-playground .toon-playground__footer a:hover,
+.toon-playground .toon-playground__footer a:focus-visible,
+.toon-playground .toon-playground__footer a.toon-playground__link:hover,
+.toon-playground .toon-playground__footer a.toon-playground__link:focus-visible {
+  color: var(--toon-footer-link-hover);
+  background-color: transparent;
+  text-decoration: underline;
+  text-underline-offset: 0.15em;
+  box-shadow: none;
 }
 
 .toon-playground__footer-links {
@@ -317,17 +473,21 @@
   color: var(--toon-border);
 }
 
-.toon-playground__link {
-  color: var(--toon-text-muted);
-  text-decoration: none;
-  transition: color var(--toon-transition);
+.toon-playground .toon-playground__footer .toon-playground__link {
   display: inline-flex;
   align-items: center;
   gap: 0.25rem;
 }
 
-.toon-playground__link:hover {
-  color: var(--toon-accent);
+/* Icons follow link text color in default and hover states */
+.toon-playground .toon-playground__footer .toon-playground__link .icon,
+.toon-playground .toon-playground__footer .toon-playground__link typo3-backend-icon,
+.toon-playground .toon-playground__footer .toon-playground__link:hover .icon,
+.toon-playground .toon-playground__footer .toon-playground__link:hover typo3-backend-icon,
+.toon-playground .toon-playground__footer .toon-playground__link:focus-visible .icon,
+.toon-playground .toon-playground__footer .toon-playground__link:focus-visible typo3-backend-icon {
+  --icon-color-primary: currentColor;
+  color: inherit;
 }
 
 /* ─── Modal ────────────────────────────────────────────── */

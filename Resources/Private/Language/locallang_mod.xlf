@@ -81,6 +81,48 @@
             <trans-unit id="playground.error_invalid_json">
                 <source>Invalid JSON input for encode.</source>
             </trans-unit>
+            <trans-unit id="playground.option_delimiter">
+                <source>Delimiter</source>
+            </trans-unit>
+            <trans-unit id="playground.option_indent">
+                <source>Indent</source>
+            </trans-unit>
+            <trans-unit id="playground.option_key_folding">
+                <source>Key folding</source>
+            </trans-unit>
+            <trans-unit id="playground.key_folding_off">
+                <source>Off</source>
+            </trans-unit>
+            <trans-unit id="playground.key_folding_safe">
+                <source>Safe</source>
+            </trans-unit>
+            <trans-unit id="playground.option_flatten_depth">
+                <source>Flatten depth</source>
+            </trans-unit>
+            <trans-unit id="playground.flatten_unlimited">
+                <source>Unlimited</source>
+            </trans-unit>
+            <trans-unit id="playground.presets">
+                <source>Load example</source>
+            </trans-unit>
+            <trans-unit id="playground.preset_hikes">
+                <source>Hikes</source>
+            </trans-unit>
+            <trans-unit id="playground.preset_typo3">
+                <source>TYPO3</source>
+            </trans-unit>
+            <trans-unit id="playground.chars">
+                <source>chars</source>
+            </trans-unit>
+            <trans-unit id="playground.size_reduction">
+                <source>%s%% size reduction vs pretty JSON</source>
+            </trans-unit>
+            <trans-unit id="playground.lenient_decode">
+                <source>Lenient decode</source>
+            </trans-unit>
+            <trans-unit id="playground.official_playground">
+                <source>Official playground</source>
+            </trans-unit>
             <trans-unit id="optimization_note.title">
                 <source>Why is optimization sometimes negative?</source>
             </trans-unit>

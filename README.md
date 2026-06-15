@@ -88,10 +88,9 @@ $decoded = $toon->decode($toonString);
 
 ```
 user: ABC
-tasks:
-  items[2]{id,done}:
-    1,false
-    2,true
+tasks[2]{id,done}:
+  1,false
+  2,true
 ```
 
 ### Configuration options
@@ -123,8 +122,8 @@ Extension config (Install Tool → Settings → Extension Configuration → rrp_
 | `enabled` | bool | `1` | encode (passthrough when off) |
 | `indent` | int ≥ 1 | `2` | encode |
 | `delimiter` | comma / tab / pipe | `comma` | encode |
-| `key_folding` | off / safe | `off` | encode (§13.4) |
-| `flatten_depth` | int (`-1` = unbounded) | `-1` | encode (key folding) |
+| `key_folding` | off / safe | `safe` | encode (§13.4) |
+| `flatten_depth` | int (`-1` = unbounded) | `2` | encode (key folding) |
 | `strict` | bool | `1` | decode (§14) |
 | `expand_paths` | off / safe | `off` | decode (§13.4) |
 | `show_default_example` | bool | `1` | Playground (prefill sample on first load) |
@@ -140,7 +139,7 @@ toon($value);                    // encode (alias for Toon::encodeStatic)
 toon_decode($toon);              // decode
 toon_compact($value);            // encode with EncodeOptions::compact()
 toon_readable($value);           // encode with EncodeOptions::readable()
-toon_decode_lenient($toon);      // decode without scalar coercion
+toon_decode_lenient($toon);      // decode in non-strict mode (relaxed validation)
 toon_estimate_tokens($toon);      // return ['words' => …, 'chars' => …, 'tokens_estimate' => …]
 ```
 
@@ -173,9 +172,11 @@ In Fluid templates, add the namespace and use:
 Encode and decode TOON in the browser:
 
 - Paste **JSON** and click **Encode to TOON** or **Encode (compact)** to get TOON output.
-- Paste **TOON** and click **Decode from TOON** to get JSON.
-- The module shows estimated tokens and any error messages.
-- On first load it pre-fills a sample JSON input and its encoded TOON output so you can see the format immediately. Turn this off with the `show_default_example` extension setting (on by default); **Clear all** empties both fields.
+- Paste **TOON** and click **Decode from TOON** to get JSON (strict by default; optional lenient mode).
+- Adjust **delimiter**, **indent**, **key folding**, and **flatten depth** like the [official playground](https://toonformat.dev/playground.html).
+- Load **Hikes** or **TYPO3** example presets; char counts and size reduction vs pretty JSON are shown after encode.
+- On first load the **Hikes** example is pre-filled (same as [toonformat.dev](https://toonformat.dev/playground.html)). Disable with `show_default_example` in extension settings; **Clear all** empties both fields.
+- Estimated tokens and error messages are shown when relevant.
 
 #### TOON Logs (View Logs button)
 
