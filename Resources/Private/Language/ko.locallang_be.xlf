@@ -7,33 +7,33 @@
         <source>Enabled : Global toggle for the TOON converter. When disabled, encoding operations bypass TOON and return standard JSON instead. Decoding of existing TOON data still works normally.</source>
         <target state="final">활성화됨 : TOON 변환기의 전역 토글입니다. 비활성화된 경우, 인코딩 작업은 TOON을 우회하여 표준 JSON을 반환합니다. 기존 TOON 데이터의 디코딩은 정상적으로 작동합니다.</target>
       </trans-unit>
-      <trans-unit id="settings.indent">
+      <trans-unit id="settings.indent" approved="yes">
         <source>Indent : Number of spaces per indentation level when encoding TOON (spec default: 2; must be at least 1).</source>
-        <target state="needs-translation">Indent : Number of spaces per indentation level when encoding TOON (spec default: 2; must be at least 1).</target>
+        <target state="final">들여쓰기 : TOON 인코딩 시 들여쓰기 수준당 공백 수 (스펙 기본값: 2; 최소 1 이상이어야 함).</target>
       </trans-unit>
-      <trans-unit id="settings.delimiter">
+      <trans-unit id="settings.delimiter" approved="yes">
         <source>Delimiter : Document delimiter for inline arrays and tabular rows when encoding: Comma (default), Tab, or Pipe.</source>
-        <target state="needs-translation">Delimiter : Document delimiter for inline arrays and tabular rows when encoding: Comma (default), Tab, or Pipe.</target>
+        <target state="final">구분자 : 인코딩 시 인라인 배열 및 테이블 행의 문서 구분자: 쉼표 (기본값), 탭, 또는 파이프.</target>
       </trans-unit>
-      <trans-unit id="settings.key_folding">
+      <trans-unit id="settings.key_folding" approved="yes">
         <source>Key Folding : When set to "Safe", chains of single-key objects are collapsed into dotted paths (e.g. a.b.c: 1) to reduce verbosity. "Off" keeps standard nesting (spec §13.4).</source>
-        <target state="needs-translation">Key Folding : When set to "Safe", chains of single-key objects are collapsed into dotted paths (e.g. a.b.c: 1) to reduce verbosity. "Off" keeps standard nesting (spec §13.4).</target>
+        <target state="final">키 폴딩 : "안전"으로 설정하면 단일 키 객체의 체인이 점으로 연결된 경로로 축약됩니다 (예: a.b.c: 1). 장황함을 줄이기 위함입니다. "끄기"는 표준 중첩을 유지합니다 (스펙 §13.4).</target>
       </trans-unit>
-      <trans-unit id="settings.flatten_depth">
+      <trans-unit id="settings.flatten_depth" approved="yes">
         <source>Flatten Depth : Maximum number of segments to fold when Key Folding is "Safe". Use -1 for unbounded; values below 2 have no practical folding effect.</source>
-        <target state="needs-translation">Flatten Depth : Maximum number of segments to fold when Key Folding is "Safe". Use -1 for unbounded; values below 2 have no practical folding effect.</target>
+        <target state="final">평탄화 깊이 : 키 폴딩이 "안전"일 때 접을 최대 세그먼트 수. 무제한은 -1을 사용하며, 2 미만의 값은 실질적인 폴딩 효과가 없습니다.</target>
       </trans-unit>
-      <trans-unit id="settings.strict">
+      <trans-unit id="settings.strict" approved="yes">
         <source>Strict Decoding : Enforce strict-mode validation when decoding (array length and row-width counts, indentation multiples, escape and delimiter consistency). Disable for lenient parsing (spec §14).</source>
-        <target state="needs-translation">Strict Decoding : Enforce strict-mode validation when decoding (array length and row-width counts, indentation multiples, escape and delimiter consistency). Disable for lenient parsing (spec §14).</target>
+        <target state="final">엄격 디코딩 : 디코딩 시 엄격 모드 유효성 검사를 적용합니다 (배열 길이 및 행 너비 수, 들여쓰기 배수, 이스케이프 및 구분자 일관성). 관대한 파싱을 위해 비활성화하십시오 (스펙 §14).</target>
       </trans-unit>
-      <trans-unit id="settings.expand_paths">
+      <trans-unit id="settings.expand_paths" approved="yes">
         <source>Expand Paths : When set to "Safe", unquoted dotted keys are expanded into nested objects on decode (e.g. a.b.c -&gt; {a:{b:{c:...}}}). "Off" keeps dotted keys literal (spec §13.4).</source>
-        <target state="needs-translation">Expand Paths : When set to "Safe", unquoted dotted keys are expanded into nested objects on decode (e.g. a.b.c -&gt; {a:{b:{c:...}}}). "Off" keeps dotted keys literal (spec §13.4).</target>
+        <target state="final">경로 확장 : "안전"으로 설정하면 디코딩 시 따옴표 없는 점으로 연결된 키가 중첩 객체로 확장됩니다 (예: a.b.c -&gt; {a:{b:{c:...}}}). "끄기"는 점으로 연결된 키를 리터럴로 유지합니다 (스펙 §13.4).</target>
       </trans-unit>
-      <trans-unit id="settings.show_default_example">
+      <trans-unit id="settings.show_default_example" approved="yes">
         <source>Show Default Example : When enabled, the TOON Playground backend module pre-fills a sample JSON input and its encoded TOON output on first load. Disable to open the Playground with empty fields.</source>
-        <target state="needs-translation">Show Default Example : When enabled, the TOON Playground backend module pre-fills a sample JSON input and its encoded TOON output on first load. Disable to open the Playground with empty fields.</target>
+        <target state="final">기본 예제 표시 : 활성화하면 TOON 플레이그라운드 백엔드 모듈이 첫 로드 시 샘플 JSON 입력과 인코딩된 TOON 출력을 미리 채웁니다. 비활성화하면 플레이그라운드가 빈 필드로 열립니다.</target>
       </trans-unit>
     </body>
   </file>
