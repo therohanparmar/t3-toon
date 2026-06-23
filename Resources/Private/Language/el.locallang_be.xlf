@@ -7,33 +7,33 @@
         <source>Enabled : Global toggle for the TOON converter. When disabled, encoding operations bypass TOON and return standard JSON instead. Decoding of existing TOON data still works normally.</source>
         <target state="final">Ενεργοποιημένη : Παγκόσμια εναλλαγή για το μετατροπέα TOON. Όταν απενεργοποιηθεί, η κωδικοποίηση λειτουργιών παρακάμπτει το TOON και αντ' αυτού επιστρέφει πρότυπο JSON. Η αποκωδικοποίηση των υφιστάμενων δεδομένων TOON εξακολουθεί να λειτουργεί κανονικά.</target>
       </trans-unit>
-      <trans-unit id="settings.indent">
+      <trans-unit id="settings.indent" approved="yes">
         <source>Indent : Number of spaces per indentation level when encoding TOON (spec default: 2; must be at least 1).</source>
-        <target state="needs-translation">Indent : Number of spaces per indentation level when encoding TOON (spec default: 2; must be at least 1).</target>
+        <target state="final">Εσοχή : Αριθμός κενών ανά επίπεδο εσοχής κατά την κωδικοποίηση TOON (προεπιλογή spec: 2· πρέπει να είναι τουλάχιστον 1).</target>
       </trans-unit>
-      <trans-unit id="settings.delimiter">
+      <trans-unit id="settings.delimiter" approved="yes">
         <source>Delimiter : Document delimiter for inline arrays and tabular rows when encoding: Comma (default), Tab, or Pipe.</source>
-        <target state="needs-translation">Delimiter : Document delimiter for inline arrays and tabular rows when encoding: Comma (default), Tab, or Pipe.</target>
+        <target state="final">Οριοθέτης : Οριοθέτης εγγράφου για ενσωματωμένους πίνακες και γραμμές πίνακα κατά την κωδικοποίηση: Κόμμα (προεπιλογή), Tab ή Κάθετος.</target>
       </trans-unit>
-      <trans-unit id="settings.key_folding">
+      <trans-unit id="settings.key_folding" approved="yes">
         <source>Key Folding : When set to "Safe", chains of single-key objects are collapsed into dotted paths (e.g. a.b.c: 1) to reduce verbosity. "Off" keeps standard nesting (spec §13.4).</source>
-        <target state="needs-translation">Key Folding : When set to "Safe", chains of single-key objects are collapsed into dotted paths (e.g. a.b.c: 1) to reduce verbosity. "Off" keeps standard nesting (spec §13.4).</target>
+        <target state="final">Αναδίπλωση Κλειδιών : Όταν οριστεί σε «Ασφαλής», αλυσίδες αντικειμένων με ένα κλειδί συμπτύσσονται σε διαδρομές με τελείες (π.χ. a.b.c: 1) για μείωση της πολυλογίας. «Απενεργοποιημένο» διατηρεί την κανονική εμφώλευση (spec §13.4).</target>
       </trans-unit>
-      <trans-unit id="settings.flatten_depth">
+      <trans-unit id="settings.flatten_depth" approved="yes">
         <source>Flatten Depth : Maximum number of segments to fold when Key Folding is "Safe". Use -1 for unbounded; values below 2 have no practical folding effect.</source>
-        <target state="needs-translation">Flatten Depth : Maximum number of segments to fold when Key Folding is "Safe". Use -1 for unbounded; values below 2 have no practical folding effect.</target>
+        <target state="final">Βάθος Ισοπέδωσης : Μέγιστος αριθμός τμημάτων προς αναδίπλωση όταν η Αναδίπλωση Κλειδιών είναι «Ασφαλής». Χρησιμοποιήστε -1 για απεριόριστο· τιμές κάτω από 2 δεν έχουν ουσιαστικό αποτέλεσμα αναδίπλωσης.</target>
       </trans-unit>
-      <trans-unit id="settings.strict">
+      <trans-unit id="settings.strict" approved="yes">
         <source>Strict Decoding : Enforce strict-mode validation when decoding (array length and row-width counts, indentation multiples, escape and delimiter consistency). Disable for lenient parsing (spec §14).</source>
-        <target state="needs-translation">Strict Decoding : Enforce strict-mode validation when decoding (array length and row-width counts, indentation multiples, escape and delimiter consistency). Disable for lenient parsing (spec §14).</target>
+        <target state="final">Αυστηρή Αποκωδικοποίηση : Επιβολή επικύρωσης αυστηρής λειτουργίας κατά την αποκωδικοποίηση (μετρήσεις μήκους πίνακα και πλάτους γραμμής, πολλαπλάσια εσοχής, συνέπεια διαφυγής και οριοθέτη). Απενεργοποιήστε για επιεική ανάλυση (spec §14).</target>
       </trans-unit>
-      <trans-unit id="settings.expand_paths">
+      <trans-unit id="settings.expand_paths" approved="yes">
         <source>Expand Paths : When set to "Safe", unquoted dotted keys are expanded into nested objects on decode (e.g. a.b.c -&gt; {a:{b:{c:...}}}). "Off" keeps dotted keys literal (spec §13.4).</source>
-        <target state="needs-translation">Expand Paths : When set to "Safe", unquoted dotted keys are expanded into nested objects on decode (e.g. a.b.c -&gt; {a:{b:{c:...}}}). "Off" keeps dotted keys literal (spec §13.4).</target>
+        <target state="final">Επέκταση Διαδρομών : Όταν οριστεί σε «Ασφαλής», τα χωρίς εισαγωγικά κλειδιά με τελείες επεκτείνονται σε εμφωλευμένα αντικείμενα κατά την αποκωδικοποίηση (π.χ. a.b.c -&gt; {a:{b:{c:...}}}). «Απενεργοποιημένο» διατηρεί τα κλειδιά με τελείες ως έχουν (spec §13.4).</target>
       </trans-unit>
-      <trans-unit id="settings.show_default_example">
+      <trans-unit id="settings.show_default_example" approved="yes">
         <source>Show Default Example : When enabled, the TOON Playground backend module pre-fills a sample JSON input and its encoded TOON output on first load. Disable to open the Playground with empty fields.</source>
-        <target state="needs-translation">Show Default Example : When enabled, the TOON Playground backend module pre-fills a sample JSON input and its encoded TOON output on first load. Disable to open the Playground with empty fields.</target>
+        <target state="final">Εμφάνιση Προεπιλεγμένου Παραδείγματος : Όταν ενεργοποιηθεί, το module backend TOON Playground προ-συμπληρώνει ένα δείγμα εισόδου JSON και την κωδικοποιημένη έξοδο TOON κατά την πρώτη φόρτωση. Απενεργοποιήστε για να ανοίξει το Playground με κενά πεδία.</target>
       </trans-unit>
     </body>
   </file>
