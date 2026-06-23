@@ -107,61 +107,61 @@
         <source>Invalid JSON input for encode.</source>
         <target state="final">Ugyldig JSON input for kode.</target>
       </trans-unit>
-      <trans-unit id="playground.option_delimiter">
+      <trans-unit id="playground.option_delimiter" approved="yes">
         <source>Delimiter</source>
-        <target state="needs-translation">Delimiter</target>
+        <target state="final">Afgrænser</target>
       </trans-unit>
-      <trans-unit id="playground.option_indent">
+      <trans-unit id="playground.option_indent" approved="yes">
         <source>Indent</source>
-        <target state="needs-translation">Indent</target>
+        <target state="final">Indrykning</target>
       </trans-unit>
-      <trans-unit id="playground.option_key_folding">
+      <trans-unit id="playground.option_key_folding" approved="yes">
         <source>Key folding</source>
-        <target state="needs-translation">Key folding</target>
+        <target state="final">Nøglefoldning</target>
       </trans-unit>
-      <trans-unit id="playground.key_folding_off">
+      <trans-unit id="playground.key_folding_off" approved="yes">
         <source>Off</source>
-        <target state="needs-translation">Off</target>
+        <target state="final">Fra</target>
       </trans-unit>
-      <trans-unit id="playground.key_folding_safe">
+      <trans-unit id="playground.key_folding_safe" approved="yes">
         <source>Safe</source>
-        <target state="needs-translation">Safe</target>
+        <target state="final">Sikker</target>
       </trans-unit>
-      <trans-unit id="playground.option_flatten_depth">
+      <trans-unit id="playground.option_flatten_depth" approved="yes">
         <source>Flatten depth</source>
-        <target state="needs-translation">Flatten depth</target>
+        <target state="final">Foldningsdybde</target>
       </trans-unit>
-      <trans-unit id="playground.flatten_unlimited">
+      <trans-unit id="playground.flatten_unlimited" approved="yes">
         <source>Unlimited</source>
-        <target state="needs-translation">Unlimited</target>
+        <target state="final">Ubegrænset</target>
       </trans-unit>
-      <trans-unit id="playground.presets">
+      <trans-unit id="playground.presets" approved="yes">
         <source>Load example</source>
-        <target state="needs-translation">Load example</target>
+        <target state="final">Indlæs eksempel</target>
       </trans-unit>
-      <trans-unit id="playground.preset_hikes">
+      <trans-unit id="playground.preset_hikes" approved="yes">
         <source>Hikes</source>
-        <target state="needs-translation">Hikes</target>
+        <target state="final">Vandreture</target>
       </trans-unit>
-      <trans-unit id="playground.preset_typo3">
+      <trans-unit id="playground.preset_typo3" approved="yes">
         <source>TYPO3</source>
-        <target state="needs-translation">TYPO3</target>
+        <target state="final">TYPO3</target>
       </trans-unit>
-      <trans-unit id="playground.chars">
+      <trans-unit id="playground.chars" approved="yes">
         <source>chars</source>
-        <target state="needs-translation">chars</target>
+        <target state="final">tegn</target>
       </trans-unit>
-      <trans-unit id="playground.size_reduction">
+      <trans-unit id="playground.size_reduction" approved="yes">
         <source>%s%% size reduction vs pretty JSON</source>
-        <target state="needs-translation">%s%% size reduction vs pretty JSON</target>
+        <target state="final">%s%% størrelsesreduktion i forhold til pæn JSON</target>
       </trans-unit>
-      <trans-unit id="playground.lenient_decode">
+      <trans-unit id="playground.lenient_decode" approved="yes">
         <source>Lenient decode</source>
-        <target state="needs-translation">Lenient decode</target>
+        <target state="final">Eftergivende dekodning</target>
       </trans-unit>
-      <trans-unit id="playground.official_playground">
+      <trans-unit id="playground.official_playground" approved="yes">
         <source>Official playground</source>
-        <target state="needs-translation">Official playground</target>
+        <target state="final">Officielt playground</target>
       </trans-unit>
       <trans-unit id="optimization_note.title" approved="yes">
         <source>Why is optimization sometimes negative?</source>
