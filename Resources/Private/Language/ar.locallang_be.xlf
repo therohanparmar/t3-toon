@@ -7,33 +7,33 @@
         <source>Enabled : Global toggle for the TOON converter. When disabled, encoding operations bypass TOON and return standard JSON instead. Decoding of existing TOON data still works normally.</source>
         <target state="final">تم التمكين: التبديل العام لمحول TOON. عند التعطيل، يتم تجاوز عمليات الترميز TOON والعودة القياسية JSON بدلاً من ذلك. ولا يزال تفكيك بيانات TOON الموجودة يعمل بصورة طبيعية.</target>
       </trans-unit>
-      <trans-unit id="settings.indent">
+      <trans-unit id="settings.indent" approved="yes">
         <source>Indent : Number of spaces per indentation level when encoding TOON (spec default: 2; must be at least 1).</source>
-        <target state="needs-translation">Indent : Number of spaces per indentation level when encoding TOON (spec default: 2; must be at least 1).</target>
+        <target state="final">المسافة البادئة : عدد المسافات لكل مستوى مسافة بادئة عند ترميز TOON (الافتراضي حسب المواصفة: 2؛ يجب أن يكون 1 على الأقل).</target>
       </trans-unit>
-      <trans-unit id="settings.delimiter">
+      <trans-unit id="settings.delimiter" approved="yes">
         <source>Delimiter : Document delimiter for inline arrays and tabular rows when encoding: Comma (default), Tab, or Pipe.</source>
-        <target state="needs-translation">Delimiter : Document delimiter for inline arrays and tabular rows when encoding: Comma (default), Tab, or Pipe.</target>
+        <target state="final">المحدد : محدد المستند للمصفوفات المضمّنة والصفوف الجدولية عند الترميز: فاصلة (الافتراضي)، أو جدولة، أو شريط عمودي.</target>
       </trans-unit>
-      <trans-unit id="settings.key_folding">
+      <trans-unit id="settings.key_folding" approved="yes">
         <source>Key Folding : When set to "Safe", chains of single-key objects are collapsed into dotted paths (e.g. a.b.c: 1) to reduce verbosity. "Off" keeps standard nesting (spec §13.4).</source>
-        <target state="needs-translation">Key Folding : When set to "Safe", chains of single-key objects are collapsed into dotted paths (e.g. a.b.c: 1) to reduce verbosity. "Off" keeps standard nesting (spec §13.4).</target>
+        <target state="final">طي المفاتيح : عند الضبط على "آمن"، تُدمج سلاسل الكائنات ذات المفتاح الواحد في مسارات منقوطة (مثال: a.b.c: 1) لتقليل الإسهاب. "إيقاف" يحافظ على التداخل القياسي (المواصفة §13.4).</target>
       </trans-unit>
-      <trans-unit id="settings.flatten_depth">
+      <trans-unit id="settings.flatten_depth" approved="yes">
         <source>Flatten Depth : Maximum number of segments to fold when Key Folding is "Safe". Use -1 for unbounded; values below 2 have no practical folding effect.</source>
-        <target state="needs-translation">Flatten Depth : Maximum number of segments to fold when Key Folding is "Safe". Use -1 for unbounded; values below 2 have no practical folding effect.</target>
+        <target state="final">عمق الطي : الحد الأقصى لعدد المقاطع المطوية عند تفعيل طي المفاتيح "آمن". استخدم -1 للطي غير المحدود؛ القيم الأقل من 2 لا يكون لها تأثير طي فعلي.</target>
       </trans-unit>
-      <trans-unit id="settings.strict">
+      <trans-unit id="settings.strict" approved="yes">
         <source>Strict Decoding : Enforce strict-mode validation when decoding (array length and row-width counts, indentation multiples, escape and delimiter consistency). Disable for lenient parsing (spec §14).</source>
-        <target state="needs-translation">Strict Decoding : Enforce strict-mode validation when decoding (array length and row-width counts, indentation multiples, escape and delimiter consistency). Disable for lenient parsing (spec §14).</target>
+        <target state="final">فك التشفير الصارم : تطبيق التحقق بالوضع الصارم عند فك التشفير (عدد طول المصفوفة وعرض الصفوف، ومضاعفات المسافة البادئة، واتساق الهروب والمحدد). قم بتعطيله للتحليل المتساهل (المواصفة §14).</target>
       </trans-unit>
-      <trans-unit id="settings.expand_paths">
+      <trans-unit id="settings.expand_paths" approved="yes">
         <source>Expand Paths : When set to "Safe", unquoted dotted keys are expanded into nested objects on decode (e.g. a.b.c -&gt; {a:{b:{c:...}}}). "Off" keeps dotted keys literal (spec §13.4).</source>
-        <target state="needs-translation">Expand Paths : When set to "Safe", unquoted dotted keys are expanded into nested objects on decode (e.g. a.b.c -&gt; {a:{b:{c:...}}}). "Off" keeps dotted keys literal (spec §13.4).</target>
+        <target state="final">توسيع المسارات : عند الضبط على "آمن"، تُوسَّع المفاتيح المنقوطة غير المقتبسة إلى كائنات متداخلة عند فك التشفير (مثال: a.b.c -&gt; {a:{b:{c:...}}}). "إيقاف" يحافظ على المفاتيح المنقوطة كما هي (المواصفة §13.4).</target>
       </trans-unit>
-      <trans-unit id="settings.show_default_example">
+      <trans-unit id="settings.show_default_example" approved="yes">
         <source>Show Default Example : When enabled, the TOON Playground backend module pre-fills a sample JSON input and its encoded TOON output on first load. Disable to open the Playground with empty fields.</source>
-        <target state="needs-translation">Show Default Example : When enabled, the TOON Playground backend module pre-fills a sample JSON input and its encoded TOON output on first load. Disable to open the Playground with empty fields.</target>
+        <target state="final">عرض المثال الافتراضي : عند التفعيل، تقوم وحدة TOON Playground الخلفية بملء نموذج إدخال JSON وإخراج TOON المشفّر مسبقاً عند التحميل الأول. قم بتعطيله لفتح Playground بحقول فارغة.</target>
       </trans-unit>
     </body>
   </file>
