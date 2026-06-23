@@ -7,33 +7,33 @@
         <source>Enabled : Global toggle for the TOON converter. When disabled, encoding operations bypass TOON and return standard JSON instead. Decoding of existing TOON data still works normally.</source>
         <target state="final">Activat: Comutare globală pentru convertorul TOON. Când este dezactivată, codarea operațiunilor ocolind TOON și returnând JSON standard. Decodarea datelor TOON existente încă funcţionează normal.</target>
       </trans-unit>
-      <trans-unit id="settings.indent">
+      <trans-unit id="settings.indent" approved="yes">
         <source>Indent : Number of spaces per indentation level when encoding TOON (spec default: 2; must be at least 1).</source>
-        <target state="needs-translation">Indent : Number of spaces per indentation level when encoding TOON (spec default: 2; must be at least 1).</target>
+        <target state="final">Indentare : Numărul de spații per nivel de indentare la codificarea TOON (implicit conform specificației: 2; trebuie să fie cel puțin 1).</target>
       </trans-unit>
-      <trans-unit id="settings.delimiter">
+      <trans-unit id="settings.delimiter" approved="yes">
         <source>Delimiter : Document delimiter for inline arrays and tabular rows when encoding: Comma (default), Tab, or Pipe.</source>
-        <target state="needs-translation">Delimiter : Document delimiter for inline arrays and tabular rows when encoding: Comma (default), Tab, or Pipe.</target>
+        <target state="final">Delimitator : Delimitatorul documentului pentru tablouri inline și rânduri tabelare la codificare: Virgulă (implicit), Tab sau Bară verticală.</target>
       </trans-unit>
-      <trans-unit id="settings.key_folding">
+      <trans-unit id="settings.key_folding" approved="yes">
         <source>Key Folding : When set to "Safe", chains of single-key objects are collapsed into dotted paths (e.g. a.b.c: 1) to reduce verbosity. "Off" keeps standard nesting (spec §13.4).</source>
-        <target state="needs-translation">Key Folding : When set to "Safe", chains of single-key objects are collapsed into dotted paths (e.g. a.b.c: 1) to reduce verbosity. "Off" keeps standard nesting (spec §13.4).</target>
+        <target state="final">Pliere cheie : Când este setat pe „Sigur", lanțurile de obiecte cu o singură cheie sunt colapsate în căi cu puncte (ex. a.b.c: 1) pentru a reduce verbozitatea. „Oprit" păstrează imbricarea standard (spec §13.4).</target>
       </trans-unit>
-      <trans-unit id="settings.flatten_depth">
+      <trans-unit id="settings.flatten_depth" approved="yes">
         <source>Flatten Depth : Maximum number of segments to fold when Key Folding is "Safe". Use -1 for unbounded; values below 2 have no practical folding effect.</source>
-        <target state="needs-translation">Flatten Depth : Maximum number of segments to fold when Key Folding is "Safe". Use -1 for unbounded; values below 2 have no practical folding effect.</target>
+        <target state="final">Adâncime de aplatizare : Numărul maxim de segmente de pliat când Plierea cheilor este „Sigură". Folosiți -1 pentru nelimitat; valorile sub 2 nu au niciun efect practic de pliere.</target>
       </trans-unit>
-      <trans-unit id="settings.strict">
+      <trans-unit id="settings.strict" approved="yes">
         <source>Strict Decoding : Enforce strict-mode validation when decoding (array length and row-width counts, indentation multiples, escape and delimiter consistency). Disable for lenient parsing (spec §14).</source>
-        <target state="needs-translation">Strict Decoding : Enforce strict-mode validation when decoding (array length and row-width counts, indentation multiples, escape and delimiter consistency). Disable for lenient parsing (spec §14).</target>
+        <target state="final">Decodare Strictă : Activează validarea în mod strict la decodare (numărul elementelor din tablou și lățimea rândurilor, multiplii de indentare, consistența caracterelor de escape și a delimitatorilor). Dezactivează pentru parsare permisivă (spec §14).</target>
       </trans-unit>
-      <trans-unit id="settings.expand_paths">
+      <trans-unit id="settings.expand_paths" approved="yes">
         <source>Expand Paths : When set to "Safe", unquoted dotted keys are expanded into nested objects on decode (e.g. a.b.c -&gt; {a:{b:{c:...}}}). "Off" keeps dotted keys literal (spec §13.4).</source>
-        <target state="needs-translation">Expand Paths : When set to "Safe", unquoted dotted keys are expanded into nested objects on decode (e.g. a.b.c -&gt; {a:{b:{c:...}}}). "Off" keeps dotted keys literal (spec §13.4).</target>
+        <target state="final">Extindere căi : Când este setat pe „Sigur", cheile cu puncte necitate sunt extinse în obiecte imbricate la decodificare (ex. a.b.c -&gt; {a:{b:{c:...}}}). „Dezactivat" păstrează cheile cu puncte ca literale (spec §13.4).</target>
       </trans-unit>
-      <trans-unit id="settings.show_default_example">
+      <trans-unit id="settings.show_default_example" approved="yes">
         <source>Show Default Example : When enabled, the TOON Playground backend module pre-fills a sample JSON input and its encoded TOON output on first load. Disable to open the Playground with empty fields.</source>
-        <target state="needs-translation">Show Default Example : When enabled, the TOON Playground backend module pre-fills a sample JSON input and its encoded TOON output on first load. Disable to open the Playground with empty fields.</target>
+        <target state="final">Afișare exemplu implicit : Când este activat, modulul backend TOON Playground pre-completează un exemplu de intrare JSON și ieșirea TOON codificată corespunzătoare la prima încărcare. Dezactivați pentru a deschide Playground-ul cu câmpuri goale.</target>
       </trans-unit>
     </body>
   </file>
