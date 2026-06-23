@@ -7,33 +7,33 @@
         <source>Enabled : Global toggle for the TOON converter. When disabled, encoding operations bypass TOON and return standard JSON instead. Decoding of existing TOON data still works normally.</source>
         <target state="final">Activado : Interruptor global para el convertidor TOON. Cuando está desactivado, las operaciones de codificación evitan TOON y devuelven JSON estándar. La decodificación de los datos TOON existentes todavía funciona normalmente.</target>
       </trans-unit>
-      <trans-unit id="settings.indent">
+      <trans-unit id="settings.indent" approved="yes">
         <source>Indent : Number of spaces per indentation level when encoding TOON (spec default: 2; must be at least 1).</source>
-        <target state="needs-translation">Indent : Number of spaces per indentation level when encoding TOON (spec default: 2; must be at least 1).</target>
+        <target state="final">Sangría : Número de espacios por nivel de sangría al codificar TOON (valor predeterminado de la especificación: 2; debe ser al menos 1).</target>
       </trans-unit>
-      <trans-unit id="settings.delimiter">
+      <trans-unit id="settings.delimiter" approved="yes">
         <source>Delimiter : Document delimiter for inline arrays and tabular rows when encoding: Comma (default), Tab, or Pipe.</source>
-        <target state="needs-translation">Delimiter : Document delimiter for inline arrays and tabular rows when encoding: Comma (default), Tab, or Pipe.</target>
+        <target state="final">Delimitador : Delimitador de documentos para matrices en línea y filas tabulares al codificar: Coma (predeterminado), Tabulador o Barra vertical.</target>
       </trans-unit>
-      <trans-unit id="settings.key_folding">
+      <trans-unit id="settings.key_folding" approved="yes">
         <source>Key Folding : When set to "Safe", chains of single-key objects are collapsed into dotted paths (e.g. a.b.c: 1) to reduce verbosity. "Off" keeps standard nesting (spec §13.4).</source>
-        <target state="needs-translation">Key Folding : When set to "Safe", chains of single-key objects are collapsed into dotted paths (e.g. a.b.c: 1) to reduce verbosity. "Off" keeps standard nesting (spec §13.4).</target>
+        <target state="final">Plegado de claves : Cuando se establece en «Seguro», las cadenas de objetos de clave única se comprimen en rutas con puntos (p. ej. a.b.c: 1) para reducir la verbosidad. «Desactivado» mantiene el anidamiento estándar (especificación §13.4).</target>
       </trans-unit>
-      <trans-unit id="settings.flatten_depth">
+      <trans-unit id="settings.flatten_depth" approved="yes">
         <source>Flatten Depth : Maximum number of segments to fold when Key Folding is "Safe". Use -1 for unbounded; values below 2 have no practical folding effect.</source>
-        <target state="needs-translation">Flatten Depth : Maximum number of segments to fold when Key Folding is "Safe". Use -1 for unbounded; values below 2 have no practical folding effect.</target>
+        <target state="final">Profundidad de aplanado : Número máximo de segmentos a plegar cuando el plegado de claves es «Seguro». Use -1 para sin límite; los valores inferiores a 2 no tienen efecto práctico de plegado.</target>
       </trans-unit>
-      <trans-unit id="settings.strict">
+      <trans-unit id="settings.strict" approved="yes">
         <source>Strict Decoding : Enforce strict-mode validation when decoding (array length and row-width counts, indentation multiples, escape and delimiter consistency). Disable for lenient parsing (spec §14).</source>
-        <target state="needs-translation">Strict Decoding : Enforce strict-mode validation when decoding (array length and row-width counts, indentation multiples, escape and delimiter consistency). Disable for lenient parsing (spec §14).</target>
+        <target state="final">Decodificación estricta : Aplicar validación en modo estricto al decodificar (recuentos de longitud de matriz y ancho de fila, múltiplos de sangría, coherencia de escape y delimitador). Deshabilitar para análisis indulgente (especificación §14).</target>
       </trans-unit>
-      <trans-unit id="settings.expand_paths">
+      <trans-unit id="settings.expand_paths" approved="yes">
         <source>Expand Paths : When set to "Safe", unquoted dotted keys are expanded into nested objects on decode (e.g. a.b.c -&gt; {a:{b:{c:...}}}). "Off" keeps dotted keys literal (spec §13.4).</source>
-        <target state="needs-translation">Expand Paths : When set to "Safe", unquoted dotted keys are expanded into nested objects on decode (e.g. a.b.c -&gt; {a:{b:{c:...}}}). "Off" keeps dotted keys literal (spec §13.4).</target>
+        <target state="final">Expandir rutas : Cuando se establece en «Seguro», las claves con puntos sin comillas se expanden en objetos anidados al decodificar (p. ej. a.b.c -&gt; {a:{b:{c:...}}}). «Desactivado» mantiene las claves con puntos literales (especificación §13.4).</target>
       </trans-unit>
-      <trans-unit id="settings.show_default_example">
+      <trans-unit id="settings.show_default_example" approved="yes">
         <source>Show Default Example : When enabled, the TOON Playground backend module pre-fills a sample JSON input and its encoded TOON output on first load. Disable to open the Playground with empty fields.</source>
-        <target state="needs-translation">Show Default Example : When enabled, the TOON Playground backend module pre-fills a sample JSON input and its encoded TOON output on first load. Disable to open the Playground with empty fields.</target>
+        <target state="final">Mostrar ejemplo predeterminado : Cuando está habilitado, el módulo de backend TOON Playground rellena previamente una entrada JSON de muestra y su salida TOON codificada en la primera carga. Deshabilitar para abrir el Playground con campos vacíos.</target>
       </trans-unit>
     </body>
   </file>
