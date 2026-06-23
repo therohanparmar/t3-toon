@@ -7,33 +7,33 @@
         <source>Enabled : Global toggle for the TOON converter. When disabled, encoding operations bypass TOON and return standard JSON instead. Decoding of existing TOON data still works normally.</source>
         <target state="final">Ingeschakeld: Algemene schakelaar voor de TOON converter. Indien uitgeschakeld, coderen operaties omzeilen TOON en standaard JSON retourneren. Decoderen van bestaande TOON data werkt normaal.</target>
       </trans-unit>
-      <trans-unit id="settings.indent">
+      <trans-unit id="settings.indent" approved="yes">
         <source>Indent : Number of spaces per indentation level when encoding TOON (spec default: 2; must be at least 1).</source>
-        <target state="needs-translation">Indent : Number of spaces per indentation level when encoding TOON (spec default: 2; must be at least 1).</target>
+        <target state="final">Inspringing : Aantal spaties per inspring­niveau bij het coderen van TOON (standaard spec: 2; minimaal 1).</target>
       </trans-unit>
-      <trans-unit id="settings.delimiter">
+      <trans-unit id="settings.delimiter" approved="yes">
         <source>Delimiter : Document delimiter for inline arrays and tabular rows when encoding: Comma (default), Tab, or Pipe.</source>
-        <target state="needs-translation">Delimiter : Document delimiter for inline arrays and tabular rows when encoding: Comma (default), Tab, or Pipe.</target>
+        <target state="final">Scheidingsteken : Documentscheidingsteken voor inline-arrays en tabelrijen bij het coderen: Komma (standaard), Tab of Pipe.</target>
       </trans-unit>
-      <trans-unit id="settings.key_folding">
+      <trans-unit id="settings.key_folding" approved="yes">
         <source>Key Folding : When set to "Safe", chains of single-key objects are collapsed into dotted paths (e.g. a.b.c: 1) to reduce verbosity. "Off" keeps standard nesting (spec §13.4).</source>
-        <target state="needs-translation">Key Folding : When set to "Safe", chains of single-key objects are collapsed into dotted paths (e.g. a.b.c: 1) to reduce verbosity. "Off" keeps standard nesting (spec §13.4).</target>
+        <target state="final">Sleutelvouwing : Indien ingesteld op "Veilig", worden ketens van objecten met één sleutel samengevouwen tot puntige paden (bijv. a.b.c: 1) om breedsprakigheid te verminderen. "Uit" behoudt standaard nesting (spec §13.4).</target>
       </trans-unit>
-      <trans-unit id="settings.flatten_depth">
+      <trans-unit id="settings.flatten_depth" approved="yes">
         <source>Flatten Depth : Maximum number of segments to fold when Key Folding is "Safe". Use -1 for unbounded; values below 2 have no practical folding effect.</source>
-        <target state="needs-translation">Flatten Depth : Maximum number of segments to fold when Key Folding is "Safe". Use -1 for unbounded; values below 2 have no practical folding effect.</target>
+        <target state="final">Vouwdiepte : Maximum aantal segmenten dat wordt gevouwen wanneer Sleutelvouwing op "Veilig" staat. Gebruik -1 voor onbeperkt; waarden onder 2 hebben geen praktisch vouweffect.</target>
       </trans-unit>
-      <trans-unit id="settings.strict">
+      <trans-unit id="settings.strict" approved="yes">
         <source>Strict Decoding : Enforce strict-mode validation when decoding (array length and row-width counts, indentation multiples, escape and delimiter consistency). Disable for lenient parsing (spec §14).</source>
-        <target state="needs-translation">Strict Decoding : Enforce strict-mode validation when decoding (array length and row-width counts, indentation multiples, escape and delimiter consistency). Disable for lenient parsing (spec §14).</target>
+        <target state="final">Strikt decoderen : Strikte validatie afdwingen bij het decoderen (array-lengte en rijbreedte-tellingen, inspring-veelvouden, escape- en scheidingstekenconsistentie). Uitschakelen voor soepel parseren (spec §14).</target>
       </trans-unit>
-      <trans-unit id="settings.expand_paths">
+      <trans-unit id="settings.expand_paths" approved="yes">
         <source>Expand Paths : When set to "Safe", unquoted dotted keys are expanded into nested objects on decode (e.g. a.b.c -&gt; {a:{b:{c:...}}}). "Off" keeps dotted keys literal (spec §13.4).</source>
-        <target state="needs-translation">Expand Paths : When set to "Safe", unquoted dotted keys are expanded into nested objects on decode (e.g. a.b.c -&gt; {a:{b:{c:...}}}). "Off" keeps dotted keys literal (spec §13.4).</target>
+        <target state="final">Paden uitvouwen : Indien ingesteld op "Veilig", worden ongequoteerde puntige sleutels uitgevouwen tot geneste objecten bij het decoderen (bijv. a.b.c -&gt; {a:{b:{c:...}}}). "Uit" behoudt puntige sleutels letterlijk (spec §13.4).</target>
       </trans-unit>
-      <trans-unit id="settings.show_default_example">
+      <trans-unit id="settings.show_default_example" approved="yes">
         <source>Show Default Example : When enabled, the TOON Playground backend module pre-fills a sample JSON input and its encoded TOON output on first load. Disable to open the Playground with empty fields.</source>
-        <target state="needs-translation">Show Default Example : When enabled, the TOON Playground backend module pre-fills a sample JSON input and its encoded TOON output on first load. Disable to open the Playground with empty fields.</target>
+        <target state="final">Standaard voorbeeld tonen : Indien ingeschakeld, vult de TOON Playground backend-module bij het eerste laden automatisch een voorbeeld-JSON-invoer en de gecodeerde TOON-uitvoer in. Uitschakelen om de Playground met lege velden te openen.</target>
       </trans-unit>
     </body>
   </file>
