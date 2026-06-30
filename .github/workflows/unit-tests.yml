@@ -14,7 +14,7 @@ jobs:
     name: TYPO3 ${{ matrix.typo3 }} - PHP ${{ matrix.php }}
     runs-on: ubuntu-latest
     container:
-      image: himanshuramavat/php-ci:${{ matrix.php }}-v1.2.0
+      image: himanshuramavat/php-ci:${{ matrix.php }}-v1.5.0
     defaults:
       run:
         shell: bash
