@@ -2,7 +2,7 @@
 
 $EM_CONF['rrp_t3toon'] = [
     'title' => 'T3Toon – Token-Efficient Data Format for TYPO3 AI',
-    'description' => 'TOON for TYPO3 — AI-ready data format for LLM prompts, AI agents, ChatGPT, Gemini, Claude, Mistral, OpenAI, and TYPO3 AI integrations. Convert JSON ⇄ TOON for compact, token-efficient AI context exchange.',
+    'description' => 'Spec-compliant TOON for TYPO3: token-efficient AI data format with JSON ⇄ TOON conversion for LLMs and AI agents.',
     'category' => 'be',
     'author' => 'Rohan Parmar | Himanshu Ramavat',
     'author_email' => 'rohanrparmar987@gmail.com | himanshuramavat07@gmail.com',
