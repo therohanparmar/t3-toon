@@ -1,0 +1,4 @@
+source: https://github.com/toon-format/spec
+commit: f55b93ac489f297ff597d95e4c19ae84675eaeb7
+spec-version: 3.3
+vendored: 2026-06-13

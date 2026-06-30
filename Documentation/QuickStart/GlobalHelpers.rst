@@ -40,7 +40,7 @@ Decode a TOON string to a PHP array.
 toon_compact()
 ~~~~~~~~~~~~~~
 
-Encode to TOON with compact options (indent 0, comma delimiter).
+Encode to TOON with compact options (indent 2, comma delimiter).
 
 :Signature: ``toon_compact(mixed $value): string``
 
@@ -62,9 +62,10 @@ Encode to TOON with readable options (indent 4).
 toon_decode_lenient()
 ~~~~~~~~~~~~~~~~~~~~~
 
-Decode TOON without coercing scalar types (keep ``"true"``, ``"42"`` as strings).
+Decode TOON in lenient (non-strict) mode: relaxes count, indentation, and
+blank-line validation. Type coercion of unquoted tokens still follows the spec.
 
-:Signature: ``toon_decode_lenient(string $toon): array``
+:Signature: ``toon_decode_lenient(string $toon): mixed``
 :Throws: ``RRP\T3Toon\Exception\ToonDecodeException`` when input is malformed
 
 .. code-block:: php

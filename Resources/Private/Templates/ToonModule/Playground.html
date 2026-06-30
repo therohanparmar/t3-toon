@@ -1,5 +1,6 @@
 <html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers"
       xmlns:core="http://typo3.org/ns/TYPO3/CMS/Core/ViewHelpers"
+      xmlns:be="http://typo3.org/ns/TYPO3/CMS/Backend/ViewHelpers"
       data-namespace-typo3-fluid="true">
 
 <f:layout name="Module"/>
@@ -16,12 +17,18 @@
                     <f:translate key="LLL:EXT:rrp_t3toon/Resources/Private/Language/locallang_mod.xlf:playground.subtitle"/>
                 </p>
             </div>
-            <button type="button"
-                    class="btn btn-default btn-sm"
-                    id="toon-clear-btn">
-                <core:icon identifier="actions-delete" size="small"/>
-                <f:translate key="LLL:EXT:rrp_t3toon/Resources/Private/Language/locallang_mod.xlf:playground.clear_all"/>
-            </button>
+            <div class="toon-playground__header-actions">
+                <a href="{be:moduleLink(route: 'tools_t3toon.logs')}" class="btn btn-default btn-sm">
+                    <core:icon identifier="actions-list-alternative" size="small"/>
+                    <f:translate key="LLL:EXT:rrp_t3toon/Resources/Private/Language/locallang_mod.xlf:playground.view_logs"/>
+                </a>
+                <button type="button"
+                        class="btn btn-default btn-sm"
+                        id="toon-clear-btn">
+                    <core:icon identifier="actions-delete" size="small"/>
+                    <f:translate key="LLL:EXT:rrp_t3toon/Resources/Private/Language/locallang_mod.xlf:playground.clear_all"/>
+                </button>
+            </div>
         </div>
 
         <f:if condition="{error}">
@@ -32,6 +39,68 @@
         </f:if>
 
         <form method="post" action="" id="toon-form">
+            <div class="toon-playground__options">
+                <div class="toon-playground__options-group">
+                    <label class="toon-playground__options-label" for="toon-delimiter">
+                        <f:translate key="LLL:EXT:rrp_t3toon/Resources/Private/Language/locallang_mod.xlf:playground.option_delimiter"/>
+                    </label>
+                    <select class="form-select form-select-sm" id="toon-delimiter" name="delimiter">
+                        <option value="comma" {f:if(condition: '{formState.delimiter} == "comma"', then: 'selected="selected"')}>Comma (,)</option>
+                        <option value="tab" {f:if(condition: '{formState.delimiter} == "tab"', then: 'selected="selected"')}>Tab</option>
+                        <option value="pipe" {f:if(condition: '{formState.delimiter} == "pipe"', then: 'selected="selected"')}>Pipe (|)</option>
+                    </select>
+                </div>
+                <div class="toon-playground__options-group">
+                    <label class="toon-playground__options-label" for="toon-indent">
+                        <f:translate key="LLL:EXT:rrp_t3toon/Resources/Private/Language/locallang_mod.xlf:playground.option_indent"/>
+                    </label>
+                    <select class="form-select form-select-sm" id="toon-indent" name="indent">
+                        <option value="2" {f:if(condition: '{formState.indent} == 2', then: 'selected="selected"')}>2</option>
+                        <option value="4" {f:if(condition: '{formState.indent} == 4', then: 'selected="selected"')}>4</option>
+                    </select>
+                </div>
+                <div class="toon-playground__options-group">
+                    <label class="toon-playground__options-label" for="toon-key-folding">
+                        <f:translate key="LLL:EXT:rrp_t3toon/Resources/Private/Language/locallang_mod.xlf:playground.option_key_folding"/>
+                    </label>
+                    <select class="form-select form-select-sm" id="toon-key-folding" name="key_folding">
+                        <option value="off" {f:if(condition: '{formState.key_folding} == "off"', then: 'selected="selected"')}>
+                            <f:translate key="LLL:EXT:rrp_t3toon/Resources/Private/Language/locallang_mod.xlf:playground.key_folding_off"/>
+                        </option>
+                        <option value="safe" {f:if(condition: '{formState.key_folding} == "safe"', then: 'selected="selected"')}>
+                            <f:translate key="LLL:EXT:rrp_t3toon/Resources/Private/Language/locallang_mod.xlf:playground.key_folding_safe"/>
+                        </option>
+                    </select>
+                </div>
+                <div class="toon-playground__options-group">
+                    <label class="toon-playground__options-label" for="toon-flatten-depth">
+                        <f:translate key="LLL:EXT:rrp_t3toon/Resources/Private/Language/locallang_mod.xlf:playground.option_flatten_depth"/>
+                    </label>
+                    <select class="form-select form-select-sm" id="toon-flatten-depth" name="flatten_depth">
+                        <option value="2" {f:if(condition: '{formState.flatten_depth} == 2', then: 'selected="selected"')}>2</option>
+                        <option value="-1" {f:if(condition: '{formState.flatten_depth} == -1', then: 'selected="selected"')}>
+                            <f:translate key="LLL:EXT:rrp_t3toon/Resources/Private/Language/locallang_mod.xlf:playground.flatten_unlimited"/>
+                        </option>
+                    </select>
+                </div>
+                <div class="toon-playground__options-group toon-playground__options-group--presets">
+                    <span class="toon-playground__options-label">
+                        <f:translate key="LLL:EXT:rrp_t3toon/Resources/Private/Language/locallang_mod.xlf:playground.presets"/>
+                    </span>
+                    <div class="toon-playground__preset-buttons">
+                        <button type="button" class="btn btn-default btn-sm" id="preset-hikes">
+                            <f:translate key="LLL:EXT:rrp_t3toon/Resources/Private/Language/locallang_mod.xlf:playground.preset_hikes"/>
+                        </button>
+                        <button type="button" class="btn btn-default btn-sm" id="preset-typo3">
+                            <f:translate key="LLL:EXT:rrp_t3toon/Resources/Private/Language/locallang_mod.xlf:playground.preset_typo3"/>
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <script type="application/json" id="toon-preset-hikes"><f:format.raw>{presetHikes}</f:format.raw></script>
+            <script type="application/json" id="toon-preset-typo3"><f:format.raw>{presetTypo3}</f:format.raw></script>
+
             <div class="toon-playground__card">
                 <div class="row g-0">
 
@@ -44,6 +113,9 @@
                                 <span class="toon-playground__badge">
                                     <f:translate key="LLL:EXT:rrp_t3toon/Resources/Private/Language/locallang_mod.xlf:playground.badge_input"/>
                                 </span>
+                                <f:if condition="{inputChars}">
+                                    <span class="toon-playground__meta">{inputChars} <f:translate key="LLL:EXT:rrp_t3toon/Resources/Private/Language/locallang_mod.xlf:playground.chars"/></span>
+                                </f:if>
                             </div>
                             <textarea class="toon-playground__editor"
                                       id="toon-input"
@@ -75,6 +147,12 @@
                                 <f:translate key="LLL:EXT:rrp_t3toon/Resources/Private/Language/locallang_mod.xlf:playground.decode"/>
                             </button>
 
+                            <label class="toon-playground__lenient">
+                                <input type="checkbox" name="lenient_decode" value="1"
+                                       {f:if(condition: formState.lenient_decode, then: 'checked="checked"')}/>
+                                <f:translate key="LLL:EXT:rrp_t3toon/Resources/Private/Language/locallang_mod.xlf:playground.lenient_decode"/>
+                            </label>
+
                             <f:if condition="{tokenEstimate}">
                                 <div class="toon-playground__tokens">
                                     <span class="toon-playground__tokens-label">
@@ -92,6 +170,14 @@
                                 <label for="toon-output" class="toon-playground__label">
                                     <f:translate key="LLL:EXT:rrp_t3toon/Resources/Private/Language/locallang_mod.xlf:playground.output_label"/>
                                 </label>
+                                <f:if condition="{outputChars}">
+                                    <span class="toon-playground__meta">
+                                        {outputChars} <f:translate key="LLL:EXT:rrp_t3toon/Resources/Private/Language/locallang_mod.xlf:playground.chars"/>
+                                        <f:if condition="{showReduction}">
+                                            · <f:translate key="LLL:EXT:rrp_t3toon/Resources/Private/Language/locallang_mod.xlf:playground.size_reduction" arguments="{0: reductionPercent}"/>
+                                        </f:if>
+                                    </span>
+                                </f:if>
                                 <button type="button" class="btn btn-default btn-sm" id="copy-btn">
                                     <core:icon identifier="actions-clipboard" size="small"/>
                                     <f:translate key="LLL:EXT:rrp_t3toon/Resources/Private/Language/locallang_mod.xlf:playground.copy"/>
@@ -148,6 +234,11 @@
                 <a href="https://github.com/therohanparmar/t3-toon" target="_blank" rel="noopener" class="toon-playground__link">
                     <core:icon identifier="actions-brand-github" size="small"/>
                     <f:translate key="LLL:EXT:rrp_t3toon/Resources/Private/Language/locallang_mod.xlf:playground.github"/>
+                </a>
+                <span class="toon-playground__footer-sep">|</span>
+                <a href="https://toonformat.dev/playground.html" target="_blank" rel="noopener" class="toon-playground__link">
+                    <core:icon identifier="actions-link" size="small"/>
+                    <f:translate key="LLL:EXT:rrp_t3toon/Resources/Private/Language/locallang_mod.xlf:playground.official_playground"/>
                 </a>
                 <span class="toon-playground__footer-sep">|</span>
                 <a href="https://docs.typo3.org/p/rrp/t3-toon/main/en-us/" target="_blank" rel="noopener" class="toon-playground__link">

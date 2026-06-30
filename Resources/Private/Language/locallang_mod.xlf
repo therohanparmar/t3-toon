@@ -36,6 +36,9 @@
             <trans-unit id="playground.clear_all">
                 <source>Clear All</source>
             </trans-unit>
+            <trans-unit id="playground.view_logs">
+                <source>View Logs</source>
+            </trans-unit>
             <trans-unit id="playground.badge_input">
                 <source>Input</source>
             </trans-unit>
@@ -78,6 +81,57 @@
             <trans-unit id="playground.error_invalid_json">
                 <source>Invalid JSON input for encode.</source>
             </trans-unit>
+            <trans-unit id="playground.option_delimiter">
+                <source>Delimiter</source>
+            </trans-unit>
+            <trans-unit id="playground.option_indent">
+                <source>Indent</source>
+            </trans-unit>
+            <trans-unit id="playground.option_key_folding">
+                <source>Key folding</source>
+            </trans-unit>
+            <trans-unit id="playground.key_folding_off">
+                <source>Off</source>
+            </trans-unit>
+            <trans-unit id="playground.key_folding_safe">
+                <source>Safe</source>
+            </trans-unit>
+            <trans-unit id="playground.option_flatten_depth">
+                <source>Flatten depth</source>
+            </trans-unit>
+            <trans-unit id="playground.flatten_unlimited">
+                <source>Unlimited</source>
+            </trans-unit>
+            <trans-unit id="playground.presets">
+                <source>Load example</source>
+            </trans-unit>
+            <trans-unit id="playground.preset_hikes">
+                <source>Hikes</source>
+            </trans-unit>
+            <trans-unit id="playground.preset_typo3">
+                <source>TYPO3</source>
+            </trans-unit>
+            <trans-unit id="playground.chars">
+                <source>chars</source>
+            </trans-unit>
+            <trans-unit id="playground.size_reduction">
+                <source>%s%% size reduction vs pretty JSON</source>
+            </trans-unit>
+            <trans-unit id="playground.lenient_decode">
+                <source>Lenient decode</source>
+            </trans-unit>
+            <trans-unit id="playground.official_playground">
+                <source>Official playground</source>
+            </trans-unit>
+            <trans-unit id="optimization_note.title">
+                <source>Why is optimization sometimes negative?</source>
+            </trans-unit>
+            <trans-unit id="optimization_note.body">
+                <source>The optimization % compares the TOON output against minified JSON (not the indented text you paste). TOON saves the most on arrays of uniform records, which collapse into a single table header plus one compact line per row — the more rows, the bigger the saving. Deeply nested data with few or no repeating arrays has nothing to tabularize and can come out slightly larger, showing a negative percentage. This is expected, not an error.</source>
+            </trans-unit>
+            <trans-unit id="optimization_note.close">
+                <source>Dismiss note</source>
+            </trans-unit>
             <trans-unit id="logs.mlang_tabs_tab">
                 <source>TOON Logs</source>
             </trans-unit>
@@ -86,6 +140,9 @@
             </trans-unit>
             <trans-unit id="logs.subtitle">
                 <source>Every successful encode/convert call recorded with input size, output size, and compression ratio.</source>
+            </trans-unit>
+            <trans-unit id="logs.back_to_playground">
+                <source>Back to Playground</source>
             </trans-unit>
             <trans-unit id="logs.filter.legend">
                 <source>Filters</source>

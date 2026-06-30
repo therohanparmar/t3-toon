@@ -45,7 +45,7 @@ Decodes a TOON string to a PHP array. You can assign the result to a variable an
 
 * **toon** (required) — TOON-formatted string to decode
 * **as** (optional) — Variable name to assign the decoded array to; if set, child content is rendered and the variable is available inside
-* **lenient** (optional) — If ``true``, do not coerce scalar types; default: ``false``
+* **lenient** (optional) — If ``true``, decode in lenient (non-strict) mode; default: ``false``
 
 **Examples:**
 
@@ -61,7 +61,7 @@ Decodes a TOON string to a PHP array. You can assign the result to a variable an
        </f:for>
    </toon:decode>
 
-   <!-- Lenient decode (keep "true", "42" as strings) -->
+   <!-- Lenient decode (relaxed strict-mode validation) -->
    <toon:decode toon="{toonString}" as="decoded" lenient="true">
        ...
    </toon:decode>

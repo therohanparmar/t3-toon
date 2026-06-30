@@ -1,31 +1,31 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
-    <file source-language="en" datatype="plaintext" original="EXT:rrp_t3toon/Resources/Private/Language/locallang_be.xlf" date="2026-01-11T11:26:11Z" product-name="rrp_t3toon">
+    <file source-language="en" datatype="plaintext" original="EXT:rrp_t3toon/Resources/Private/Language/locallang_be.xlf" date="2026-06-13T00:00:00Z" product-name="rrp_t3toon">
         <header />
         <body>
             <trans-unit id="settings.enabled">
                 <source>Enabled : Global toggle for the TOON converter. When disabled, encoding operations bypass TOON and return standard JSON instead. Decoding of existing TOON data still works normally.</source>
             </trans-unit>
             <trans-unit id="settings.indent">
-                <source>Indent : Number of spaces per indentation level when encoding TOON (default: 2).</source>
+                <source>Indent : Number of spaces per indentation level when encoding TOON (spec default: 2; must be at least 1).</source>
             </trans-unit>
             <trans-unit id="settings.delimiter">
-                <source>Delimiter : Field delimiter for tabular rows when encoding (comma or tab). Use a single comma "," for default.</source>
+                <source>Delimiter : Document delimiter for inline arrays and tabular rows when encoding: Comma (default), Tab, or Pipe.</source>
             </trans-unit>
-            <trans-unit id="settings.escape_style">
-                <source>Escape Style : Defines how special characters (commas, colons, backslashes, etc.) should be escaped when serializing text values into TOON format.</source>
+            <trans-unit id="settings.key_folding">
+                <source>Key Folding : When set to "Safe", chains of single-key objects are collapsed into dotted paths (e.g. a.b.c: 1) to reduce verbosity. "Off" keeps standard nesting (spec §13.4).</source>
             </trans-unit>
-            <trans-unit id="settings.min_rows_to_tabular">
-                <source>Minimum Rows to Tabular : Determines the minimum number of sequential rows required for an array to be rendered as a tabular block in TOON.</source>
+            <trans-unit id="settings.flatten_depth">
+                <source>Flatten Depth : Maximum number of segments to fold when Key Folding is "Safe". Use -1 for unbounded; values below 2 have no practical folding effect.</source>
             </trans-unit>
-            <trans-unit id="settings.max_preview_items">
-                <source>Maximum Preview Items : Controls how many items are displayed when rendering long tabular arrays or datasets in TOON format.</source>
+            <trans-unit id="settings.strict">
+                <source>Strict Decoding : Enforce strict-mode validation when decoding (array length and row-width counts, indentation multiples, escape and delimiter consistency). Disable for lenient parsing (spec §14).</source>
             </trans-unit>
-            <trans-unit id="settings.coerce_scalar_types">
-                <source>Coerce Scalar Types : When decoding TOON back to JSON/PHP arrays, this setting decides whether textual scalars such as "true", "false", "null", or "42" should be converted to their native PHP types (boolean, null, int).</source>
+            <trans-unit id="settings.expand_paths">
+                <source>Expand Paths : When set to "Safe", unquoted dotted keys are expanded into nested objects on decode (e.g. a.b.c -> {a:{b:{c:...}}}). "Off" keeps dotted keys literal (spec §13.4).</source>
             </trans-unit>
-            <trans-unit id="settings.primitive_array_header">
-                <source>Primitive Array Header : When encoding, emit primitive sequential arrays as a single line [N]: v1,v2,v3 (spec-style). Disabled by default.</source>
+            <trans-unit id="settings.show_default_example">
+                <source>Show Default Example : When enabled, the TOON Playground backend module pre-fills a sample JSON input and its encoded TOON output on first load. Disable to open the Playground with empty fields.</source>
             </trans-unit>
         </body>
     </file>

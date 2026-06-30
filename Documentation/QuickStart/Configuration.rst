@@ -34,63 +34,67 @@ vs off.
 
 ``decode()`` is not affected by this flag.
 
-Escape style
-~~~~~~~~~~~~
-
-:Type: string
-:Default: ``backslash``
-:Description: The style used for escaping special characters in TOON format.
-
-Available options:
-* ``backslash`` — Use backslash escaping (e.g. ``Hello\, world``)
-
-Minimum rows for tabular format
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Indent
+~~~~~~
 
 :Type: integer
 :Default: ``2``
-:Description: Minimum number of rows required before converting arrays to tabular format.
+:Description: Spaces per indentation level when encoding. Must be at least 1 (spec default 2).
 
-When arrays have at least this many items with the same structure, they are
-converted to a more compact tabular format:
+Delimiter
+~~~~~~~~~
+
+:Type: options (comma / tab / pipe)
+:Default: ``comma``
+:Description: Document delimiter used for inline arrays and tabular rows when encoding.
+
+Key folding
+~~~~~~~~~~~
+
+:Type: options (off / safe)
+:Default: ``off``
+:Description: When ``safe``, chains of single-key objects are collapsed into dotted
+   paths to reduce verbosity (spec §13.4):
 
 .. code-block:: text
 
-   items[2]{id,done}:
-     1,false
-     2,true
+   a.b.c: 1
 
-Maximum preview items
-~~~~~~~~~~~~~~~~~~~~
+Flatten depth
+~~~~~~~~~~~~~
 
 :Type: integer
-:Default: ``200``
-:Description: Maximum number of items to preview in nested structures.
+:Default: ``-1`` (unbounded)
+:Description: Maximum number of segments to fold when key folding is ``safe``. Use
+   ``-1`` for unbounded; values below 2 have no practical folding effect.
 
-This prevents extremely large arrays from generating unreadable output.
-
-Coerce scalar types
-~~~~~~~~~~~~~~~~~~
+Strict decoding
+~~~~~~~~~~~~~~~
 
 :Type: boolean
 :Default: ``1`` (enabled)
-:Description: Automatically convert string representations of booleans and numbers
-to their proper types during decoding.
+:Description: Enforce strict-mode validation when decoding — array length and
+   row-width counts, indentation multiples, escape sequences, delimiter
+   consistency, and blank lines inside arrays (spec §14). Disable for lenient
+   parsing. Type coercion of unquoted tokens follows the spec in either mode.
 
-When enabled:
-* ``"true"`` → ``true`` (boolean)
-* ``"false"`` → ``false`` (boolean)
-* ``"123"`` → ``123`` (integer)
-* ``"45.67"`` → ``45.67`` (float)
+Expand paths
+~~~~~~~~~~~~
 
-Programmatic defaults (code)
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+:Type: options (off / safe)
+:Default: ``off``
+:Description: When ``safe``, unquoted dotted keys are expanded into nested objects
+   on decode, e.g. ``a.b.c`` becomes ``{a:{b:{c:...}}}`` (spec §13.4). ``off`` keeps
+   dotted keys literal.
 
-The following options are used by the service with defaults in code when not set in Extension Configuration:
+Show default example
+~~~~~~~~~~~~~~~~~~~~
 
-* **indent** (int, default ``2``) — Spaces per indentation level
-* **delimiter** (string, default ``','``) — Field delimiter for tabular rows (comma or tab)
-* **primitive_array_header** (bool, default ``false``) — Emit primitive arrays as ``[N]: v1,v2,v3`` (spec-style)
+:Type: boolean
+:Default: ``1`` (enabled)
+:Description: When enabled, the :ref:`TOON Playground <backend-module-playground>` pre-fills a
+   sample JSON input and its encoded TOON output on first load. Disable to open the
+   Playground with empty fields.
 
 Per-call options
 ----------------
@@ -105,16 +109,15 @@ Programmatic access
    use RRP\T3Toon\Utility\ToonHelper;
 
    $config = ToonHelper::getConfig();
-   // Returns full config including defaults:
+   // Returns the normalized config used by the spec engine:
    // [
    //     'enabled' => true,
    //     'indent' => 2,
    //     'delimiter' => ',',
-   //     'escape_style' => 'backslash',
-   //     'min_rows_to_tabular' => 2,
-   //     'max_preview_items' => 200,
-   //     'coerce_scalar_types' => true,
-   //     'primitive_array_header' => false,
+   //     'key_folding' => 'off',
+   //     'flatten_depth' => null,
+   //     'strict' => true,
+   //     'expand_paths' => 'off',
    // ]
 
    $merged = ToonHelper::getConfigMerged(['indent' => 4]);

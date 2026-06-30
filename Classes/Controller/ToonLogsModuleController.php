@@ -60,7 +60,7 @@ final class ToonLogsModuleController
         $pagination = new SlidingWindowPagination($paginator, 5);
 
         $formProtection = $this->formProtectionFactory->createFromRequest($request);
-        $routeToken = $formProtection->generateToken('route', 'tools_t3toon_logs');
+        $routeToken = $formProtection->generateToken('route', 'tools_t3toon.logs');
 
         $moduleTemplate->assignMultiple([
             'rows' => $paginator->getPaginatedItems(),
@@ -97,7 +97,7 @@ final class ToonLogsModuleController
 
         $returnUrl = (string) ($parsedBody['returnUrl'] ?? $queryParams['returnUrl'] ?? '');
         if ($returnUrl === '') {
-            $returnUrl = (string) $this->uriBuilder->buildUriFromRoute('tools_t3toon_logs');
+            $returnUrl = (string) $this->uriBuilder->buildUriFromRoute('tools_t3toon.logs');
         }
 
         return new RedirectResponse($returnUrl);

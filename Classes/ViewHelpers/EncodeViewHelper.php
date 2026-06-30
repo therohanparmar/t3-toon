@@ -21,7 +21,7 @@ final class EncodeViewHelper extends AbstractViewHelper
     {
         parent::initializeArguments();
         $this->registerArgument('value', 'mixed', 'Data to encode (array, object, scalar)', true);
-        $this->registerArgument('options', 'string', 'Preset: default, compact, readable, tabular', false, 'default');
+        $this->registerArgument('options', 'string', 'Preset: default, compact, readable, tabular, folded', false, 'default');
     }
 
     public function render(): string
@@ -37,6 +37,7 @@ final class EncodeViewHelper extends AbstractViewHelper
             'compact' => EncodeOptions::compact(),
             'readable' => EncodeOptions::readable(),
             'tabular' => EncodeOptions::tabular(),
+            'folded' => EncodeOptions::folded(),
             default => null,
         };
     }

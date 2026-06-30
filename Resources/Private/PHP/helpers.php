@@ -27,14 +27,14 @@ if (!function_exists('toon')) {
 
 if (!function_exists('toon_decode')) {
     /**
-     * Decode a TOON string to a PHP array.
+     * Decode a TOON string to native PHP values (objects -> associative arrays).
      *
      * @param string $toon TOON-formatted string
      * @param DecodeOptions|null $options Optional decoding options; null = extension config
-     * @return array Decoded associative array
+     * @return mixed Decoded value (associative array, list, scalar, or null)
      * @throws \RRP\T3Toon\Exception\ToonDecodeException When the TOON input is malformed
      */
-    function toon_decode(string $toon, ?DecodeOptions $options = null): array
+    function toon_decode(string $toon, ?DecodeOptions $options = null): mixed
     {
         return Toon::decodeStatic($toon, $options);
     }
@@ -42,7 +42,7 @@ if (!function_exists('toon_decode')) {
 
 if (!function_exists('toon_compact')) {
     /**
-     * Encode to TOON with compact options (indent 0, comma delimiter).
+     * Encode to TOON with compact options (indent 2, comma delimiter).
      *
      * @param mixed $value Data to encode
      * @return string TOON string
@@ -68,13 +68,14 @@ if (!function_exists('toon_readable')) {
 
 if (!function_exists('toon_decode_lenient')) {
     /**
-     * Decode TOON without coercing scalar types (keep "true", "42" as strings).
+     * Decode TOON in lenient (non-strict) mode: relaxes count, indentation, and
+     * blank-line validation. Type coercion of unquoted tokens still follows the spec.
      *
      * @param string $toon TOON string
-     * @return array Decoded array
+     * @return mixed Decoded value
      * @throws \RRP\T3Toon\Exception\ToonDecodeException When the TOON input is malformed
      */
-    function toon_decode_lenient(string $toon): array
+    function toon_decode_lenient(string $toon): mixed
     {
         return Toon::decodeStatic($toon, DecodeOptions::lenient());
     }

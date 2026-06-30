@@ -32,7 +32,7 @@ Decodes a TOON string to a PHP array.
 
 * **toon** (required, string) — TOON-formatted string to decode
 * **as** (optional, string) — Variable name to assign the decoded array to; if set, child content is rendered and the variable is available inside
-* **lenient** (optional, bool) — If true, do not coerce scalar types; default: false
+* **lenient** (optional, bool) — If true, decode in lenient (non-strict) mode; default: false
 
 **Returns:** If ``as`` is set, the rendered child content; otherwise JSON-encoded decoded array.
 
