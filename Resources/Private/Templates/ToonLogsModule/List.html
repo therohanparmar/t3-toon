@@ -82,19 +82,45 @@
             </div>
         </form>
 
-        <div class="toon-logs__note callout callout-info" id="toon-logs-note" role="note">
-            <div class="toon-logs__note-body">
-                <core:icon identifier="actions-info" size="small"/>
-                <div>
-                    <strong><f:translate key="LLL:EXT:rrp_t3toon/Resources/Private/Language/locallang_mod.xlf:optimization_note.title"/></strong>
-                    <p><f:translate key="LLL:EXT:rrp_t3toon/Resources/Private/Language/locallang_mod.xlf:optimization_note.body"/></p>
+        <f:comment>Core callout markup changed in v13: v12 uses media/media-left/media-body, v13+ uses callout-icon/callout-content.</f:comment>
+        <f:if condition="{typo3MajorVersion} > 12">
+            <f:then>
+                <div class="callout callout-info" id="toon-logs-note" role="note">
+                    <div class="callout-icon">
+                        <span class="icon-emphasized">
+                            <core:icon identifier="actions-info" size="small"/>
+                        </span>
+                    </div>
+                    <div class="callout-content">
+                        <div class="callout-title"><f:translate key="LLL:EXT:rrp_t3toon/Resources/Private/Language/locallang_mod.xlf:optimization_note.title"/></div>
+                        <div class="callout-body"><f:translate key="LLL:EXT:rrp_t3toon/Resources/Private/Language/locallang_mod.xlf:optimization_note.body"/></div>
+                    </div>
+                    <button type="button" class="btn btn-sm btn-borderless ms-auto align-self-start" id="toon-logs-note-close"
+                            aria-label="{f:translate(key: 'LLL:EXT:rrp_t3toon/Resources/Private/Language/locallang_mod.xlf:optimization_note.close')}">
+                        <core:icon identifier="actions-close" size="small"/>
+                    </button>
                 </div>
-            </div>
-            <button type="button" class="toon-logs__note-close" id="toon-logs-note-close"
-                    aria-label="{f:translate(key: 'LLL:EXT:rrp_t3toon/Resources/Private/Language/locallang_mod.xlf:optimization_note.close')}">
-                <core:icon identifier="actions-close" size="small"/>
-            </button>
-        </div>
+            </f:then>
+            <f:else>
+                <div class="callout callout-info" id="toon-logs-note" role="note">
+                    <div class="media">
+                        <div class="media-left">
+                            <span class="icon-emphasized">
+                                <core:icon identifier="actions-info" size="small"/>
+                            </span>
+                        </div>
+                        <div class="media-body">
+                            <button type="button" class="btn btn-sm btn-borderless float-end" id="toon-logs-note-close"
+                                    aria-label="{f:translate(key: 'LLL:EXT:rrp_t3toon/Resources/Private/Language/locallang_mod.xlf:optimization_note.close')}">
+                                <core:icon identifier="actions-close" size="small"/>
+                            </button>
+                            <div class="callout-title"><f:translate key="LLL:EXT:rrp_t3toon/Resources/Private/Language/locallang_mod.xlf:optimization_note.title"/></div>
+                            <div class="callout-body"><f:translate key="LLL:EXT:rrp_t3toon/Resources/Private/Language/locallang_mod.xlf:optimization_note.body"/></div>
+                        </div>
+                    </div>
+                </div>
+            </f:else>
+        </f:if>
 
         <f:if condition="{rows}">
             <f:then>

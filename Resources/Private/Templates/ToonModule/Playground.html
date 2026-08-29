@@ -83,6 +83,25 @@
                         </option>
                     </select>
                 </div>
+                <div class="toon-playground__options-group">
+                    <label class="toon-playground__options-label" for="toon-json-baseline">
+                        <f:translate key="LLL:EXT:rrp_t3toon/Resources/Private/Language/locallang_mod.xlf:playground.option_baseline"/>
+                    </label>
+                    <select class="form-select form-select-sm" id="toon-json-baseline" name="json_baseline">
+                        <option value="pretty2" {f:if(condition: '{formState.json_baseline} == "pretty2"', then: 'selected="selected"')}>
+                            <f:translate key="LLL:EXT:rrp_t3toon/Resources/Private/Language/locallang_mod.xlf:playground.baseline_pretty2"/>
+                        </option>
+                        <option value="pretty4" {f:if(condition: '{formState.json_baseline} == "pretty4"', then: 'selected="selected"')}>
+                            <f:translate key="LLL:EXT:rrp_t3toon/Resources/Private/Language/locallang_mod.xlf:playground.baseline_pretty4"/>
+                        </option>
+                        <option value="tabs" {f:if(condition: '{formState.json_baseline} == "tabs"', then: 'selected="selected"')}>
+                            <f:translate key="LLL:EXT:rrp_t3toon/Resources/Private/Language/locallang_mod.xlf:playground.baseline_tabs"/>
+                        </option>
+                        <option value="minified" {f:if(condition: '{formState.json_baseline} == "minified"', then: 'selected="selected"')}>
+                            <f:translate key="LLL:EXT:rrp_t3toon/Resources/Private/Language/locallang_mod.xlf:playground.baseline_minified"/>
+                        </option>
+                    </select>
+                </div>
                 <div class="toon-playground__options-group toon-playground__options-group--presets">
                     <span class="toon-playground__options-label">
                         <f:translate key="LLL:EXT:rrp_t3toon/Resources/Private/Language/locallang_mod.xlf:playground.presets"/>
@@ -174,7 +193,7 @@
                                     <span class="toon-playground__meta">
                                         {outputChars} <f:translate key="LLL:EXT:rrp_t3toon/Resources/Private/Language/locallang_mod.xlf:playground.chars"/>
                                         <f:if condition="{showReduction}">
-                                            · <f:translate key="LLL:EXT:rrp_t3toon/Resources/Private/Language/locallang_mod.xlf:playground.size_reduction" arguments="{0: reductionPercent}"/>
+                                            · <f:translate key="LLL:EXT:rrp_t3toon/Resources/Private/Language/locallang_mod.xlf:playground.size_reduction" arguments="{0: reductionPercent, 1: baselineLabel}"/>
                                         </f:if>
                                     </span>
                                 </f:if>
@@ -227,7 +246,7 @@
         <footer class="toon-playground__footer">
             <span>
                 Made with 🧡 for the TYPO3 Developer by
-                <a href="https://www.linkedin.com/in/rohanrparmar" target="_blank" rel="noopener">Rohan</a> and
+                <a href="https://www.linkedin.com/in/therohanparmar" target="_blank" rel="noopener">Rohan</a> and
                 <a href="https://www.linkedin.com/in/himanshu-ramavat/" target="_blank" rel="noopener">Himanshu</a>
             </span>
             <div class="toon-playground__footer-links">

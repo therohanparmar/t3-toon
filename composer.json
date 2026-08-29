@@ -35,7 +35,7 @@
     "support": {
         "issues": "https://github.com/therohanparmar/t3-toon/issues",
         "source": "https://github.com/therohanparmar/t3-toon",
-        "docs": "https://docs.typo3.org/p/rrp/t3-toon/4.0/en-us/"
+        "docs": "https://docs.typo3.org/p/rrp/t3-toon/4.1/en-us/"
     },
     "require": {
         "php": "^8.1",
@@ -64,7 +64,7 @@
             "Package": {
                 "providesPackages": []
             },
-            "version": "4.0.0"
+            "version": "4.1.0"
         }
     },
     "config": {

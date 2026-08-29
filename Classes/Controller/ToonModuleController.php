@@ -86,7 +86,7 @@ JSON;
                             $encodeOptions = $this->buildEncodeOptions($formState, $mode);
                             $output = $toon->encode($input, $encodeOptions);
                             $tokenEstimate = $toon->estimateTokens($output);
-                            $sizeStats = $this->computeEncodeSizeStats($input, $output);
+                            $sizeStats = $this->computeEncodeSizeStats($input, $output, $formState['json_baseline']);
                         } else {
                             $error = $this->getLanguageService()->sL(
                                 'LLL:EXT:rrp_t3toon/Resources/Private/Language/locallang_mod.xlf:playground.error_invalid_json'
@@ -114,7 +114,7 @@ JSON;
                 $toon = GeneralUtility::makeInstance(Toon::class);
                 $output = $toon->encode($input, $this->buildEncodeOptions($formState, 'encode'));
                 $tokenEstimate = $toon->estimateTokens($output);
-                $sizeStats = $this->computeEncodeSizeStats($input, $output);
+                $sizeStats = $this->computeEncodeSizeStats($input, $output, $formState['json_baseline']);
             } catch (\Throwable) {
                 $output = '';
             }
@@ -135,6 +135,9 @@ JSON;
             'outputChars' => $sizeStats['outputChars'],
             'reductionPercent' => $sizeStats['reductionPercent'],
             'showReduction' => $sizeStats['reductionPercent'] !== null,
+            'baselineLabel' => $this->getLanguageService()->sL(
+                'LLL:EXT:rrp_t3toon/Resources/Private/Language/locallang_mod.xlf:playground.baseline_' . $formState['json_baseline']
+            ),
             'presetHikes' => self::HIKES_EXAMPLE,
             'presetTypo3' => self::TYPO3_EXAMPLE,
         ]);
@@ -148,7 +151,8 @@ JSON;
      *     delimiter: string,
      *     key_folding: string,
      *     flatten_depth: int,
-     *     lenient_decode: bool
+     *     lenient_decode: bool,
+     *     json_baseline: string
      * }
      */
     private function defaultFormState(): array
@@ -160,7 +164,9 @@ JSON;
             'delimiter' => $this->delimiterTokenFromChar((string) $config['delimiter']),
             'key_folding' => (string) $config['key_folding'],
             'flatten_depth' => $flatten === null ? -1 : (int) $flatten,
-            'lenient_decode' => false,
+            // "strict" decoding disabled in the extension settings means lenient by default.
+            'lenient_decode' => !$config['strict'],
+            'json_baseline' => (string) $config['json_baseline'],
         ];
     }
 
@@ -171,18 +177,21 @@ JSON;
      *     delimiter: string,
      *     key_folding: string,
      *     flatten_depth: int,
-     *     lenient_decode: bool
+     *     lenient_decode: bool,
+     *     json_baseline: string
      * }
      */
     private function formStateFromRequest(array $body): array
     {
         $flattenRaw = $body['flatten_depth'] ?? -1;
+        $baseline = (string) ($body['json_baseline'] ?? 'minified');
         return [
             'indent' => max(1, (int) ($body['indent'] ?? 2)),
             'delimiter' => (string) ($body['delimiter'] ?? 'comma'),
             'key_folding' => ($body['key_folding'] ?? 'off') === 'safe' ? 'safe' : 'off',
             'flatten_depth' => (int) $flattenRaw,
             'lenient_decode' => !empty($body['lenient_decode']),
+            'json_baseline' => in_array($baseline, ['minified', 'pretty2', 'pretty4', 'tabs'], true) ? $baseline : 'minified',
         ];
     }
 
@@ -192,7 +201,8 @@ JSON;
      *     delimiter: string,
      *     key_folding: string,
      *     flatten_depth: int,
-     *     lenient_decode: bool
+     *     lenient_decode: bool,
+     *     json_baseline: string
      * } $formState
      */
     private function buildEncodeOptions(array $formState, string $mode): ?EncodeOptions
@@ -219,9 +229,13 @@ JSON;
     }
 
     /**
+     * Size stats comparing the TOON output against a re-serialized JSON baseline
+     * ("minified", "pretty2", "pretty4" or "tabs") rather than the input as pasted,
+     * so the reduction percentage is independent of the input's incidental formatting.
+     *
      * @return array{inputChars: int, outputChars: int, reductionPercent: float|null}
      */
-    private function computeEncodeSizeStats(string $input, string $output): array
+    private function computeEncodeSizeStats(string $input, string $output, string $baseline): array
     {
         $inputChars = strlen($input);
         $outputChars = strlen($output);
@@ -229,9 +243,9 @@ JSON;
 
         $decoded = json_decode($input, true);
         if (json_last_error() === JSON_ERROR_NONE) {
-            $baseline = json_encode($decoded, JSON_PRETTY_PRINT | JSON_UNESCAPED_UNICODE);
-            if (is_string($baseline)) {
-                $baselineChars = strlen($baseline);
+            $baselineJson = $this->serializeBaseline($decoded, $baseline);
+            if (is_string($baselineJson)) {
+                $baselineChars = strlen($baselineJson);
                 if ($baselineChars > 0) {
                     $reduction = round((($baselineChars - $outputChars) / $baselineChars) * 100, 1);
                 }
@@ -243,6 +257,32 @@ JSON;
             'outputChars' => $outputChars,
             'reductionPercent' => $reduction,
         ];
+    }
+
+    /**
+     * Serialize data as the selected JSON baseline variant.
+     */
+    private function serializeBaseline(mixed $decoded, string $baseline): ?string
+    {
+        $flags = JSON_UNESCAPED_UNICODE;
+        if ($baseline !== 'minified') {
+            $flags |= JSON_PRETTY_PRINT;
+        }
+        $json = json_encode($decoded, $flags);
+        if (!is_string($json)) {
+            return null;
+        }
+        // PHP's JSON_PRETTY_PRINT always indents with 4 spaces; rewrite the
+        // indentation for the 2-space and tab variants.
+        if ($baseline === 'pretty2' || $baseline === 'tabs') {
+            $unit = $baseline === 'tabs' ? "\t" : '  ';
+            $json = (string) preg_replace_callback(
+                '/^(?: {4})+/m',
+                static fn(array $m): string => str_repeat($unit, intdiv(strlen($m[0]), 4)),
+                $json
+            );
+        }
+        return $json;
     }
 
     private function delimiterTokenFromChar(string $delimiter): string

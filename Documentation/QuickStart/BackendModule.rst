@@ -29,13 +29,14 @@ Features
 --------
 
 * **Input area** — Paste JSON (for encoding) or TOON text (for decoding).
-* **Encode options** — Delimiter (comma / tab / pipe), indent, key folding, and flatten depth (aligned with the `official TOON playground <https://toonformat.dev/playground.html>`_).
+* **Encode options** — Delimiter (comma / tab / pipe), indent, key folding, flatten depth, and JSON baseline (aligned with the `official TOON playground <https://toonformat.dev/playground.html>`_). Defaults come from the extension configuration.
+* **JSON baseline** — The JSON formatting the size-reduction figure is measured against, mirroring the official playground: Pretty (2 spaces), Pretty (4 spaces), Pretty (tabs), or Compact (default — the fairest comparison). The default is configurable via the ``json_baseline`` extension setting.
 * **Load example** — **Hikes** (official mixed-structure demo) or **TYPO3** (headless site sample).
 * **Encode to TOON** — Converts pasted JSON using the selected encode options.
 * **Decode from TOON** — Converts pasted TOON to pretty-printed JSON (strict by default).
-* **Lenient decode** — Optional checkbox to relax strict-mode validation (counts, indentation, blank lines).
+* **Lenient decode** — Optional checkbox to relax strict-mode validation (counts, indentation, blank lines). Pre-checked when the ``strict`` extension setting is disabled.
 * **Encode (compact)** — Same as encode with compact preset (indent 2, comma).
-* **Output area** — Result plus character counts; after encode, size reduction vs pretty JSON is shown when applicable.
+* **Output area** — Result plus character counts; after encode, the size reduction vs the selected JSON baseline is shown when applicable.
 * **Estimated tokens** — Approximate token count for the result when available.
 * **Error messages** — Invalid JSON or malformed TOON surfaces a clear error.
 * **Default example** — On first load the **Hikes** sample and its TOON output are pre-filled. Disable via ``show_default_example``; **Clear all** empties both fields.

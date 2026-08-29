@@ -6,6 +6,18 @@ services:
 
   RRP\T3Toon\:
     resource: '../Classes/*'
+    # Value objects, exceptions and the spec engine are created with `new`
+    # (or via named-argument constructors) and must not be container services.
+    exclude:
+      - '../Classes/Domain/Model/*'
+      - '../Classes/Exception/*'
+      - '../Classes/Spec/*'
+
+  # Public so third-party code following the documented API
+  # (GeneralUtility::makeInstance(Toon::class)) receives the container-built
+  # instance with all dependencies injected, instead of a fallback instance.
+  RRP\T3Toon\Service\Toon:
+    public: true
 
   RRP\T3Toon\Controller\:
     resource: '../Classes/Controller/*'

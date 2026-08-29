@@ -17,6 +17,7 @@ use TYPO3\CMS\Core\Messaging\FlashMessageService;
 use TYPO3\CMS\Core\Page\PageRenderer;
 use TYPO3\CMS\Core\Pagination\ArrayPaginator;
 use TYPO3\CMS\Core\Pagination\SlidingWindowPagination;
+use TYPO3\CMS\Core\Information\Typo3Version;
 use TYPO3\CMS\Core\Type\ContextualFeedbackSeverity;
 use TYPO3\CMS\Core\Utility\GeneralUtility;
 
@@ -73,6 +74,8 @@ final class ToonLogsModuleController
             'perPageOptions' => self::ALLOWED_PER_PAGE,
             'returnUrl' => (string) $request->getUri(),
             'routeToken' => $routeToken,
+            // The core callout markup changed in v13 (media/media-body -> callout-icon/callout-content).
+            'typo3MajorVersion' => GeneralUtility::makeInstance(Typo3Version::class)->getMajorVersion(),
         ]);
 
         return $moduleTemplate->renderResponse('ToonLogsModule/List');

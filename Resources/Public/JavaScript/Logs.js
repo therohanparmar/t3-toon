@@ -131,8 +131,10 @@
     var noteCloseBtn = document.getElementById('toon-logs-note-close');
     if (noteCloseBtn) {
       noteCloseBtn.addEventListener('click', function () {
+        // d-none instead of [hidden]: .callout sets display:flex, which
+        // would override the UA's [hidden] { display: none } rule.
         var note = document.getElementById('toon-logs-note');
-        if (note) note.setAttribute('hidden', '');
+        if (note) note.classList.add('d-none');
       });
     }
 

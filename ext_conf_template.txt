@@ -21,3 +21,6 @@ expand_paths = off
 
 # cat=playground//80; type=boolean; label=LLL:EXT:rrp_t3toon/Resources/Private/Language/locallang_be.xlf:settings.show_default_example;
 show_default_example = 1
+
+# cat=playground//90; type=options[Compact=minified,Pretty (2 spaces)=pretty2,Pretty (4 spaces)=pretty4,Pretty (tabs)=tabs]; label=LLL:EXT:rrp_t3toon/Resources/Private/Language/locallang_be.xlf:settings.json_baseline;
+json_baseline = minified

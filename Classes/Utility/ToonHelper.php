@@ -31,6 +31,7 @@ class ToonHelper
             'strict' => (bool) ($settings['strict'] ?? true),
             'expand_paths' => ($settings['expand_paths'] ?? 'off') === 'safe' ? 'safe' : 'off',
             'show_default_example' => (bool) ($settings['show_default_example'] ?? true),
+            'json_baseline' => self::normalizeJsonBaseline((string) ($settings['json_baseline'] ?? 'minified')),
         ];
     }
 
@@ -53,6 +54,14 @@ class ToonHelper
             'pipe', '|' => '|',
             default => ',',
         };
+    }
+
+    /**
+     * Restrict the JSON baseline setting to the supported tokens.
+     */
+    private static function normalizeJsonBaseline(string $value): string
+    {
+        return in_array($value, ['minified', 'pretty2', 'pretty4', 'tabs'], true) ? $value : 'minified';
     }
 
     /**

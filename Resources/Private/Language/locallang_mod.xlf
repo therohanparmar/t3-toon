@@ -115,7 +115,22 @@
                 <source>chars</source>
             </trans-unit>
             <trans-unit id="playground.size_reduction">
-                <source>%s%% size reduction vs pretty JSON</source>
+                <source>%1$s%% size reduction vs %2$s JSON</source>
+            </trans-unit>
+            <trans-unit id="playground.option_baseline">
+                <source>JSON baseline</source>
+            </trans-unit>
+            <trans-unit id="playground.baseline_minified">
+                <source>Compact</source>
+            </trans-unit>
+            <trans-unit id="playground.baseline_pretty2">
+                <source>Pretty (2 spaces)</source>
+            </trans-unit>
+            <trans-unit id="playground.baseline_pretty4">
+                <source>Pretty (4 spaces)</source>
+            </trans-unit>
+            <trans-unit id="playground.baseline_tabs">
+                <source>Pretty (tabs)</source>
             </trans-unit>
             <trans-unit id="playground.lenient_decode">
                 <source>Lenient decode</source>

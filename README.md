@@ -3,7 +3,7 @@
 ### Token-Optimized Object Notation for AI & LLM Workflows
 
 <p align="center">
-  <img src="https://img.shields.io/badge/Version-4.0.0-blue" alt="Version 4.0.0">
+  <img src="https://img.shields.io/badge/Version-4.1.0-blue" alt="Version 4.1.0">
   <img src="https://img.shields.io/github/license/therohanparmar/t3-toon" alt="License">
   <img src="https://img.shields.io/badge/TYPO3-12,13,14-orange" alt="TYPO3 12-14">
   <img src="https://img.shields.io/badge/PHP-8.1%2B-red" alt="PHP 8.1+">
@@ -242,7 +242,7 @@ Full documentation, configuration, and advanced usage are available here:
 
 | TYPO3       | PHP   | Extension Version | TOON Spec |
 | ----------- | ----- | ----------------- | --------- |
-| 12.x – 14.x | ≥ 8.1 | v4.0.0            | v3.3      |
+| 12.x – 14.x | ≥ 8.1 | v4.1.0            | v3.3      |
 
 ## ✅ Specification compliance
 
@@ -272,7 +272,7 @@ v3.x emitted a TYPO3-specific “TOON-inspired” format. v4.0 emits **standards
 
 ## 👨‍💻 Authors
 
-- **[Rohan Parmar](https://www.linkedin.com/in/rohanrparmar)**
+- **[Rohan Parmar](https://www.linkedin.com/in/therohanparmar)**
 - **[Himanshu Ramavat](https://www.linkedin.com/in/himanshu-ramavat/)**
 
 ---

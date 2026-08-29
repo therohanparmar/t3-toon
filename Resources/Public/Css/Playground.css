@@ -622,48 +622,6 @@ html[data-bs-theme="dark"] .toon-playground {
 }
 
 /* ─── Logs module ──────────────────────────────────────── */
-.toon-logs__note {
-  display: flex;
-  align-items: flex-start;
-  justify-content: space-between;
-  gap: 1rem;
-  padding: 0.75rem 1rem;
-  margin-bottom: 1.25rem;
-  background: var(--toon-accent-soft);
-  border: 1px solid var(--toon-border);
-  border-left: 4px solid var(--toon-accent);
-  border-radius: var(--toon-radius);
-}
-
-.toon-logs__note[hidden] {
-  display: none;
-}
-
-.toon-logs__note-body {
-  display: flex;
-  align-items: flex-start;
-  gap: 0.5rem;
-}
-
-.toon-logs__note-body p {
-  margin: 0.25rem 0 0;
-  color: var(--toon-text-muted);
-}
-
-.toon-logs__note-close {
-  flex-shrink: 0;
-  background: transparent;
-  border: 0;
-  padding: 0.25rem;
-  cursor: pointer;
-  color: var(--toon-text-muted);
-  line-height: 1;
-}
-
-.toon-logs__note-close:hover {
-  color: var(--toon-text);
-}
-
 .toon-logs__filters {
   display: flex;
   flex-wrap: wrap;

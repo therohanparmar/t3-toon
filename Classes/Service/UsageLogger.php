@@ -52,7 +52,15 @@ final class UsageLogger
     private function sizeOf(mixed $value): int
     {
         if (is_string($value)) {
-            return mb_strlen($value, '8bit');
+            // Re-serialize valid JSON strings so the logged optimization % is
+            // always measured against a minified baseline, independent of how
+            // the caller happened to format the input (pretty vs compact).
+            $decoded = json_decode($value, true);
+            if (json_last_error() === JSON_ERROR_NONE) {
+                $value = $decoded;
+            } else {
+                return mb_strlen($value, '8bit');
+            }
         }
         $json = json_encode($value, JSON_UNESCAPED_UNICODE | JSON_PARTIAL_OUTPUT_ON_ERROR);
         return is_string($json) ? mb_strlen($json, '8bit') : 0;

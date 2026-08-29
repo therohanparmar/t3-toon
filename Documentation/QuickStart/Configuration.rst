@@ -96,6 +96,20 @@ Show default example
    sample JSON input and its encoded TOON output on first load. Disable to open the
    Playground with empty fields.
 
+JSON baseline
+~~~~~~~~~~~~~
+
+:Type: options (minified / pretty2 / pretty4 / tabs)
+:Default: ``minified``
+:Description: Default JSON formatting the :ref:`TOON Playground <backend-module-playground>`
+   compares TOON output against when computing the size-reduction percentage.
+   The options mirror the official TOON playground: Compact (``minified``),
+   Pretty with 2 spaces, 4 spaces, or tabs. Compact is the fairest comparison
+   (what you would actually send to an LLM); the pretty variants include
+   indentation whitespace and therefore show larger savings. The optimization
+   %% stored in usage logs always uses the compact baseline so logged values
+   stay comparable over time.
+
 Per-call options
 ----------------
 
@@ -118,6 +132,8 @@ Programmatic access
    //     'flatten_depth' => null,
    //     'strict' => true,
    //     'expand_paths' => 'off',
+   //     'show_default_example' => true,
+   //     'json_baseline' => 'minified', // or 'pretty2' | 'pretty4' | 'tabs'
    // ]
 
    $merged = ToonHelper::getConfigMerged(['indent' => 4]);
