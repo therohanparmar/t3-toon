@@ -151,9 +151,29 @@
         <source>chars</source>
         <target state="final">znaki</target>
       </trans-unit>
-      <trans-unit id="playground.size_reduction" approved="yes">
-        <source>%s%% size reduction vs pretty JSON</source>
-        <target state="final">%s%% redukcja rozmiaru w porównaniu do czytelnego JSON</target>
+      <trans-unit id="playground.size_reduction">
+        <source>%1$s%% size reduction vs %2$s JSON</source>
+        <target state="needs-translation">%1$s%% size reduction vs %2$s JSON</target>
+      </trans-unit>
+      <trans-unit id="playground.option_baseline">
+        <source>JSON baseline</source>
+        <target state="needs-translation">JSON baseline</target>
+      </trans-unit>
+      <trans-unit id="playground.baseline_minified">
+        <source>Compact</source>
+        <target state="needs-translation">Compact</target>
+      </trans-unit>
+      <trans-unit id="playground.baseline_pretty2">
+        <source>Pretty (2 spaces)</source>
+        <target state="needs-translation">Pretty (2 spaces)</target>
+      </trans-unit>
+      <trans-unit id="playground.baseline_pretty4">
+        <source>Pretty (4 spaces)</source>
+        <target state="needs-translation">Pretty (4 spaces)</target>
+      </trans-unit>
+      <trans-unit id="playground.baseline_tabs">
+        <source>Pretty (tabs)</source>
+        <target state="needs-translation">Pretty (tabs)</target>
       </trans-unit>
       <trans-unit id="playground.lenient_decode" approved="yes">
         <source>Lenient decode</source>
