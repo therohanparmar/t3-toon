@@ -35,6 +35,10 @@
         <source>Show Default Example : When enabled, the TOON Playground backend module pre-fills a sample JSON input and its encoded TOON output on first load. Disable to open the Playground with empty fields.</source>
         <target state="final">Mostra l'exemple per defecte : Quan està activat, el mòdul de backend TOON Playground omple prèviament una entrada JSON d'exemple i la seva sortida TOON codificada en la primera càrrega. Desactiveu-lo per obrir el Playground amb els camps buits.</target>
       </trans-unit>
+      <trans-unit id="settings.json_baseline">
+        <source>JSON Baseline : Default JSON formatting the Playground compares TOON output against when computing the size reduction. "Compact" (minified) is the fairest comparison (what you would actually send to an LLM); the pretty variants include indentation whitespace and show larger savings. Matches the baseline options of the official TOON playground. Note: the optimization %% stored in usage logs always uses the compact baseline so logged values stay comparable over time.</source>
+        <target state="needs-translation">JSON Baseline : Default JSON formatting the Playground compares TOON output against when computing the size reduction. "Compact" (minified) is the fairest comparison (what you would actually send to an LLM); the pretty variants include indentation whitespace and show larger savings. Matches the baseline options of the official TOON playground. Note: the optimization %% stored in usage logs always uses the compact baseline so logged values stay comparable over time.</target>
+      </trans-unit>
     </body>
   </file>
 </xliff>
