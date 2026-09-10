@@ -1,0 +1,368 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xliff xmlns="urn:oasis:names:tc:xliff:document:1.2" version="1.2">
+  <file source-language="en" datatype="plaintext" original="EXT:rrp_t3toon/Resources/Private/Language/locallang_mod.xlf" product-name="rrp_t3toon" target-language="pt-PT">
+    <header/>
+    <body>
+      <trans-unit id="mlang_tabs_tab" approved="yes">
+        <source>TOON Playground</source>
+        <target state="final">Playground FERRO</target>
+      </trans-unit>
+      <trans-unit id="playground.title" approved="yes">
+        <source>TOON Playground</source>
+        <target state="final">Playground FERRO</target>
+      </trans-unit>
+      <trans-unit id="playground.input_label" approved="yes">
+        <source>Input (JSON for encode, TOON for decode)</source>
+        <target state="final">Entrada (JSON para codificação, TOON para decodificar)</target>
+      </trans-unit>
+      <trans-unit id="playground.output_label" approved="yes">
+        <source>Output</source>
+        <target state="final">Saída</target>
+      </trans-unit>
+      <trans-unit id="playground.encode" approved="yes">
+        <source>Encode to TOON</source>
+        <target state="final">Codificar para TOON</target>
+      </trans-unit>
+      <trans-unit id="playground.decode" approved="yes">
+        <source>Decode from TOON</source>
+        <target state="final">Decodificar da TOON</target>
+      </trans-unit>
+      <trans-unit id="playground.encode_compact" approved="yes">
+        <source>Encode (compact)</source>
+        <target state="final">Codificar (compact)</target>
+      </trans-unit>
+      <trans-unit id="playground.tokens" approved="yes">
+        <source>Estimated tokens: %d</source>
+        <target state="final">Tokens estimados: %d</target>
+      </trans-unit>
+      <trans-unit id="playground.footer_made_with" approved="yes">
+        <source>Made with 🧡 for the TYPO3 Developer by Rohan and Himanshu</source>
+        <target state="final">Feito com 🧡 para o desenvolvedor TYPO3 de Rohan e Himanshu</target>
+      </trans-unit>
+      <trans-unit id="playground.subtitle" approved="yes">
+        <source>Encode JSON to TOON or decode strings instantly.</source>
+        <target state="final">Codifique JSON para TOON ou decodificar frases instantaneamente.</target>
+      </trans-unit>
+      <trans-unit id="playground.clear_all" approved="yes">
+        <source>Clear All</source>
+        <target state="final">Limpar Tudo</target>
+      </trans-unit>
+      <trans-unit id="playground.view_logs" approved="yes">
+        <source>View Logs</source>
+        <target state="final">Visualizar registros</target>
+      </trans-unit>
+      <trans-unit id="playground.badge_input" approved="yes">
+        <source>Input</source>
+        <target state="final">Input</target>
+      </trans-unit>
+      <trans-unit id="playground.or" approved="yes">
+        <source>OR</source>
+        <target state="final">ou</target>
+      </trans-unit>
+      <trans-unit id="playground.estimated_tokens_label" approved="yes">
+        <source>Estimated tokens</source>
+        <target state="final">Tokens estimados</target>
+      </trans-unit>
+      <trans-unit id="playground.copy" approved="yes">
+        <source>Copy</source>
+        <target state="final">copiar</target>
+      </trans-unit>
+      <trans-unit id="playground.copied_to_clipboard" approved="yes">
+        <source>Copied to clipboard!</source>
+        <target state="final">Copiado para o clipboard!</target>
+      </trans-unit>
+      <trans-unit id="playground.github" approved="yes">
+        <source>GitHub</source>
+        <target state="final">GitHub</target>
+      </trans-unit>
+      <trans-unit id="playground.documentation" approved="yes">
+        <source>Documentation</source>
+        <target state="final">Documentação</target>
+      </trans-unit>
+      <trans-unit id="playground.clear_confirm" approved="yes">
+        <source>Clear both input and output?</source>
+        <target state="final">Limpar entrada e saída?</target>
+      </trans-unit>
+      <trans-unit id="playground.clear_confirm_title" approved="yes">
+        <source>Clear All</source>
+        <target state="final">Limpar Tudo</target>
+      </trans-unit>
+      <trans-unit id="playground.clear_confirm_body" approved="yes">
+        <source>This will clear both the input and output fields. This action cannot be undone.</source>
+        <target state="final">Isto irá limpar os campos de entrada e saída. Esta ação não pode ser desfeita.</target>
+      </trans-unit>
+      <trans-unit id="playground.cancel" approved="yes">
+        <source>Cancel</source>
+        <target state="final">cancelar</target>
+      </trans-unit>
+      <trans-unit id="playground.confirm_clear" approved="yes">
+        <source>Yes, Clear All</source>
+        <target state="final">Sim, Limpar Tudo</target>
+      </trans-unit>
+      <trans-unit id="playground.placeholder" approved="yes">
+        <source>{"name": "TOON", "items": [1, 2, 3]}</source>
+        <target state="final">{"name": "TODO", "itens": [1, 2, 3]}</target>
+      </trans-unit>
+      <trans-unit id="playground.error_invalid_json" approved="yes">
+        <source>Invalid JSON input for encode.</source>
+        <target state="final">Entrada JSON inválida para a codificação.</target>
+      </trans-unit>
+      <trans-unit id="playground.option_delimiter" approved="yes">
+        <source>Delimiter</source>
+        <target state="final">Delimitador</target>
+      </trans-unit>
+      <trans-unit id="playground.option_indent" approved="yes">
+        <source>Indent</source>
+        <target state="final">Indentação</target>
+      </trans-unit>
+      <trans-unit id="playground.option_key_folding" approved="yes">
+        <source>Key folding</source>
+        <target state="final">Dobramento de chaves</target>
+      </trans-unit>
+      <trans-unit id="playground.key_folding_off" approved="yes">
+        <source>Off</source>
+        <target state="final">Desligado</target>
+      </trans-unit>
+      <trans-unit id="playground.key_folding_safe" approved="yes">
+        <source>Safe</source>
+        <target state="final">Seguro</target>
+      </trans-unit>
+      <trans-unit id="playground.option_flatten_depth" approved="yes">
+        <source>Flatten depth</source>
+        <target state="final">Profundidade de achatamento</target>
+      </trans-unit>
+      <trans-unit id="playground.flatten_unlimited" approved="yes">
+        <source>Unlimited</source>
+        <target state="final">Ilimitado</target>
+      </trans-unit>
+      <trans-unit id="playground.presets" approved="yes">
+        <source>Load example</source>
+        <target state="final">Carregar exemplo</target>
+      </trans-unit>
+      <trans-unit id="playground.preset_hikes" approved="yes">
+        <source>Hikes</source>
+        <target state="final">Caminhadas</target>
+      </trans-unit>
+      <trans-unit id="playground.preset_typo3" approved="yes">
+        <source>TYPO3</source>
+        <target state="final">TYPO3</target>
+      </trans-unit>
+      <trans-unit id="playground.chars" approved="yes">
+        <source>chars</source>
+        <target state="final">carateres</target>
+      </trans-unit>
+      <trans-unit id="playground.size_reduction">
+        <source>%1$s%% size reduction vs %2$s JSON</source>
+        <target state="needs-translation">%1$s%% size reduction vs %2$s JSON</target>
+      </trans-unit>
+      <trans-unit id="playground.option_baseline">
+        <source>JSON baseline</source>
+        <target state="needs-translation">JSON baseline</target>
+      </trans-unit>
+      <trans-unit id="playground.baseline_minified">
+        <source>Compact</source>
+        <target state="needs-translation">Compact</target>
+      </trans-unit>
+      <trans-unit id="playground.baseline_pretty2">
+        <source>Pretty (2 spaces)</source>
+        <target state="needs-translation">Pretty (2 spaces)</target>
+      </trans-unit>
+      <trans-unit id="playground.baseline_pretty4">
+        <source>Pretty (4 spaces)</source>
+        <target state="needs-translation">Pretty (4 spaces)</target>
+      </trans-unit>
+      <trans-unit id="playground.baseline_tabs">
+        <source>Pretty (tabs)</source>
+        <target state="needs-translation">Pretty (tabs)</target>
+      </trans-unit>
+      <trans-unit id="playground.lenient_decode" approved="yes">
+        <source>Lenient decode</source>
+        <target state="final">Descodificação permissiva</target>
+      </trans-unit>
+      <trans-unit id="playground.official_playground" approved="yes">
+        <source>Official playground</source>
+        <target state="final">Playground oficial</target>
+      </trans-unit>
+      <trans-unit id="optimization_note.title" approved="yes">
+        <source>Why is optimization sometimes negative?</source>
+        <target state="final">Por que a otimização é por vezes negativa?</target>
+      </trans-unit>
+      <trans-unit id="optimization_note.body" approved="yes">
+        <source>The optimization % compares the TOON output against minified JSON (not the indented text you paste). TOON saves the most on arrays of uniform records, which collapse into a single table header plus one compact line per row — the more rows, the bigger the saving. Deeply nested data with few or no repeating arrays has nothing to tabularize and can come out slightly larger, showing a negative percentage. This is expected, not an error.</source>
+        <target state="final">A porcentagem de otimização compara a saída TOON com JSON minificado (não o texto recuado que você cola). A TOON salva mais em matrizes de registros uniformes, que colapsam em uma única tabela de cabeçalho mais uma linha compacta por linha — quanto mais linhas, maior será a poupança. Dados aninhados abundantemente com poucos ou nenhuns arrays repetidas não tem nada para tabular, e podem sair um pouco maiores, mostrando uma porcentagem negativa. Isto é esperado, não um erro.</target>
+      </trans-unit>
+      <trans-unit id="optimization_note.close" approved="yes">
+        <source>Dismiss note</source>
+        <target state="final">Descartar nota</target>
+      </trans-unit>
+      <trans-unit id="logs.mlang_tabs_tab" approved="yes">
+        <source>TOON Logs</source>
+        <target state="final">Registros TONOS</target>
+      </trans-unit>
+      <trans-unit id="logs.title" approved="yes">
+        <source>TOON Usage Logs</source>
+        <target state="final">TOON de Logs de Uso</target>
+      </trans-unit>
+      <trans-unit id="logs.subtitle" approved="yes">
+        <source>Every successful encode/convert call recorded with input size, output size, and compression ratio.</source>
+        <target state="final">Cada codificação bem-sucedida/converte chamada gravada com tamanho de entrada, tamanho de saída e taxa de compressão.</target>
+      </trans-unit>
+      <trans-unit id="logs.back_to_playground" approved="yes">
+        <source>Back to Playground</source>
+        <target state="final">Voltar ao Playground</target>
+      </trans-unit>
+      <trans-unit id="logs.filter.legend" approved="yes">
+        <source>Filters</source>
+        <target state="final">Filtros</target>
+      </trans-unit>
+      <trans-unit id="logs.filter.date_from" approved="yes">
+        <source>From</source>
+        <target state="final">De</target>
+      </trans-unit>
+      <trans-unit id="logs.filter.date_to" approved="yes">
+        <source>To</source>
+        <target state="final">Para</target>
+      </trans-unit>
+      <trans-unit id="logs.filter.enabled" approved="yes">
+        <source>Optimization status</source>
+        <target state="final">Status de otimização</target>
+      </trans-unit>
+      <trans-unit id="logs.filter.enabled.all" approved="yes">
+        <source>All</source>
+        <target state="final">TODOS</target>
+      </trans-unit>
+      <trans-unit id="logs.filter.enabled.on" approved="yes">
+        <source>Enabled</source>
+        <target state="final">Ativado</target>
+      </trans-unit>
+      <trans-unit id="logs.filter.enabled.off" approved="yes">
+        <source>Disabled</source>
+        <target state="final">Desabilitado</target>
+      </trans-unit>
+      <trans-unit id="logs.filter.min_pct" approved="yes">
+        <source>Min optimization %</source>
+        <target state="final">Otimização mínima %</target>
+      </trans-unit>
+      <trans-unit id="logs.filter.per_page" approved="yes">
+        <source>Per page</source>
+        <target state="final">Por página</target>
+      </trans-unit>
+      <trans-unit id="logs.filter.apply" approved="yes">
+        <source>Apply</source>
+        <target state="final">Aplicar</target>
+      </trans-unit>
+      <trans-unit id="logs.filter.reset" approved="yes">
+        <source>Reset</source>
+        <target state="final">Reset</target>
+      </trans-unit>
+      <trans-unit id="logs.column.uid" approved="yes">
+        <source>UID</source>
+        <target state="final">UID</target>
+      </trans-unit>
+      <trans-unit id="logs.column.date" approved="yes">
+        <source>Date &amp; Time</source>
+        <target state="final">Data &amp; Hora</target>
+      </trans-unit>
+      <trans-unit id="logs.column.input_size" approved="yes">
+        <source>Input size</source>
+        <target state="final">Input size</target>
+      </trans-unit>
+      <trans-unit id="logs.column.output_size" approved="yes">
+        <source>Output size</source>
+        <target state="final">Tamanho da saída</target>
+      </trans-unit>
+      <trans-unit id="logs.column.optimization" approved="yes">
+        <source>Optimization</source>
+        <target state="final">Otimização</target>
+      </trans-unit>
+      <trans-unit id="logs.column.enabled" approved="yes">
+        <source>Enabled</source>
+        <target state="final">Ativado</target>
+      </trans-unit>
+      <trans-unit id="logs.column.actions" approved="yes">
+        <source>Actions</source>
+        <target state="final">Ações.</target>
+      </trans-unit>
+      <trans-unit id="logs.column.select" approved="yes">
+        <source>Select</source>
+        <target state="final">Selecionar</target>
+      </trans-unit>
+      <trans-unit id="logs.empty.title" approved="yes">
+        <source>No log entries yet</source>
+        <target state="final">Ainda não há registros de registro</target>
+      </trans-unit>
+      <trans-unit id="logs.empty.body" approved="yes">
+        <source>Run an encode operation from the TOON Playground to record your first log entry.</source>
+        <target state="final">Execute uma operação de codificação no Playground TOON para gravar sua primeira entrada de log.</target>
+      </trans-unit>
+      <trans-unit id="logs.empty.cta" approved="yes">
+        <source>Open TOON Playground</source>
+        <target state="final">Abrir Playground TARON</target>
+      </trans-unit>
+      <trans-unit id="logs.delete.single" approved="yes">
+        <source>Delete</source>
+        <target state="final">excluir</target>
+      </trans-unit>
+      <trans-unit id="logs.delete.bulk" approved="yes">
+        <source>Delete selected (%d)</source>
+        <target state="final">Excluir selecionados (%d)</target>
+      </trans-unit>
+      <trans-unit id="logs.delete.confirm_title" approved="yes">
+        <source>Delete log entries?</source>
+        <target state="final">Excluir entradas de log?</target>
+      </trans-unit>
+      <trans-unit id="logs.delete.confirm_body_single" approved="yes">
+        <source>This will permanently remove the selected log entry. This action cannot be undone.</source>
+        <target state="final">Isto irá remover permanentemente a entrada de registro selecionada. Esta ação não pode ser desfeita.</target>
+      </trans-unit>
+      <trans-unit id="logs.delete.confirm_body_bulk" approved="yes">
+        <source>This will permanently remove the selected log entries. This action cannot be undone.</source>
+        <target state="final">Isto irá remover permanentemente os registros de registro selecionados. Esta ação não pode ser desfeita.</target>
+      </trans-unit>
+      <trans-unit id="logs.delete.confirm_button" approved="yes">
+        <source>Yes, delete</source>
+        <target state="final">Sim, excluir</target>
+      </trans-unit>
+      <trans-unit id="logs.delete.cancel" approved="yes">
+        <source>Cancel</source>
+        <target state="final">cancelar</target>
+      </trans-unit>
+      <trans-unit id="logs.flash.deleted_title" approved="yes">
+        <source>Log entries deleted</source>
+        <target state="final">Entradas de registro excluídas</target>
+      </trans-unit>
+      <trans-unit id="logs.flash.deleted_body" approved="yes">
+        <source>%d log entry/entries were removed.</source>
+        <target state="final">As entradas/registros do %d foram removidas.</target>
+      </trans-unit>
+      <trans-unit id="logs.flash.nothing_title" approved="yes">
+        <source>Nothing deleted</source>
+        <target state="final">Nada foi excluído</target>
+      </trans-unit>
+      <trans-unit id="logs.flash.nothing_body" approved="yes">
+        <source>No matching log entries were found.</source>
+        <target state="final">Nenhuma entrada de registro correspondente foi encontrada.</target>
+      </trans-unit>
+      <trans-unit id="logs.pagination.first" approved="yes">
+        <source>First</source>
+        <target state="final">Primeiro</target>
+      </trans-unit>
+      <trans-unit id="logs.pagination.previous" approved="yes">
+        <source>Previous</source>
+        <target state="final">Anterior</target>
+      </trans-unit>
+      <trans-unit id="logs.pagination.next" approved="yes">
+        <source>Next</source>
+        <target state="final">Próximo</target>
+      </trans-unit>
+      <trans-unit id="logs.pagination.last" approved="yes">
+        <source>Last</source>
+        <target state="final">Último</target>
+      </trans-unit>
+      <trans-unit id="logs.pagination.summary" approved="yes">
+        <source>Page %1$d of %2$d (%3$d total)</source>
+        <target state="final">Página %1$d de %2$d (%3$d total)</target>
+      </trans-unit>
+    </body>
+  </file>
+</xliff>

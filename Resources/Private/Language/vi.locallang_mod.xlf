@@ -1,0 +1,368 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xliff xmlns="urn:oasis:names:tc:xliff:document:1.2" version="1.2">
+  <file source-language="en" datatype="plaintext" original="EXT:rrp_t3toon/Resources/Private/Language/locallang_mod.xlf" product-name="rrp_t3toon" target-language="vi">
+    <header/>
+    <body>
+      <trans-unit id="mlang_tabs_tab" approved="yes">
+        <source>TOON Playground</source>
+        <target state="final">Sân chơi TOON</target>
+      </trans-unit>
+      <trans-unit id="playground.title" approved="yes">
+        <source>TOON Playground</source>
+        <target state="final">Sân chơi TOON</target>
+      </trans-unit>
+      <trans-unit id="playground.input_label" approved="yes">
+        <source>Input (JSON for encode, TOON for decode)</source>
+        <target state="final">Đầu vào (JSON để mã hóa, TOON để giải mã)</target>
+      </trans-unit>
+      <trans-unit id="playground.output_label" approved="yes">
+        <source>Output</source>
+        <target state="final">Đầu ra</target>
+      </trans-unit>
+      <trans-unit id="playground.encode" approved="yes">
+        <source>Encode to TOON</source>
+        <target state="final">Mã hóa sang TOON</target>
+      </trans-unit>
+      <trans-unit id="playground.decode" approved="yes">
+        <source>Decode from TOON</source>
+        <target state="final">Giải mã từ TOON</target>
+      </trans-unit>
+      <trans-unit id="playground.encode_compact" approved="yes">
+        <source>Encode (compact)</source>
+        <target state="final">Mã hóa (gọn)</target>
+      </trans-unit>
+      <trans-unit id="playground.tokens" approved="yes">
+        <source>Estimated tokens: %d</source>
+        <target state="final">Số token ước tính: %d</target>
+      </trans-unit>
+      <trans-unit id="playground.footer_made_with" approved="yes">
+        <source>Made with 🧡 for the TYPO3 Developer by Rohan and Himanshu</source>
+        <target state="final">Được tạo với 🧡 cho Nhà phát triển TYPO3 bởi Rohan và Himanshu</target>
+      </trans-unit>
+      <trans-unit id="playground.subtitle" approved="yes">
+        <source>Encode JSON to TOON or decode strings instantly.</source>
+        <target state="final">Mã hóa JSON thành TOON hoặc giải mã chuỗi ngay lập tức.</target>
+      </trans-unit>
+      <trans-unit id="playground.clear_all" approved="yes">
+        <source>Clear All</source>
+        <target state="final">Xóa tất cả</target>
+      </trans-unit>
+      <trans-unit id="playground.view_logs" approved="yes">
+        <source>View Logs</source>
+        <target state="final">Xem Nhật ký</target>
+      </trans-unit>
+      <trans-unit id="playground.badge_input" approved="yes">
+        <source>Input</source>
+        <target state="final">Đầu vào</target>
+      </trans-unit>
+      <trans-unit id="playground.or" approved="yes">
+        <source>OR</source>
+        <target state="final">HOẶC</target>
+      </trans-unit>
+      <trans-unit id="playground.estimated_tokens_label" approved="yes">
+        <source>Estimated tokens</source>
+        <target state="final">Số token ước tính</target>
+      </trans-unit>
+      <trans-unit id="playground.copy" approved="yes">
+        <source>Copy</source>
+        <target state="final">Sao chép</target>
+      </trans-unit>
+      <trans-unit id="playground.copied_to_clipboard" approved="yes">
+        <source>Copied to clipboard!</source>
+        <target state="final">Đã sao chép vào clipboard!</target>
+      </trans-unit>
+      <trans-unit id="playground.github" approved="yes">
+        <source>GitHub</source>
+        <target state="final">GitHub</target>
+      </trans-unit>
+      <trans-unit id="playground.documentation" approved="yes">
+        <source>Documentation</source>
+        <target state="final">Tài liệu</target>
+      </trans-unit>
+      <trans-unit id="playground.clear_confirm" approved="yes">
+        <source>Clear both input and output?</source>
+        <target state="final">Xóa cả đầu vào và đầu ra?</target>
+      </trans-unit>
+      <trans-unit id="playground.clear_confirm_title" approved="yes">
+        <source>Clear All</source>
+        <target state="final">Xóa Tất Cả</target>
+      </trans-unit>
+      <trans-unit id="playground.clear_confirm_body" approved="yes">
+        <source>This will clear both the input and output fields. This action cannot be undone.</source>
+        <target state="final">Thao tác này sẽ xóa cả trường nhập và trường xuất. Hành động này không thể hoàn tác.</target>
+      </trans-unit>
+      <trans-unit id="playground.cancel" approved="yes">
+        <source>Cancel</source>
+        <target state="final">Hủy</target>
+      </trans-unit>
+      <trans-unit id="playground.confirm_clear" approved="yes">
+        <source>Yes, Clear All</source>
+        <target state="final">Có, Xóa Tất Cả</target>
+      </trans-unit>
+      <trans-unit id="playground.placeholder" approved="yes">
+        <source>{"name": "TOON", "items": [1, 2, 3]}</source>
+        <target state="final">{"name": "TOON", "items": [1, 2, 3]}</target>
+      </trans-unit>
+      <trans-unit id="playground.error_invalid_json" approved="yes">
+        <source>Invalid JSON input for encode.</source>
+        <target state="final">Đầu vào JSON không hợp lệ để mã hóa.</target>
+      </trans-unit>
+      <trans-unit id="playground.option_delimiter" approved="yes">
+        <source>Delimiter</source>
+        <target state="final">Dấu phân cách</target>
+      </trans-unit>
+      <trans-unit id="playground.option_indent" approved="yes">
+        <source>Indent</source>
+        <target state="final">Thụt lề</target>
+      </trans-unit>
+      <trans-unit id="playground.option_key_folding" approved="yes">
+        <source>Key folding</source>
+        <target state="final">Gấp khóa</target>
+      </trans-unit>
+      <trans-unit id="playground.key_folding_off" approved="yes">
+        <source>Off</source>
+        <target state="final">Tắt</target>
+      </trans-unit>
+      <trans-unit id="playground.key_folding_safe" approved="yes">
+        <source>Safe</source>
+        <target state="final">An toàn</target>
+      </trans-unit>
+      <trans-unit id="playground.option_flatten_depth" approved="yes">
+        <source>Flatten depth</source>
+        <target state="final">Độ sâu làm phẳng</target>
+      </trans-unit>
+      <trans-unit id="playground.flatten_unlimited" approved="yes">
+        <source>Unlimited</source>
+        <target state="final">Không giới hạn</target>
+      </trans-unit>
+      <trans-unit id="playground.presets" approved="yes">
+        <source>Load example</source>
+        <target state="final">Tải ví dụ</target>
+      </trans-unit>
+      <trans-unit id="playground.preset_hikes" approved="yes">
+        <source>Hikes</source>
+        <target state="final">Đi bộ đường dài</target>
+      </trans-unit>
+      <trans-unit id="playground.preset_typo3" approved="yes">
+        <source>TYPO3</source>
+        <target state="final">TYPO3</target>
+      </trans-unit>
+      <trans-unit id="playground.chars" approved="yes">
+        <source>chars</source>
+        <target state="final">ký tự</target>
+      </trans-unit>
+      <trans-unit id="playground.size_reduction">
+        <source>%1$s%% size reduction vs %2$s JSON</source>
+        <target state="needs-translation">%1$s%% size reduction vs %2$s JSON</target>
+      </trans-unit>
+      <trans-unit id="playground.option_baseline">
+        <source>JSON baseline</source>
+        <target state="needs-translation">JSON baseline</target>
+      </trans-unit>
+      <trans-unit id="playground.baseline_minified">
+        <source>Compact</source>
+        <target state="needs-translation">Compact</target>
+      </trans-unit>
+      <trans-unit id="playground.baseline_pretty2">
+        <source>Pretty (2 spaces)</source>
+        <target state="needs-translation">Pretty (2 spaces)</target>
+      </trans-unit>
+      <trans-unit id="playground.baseline_pretty4">
+        <source>Pretty (4 spaces)</source>
+        <target state="needs-translation">Pretty (4 spaces)</target>
+      </trans-unit>
+      <trans-unit id="playground.baseline_tabs">
+        <source>Pretty (tabs)</source>
+        <target state="needs-translation">Pretty (tabs)</target>
+      </trans-unit>
+      <trans-unit id="playground.lenient_decode" approved="yes">
+        <source>Lenient decode</source>
+        <target state="final">Giải mã linh hoạt</target>
+      </trans-unit>
+      <trans-unit id="playground.official_playground" approved="yes">
+        <source>Official playground</source>
+        <target state="final">Playground chính thức</target>
+      </trans-unit>
+      <trans-unit id="optimization_note.title" approved="yes">
+        <source>Why is optimization sometimes negative?</source>
+        <target state="final">Tại sao tối ưu hóa đôi khi lại âm?</target>
+      </trans-unit>
+      <trans-unit id="optimization_note.body" approved="yes">
+        <source>The optimization % compares the TOON output against minified JSON (not the indented text you paste). TOON saves the most on arrays of uniform records, which collapse into a single table header plus one compact line per row — the more rows, the bigger the saving. Deeply nested data with few or no repeating arrays has nothing to tabularize and can come out slightly larger, showing a negative percentage. This is expected, not an error.</source>
+        <target state="final">Tỷ lệ tối ưu hóa % so sánh đầu ra TOON với JSON đã được rút gọn (không phải văn bản có thụt lề mà bạn dán vào). TOON tiết kiệm nhiều nhất trên các mảng gồm các bản ghi đồng nhất, vì chúng được thu gọn thành một tiêu đề bảng duy nhất cộng với một dòng gọn cho mỗi hàng — càng nhiều hàng, mức tiết kiệm càng lớn. Dữ liệu lồng nhau sâu với ít hoặc không có mảng lặp lại thì không có gì để chuyển thành bảng và có thể cho kết quả lớn hơn một chút, hiển thị tỷ lệ phần trăm âm. Đây là điều bình thường, không phải lỗi.</target>
+      </trans-unit>
+      <trans-unit id="optimization_note.close" approved="yes">
+        <source>Dismiss note</source>
+        <target state="final">Bỏ qua ghi chú</target>
+      </trans-unit>
+      <trans-unit id="logs.mlang_tabs_tab" approved="yes">
+        <source>TOON Logs</source>
+        <target state="final">Nhật ký TOON</target>
+      </trans-unit>
+      <trans-unit id="logs.title" approved="yes">
+        <source>TOON Usage Logs</source>
+        <target state="final">Nhật ký sử dụng TOON</target>
+      </trans-unit>
+      <trans-unit id="logs.subtitle" approved="yes">
+        <source>Every successful encode/convert call recorded with input size, output size, and compression ratio.</source>
+        <target state="final">Mỗi lần gọi mã hóa/chuyển đổi thành công đều được ghi lại với kích thước đầu vào, kích thước đầu ra và tỷ lệ nén.</target>
+      </trans-unit>
+      <trans-unit id="logs.back_to_playground" approved="yes">
+        <source>Back to Playground</source>
+        <target state="final">Quay lại Sân chơi</target>
+      </trans-unit>
+      <trans-unit id="logs.filter.legend" approved="yes">
+        <source>Filters</source>
+        <target state="final">Bộ lọc</target>
+      </trans-unit>
+      <trans-unit id="logs.filter.date_from" approved="yes">
+        <source>From</source>
+        <target state="final">Từ</target>
+      </trans-unit>
+      <trans-unit id="logs.filter.date_to" approved="yes">
+        <source>To</source>
+        <target state="final">Đến</target>
+      </trans-unit>
+      <trans-unit id="logs.filter.enabled" approved="yes">
+        <source>Optimization status</source>
+        <target state="final">Trạng thái tối ưu hóa</target>
+      </trans-unit>
+      <trans-unit id="logs.filter.enabled.all" approved="yes">
+        <source>All</source>
+        <target state="final">Tất cả</target>
+      </trans-unit>
+      <trans-unit id="logs.filter.enabled.on" approved="yes">
+        <source>Enabled</source>
+        <target state="final">Đã bật</target>
+      </trans-unit>
+      <trans-unit id="logs.filter.enabled.off" approved="yes">
+        <source>Disabled</source>
+        <target state="final">Đã tắt</target>
+      </trans-unit>
+      <trans-unit id="logs.filter.min_pct" approved="yes">
+        <source>Min optimization %</source>
+        <target state="final">Tối ưu hóa tối thiểu %</target>
+      </trans-unit>
+      <trans-unit id="logs.filter.per_page" approved="yes">
+        <source>Per page</source>
+        <target state="final">Mỗi trang</target>
+      </trans-unit>
+      <trans-unit id="logs.filter.apply" approved="yes">
+        <source>Apply</source>
+        <target state="final">Áp dụng</target>
+      </trans-unit>
+      <trans-unit id="logs.filter.reset" approved="yes">
+        <source>Reset</source>
+        <target state="final">Đặt lại</target>
+      </trans-unit>
+      <trans-unit id="logs.column.uid" approved="yes">
+        <source>UID</source>
+        <target state="final">UID</target>
+      </trans-unit>
+      <trans-unit id="logs.column.date" approved="yes">
+        <source>Date &amp; Time</source>
+        <target state="final">Ngày &amp; Giờ</target>
+      </trans-unit>
+      <trans-unit id="logs.column.input_size" approved="yes">
+        <source>Input size</source>
+        <target state="final">Kích thước đầu vào</target>
+      </trans-unit>
+      <trans-unit id="logs.column.output_size" approved="yes">
+        <source>Output size</source>
+        <target state="final">Kích thước đầu ra</target>
+      </trans-unit>
+      <trans-unit id="logs.column.optimization" approved="yes">
+        <source>Optimization</source>
+        <target state="final">Tối ưu hóa</target>
+      </trans-unit>
+      <trans-unit id="logs.column.enabled" approved="yes">
+        <source>Enabled</source>
+        <target state="final">Đã bật</target>
+      </trans-unit>
+      <trans-unit id="logs.column.actions" approved="yes">
+        <source>Actions</source>
+        <target state="final">Hành động</target>
+      </trans-unit>
+      <trans-unit id="logs.column.select" approved="yes">
+        <source>Select</source>
+        <target state="final">Chọn</target>
+      </trans-unit>
+      <trans-unit id="logs.empty.title" approved="yes">
+        <source>No log entries yet</source>
+        <target state="final">Chưa có mục nhật ký nào</target>
+      </trans-unit>
+      <trans-unit id="logs.empty.body" approved="yes">
+        <source>Run an encode operation from the TOON Playground to record your first log entry.</source>
+        <target state="final">Chạy một thao tác mã hóa từ TOON Playground để ghi lại mục nhật ký đầu tiên của bạn.</target>
+      </trans-unit>
+      <trans-unit id="logs.empty.cta" approved="yes">
+        <source>Open TOON Playground</source>
+        <target state="final">Mở TOON Playground</target>
+      </trans-unit>
+      <trans-unit id="logs.delete.single" approved="yes">
+        <source>Delete</source>
+        <target state="final">Xóa</target>
+      </trans-unit>
+      <trans-unit id="logs.delete.bulk" approved="yes">
+        <source>Delete selected (%d)</source>
+        <target state="final">Xóa đã chọn (%d)</target>
+      </trans-unit>
+      <trans-unit id="logs.delete.confirm_title" approved="yes">
+        <source>Delete log entries?</source>
+        <target state="final">Xóa các mục nhật ký?</target>
+      </trans-unit>
+      <trans-unit id="logs.delete.confirm_body_single" approved="yes">
+        <source>This will permanently remove the selected log entry. This action cannot be undone.</source>
+        <target state="final">Thao tác này sẽ xóa vĩnh viễn mục nhật ký đã chọn. Hành động này không thể hoàn tác.</target>
+      </trans-unit>
+      <trans-unit id="logs.delete.confirm_body_bulk" approved="yes">
+        <source>This will permanently remove the selected log entries. This action cannot be undone.</source>
+        <target state="final">Thao tác này sẽ xóa vĩnh viễn các mục nhật ký đã chọn. Hành động này không thể hoàn tác.</target>
+      </trans-unit>
+      <trans-unit id="logs.delete.confirm_button" approved="yes">
+        <source>Yes, delete</source>
+        <target state="final">Có, xóa</target>
+      </trans-unit>
+      <trans-unit id="logs.delete.cancel" approved="yes">
+        <source>Cancel</source>
+        <target state="final">Hủy</target>
+      </trans-unit>
+      <trans-unit id="logs.flash.deleted_title" approved="yes">
+        <source>Log entries deleted</source>
+        <target state="final">Các mục nhật ký đã bị xóa</target>
+      </trans-unit>
+      <trans-unit id="logs.flash.deleted_body" approved="yes">
+        <source>%d log entry/entries were removed.</source>
+        <target state="final">%d mục nhật ký đã được xóa.</target>
+      </trans-unit>
+      <trans-unit id="logs.flash.nothing_title" approved="yes">
+        <source>Nothing deleted</source>
+        <target state="final">Không có gì bị xóa</target>
+      </trans-unit>
+      <trans-unit id="logs.flash.nothing_body" approved="yes">
+        <source>No matching log entries were found.</source>
+        <target state="final">Không tìm thấy mục nhật ký nào phù hợp.</target>
+      </trans-unit>
+      <trans-unit id="logs.pagination.first" approved="yes">
+        <source>First</source>
+        <target state="final">Đầu tiên</target>
+      </trans-unit>
+      <trans-unit id="logs.pagination.previous" approved="yes">
+        <source>Previous</source>
+        <target state="final">Trước</target>
+      </trans-unit>
+      <trans-unit id="logs.pagination.next" approved="yes">
+        <source>Next</source>
+        <target state="final">Tiếp theo</target>
+      </trans-unit>
+      <trans-unit id="logs.pagination.last" approved="yes">
+        <source>Last</source>
+        <target state="final">Cuối</target>
+      </trans-unit>
+      <trans-unit id="logs.pagination.summary" approved="yes">
+        <source>Page %1$d of %2$d (%3$d total)</source>
+        <target state="final">Trang %1$d của %2$d (%3$d tổng cộng)</target>
+      </trans-unit>
+    </body>
+  </file>
+</xliff>

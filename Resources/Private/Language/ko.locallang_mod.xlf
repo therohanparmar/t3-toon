@@ -1,0 +1,368 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xliff xmlns="urn:oasis:names:tc:xliff:document:1.2" version="1.2">
+  <file source-language="en" datatype="plaintext" original="EXT:rrp_t3toon/Resources/Private/Language/locallang_mod.xlf" product-name="rrp_t3toon" target-language="ko">
+    <header/>
+    <body>
+      <trans-unit id="mlang_tabs_tab" approved="yes">
+        <source>TOON Playground</source>
+        <target state="final">TOON 플레이그라운드</target>
+      </trans-unit>
+      <trans-unit id="playground.title" approved="yes">
+        <source>TOON Playground</source>
+        <target state="final">TOON 플레이그라운드</target>
+      </trans-unit>
+      <trans-unit id="playground.input_label" approved="yes">
+        <source>Input (JSON for encode, TOON for decode)</source>
+        <target state="final">입력 (인코딩을 위한 JSON, 디코딩을 위한 TOON)</target>
+      </trans-unit>
+      <trans-unit id="playground.output_label" approved="yes">
+        <source>Output</source>
+        <target state="final">출력</target>
+      </trans-unit>
+      <trans-unit id="playground.encode" approved="yes">
+        <source>Encode to TOON</source>
+        <target state="final">TOON으로 인코딩</target>
+      </trans-unit>
+      <trans-unit id="playground.decode" approved="yes">
+        <source>Decode from TOON</source>
+        <target state="final">TOON에서 디코딩</target>
+      </trans-unit>
+      <trans-unit id="playground.encode_compact" approved="yes">
+        <source>Encode (compact)</source>
+        <target state="final">인코딩 (압축)</target>
+      </trans-unit>
+      <trans-unit id="playground.tokens" approved="yes">
+        <source>Estimated tokens: %d</source>
+        <target state="final">예상 토큰: %d</target>
+      </trans-unit>
+      <trans-unit id="playground.footer_made_with" approved="yes">
+        <source>Made with 🧡 for the TYPO3 Developer by Rohan and Himanshu</source>
+        <target state="final">🧡으로 Rohan과 Himanshu가 TYPO3 개발자를 위해 만들었습니다</target>
+      </trans-unit>
+      <trans-unit id="playground.subtitle" approved="yes">
+        <source>Encode JSON to TOON or decode strings instantly.</source>
+        <target state="final">JSON을 TOON으로 인코딩하거나 문자열을 즉시 디코딩합니다.</target>
+      </trans-unit>
+      <trans-unit id="playground.clear_all" approved="yes">
+        <source>Clear All</source>
+        <target state="final">모두 지우기</target>
+      </trans-unit>
+      <trans-unit id="playground.view_logs" approved="yes">
+        <source>View Logs</source>
+        <target state="final">로그 보기</target>
+      </trans-unit>
+      <trans-unit id="playground.badge_input" approved="yes">
+        <source>Input</source>
+        <target state="final">입력</target>
+      </trans-unit>
+      <trans-unit id="playground.or" approved="yes">
+        <source>OR</source>
+        <target state="final">또는</target>
+      </trans-unit>
+      <trans-unit id="playground.estimated_tokens_label" approved="yes">
+        <source>Estimated tokens</source>
+        <target state="final">예상 토큰</target>
+      </trans-unit>
+      <trans-unit id="playground.copy" approved="yes">
+        <source>Copy</source>
+        <target state="final">복사</target>
+      </trans-unit>
+      <trans-unit id="playground.copied_to_clipboard" approved="yes">
+        <source>Copied to clipboard!</source>
+        <target state="final">클립보드에 복사되었습니다!</target>
+      </trans-unit>
+      <trans-unit id="playground.github" approved="yes">
+        <source>GitHub</source>
+        <target state="final">GitHub</target>
+      </trans-unit>
+      <trans-unit id="playground.documentation" approved="yes">
+        <source>Documentation</source>
+        <target state="final">설명서</target>
+      </trans-unit>
+      <trans-unit id="playground.clear_confirm" approved="yes">
+        <source>Clear both input and output?</source>
+        <target state="final">입력과 출력을 모두 지우시겠습니까?</target>
+      </trans-unit>
+      <trans-unit id="playground.clear_confirm_title" approved="yes">
+        <source>Clear All</source>
+        <target state="final">모두 지우기</target>
+      </trans-unit>
+      <trans-unit id="playground.clear_confirm_body" approved="yes">
+        <source>This will clear both the input and output fields. This action cannot be undone.</source>
+        <target state="final">입력 및 출력 필드가 모두 지워집니다. 이 작업은 취소할 수 없습니다.</target>
+      </trans-unit>
+      <trans-unit id="playground.cancel" approved="yes">
+        <source>Cancel</source>
+        <target state="final">취소</target>
+      </trans-unit>
+      <trans-unit id="playground.confirm_clear" approved="yes">
+        <source>Yes, Clear All</source>
+        <target state="final">예, 모두 지우기</target>
+      </trans-unit>
+      <trans-unit id="playground.placeholder" approved="yes">
+        <source>{"name": "TOON", "items": [1, 2, 3]}</source>
+        <target state="final">{"name": "TOON", "items": [1, 2, 3]}</target>
+      </trans-unit>
+      <trans-unit id="playground.error_invalid_json" approved="yes">
+        <source>Invalid JSON input for encode.</source>
+        <target state="final">인코딩을 위한 잘못된 JSON 입력입니다.</target>
+      </trans-unit>
+      <trans-unit id="playground.option_delimiter" approved="yes">
+        <source>Delimiter</source>
+        <target state="final">구분자</target>
+      </trans-unit>
+      <trans-unit id="playground.option_indent" approved="yes">
+        <source>Indent</source>
+        <target state="final">들여쓰기</target>
+      </trans-unit>
+      <trans-unit id="playground.option_key_folding" approved="yes">
+        <source>Key folding</source>
+        <target state="final">키 폴딩</target>
+      </trans-unit>
+      <trans-unit id="playground.key_folding_off" approved="yes">
+        <source>Off</source>
+        <target state="final">끄기</target>
+      </trans-unit>
+      <trans-unit id="playground.key_folding_safe" approved="yes">
+        <source>Safe</source>
+        <target state="final">안전</target>
+      </trans-unit>
+      <trans-unit id="playground.option_flatten_depth" approved="yes">
+        <source>Flatten depth</source>
+        <target state="final">평탄화 깊이</target>
+      </trans-unit>
+      <trans-unit id="playground.flatten_unlimited" approved="yes">
+        <source>Unlimited</source>
+        <target state="final">무제한</target>
+      </trans-unit>
+      <trans-unit id="playground.presets" approved="yes">
+        <source>Load example</source>
+        <target state="final">예제 불러오기</target>
+      </trans-unit>
+      <trans-unit id="playground.preset_hikes" approved="yes">
+        <source>Hikes</source>
+        <target state="final">하이킹</target>
+      </trans-unit>
+      <trans-unit id="playground.preset_typo3" approved="yes">
+        <source>TYPO3</source>
+        <target state="final">TYPO3</target>
+      </trans-unit>
+      <trans-unit id="playground.chars" approved="yes">
+        <source>chars</source>
+        <target state="final">문자</target>
+      </trans-unit>
+      <trans-unit id="playground.size_reduction">
+        <source>%1$s%% size reduction vs %2$s JSON</source>
+        <target state="needs-translation">%1$s%% size reduction vs %2$s JSON</target>
+      </trans-unit>
+      <trans-unit id="playground.option_baseline">
+        <source>JSON baseline</source>
+        <target state="needs-translation">JSON baseline</target>
+      </trans-unit>
+      <trans-unit id="playground.baseline_minified">
+        <source>Compact</source>
+        <target state="needs-translation">Compact</target>
+      </trans-unit>
+      <trans-unit id="playground.baseline_pretty2">
+        <source>Pretty (2 spaces)</source>
+        <target state="needs-translation">Pretty (2 spaces)</target>
+      </trans-unit>
+      <trans-unit id="playground.baseline_pretty4">
+        <source>Pretty (4 spaces)</source>
+        <target state="needs-translation">Pretty (4 spaces)</target>
+      </trans-unit>
+      <trans-unit id="playground.baseline_tabs">
+        <source>Pretty (tabs)</source>
+        <target state="needs-translation">Pretty (tabs)</target>
+      </trans-unit>
+      <trans-unit id="playground.lenient_decode" approved="yes">
+        <source>Lenient decode</source>
+        <target state="final">관대한 디코딩</target>
+      </trans-unit>
+      <trans-unit id="playground.official_playground" approved="yes">
+        <source>Official playground</source>
+        <target state="final">공식 플레이그라운드</target>
+      </trans-unit>
+      <trans-unit id="optimization_note.title" approved="yes">
+        <source>Why is optimization sometimes negative?</source>
+        <target state="final">최적화가 때때로 음수인 이유는 무엇인가요?</target>
+      </trans-unit>
+      <trans-unit id="optimization_note.body" approved="yes">
+        <source>The optimization % compares the TOON output against minified JSON (not the indented text you paste). TOON saves the most on arrays of uniform records, which collapse into a single table header plus one compact line per row — the more rows, the bigger the saving. Deeply nested data with few or no repeating arrays has nothing to tabularize and can come out slightly larger, showing a negative percentage. This is expected, not an error.</source>
+        <target state="final">최적화 %는 TOON 출력을 들여쓰기된 텍스트가 아닌 최소화된 JSON과 비교합니다. TOON은 균일한 레코드로 구성된 배열에서 가장 큰 효과를 발휘하며, 이러한 배열은 단일 테이블 헤더와 행당 하나의 간결한 줄로 축소됩니다. 행이 많을수록 절약 효과가 커집니다. 반복 배열이 거의 없거나 전혀 없는 깊게 중첩된 데이터는 표로 만들 것이 없어 약간 더 커질 수 있으며, 이 경우 음수 백분율이 표시됩니다. 이는 예상된 동작이며 오류가 아닙니다.</target>
+      </trans-unit>
+      <trans-unit id="optimization_note.close" approved="yes">
+        <source>Dismiss note</source>
+        <target state="final">메모 닫기</target>
+      </trans-unit>
+      <trans-unit id="logs.mlang_tabs_tab" approved="yes">
+        <source>TOON Logs</source>
+        <target state="final">TOON 로그</target>
+      </trans-unit>
+      <trans-unit id="logs.title" approved="yes">
+        <source>TOON Usage Logs</source>
+        <target state="final">TOON 사용 로그</target>
+      </trans-unit>
+      <trans-unit id="logs.subtitle" approved="yes">
+        <source>Every successful encode/convert call recorded with input size, output size, and compression ratio.</source>
+        <target state="final">성공적인 모든 인코딩/변환 호출이 입력 크기, 출력 크기 및 압축 비율과 함께 기록됩니다.</target>
+      </trans-unit>
+      <trans-unit id="logs.back_to_playground" approved="yes">
+        <source>Back to Playground</source>
+        <target state="final">플레이그라운드로 돌아가기</target>
+      </trans-unit>
+      <trans-unit id="logs.filter.legend" approved="yes">
+        <source>Filters</source>
+        <target state="final">필터</target>
+      </trans-unit>
+      <trans-unit id="logs.filter.date_from" approved="yes">
+        <source>From</source>
+        <target state="final">시작일</target>
+      </trans-unit>
+      <trans-unit id="logs.filter.date_to" approved="yes">
+        <source>To</source>
+        <target state="final">종료일</target>
+      </trans-unit>
+      <trans-unit id="logs.filter.enabled" approved="yes">
+        <source>Optimization status</source>
+        <target state="final">최적화 상태</target>
+      </trans-unit>
+      <trans-unit id="logs.filter.enabled.all" approved="yes">
+        <source>All</source>
+        <target state="final">전체</target>
+      </trans-unit>
+      <trans-unit id="logs.filter.enabled.on" approved="yes">
+        <source>Enabled</source>
+        <target state="final">활성화됨</target>
+      </trans-unit>
+      <trans-unit id="logs.filter.enabled.off" approved="yes">
+        <source>Disabled</source>
+        <target state="final">비활성화됨</target>
+      </trans-unit>
+      <trans-unit id="logs.filter.min_pct" approved="yes">
+        <source>Min optimization %</source>
+        <target state="final">최소 최적화 %</target>
+      </trans-unit>
+      <trans-unit id="logs.filter.per_page" approved="yes">
+        <source>Per page</source>
+        <target state="final">페이지당</target>
+      </trans-unit>
+      <trans-unit id="logs.filter.apply" approved="yes">
+        <source>Apply</source>
+        <target state="final">적용</target>
+      </trans-unit>
+      <trans-unit id="logs.filter.reset" approved="yes">
+        <source>Reset</source>
+        <target state="final">초기화</target>
+      </trans-unit>
+      <trans-unit id="logs.column.uid" approved="yes">
+        <source>UID</source>
+        <target state="final">UID</target>
+      </trans-unit>
+      <trans-unit id="logs.column.date" approved="yes">
+        <source>Date &amp; Time</source>
+        <target state="final">날짜 및 시간</target>
+      </trans-unit>
+      <trans-unit id="logs.column.input_size" approved="yes">
+        <source>Input size</source>
+        <target state="final">입력 크기</target>
+      </trans-unit>
+      <trans-unit id="logs.column.output_size" approved="yes">
+        <source>Output size</source>
+        <target state="final">출력 크기</target>
+      </trans-unit>
+      <trans-unit id="logs.column.optimization" approved="yes">
+        <source>Optimization</source>
+        <target state="final">최적화</target>
+      </trans-unit>
+      <trans-unit id="logs.column.enabled" approved="yes">
+        <source>Enabled</source>
+        <target state="final">활성화됨</target>
+      </trans-unit>
+      <trans-unit id="logs.column.actions" approved="yes">
+        <source>Actions</source>
+        <target state="final">작업</target>
+      </trans-unit>
+      <trans-unit id="logs.column.select" approved="yes">
+        <source>Select</source>
+        <target state="final">선택</target>
+      </trans-unit>
+      <trans-unit id="logs.empty.title" approved="yes">
+        <source>No log entries yet</source>
+        <target state="final">아직 로그 항목이 없습니다</target>
+      </trans-unit>
+      <trans-unit id="logs.empty.body" approved="yes">
+        <source>Run an encode operation from the TOON Playground to record your first log entry.</source>
+        <target state="final">TOON 플레이그라운드에서 인코딩 작업을 실행하여 첫 번째 로그 항목을 기록하세요.</target>
+      </trans-unit>
+      <trans-unit id="logs.empty.cta" approved="yes">
+        <source>Open TOON Playground</source>
+        <target state="final">TOON 플레이그라운드 열기</target>
+      </trans-unit>
+      <trans-unit id="logs.delete.single" approved="yes">
+        <source>Delete</source>
+        <target state="final">삭제</target>
+      </trans-unit>
+      <trans-unit id="logs.delete.bulk" approved="yes">
+        <source>Delete selected (%d)</source>
+        <target state="final">선택한 항목 삭제 (%d)</target>
+      </trans-unit>
+      <trans-unit id="logs.delete.confirm_title" approved="yes">
+        <source>Delete log entries?</source>
+        <target state="final">로그 항목을 삭제하시겠습니까?</target>
+      </trans-unit>
+      <trans-unit id="logs.delete.confirm_body_single" approved="yes">
+        <source>This will permanently remove the selected log entry. This action cannot be undone.</source>
+        <target state="final">선택한 로그 항목이 영구적으로 삭제됩니다. 이 작업은 취소할 수 없습니다.</target>
+      </trans-unit>
+      <trans-unit id="logs.delete.confirm_body_bulk" approved="yes">
+        <source>This will permanently remove the selected log entries. This action cannot be undone.</source>
+        <target state="final">선택한 로그 항목이 영구적으로 삭제됩니다. 이 작업은 취소할 수 없습니다.</target>
+      </trans-unit>
+      <trans-unit id="logs.delete.confirm_button" approved="yes">
+        <source>Yes, delete</source>
+        <target state="final">예, 삭제</target>
+      </trans-unit>
+      <trans-unit id="logs.delete.cancel" approved="yes">
+        <source>Cancel</source>
+        <target state="final">취소</target>
+      </trans-unit>
+      <trans-unit id="logs.flash.deleted_title" approved="yes">
+        <source>Log entries deleted</source>
+        <target state="final">로그 항목 삭제됨</target>
+      </trans-unit>
+      <trans-unit id="logs.flash.deleted_body" approved="yes">
+        <source>%d log entry/entries were removed.</source>
+        <target state="final">%d개의 로그 항목이 삭제되었습니다.</target>
+      </trans-unit>
+      <trans-unit id="logs.flash.nothing_title" approved="yes">
+        <source>Nothing deleted</source>
+        <target state="final">삭제된 항목 없음</target>
+      </trans-unit>
+      <trans-unit id="logs.flash.nothing_body" approved="yes">
+        <source>No matching log entries were found.</source>
+        <target state="final">일치하는 로그 항목이 없습니다.</target>
+      </trans-unit>
+      <trans-unit id="logs.pagination.first" approved="yes">
+        <source>First</source>
+        <target state="final">처음</target>
+      </trans-unit>
+      <trans-unit id="logs.pagination.previous" approved="yes">
+        <source>Previous</source>
+        <target state="final">이전</target>
+      </trans-unit>
+      <trans-unit id="logs.pagination.next" approved="yes">
+        <source>Next</source>
+        <target state="final">다음</target>
+      </trans-unit>
+      <trans-unit id="logs.pagination.last" approved="yes">
+        <source>Last</source>
+        <target state="final">마지막</target>
+      </trans-unit>
+      <trans-unit id="logs.pagination.summary" approved="yes">
+        <source>Page %1$d of %2$d (%3$d total)</source>
+        <target state="final">%1$d / %2$d 페이지 (총 %3$d개)</target>
+      </trans-unit>
+    </body>
+  </file>
+</xliff>
