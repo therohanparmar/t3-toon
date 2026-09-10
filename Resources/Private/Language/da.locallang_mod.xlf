@@ -151,29 +151,29 @@
         <source>chars</source>
         <target state="final">tegn</target>
       </trans-unit>
-      <trans-unit id="playground.size_reduction">
+      <trans-unit id="playground.size_reduction" approved="yes">
         <source>%1$s%% size reduction vs %2$s JSON</source>
-        <target state="needs-translation">%1$s%% size reduction vs %2$s JSON</target>
+        <target state="final">%1$s%% størrelse reduktion mod %2$s JSON</target>
       </trans-unit>
-      <trans-unit id="playground.option_baseline">
+      <trans-unit id="playground.option_baseline" approved="yes">
         <source>JSON baseline</source>
-        <target state="needs-translation">JSON baseline</target>
+        <target state="final">JSON baseline</target>
       </trans-unit>
-      <trans-unit id="playground.baseline_minified">
+      <trans-unit id="playground.baseline_minified" approved="yes">
         <source>Compact</source>
-        <target state="needs-translation">Compact</target>
+        <target state="final">Kompakt</target>
       </trans-unit>
-      <trans-unit id="playground.baseline_pretty2">
+      <trans-unit id="playground.baseline_pretty2" approved="yes">
         <source>Pretty (2 spaces)</source>
-        <target state="needs-translation">Pretty (2 spaces)</target>
+        <target state="final">Nydelig (2 mellemrum)</target>
       </trans-unit>
-      <trans-unit id="playground.baseline_pretty4">
+      <trans-unit id="playground.baseline_pretty4" approved="yes">
         <source>Pretty (4 spaces)</source>
-        <target state="needs-translation">Pretty (4 spaces)</target>
+        <target state="final">Nydelig (4 mellemrum)</target>
       </trans-unit>
-      <trans-unit id="playground.baseline_tabs">
+      <trans-unit id="playground.baseline_tabs" approved="yes">
         <source>Pretty (tabs)</source>
-        <target state="needs-translation">Pretty (tabs)</target>
+        <target state="final">Nydelig (faneblad)</target>
       </trans-unit>
       <trans-unit id="playground.lenient_decode" approved="yes">
         <source>Lenient decode</source>
