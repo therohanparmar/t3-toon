@@ -35,9 +35,9 @@
         <source>Show Default Example : When enabled, the TOON Playground backend module pre-fills a sample JSON input and its encoded TOON output on first load. Disable to open the Playground with empty fields.</source>
         <target state="final">Vis standardeksempel : Når aktiveret, udfylder TOON Playground-backendmodulet automatisk et eksempel på JSON-input og dets kodede TOON-output ved første indlæsning. Deaktiver for at åbne Playground med tomme felter.</target>
       </trans-unit>
-      <trans-unit id="settings.json_baseline">
+      <trans-unit id="settings.json_baseline" approved="yes">
         <source>JSON Baseline : Default JSON formatting the Playground compares TOON output against when computing the size reduction. "Compact" (minified) is the fairest comparison (what you would actually send to an LLM); the pretty variants include indentation whitespace and show larger savings. Matches the baseline options of the official TOON playground. Note: the optimization %% stored in usage logs always uses the compact baseline so logged values stay comparable over time.</source>
-        <target state="needs-translation">JSON Baseline : Default JSON formatting the Playground compares TOON output against when computing the size reduction. "Compact" (minified) is the fairest comparison (what you would actually send to an LLM); the pretty variants include indentation whitespace and show larger savings. Matches the baseline options of the official TOON playground. Note: the optimization %% stored in usage logs always uses the compact baseline so logged values stay comparable over time.</target>
+        <target state="final">JSON Baseline : Standard JSON formatering af sandkassen sammenligner TOON output mod beregningen af reduktion af størrelsen. "Kompakt" (minified) er den rimeligste sammenligning (hvad du rent faktisk ville sende til en LLM); varianter omfatter indrykning af blanktegn og viser større besparelser. Matcher udgangsmulighederne for den officielle TOON legeplads. Bemærk: Optimering %% lagret i anvendelseslogger bruger altid den kompakte baseline, så logget værdier forbliver sammenlignelige over tid.</target>
       </trans-unit>
     </body>
   </file>
