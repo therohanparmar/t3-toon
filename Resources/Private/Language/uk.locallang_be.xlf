@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xliff xmlns="urn:oasis:names:tc:xliff:document:1.2" version="1.2">
+  <file source-language="en" datatype="plaintext" original="EXT:rrp_t3toon/Resources/Private/Language/locallang_be.xlf" date="2026-06-13T00:00:00Z" product-name="rrp_t3toon" target-language="uk">
+    <header/>
+    <body>
+      <trans-unit id="settings.enabled" approved="yes">
+        <source>Enabled : Global toggle for the TOON converter. When disabled, encoding operations bypass TOON and return standard JSON instead. Decoding of existing TOON data still works normally.</source>
+        <target state="final">Увімкнено: Глобальні перемикачі для перетворювача TOON. Коли вимкнено, операції з кодування обходять TOON і замість цього повертають стандартний JSON. Декодування існуючих даних TOON все ще працює нормально.</target>
+      </trans-unit>
+      <trans-unit id="settings.indent" approved="yes">
+        <source>Indent : Number of spaces per indentation level when encoding TOON (spec default: 2; must be at least 1).</source>
+        <target state="final">Відступ : кількість пробілів на рівень відступу при кодуванні TOON (стандартне значення специфікації: 2; має бути не менше 1).</target>
+      </trans-unit>
+      <trans-unit id="settings.delimiter" approved="yes">
+        <source>Delimiter : Document delimiter for inline arrays and tabular rows when encoding: Comma (default), Tab, or Pipe.</source>
+        <target state="final">Роздільник : роздільник документа для вбудованих масивів і табличних рядків при кодуванні: Кома (за замовчуванням), Табуляція або Вертикальна риска.</target>
+      </trans-unit>
+      <trans-unit id="settings.key_folding" approved="yes">
+        <source>Key Folding : When set to "Safe", chains of single-key objects are collapsed into dotted paths (e.g. a.b.c: 1) to reduce verbosity. "Off" keeps standard nesting (spec §13.4).</source>
+        <target state="final">Згортання ключів : якщо встановлено «Безпечний», ланцюжки об'єктів з одним ключем згортаються у шляхи з крапками (наприклад, a.b.c: 1) для зменшення багатослівності. «Вимк.» зберігає стандартне вкладення (специфікація §13.4).</target>
+      </trans-unit>
+      <trans-unit id="settings.flatten_depth" approved="yes">
+        <source>Flatten Depth : Maximum number of segments to fold when Key Folding is "Safe". Use -1 for unbounded; values below 2 have no practical folding effect.</source>
+        <target state="final">Глибина згортання : максимальна кількість сегментів для згортання при увімкненому згортанні ключів («Безпечний»). Використовуйте -1 для необмеженої глибини; значення менше 2 не мають практичного ефекту згортання.</target>
+      </trans-unit>
+      <trans-unit id="settings.strict" approved="yes">
+        <source>Strict Decoding : Enforce strict-mode validation when decoding (array length and row-width counts, indentation multiples, escape and delimiter consistency). Disable for lenient parsing (spec §14).</source>
+        <target state="final">Суворе декодування : застосовувати валідацію в суворому режимі при декодуванні (підрахунок довжини масиву та ширини рядків, кратності відступів, узгодженість екранування та роздільників). Вимкніть для м'якого розбору (специфікація §14).</target>
+      </trans-unit>
+      <trans-unit id="settings.expand_paths" approved="yes">
+        <source>Expand Paths : When set to "Safe", unquoted dotted keys are expanded into nested objects on decode (e.g. a.b.c -&gt; {a:{b:{c:...}}}). "Off" keeps dotted keys literal (spec §13.4).</source>
+        <target state="final">Розгортання шляхів : якщо встановлено «Безпечний», ключі з крапками без лапок розгортаються у вкладені об'єкти при декодуванні (наприклад, a.b.c -&gt; {a:{b:{c:...}}}). «Вимк.» зберігає ключі з крапками буквально (специфікація §13.4).</target>
+      </trans-unit>
+      <trans-unit id="settings.show_default_example" approved="yes">
+        <source>Show Default Example : When enabled, the TOON Playground backend module pre-fills a sample JSON input and its encoded TOON output on first load. Disable to open the Playground with empty fields.</source>
+        <target state="final">Показувати приклад за замовчуванням : якщо увімкнено, модуль бекенду TOON Playground попередньо заповнює зразок JSON-введення та його закодований TOON-вивід при першому завантаженні. Вимкніть, щоб відкрити Playground з порожніми полями.</target>
+      </trans-unit>
+      <trans-unit id="settings.json_baseline">
+        <source>JSON Baseline : Default JSON formatting the Playground compares TOON output against when computing the size reduction. "Compact" (minified) is the fairest comparison (what you would actually send to an LLM); the pretty variants include indentation whitespace and show larger savings. Matches the baseline options of the official TOON playground. Note: the optimization %% stored in usage logs always uses the compact baseline so logged values stay comparable over time.</source>
+        <target state="needs-translation">JSON Baseline : Default JSON formatting the Playground compares TOON output against when computing the size reduction. "Compact" (minified) is the fairest comparison (what you would actually send to an LLM); the pretty variants include indentation whitespace and show larger savings. Matches the baseline options of the official TOON playground. Note: the optimization %% stored in usage logs always uses the compact baseline so logged values stay comparable over time.</target>
+      </trans-unit>
+    </body>
+  </file>
+</xliff>
