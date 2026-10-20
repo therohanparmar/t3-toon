@@ -1,0 +1,368 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xliff xmlns="urn:oasis:names:tc:xliff:document:1.2" version="1.2">
+  <file source-language="en" datatype="plaintext" original="EXT:rrp_t3toon/Resources/Private/Language/locallang_mod.xlf" product-name="rrp_t3toon" target-language="t3">
+    <header/>
+    <body>
+      <trans-unit id="mlang_tabs_tab">
+        <source>TOON Playground</source>
+        <target>crwdns393440:0crwdne393440:0</target>
+      </trans-unit>
+      <trans-unit id="playground.title">
+        <source>TOON Playground</source>
+        <target>crwdns393442:0crwdne393442:0</target>
+      </trans-unit>
+      <trans-unit id="playground.input_label">
+        <source>Input (JSON for encode, TOON for decode)</source>
+        <target>crwdns393444:0crwdne393444:0</target>
+      </trans-unit>
+      <trans-unit id="playground.output_label">
+        <source>Output</source>
+        <target>crwdns393446:0crwdne393446:0</target>
+      </trans-unit>
+      <trans-unit id="playground.encode">
+        <source>Encode to TOON</source>
+        <target>crwdns393448:0crwdne393448:0</target>
+      </trans-unit>
+      <trans-unit id="playground.decode">
+        <source>Decode from TOON</source>
+        <target>crwdns393450:0crwdne393450:0</target>
+      </trans-unit>
+      <trans-unit id="playground.encode_compact">
+        <source>Encode (compact)</source>
+        <target>crwdns393452:0crwdne393452:0</target>
+      </trans-unit>
+      <trans-unit id="playground.tokens">
+        <source>Estimated tokens: %d</source>
+        <target>crwdns393454:0%dcrwdne393454:0</target>
+      </trans-unit>
+      <trans-unit id="playground.footer_made_with">
+        <source>Made with 🧡 for the TYPO3 Developer by Rohan and Himanshu</source>
+        <target>crwdns393456:0crwdne393456:0</target>
+      </trans-unit>
+      <trans-unit id="playground.subtitle">
+        <source>Encode JSON to TOON or decode strings instantly.</source>
+        <target>crwdns393458:0crwdne393458:0</target>
+      </trans-unit>
+      <trans-unit id="playground.clear_all">
+        <source>Clear All</source>
+        <target>crwdns393460:0crwdne393460:0</target>
+      </trans-unit>
+      <trans-unit id="playground.view_logs">
+        <source>View Logs</source>
+        <target>crwdns411013:0crwdne411013:0</target>
+      </trans-unit>
+      <trans-unit id="playground.badge_input">
+        <source>Input</source>
+        <target>crwdns393462:0crwdne393462:0</target>
+      </trans-unit>
+      <trans-unit id="playground.or">
+        <source>OR</source>
+        <target>crwdns393464:0crwdne393464:0</target>
+      </trans-unit>
+      <trans-unit id="playground.estimated_tokens_label">
+        <source>Estimated tokens</source>
+        <target>crwdns393466:0crwdne393466:0</target>
+      </trans-unit>
+      <trans-unit id="playground.copy">
+        <source>Copy</source>
+        <target>crwdns393468:0crwdne393468:0</target>
+      </trans-unit>
+      <trans-unit id="playground.copied_to_clipboard">
+        <source>Copied to clipboard!</source>
+        <target>crwdns393470:0crwdne393470:0</target>
+      </trans-unit>
+      <trans-unit id="playground.github">
+        <source>GitHub</source>
+        <target>crwdns393472:0crwdne393472:0</target>
+      </trans-unit>
+      <trans-unit id="playground.documentation">
+        <source>Documentation</source>
+        <target>crwdns393474:0crwdne393474:0</target>
+      </trans-unit>
+      <trans-unit id="playground.clear_confirm">
+        <source>Clear both input and output?</source>
+        <target>crwdns393476:0crwdne393476:0</target>
+      </trans-unit>
+      <trans-unit id="playground.clear_confirm_title">
+        <source>Clear All</source>
+        <target>crwdns393478:0crwdne393478:0</target>
+      </trans-unit>
+      <trans-unit id="playground.clear_confirm_body">
+        <source>This will clear both the input and output fields. This action cannot be undone.</source>
+        <target>crwdns393480:0crwdne393480:0</target>
+      </trans-unit>
+      <trans-unit id="playground.cancel">
+        <source>Cancel</source>
+        <target>crwdns393482:0crwdne393482:0</target>
+      </trans-unit>
+      <trans-unit id="playground.confirm_clear">
+        <source>Yes, Clear All</source>
+        <target>crwdns393484:0crwdne393484:0</target>
+      </trans-unit>
+      <trans-unit id="playground.placeholder">
+        <source>{"name": "TOON", "items": [1, 2, 3]}</source>
+        <target>crwdns393486:0crwdne393486:0</target>
+      </trans-unit>
+      <trans-unit id="playground.error_invalid_json">
+        <source>Invalid JSON input for encode.</source>
+        <target>crwdns393488:0crwdne393488:0</target>
+      </trans-unit>
+      <trans-unit id="playground.option_delimiter">
+        <source>Delimiter</source>
+        <target>crwdns411151:0crwdne411151:0</target>
+      </trans-unit>
+      <trans-unit id="playground.option_indent">
+        <source>Indent</source>
+        <target>crwdns411153:0crwdne411153:0</target>
+      </trans-unit>
+      <trans-unit id="playground.option_key_folding">
+        <source>Key folding</source>
+        <target>crwdns411155:0crwdne411155:0</target>
+      </trans-unit>
+      <trans-unit id="playground.key_folding_off">
+        <source>Off</source>
+        <target>crwdns411157:0crwdne411157:0</target>
+      </trans-unit>
+      <trans-unit id="playground.key_folding_safe">
+        <source>Safe</source>
+        <target>crwdns411159:0crwdne411159:0</target>
+      </trans-unit>
+      <trans-unit id="playground.option_flatten_depth">
+        <source>Flatten depth</source>
+        <target>crwdns411161:0crwdne411161:0</target>
+      </trans-unit>
+      <trans-unit id="playground.flatten_unlimited">
+        <source>Unlimited</source>
+        <target>crwdns411163:0crwdne411163:0</target>
+      </trans-unit>
+      <trans-unit id="playground.presets">
+        <source>Load example</source>
+        <target>crwdns411165:0crwdne411165:0</target>
+      </trans-unit>
+      <trans-unit id="playground.preset_hikes">
+        <source>Hikes</source>
+        <target>crwdns411167:0crwdne411167:0</target>
+      </trans-unit>
+      <trans-unit id="playground.preset_typo3">
+        <source>TYPO3</source>
+        <target>crwdns411169:0crwdne411169:0</target>
+      </trans-unit>
+      <trans-unit id="playground.chars">
+        <source>chars</source>
+        <target>crwdns411171:0crwdne411171:0</target>
+      </trans-unit>
+      <trans-unit id="playground.size_reduction">
+        <source>%1$s%% size reduction vs %2$s JSON</source>
+        <target>crwdns413071:0%1$scrwdnd413071:0%2$scrwdne413071:0</target>
+      </trans-unit>
+      <trans-unit id="playground.option_baseline">
+        <source>JSON baseline</source>
+        <target>crwdns413073:0crwdne413073:0</target>
+      </trans-unit>
+      <trans-unit id="playground.baseline_minified">
+        <source>Compact</source>
+        <target>crwdns413075:0crwdne413075:0</target>
+      </trans-unit>
+      <trans-unit id="playground.baseline_pretty2">
+        <source>Pretty (2 spaces)</source>
+        <target>crwdns413077:0crwdne413077:0</target>
+      </trans-unit>
+      <trans-unit id="playground.baseline_pretty4">
+        <source>Pretty (4 spaces)</source>
+        <target>crwdns413079:0crwdne413079:0</target>
+      </trans-unit>
+      <trans-unit id="playground.baseline_tabs">
+        <source>Pretty (tabs)</source>
+        <target>crwdns413081:0crwdne413081:0</target>
+      </trans-unit>
+      <trans-unit id="playground.lenient_decode">
+        <source>Lenient decode</source>
+        <target>crwdns411175:0crwdne411175:0</target>
+      </trans-unit>
+      <trans-unit id="playground.official_playground">
+        <source>Official playground</source>
+        <target>crwdns411177:0crwdne411177:0</target>
+      </trans-unit>
+      <trans-unit id="optimization_note.title">
+        <source>Why is optimization sometimes negative?</source>
+        <target>crwdns411015:0crwdne411015:0</target>
+      </trans-unit>
+      <trans-unit id="optimization_note.body">
+        <source>The optimization % compares the TOON output against minified JSON (not the indented text you paste). TOON saves the most on arrays of uniform records, which collapse into a single table header plus one compact line per row — the more rows, the bigger the saving. Deeply nested data with few or no repeating arrays has nothing to tabularize and can come out slightly larger, showing a negative percentage. This is expected, not an error.</source>
+        <target>crwdns411017:0crwdne411017:0</target>
+      </trans-unit>
+      <trans-unit id="optimization_note.close">
+        <source>Dismiss note</source>
+        <target>crwdns411019:0crwdne411019:0</target>
+      </trans-unit>
+      <trans-unit id="logs.mlang_tabs_tab">
+        <source>TOON Logs</source>
+        <target>crwdns410889:0crwdne410889:0</target>
+      </trans-unit>
+      <trans-unit id="logs.title">
+        <source>TOON Usage Logs</source>
+        <target>crwdns410891:0crwdne410891:0</target>
+      </trans-unit>
+      <trans-unit id="logs.subtitle">
+        <source>Every successful encode/convert call recorded with input size, output size, and compression ratio.</source>
+        <target>crwdns410893:0crwdne410893:0</target>
+      </trans-unit>
+      <trans-unit id="logs.back_to_playground">
+        <source>Back to Playground</source>
+        <target>crwdns411021:0crwdne411021:0</target>
+      </trans-unit>
+      <trans-unit id="logs.filter.legend">
+        <source>Filters</source>
+        <target>crwdns410895:0crwdne410895:0</target>
+      </trans-unit>
+      <trans-unit id="logs.filter.date_from">
+        <source>From</source>
+        <target>crwdns410897:0crwdne410897:0</target>
+      </trans-unit>
+      <trans-unit id="logs.filter.date_to">
+        <source>To</source>
+        <target>crwdns410899:0crwdne410899:0</target>
+      </trans-unit>
+      <trans-unit id="logs.filter.enabled">
+        <source>Optimization status</source>
+        <target>crwdns410901:0crwdne410901:0</target>
+      </trans-unit>
+      <trans-unit id="logs.filter.enabled.all">
+        <source>All</source>
+        <target>crwdns410903:0crwdne410903:0</target>
+      </trans-unit>
+      <trans-unit id="logs.filter.enabled.on">
+        <source>Enabled</source>
+        <target>crwdns410905:0crwdne410905:0</target>
+      </trans-unit>
+      <trans-unit id="logs.filter.enabled.off">
+        <source>Disabled</source>
+        <target>crwdns410907:0crwdne410907:0</target>
+      </trans-unit>
+      <trans-unit id="logs.filter.min_pct">
+        <source>Min optimization %</source>
+        <target>crwdns410909:0crwdne410909:0</target>
+      </trans-unit>
+      <trans-unit id="logs.filter.per_page">
+        <source>Per page</source>
+        <target>crwdns410911:0crwdne410911:0</target>
+      </trans-unit>
+      <trans-unit id="logs.filter.apply">
+        <source>Apply</source>
+        <target>crwdns410913:0crwdne410913:0</target>
+      </trans-unit>
+      <trans-unit id="logs.filter.reset">
+        <source>Reset</source>
+        <target>crwdns410915:0crwdne410915:0</target>
+      </trans-unit>
+      <trans-unit id="logs.column.uid">
+        <source>UID</source>
+        <target>crwdns410917:0crwdne410917:0</target>
+      </trans-unit>
+      <trans-unit id="logs.column.date">
+        <source>Date &amp; Time</source>
+        <target>crwdns410919:0crwdne410919:0</target>
+      </trans-unit>
+      <trans-unit id="logs.column.input_size">
+        <source>Input size</source>
+        <target>crwdns410921:0crwdne410921:0</target>
+      </trans-unit>
+      <trans-unit id="logs.column.output_size">
+        <source>Output size</source>
+        <target>crwdns410923:0crwdne410923:0</target>
+      </trans-unit>
+      <trans-unit id="logs.column.optimization">
+        <source>Optimization</source>
+        <target>crwdns410925:0crwdne410925:0</target>
+      </trans-unit>
+      <trans-unit id="logs.column.enabled">
+        <source>Enabled</source>
+        <target>crwdns410927:0crwdne410927:0</target>
+      </trans-unit>
+      <trans-unit id="logs.column.actions">
+        <source>Actions</source>
+        <target>crwdns410929:0crwdne410929:0</target>
+      </trans-unit>
+      <trans-unit id="logs.column.select">
+        <source>Select</source>
+        <target>crwdns410931:0crwdne410931:0</target>
+      </trans-unit>
+      <trans-unit id="logs.empty.title">
+        <source>No log entries yet</source>
+        <target>crwdns410933:0crwdne410933:0</target>
+      </trans-unit>
+      <trans-unit id="logs.empty.body">
+        <source>Run an encode operation from the TOON Playground to record your first log entry.</source>
+        <target>crwdns410935:0crwdne410935:0</target>
+      </trans-unit>
+      <trans-unit id="logs.empty.cta">
+        <source>Open TOON Playground</source>
+        <target>crwdns410937:0crwdne410937:0</target>
+      </trans-unit>
+      <trans-unit id="logs.delete.single">
+        <source>Delete</source>
+        <target>crwdns410939:0crwdne410939:0</target>
+      </trans-unit>
+      <trans-unit id="logs.delete.bulk">
+        <source>Delete selected (%d)</source>
+        <target>crwdns410941:0%dcrwdne410941:0</target>
+      </trans-unit>
+      <trans-unit id="logs.delete.confirm_title">
+        <source>Delete log entries?</source>
+        <target>crwdns410943:0crwdne410943:0</target>
+      </trans-unit>
+      <trans-unit id="logs.delete.confirm_body_single">
+        <source>This will permanently remove the selected log entry. This action cannot be undone.</source>
+        <target>crwdns410945:0crwdne410945:0</target>
+      </trans-unit>
+      <trans-unit id="logs.delete.confirm_body_bulk">
+        <source>This will permanently remove the selected log entries. This action cannot be undone.</source>
+        <target>crwdns410947:0crwdne410947:0</target>
+      </trans-unit>
+      <trans-unit id="logs.delete.confirm_button">
+        <source>Yes, delete</source>
+        <target>crwdns410949:0crwdne410949:0</target>
+      </trans-unit>
+      <trans-unit id="logs.delete.cancel">
+        <source>Cancel</source>
+        <target>crwdns410951:0crwdne410951:0</target>
+      </trans-unit>
+      <trans-unit id="logs.flash.deleted_title">
+        <source>Log entries deleted</source>
+        <target>crwdns410953:0crwdne410953:0</target>
+      </trans-unit>
+      <trans-unit id="logs.flash.deleted_body">
+        <source>%d log entry/entries were removed.</source>
+        <target>crwdns410955:0%dcrwdne410955:0</target>
+      </trans-unit>
+      <trans-unit id="logs.flash.nothing_title">
+        <source>Nothing deleted</source>
+        <target>crwdns410957:0crwdne410957:0</target>
+      </trans-unit>
+      <trans-unit id="logs.flash.nothing_body">
+        <source>No matching log entries were found.</source>
+        <target>crwdns410959:0crwdne410959:0</target>
+      </trans-unit>
+      <trans-unit id="logs.pagination.first">
+        <source>First</source>
+        <target>crwdns410961:0crwdne410961:0</target>
+      </trans-unit>
+      <trans-unit id="logs.pagination.previous">
+        <source>Previous</source>
+        <target>crwdns410963:0crwdne410963:0</target>
+      </trans-unit>
+      <trans-unit id="logs.pagination.next">
+        <source>Next</source>
+        <target>crwdns410965:0crwdne410965:0</target>
+      </trans-unit>
+      <trans-unit id="logs.pagination.last">
+        <source>Last</source>
+        <target>crwdns410967:0crwdne410967:0</target>
+      </trans-unit>
+      <trans-unit id="logs.pagination.summary">
+        <source>Page %1$d of %2$d (%3$d total)</source>
+        <target>crwdns410969:0%1$dcrwdnd410969:0%2$dcrwdnd410969:0%3$dcrwdne410969:0</target>
+      </trans-unit>
+    </body>
+  </file>
+</xliff>
